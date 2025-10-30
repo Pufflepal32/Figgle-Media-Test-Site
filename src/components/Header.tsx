@@ -1,16 +1,15 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Portfolio', href: '#portfolio' },
-    { label: 'Reviews', href: '#reviews' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' },
+    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'About', href: '/about' },
   ];
 
   return (
@@ -18,27 +17,27 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <a href="#home" className="text-2xl font-bold text-dark-green">
+            <Link to="/" className="text-2xl font-bold text-dark-green">
               Figgle Media
-            </a>
+            </Link>
           </div>
 
           <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="text-jet-black hover:text-burnt-orange transition-colors font-medium"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              to="/about"
               className="bg-burnt-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all"
             >
               Get My Free Website Plan
-            </a>
+            </Link>
           </nav>
 
           <button
@@ -55,22 +54,22 @@ export default function Header() {
         <div className="lg:hidden bg-white border-t border-gray-200">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 onClick={() => setIsMenuOpen(false)}
                 className="text-jet-black hover:text-burnt-orange transition-colors font-medium py-2"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              to="/about"
               onClick={() => setIsMenuOpen(false)}
               className="bg-burnt-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all text-center"
             >
               Get My Free Website Plan
-            </a>
+            </Link>
           </nav>
         </div>
       )}

@@ -1,28 +1,25 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import TrustBadges from './components/TrustBadges';
-import CaseStudies from './components/CaseStudies';
-import Services from './components/Services';
-import WhyChooseUs from './components/WhyChooseUs';
-import Testimonials from './components/Testimonials';
-import About from './components/About';
-import CTABanner from './components/CTABanner';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <Hero />
-      <TrustBadges />
-      <CaseStudies />
-      <Services />
-      <WhyChooseUs />
-      <Testimonials />
-      <About />
-      <CTABanner />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
