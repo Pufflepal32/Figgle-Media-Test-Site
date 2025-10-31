@@ -1,5 +1,7 @@
 import Hero from '../components/Hero';
 import TrustBadges from '../components/TrustBadges';
+import ServicesPreview from '../components/ServicesPreview';
+import TestimonialsPreview from '../components/TestimonialsPreview';
 import CTABanner from '../components/CTABanner';
 
 function HomePage() {
@@ -7,6 +9,8 @@ function HomePage() {
     <>
       <Hero />
       <TrustBadges />
+      <ServicesPreview />
+      <TestimonialsPreview />
       <CTABanner />
     </>
   );
