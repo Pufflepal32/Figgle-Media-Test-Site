@@ -17,7 +17,7 @@ export default function Footer() {
               <img
                 src="/assets/logo.png"
                 alt="Figgle Media Logo"
-                className="h-10 w-10 object-contain"
+                className="h-10 w-10 object-cover rounded-full"
               />
               <h3 className="text-2xl font-bold text-cream">Figgle Media</h3>
             </div>

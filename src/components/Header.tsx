@@ -33,7 +33,7 @@ export default function Header() {
               <img
                 src="/assets/logo.png"
                 alt="Figgle Media Logo"
-                className="h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110"
+                className="h-14 w-14 object-cover rounded-full transition-transform duration-300 group-hover:scale-110"
               />
               <span className="text-2xl font-bold text-dark-green group-hover:text-burnt-orange transition-colors duration-300">
                 Figgle Media
