@@ -15,7 +15,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-light-cream via-white to-cream">
+    <section id="home" className="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -28,21 +28,21 @@ export default function Hero() {
           {/* Left Column - Content */}
           <div className="space-y-8">
             {/* Trust Badge */}
-            <div className="inline-flex items-center gap-2 bg-teal/10 border border-teal/20 rounded-full px-4 py-2">
-              <Star className="text-teal fill-teal" size={16} />
-              <span className="text-sm font-semibold text-dark-green">Trusted by 100+ Roofers</span>
+            <div className="inline-flex items-center gap-2 bg-white/20 border border-white/30 rounded-full px-4 py-2">
+              <Star className="text-burnt-orange fill-burnt-orange" size={16} />
+              <span className="text-sm font-semibold text-white">Trusted by 100+ Roofers</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Get More Roofing Leads With a{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-dark-green to-teal">
+              <span className="text-burnt-orange">
                 Website That Works
               </span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg sm:text-xl text-warm-gray leading-relaxed">
+            <p className="text-lg sm:text-xl text-cream leading-relaxed">
               Custom-built websites that turn visitors into customers. We specialize in helping roofers in West Virginia and Tennessee dominate their local markets.
             </p>
 
@@ -54,8 +54,8 @@ export default function Hero() {
                 'Professional design that builds trust instantly',
               ].map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="text-teal flex-shrink-0 mt-1" size={20} />
-                  <span className="text-charcoal">{benefit}</span>
+                  <CheckCircle className="text-burnt-orange flex-shrink-0 mt-1" size={20} />
+                  <span className="text-white">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -69,7 +69,7 @@ export default function Hero() {
                 <Phone size={20} className="group-hover:rotate-12 transition-transform" />
                 <span>(123) 456-7890</span>
               </a>
-              <span className="text-sm text-warm-gray">Call now for a free consultation</span>
+              <span className="text-sm text-cream">Call now for a free consultation</span>
             </div>
           </div>
 

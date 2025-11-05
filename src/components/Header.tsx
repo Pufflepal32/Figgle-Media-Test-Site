@@ -81,7 +81,7 @@ export default function Header() {
             </div>
 
             <Link
-              to="/about"
+              to="/free-website-plan"
               className="bg-burnt-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-deep-orange transition-all shadow-md hover:shadow-lg"
             >
               Get My Free Website Plan
@@ -141,7 +141,7 @@ export default function Header() {
             </div>
 
             <Link
-              to="/about"
+              to="/free-website-plan"
               onClick={() => setIsMenuOpen(false)}
               className="bg-burnt-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-deep-orange transition-all text-center shadow-md hover:shadow-lg"
             >

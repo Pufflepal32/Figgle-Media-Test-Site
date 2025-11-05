@@ -9,7 +9,7 @@ export default function TrustBadges() {
   ];
 
   return (
-    <section className="py-16 bg-white border-y border-light-gray">
+    <section className="py-16 bg-gradient-to-br from-dark-navy to-navy-blue border-y border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -18,13 +18,13 @@ export default function TrustBadges() {
               key={index}
               className="text-center group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-teal/10 to-dark-green/10 mb-4 group-hover:scale-110 transition-transform">
-                <stat.icon className="text-teal" size={32} />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 mb-4 group-hover:scale-110 transition-transform">
+                <stat.icon className="text-burnt-orange" size={32} />
               </div>
-              <div className="text-3xl sm:text-4xl font-bold text-charcoal mb-2">
+              <div className="text-3xl sm:text-4xl font-bold text-white mb-2">
                 {stat.number}
               </div>
-              <div className="text-warm-gray font-medium">
+              <div className="text-cream font-medium">
                 {stat.label}
               </div>
             </div>
@@ -33,25 +33,25 @@ export default function TrustBadges() {
 
         {/* Certification Badges */}
         <div className="text-center">
-          <p className="text-sm font-semibold text-warm-gray uppercase tracking-wider mb-6">
+          <p className="text-sm font-semibold text-cream uppercase tracking-wider mb-6">
             We Partner With Industry Leaders
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
+          <div className="flex flex-wrap items-center justify-center gap-8 opacity-90">
             <div className="flex items-center gap-2">
-              <Shield size={24} className="text-dark-green" />
-              <span className="font-semibold text-charcoal">GAF Certified</span>
+              <Shield size={24} className="text-burnt-orange" />
+              <span className="font-semibold text-white">GAF Certified</span>
             </div>
             <div className="flex items-center gap-2">
-              <Award size={24} className="text-dark-green" />
-              <span className="font-semibold text-charcoal">Owens Corning</span>
+              <Award size={24} className="text-burnt-orange" />
+              <span className="font-semibold text-white">Owens Corning</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle size={24} className="text-dark-green" />
-              <span className="font-semibold text-charcoal">CertainTeed</span>
+              <CheckCircle size={24} className="text-burnt-orange" />
+              <span className="font-semibold text-white">CertainTeed</span>
             </div>
             <div className="flex items-center gap-2">
-              <Star size={24} className="text-dark-green" />
-              <span className="font-semibold text-charcoal">Google Partner</span>
+              <Star size={24} className="text-burnt-orange" />
+              <span className="font-semibold text-white">Google Partner</span>
             </div>
           </div>
         </div>

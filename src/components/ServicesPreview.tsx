@@ -30,17 +30,17 @@ export default function ServicesPreview() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-light-cream to-white">
+    <section className="py-20 bg-gradient-to-br from-light-navy to-navy-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-charcoal mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Everything You Need to{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-dark-green to-teal">
+            <span className="text-burnt-orange">
               Grow Your Business
             </span>
           </h2>
-          <p className="text-xl text-warm-gray">
+          <p className="text-xl text-cream">
             We build complete digital solutions designed specifically for roofing contractors.
           </p>
         </div>

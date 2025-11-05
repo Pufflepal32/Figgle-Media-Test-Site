@@ -29,14 +29,14 @@ export default function TestimonialsPreview() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-charcoal mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             What Roofers Are Saying
           </h2>
-          <p className="text-xl text-warm-gray">
+          <p className="text-xl text-cream">
             Don't just take our word for it. Here's what our clients have to say.
           </p>
         </div>

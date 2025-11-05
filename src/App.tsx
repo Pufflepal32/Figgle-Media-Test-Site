@@ -5,20 +5,29 @@ import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import TestimonialsPage from './pages/TestimonialsPage';
 import AboutPage from './pages/AboutPage';
+import FreeWebsitePlanPage from './pages/FreeWebsitePlanPage';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen">
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/testimonials" element={<TestimonialsPage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Routes>
+        {/* Landing page route without header/footer for maximum conversions */}
+        <Route path="/free-website-plan" element={<FreeWebsitePlanPage />} />
+
+        {/* Main site routes with header/footer */}
+        <Route path="*" element={
+          <div className="min-h-screen">
+            <Header />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/testimonials" element={<TestimonialsPage />} />
+              <Route path="/about" element={<AboutPage />} />
+            </Routes>
+            <Footer />
+          </div>
+        } />
+      </Routes>
     </Router>
   );
 }

@@ -1,8 +1,9 @@
 import { ArrowRight, Calendar, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function CTABanner() {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-dark-green via-forest-green to-teal relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -20,14 +21,14 @@ export default function CTABanner() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="#home"
+            <Link
+              to="/free-website-plan"
               className="inline-flex items-center justify-center bg-burnt-orange hover:bg-deep-orange text-white px-10 py-5 rounded-xl font-bold text-lg transition-all shadow-2xl hover:shadow-3xl hover:scale-105 w-full sm:w-auto"
             >
               <Calendar className="mr-2" size={24} />
               Get Your Free Website Plan
               <ArrowRight className="ml-2" size={24} />
-            </a>
+            </Link>
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-cream">
