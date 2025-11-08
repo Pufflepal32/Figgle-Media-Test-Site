@@ -5,6 +5,8 @@ import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import TestimonialsPage from './pages/TestimonialsPage';
 import AboutPage from './pages/AboutPage';
+import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 import FreeWebsitePlanPage from './pages/FreeWebsitePlanPage';
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/testimonials" element={<TestimonialsPage />} />
               <Route path="/about" element={<AboutPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:slug" element={<BlogPostPage />} />
             </Routes>
             <Footer />
           </div>

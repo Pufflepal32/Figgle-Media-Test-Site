@@ -50,15 +50,15 @@ export default function ServicesPreview() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-light-gray group"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-white/20 group"
             >
               <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} mb-6 group-hover:scale-110 transition-transform`}>
                 <service.icon className="text-white" size={32} />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">
+              <h3 className="text-xl font-bold text-white mb-3">
                 {service.title}
               </h3>
-              <p className="text-warm-gray leading-relaxed">
+              <p className="text-cream leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -69,7 +69,7 @@ export default function ServicesPreview() {
         <div className="text-center">
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 text-teal hover:text-dark-green font-semibold text-lg group"
+            className="inline-flex items-center gap-2 text-burnt-orange hover:text-white font-semibold text-lg group transition-colors"
           >
             View All Services
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />

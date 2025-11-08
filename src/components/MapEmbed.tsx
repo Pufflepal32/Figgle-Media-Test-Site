@@ -32,26 +32,26 @@ export default function MapEmbed() {
           {/* Left Column - Service Areas & Info */}
           <div className="space-y-6">
             {/* Service Areas Card */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20">
               <div className="flex items-center gap-3 mb-6">
                 <div className="bg-burnt-orange rounded-full p-3">
                   <MapPin size={28} className="text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-dark-green">Our Service Areas</h3>
+                <h3 className="text-2xl font-bold text-white">Our Service Areas</h3>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-6">
                 {serviceAreas.map((area, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <CheckCircle size={18} className="text-teal flex-shrink-0" />
-                    <span className="text-charcoal font-medium">
+                    <CheckCircle size={18} className="text-burnt-orange flex-shrink-0" />
+                    <span className="text-white font-medium">
                       {area.city}, {area.state}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <p className="text-warm-gray text-sm italic">
+              <p className="text-cream text-sm italic">
                 And surrounding areas throughout Tennessee and West Virginia
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function MapEmbed() {
 
           {/* Right Column - Map */}
           <div>
-            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-burnt-orange sticky top-8">
+            <div className="bg-navy rounded-2xl shadow-2xl overflow-hidden border-4 border-burnt-orange sticky top-8">
               <div className="relative w-full h-[500px] lg:h-[600px]">
                 <iframe
                   src={mapUrl}

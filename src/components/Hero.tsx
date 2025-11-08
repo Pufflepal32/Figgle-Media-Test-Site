@@ -89,7 +89,7 @@ export default function Hero() {
               {/* Form */}
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-charcoal mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-navy-blue mb-2">
                     Full Name
                   </label>
                   <input
@@ -97,14 +97,14 @@ export default function Hero() {
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent transition-all"
                     placeholder="John Smith"
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-charcoal mb-2">
+                  <label htmlFor="phone" className="block text-sm font-semibold text-navy-blue mb-2">
                     Phone Number
                   </label>
                   <input
@@ -112,14 +112,14 @@ export default function Hero() {
                     id="phone"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent transition-all"
                     placeholder="(123) 456-7890"
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-charcoal mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-navy-blue mb-2">
                     Email Address
                   </label>
                   <input
@@ -127,7 +127,7 @@ export default function Hero() {
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent transition-all"
                     placeholder="john@example.com"
                     required
                   />
@@ -135,26 +135,26 @@ export default function Hero() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-dark-green to-teal text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group"
+                  className="w-full bg-gradient-to-r from-burnt-orange to-deep-orange text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group"
                 >
                   Get My Free Plan
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                 </button>
 
-                <p className="text-xs text-center text-warm-gray">
+                <p className="text-xs text-center text-navy-blue">
                   No obligation. Free consultation. We'll show you exactly how to get more leads.
                 </p>
               </form>
 
               {/* Trust Indicators */}
               <div className="mt-6 pt-6 border-t border-light-gray">
-                <div className="flex items-center justify-center gap-4 text-sm text-warm-gray">
+                <div className="flex items-center justify-center gap-4 text-sm text-navy-blue">
                   <div className="flex items-center gap-1">
-                    <CheckCircle size={16} className="text-teal" />
+                    <CheckCircle size={16} className="text-burnt-orange" />
                     <span>No Spam</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <CheckCircle size={16} className="text-teal" />
+                    <CheckCircle size={16} className="text-burnt-orange" />
                     <span>Quick Response</span>
                   </div>
                 </div>

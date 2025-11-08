@@ -15,8 +15,30 @@ export default function BeforeAfter() {
           animation: scrollDown 15s ease-in-out infinite alternate;
         }
 
-        .scroll-animation:hover {
-          animation-play-state: paused;
+        .scroll-animation-before {
+          animation: scrollDownBefore 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes scrollDownBefore {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(calc(-100% + 600px));
+          }
+        }
+
+        .scroll-animation-after {
+          animation: scrollDownAfter 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes scrollDownAfter {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(calc(-100% + 600px));
+          }
         }
       `}</style>
 
@@ -44,7 +66,7 @@ export default function BeforeAfter() {
 
                 {/* Scrolling Website Preview */}
                 <div className="h-[600px] overflow-hidden bg-gray-800">
-                  <div className="scroll-animation">
+                  <div className="scroll-animation-before">
                     {/* Full website screenshot - Replace with actual "before" screenshot if available */}
                     <img
                       src="/assets/old-website-before.png"
@@ -127,7 +149,7 @@ export default function BeforeAfter() {
 
                 {/* Scrolling Website Preview */}
                 <div className="h-[600px] overflow-hidden bg-navy-blue">
-                  <div className="scroll-animation">
+                  <div className="scroll-animation-after">
                     {/* Full website screenshot */}
                     <img
                       src="/assets/premium-roofing-after.png"

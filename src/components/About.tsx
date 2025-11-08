@@ -2,17 +2,17 @@ import { Users, Heart, Target } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-alabaster">
+    <section id="about" className="py-20 bg-gradient-to-br from-light-navy via-navy to-navy-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-dark-green mb-6">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Built by Marketers Who Understand Roofing
             </h2>
-            <p className="text-xl text-jet-black mb-6 leading-relaxed">
+            <p className="text-xl text-cream mb-6 leading-relaxed">
               We started Figgle Media with one mission: help local roofers stand out online with websites that actually bring results.
             </p>
-            <p className="text-lg text-jet-black mb-8 leading-relaxed">
+            <p className="text-lg text-cream mb-8 leading-relaxed">
               Founded by Michael Burgess and Trevor, we've spent years working exclusively with roofing contractors across West Virginia and Tennessee. We understand the unique challenges you face and know exactly what it takes to turn your website into a lead-generating machine.
             </p>
 
@@ -22,10 +22,10 @@ export default function About() {
                   <Users size={24} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-dark-green text-lg mb-1">
+                  <h3 className="font-bold text-white text-lg mb-1">
                     Industry Expertise
                   </h3>
-                  <p className="text-jet-black">
+                  <p className="text-cream">
                     We only work with roofers, so we know your business inside and out.
                   </p>
                 </div>
@@ -36,10 +36,10 @@ export default function About() {
                   <Heart size={24} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-dark-green text-lg mb-1">
+                  <h3 className="font-bold text-white text-lg mb-1">
                     Local Focus
                   </h3>
-                  <p className="text-jet-black">
+                  <p className="text-cream">
                     We're based in your backyard and understand local markets.
                   </p>
                 </div>
@@ -50,10 +50,10 @@ export default function About() {
                   <Target size={24} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-dark-green text-lg mb-1">
+                  <h3 className="font-bold text-white text-lg mb-1">
                     Results-Driven
                   </h3>
-                  <p className="text-jet-black">
+                  <p className="text-cream">
                     Every decision we make is focused on getting you more leads.
                   </p>
                 </div>
@@ -62,16 +62,16 @@ export default function About() {
           </div>
 
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-dark-green to-burnt-orange rounded-xl overflow-hidden shadow-2xl">
+            <div className="aspect-square bg-gradient-to-br from-navy to-burnt-orange rounded-xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Figgle Media Team"
                 className="w-full h-full object-cover opacity-80"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-peach p-6 rounded-lg shadow-xl max-w-xs">
-              <p className="text-2xl font-bold text-dark-green mb-2">50+</p>
-              <p className="text-jet-black">Roofing businesses transformed</p>
+            <div className="absolute -bottom-6 -right-6 bg-burnt-orange p-6 rounded-lg shadow-xl max-w-xs">
+              <p className="text-2xl font-bold text-white mb-2">50+</p>
+              <p className="text-white">Roofing businesses transformed</p>
             </div>
           </div>
         </div>

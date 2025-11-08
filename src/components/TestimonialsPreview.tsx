@@ -46,11 +46,11 @@ export default function TestimonialsPreview() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-light-cream to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-light-gray relative"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-white/20 relative"
             >
               {/* Quote Icon */}
               <div className="absolute top-6 right-6 opacity-10">
-                <Quote size={64} className="text-teal" />
+                <Quote size={64} className="text-white" />
               </div>
 
               {/* Stars */}
@@ -61,7 +61,7 @@ export default function TestimonialsPreview() {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-warm-gray mb-6 leading-relaxed relative z-10">
+              <p className="text-cream mb-6 leading-relaxed relative z-10">
                 "{testimonial.text}"
               </p>
 
@@ -70,11 +70,11 @@ export default function TestimonialsPreview() {
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-teal"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-burnt-orange"
                 />
                 <div>
-                  <div className="font-bold text-charcoal">{testimonial.name}</div>
-                  <div className="text-sm text-warm-gray">
+                  <div className="font-bold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-cream">
                     {testimonial.company} • {testimonial.location}
                   </div>
                 </div>
