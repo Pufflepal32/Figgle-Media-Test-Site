@@ -1,88 +1,9 @@
 import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  publishDate: string;
-  readTime: string;
-  category: string;
-  image: string;
-  slug: string;
-}
+import { getAllBlogPosts } from '../data/blogPosts';
 
 export default function Blog() {
-  // Placeholder blog posts with SEO-optimized content structure
-  const blogPosts: BlogPost[] = [
-    {
-      id: '1',
-      title: '10 Signs Your Roofing Business Needs a New Website in 2025',
-      excerpt: 'Is your roofing website turning away potential customers? Learn the key indicators that it\'s time for a modern, conversion-focused website that actually brings in leads.',
-      author: 'Figgle Media Team',
-      publishDate: '2025-01-15',
-      readTime: '5 min read',
-      category: 'Web Design',
-      image: '/assets/blog/website-signs.jpg',
-      slug: '10-signs-your-roofing-business-needs-new-website',
-    },
-    {
-      id: '2',
-      title: 'How Local SEO Helps Roofers Dominate Their Market',
-      excerpt: 'Discover proven local SEO strategies that help roofing contractors rank #1 in their area and get more qualified leads from homeowners searching for roof repairs.',
-      author: 'Figgle Media Team',
-      publishDate: '2025-01-10',
-      readTime: '7 min read',
-      category: 'SEO',
-      image: '/assets/blog/local-seo.jpg',
-      slug: 'how-local-seo-helps-roofers-dominate-market',
-    },
-    {
-      id: '3',
-      title: 'Google Ads vs. Local Service Ads for Roofing Companies',
-      excerpt: 'Not sure which advertising platform is right for your roofing business? We break down the pros, cons, and ROI of each to help you make the best decision.',
-      author: 'Figgle Media Team',
-      publishDate: '2025-01-05',
-      readTime: '6 min read',
-      category: 'Digital Marketing',
-      image: '/assets/blog/google-ads.jpg',
-      slug: 'google-ads-vs-local-service-ads-roofing',
-    },
-    {
-      id: '4',
-      title: 'Converting Website Visitors Into Roofing Leads: A Complete Guide',
-      excerpt: 'Your website gets traffic, but are you converting those visitors into paying customers? Learn the essential elements every high-converting roofing website needs.',
-      author: 'Figgle Media Team',
-      publishDate: '2024-12-28',
-      readTime: '8 min read',
-      category: 'Lead Generation',
-      image: '/assets/blog/conversion-guide.jpg',
-      slug: 'converting-website-visitors-into-roofing-leads',
-    },
-    {
-      id: '5',
-      title: 'Mobile-First Design: Why It Matters for Roofing Contractors',
-      excerpt: 'Over 70% of homeowners search for roofers on their phones. If your website isn\'t mobile-optimized, you\'re losing leads every day. Here\'s what you need to know.',
-      author: 'Figgle Media Team',
-      publishDate: '2024-12-20',
-      readTime: '5 min read',
-      category: 'Web Design',
-      image: '/assets/blog/mobile-first.jpg',
-      slug: 'mobile-first-design-roofing-contractors',
-    },
-    {
-      id: '6',
-      title: 'Customer Reviews: The Secret Weapon for Roofing SEO',
-      excerpt: 'Google reviews aren\'t just for social proof—they\'re a powerful SEO ranking factor. Learn how to leverage reviews to boost your local search visibility.',
-      author: 'Figgle Media Team',
-      publishDate: '2024-12-15',
-      readTime: '6 min read',
-      category: 'SEO',
-      image: '/assets/blog/customer-reviews.jpg',
-      slug: 'customer-reviews-secret-weapon-roofing-seo',
-    },
-  ];
+  const blogPosts = getAllBlogPosts();
 
   const categories = ['All', 'Web Design', 'SEO', 'Digital Marketing', 'Lead Generation'];
 
@@ -126,9 +47,11 @@ export default function Blog() {
             >
               {/* Featured Image */}
               <div className="relative overflow-hidden h-48 bg-navy">
-                <div className="absolute inset-0 bg-gradient-to-br from-burnt-orange/20 to-navy-blue/40 flex items-center justify-center">
-                  <span className="text-white/50 text-sm">Image Placeholder</span>
-                </div>
+                <img
+                  src={post.image.replace('.jpg', '.svg')}
+                  alt={post.imageAlt}
+                  className="w-full h-full object-cover"
+                />
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
                   <span className="bg-burnt-orange text-white px-3 py-1 rounded-full text-sm font-semibold">

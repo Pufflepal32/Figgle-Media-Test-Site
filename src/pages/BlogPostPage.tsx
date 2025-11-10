@@ -1,19 +1,28 @@
 import { Helmet } from 'react-helmet-async';
+import { useParams, Navigate } from 'react-router-dom';
 import BlogPost from '../components/BlogPost';
+import { getBlogPostBySlug } from '../data/blogPosts';
 
 export default function BlogPostPage() {
+  const { slug } = useParams<{ slug: string }>();
+  const post = getBlogPostBySlug(slug || '');
+
+  if (!post) {
+    return <Navigate to="/blog" replace />;
+  }
+
   // SEO metadata for the blog post
   const postMeta = {
-    title: '10 Signs Your Roofing Business Needs a New Website in 2025',
-    description: 'Is your roofing website turning away potential customers? Learn the key indicators that it\'s time for a modern, conversion-focused website that actually brings in leads.',
-    keywords: 'roofing website, roofing web design, contractor website, roofing business website, website redesign',
-    author: 'Figgle Media Team',
-    publishDate: '2025-01-15T09:00:00-05:00',
-    modifiedDate: '2025-01-15T09:00:00-05:00',
-    image: 'https://figglemedia.com/assets/blog/website-signs.jpg',
-    imageAlt: 'Modern roofing website on laptop showing lead generation form',
-    url: 'https://figglemedia.com/blog/10-signs-your-roofing-business-needs-new-website',
-    category: 'Web Design',
+    title: post.title,
+    description: post.excerpt,
+    keywords: post.keywords,
+    author: post.author,
+    publishDate: post.publishDate,
+    modifiedDate: post.modifiedDate,
+    image: `https://figglemedia.com${post.image.replace('.jpg', '.svg')}`,
+    imageAlt: post.imageAlt,
+    url: `https://figglemedia.com/blog/${post.slug}`,
+    category: post.category,
   };
 
   return (

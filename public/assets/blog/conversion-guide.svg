@@ -1,0 +1,65 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Geolocation: Parkersburg, WV (39.2667, -81.5615) -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:exif="http://ns.adobe.com/exif/1.0/">
+      <rdf:Description rdf:about=""
+        exif:GPSLatitude="39.2667"
+        exif:GPSLongitude="-81.5615"
+        exif:GPSAltitude="0"
+        exif:Location="Parkersburg, WV"/>
+    </rdf:Description>
+  </metadata>
+
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0C2340;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F3556;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad4)"/>
+
+  <!-- Funnel -->
+  <path d="M 300 120 L 900 120 L 750 350 L 450 350 Z" fill="#D2622A" opacity="0.3" stroke="#D2622A" stroke-width="3"/>
+  <path d="M 750 350 L 450 350 L 550 510 L 650 510 Z" fill="#D2622A" opacity="0.5" stroke="#D2622A" stroke-width="3"/>
+  <rect x="540" y="510" width="120" height="80" fill="#0D5C3B" stroke="#0D5C3B" stroke-width="3"/>
+
+  <!-- Labels -->
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#F5E6D3" text-anchor="middle">
+    Website Visitors
+  </text>
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#F5E6D3" text-anchor="middle">
+    Leads
+  </text>
+  <text x="600" y="565" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#fff" text-anchor="middle">
+    Customers
+  </text>
+
+  <!-- Numbers -->
+  <text x="200" y="170" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#F5E6D3">
+    1000
+  </text>
+  <text x="200" y="400" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#F5E6D3">
+    50
+  </text>
+  <text x="200" y="560" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#0D5C3B">
+    10
+  </text>
+
+  <!-- Arrow -->
+  <path d="M 950 200 L 950 500" stroke="#D2622A" stroke-width="6" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#D2622A"/>
+    </marker>
+  </defs>
+  <text x="970" y="360" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#D2622A">
+    Optimize
+  </text>
+
+  <!-- Title -->
+  <text x="600" y="70" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#F5E6D3" text-anchor="middle">
+    Conversion Optimization
+  </text>
+</svg>
