@@ -58,16 +58,16 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-cream">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+              <a href="https://www.facebook.com/people/Figgle-Media/61566383850893/" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+              <a href="https://x.com/FiggleMedia" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+              <a href="https://www.instagram.com/figglemedia/" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+              <a href="https://www.linkedin.com/in/trevor-alford-753435248/" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>

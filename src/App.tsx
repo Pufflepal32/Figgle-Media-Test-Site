@@ -11,6 +11,7 @@ import FreeWebsitePlanPage from './pages/FreeWebsitePlanPage';
 import PricingPage from './pages/PricingPage';
 import RaleighPage from './pages/RaleighPage';
 import ServiceLandingPage from './pages/ServiceLandingPage';
+import CityLandingPage from './pages/CityLandingPage';
 
 function App() {
   return (
@@ -31,6 +32,13 @@ function App() {
               <Route path="/our-process" element={<TestimonialsPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/raleigh-contractor-web-design" element={<RaleighPage />} />
+              <Route path="/charlotte-contractor-web-design" element={<CityLandingPage />} />
+              <Route path="/durham-contractor-web-design" element={<CityLandingPage />} />
+              <Route path="/greensboro-contractor-web-design" element={<CityLandingPage />} />
+              <Route path="/winston-salem-contractor-web-design" element={<CityLandingPage />} />
+              <Route path="/fayetteville-contractor-web-design" element={<CityLandingPage />} />
+              <Route path="/wilmington-contractor-web-design" element={<CityLandingPage />} />
+              <Route path="/asheville-contractor-web-design" element={<CityLandingPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
             </Routes>

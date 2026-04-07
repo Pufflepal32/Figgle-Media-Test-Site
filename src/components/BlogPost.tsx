@@ -161,7 +161,7 @@ export default function BlogPost() {
         <div className="mb-12 rounded-xl overflow-hidden shadow-2xl">
           <div className="relative h-96 bg-navy">
             <img
-              src={post.image.replace('.jpg', '.svg')}
+              src={post.image}
               alt={post.imageAlt}
               className="w-full h-full object-cover"
               itemProp="image"

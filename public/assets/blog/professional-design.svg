@@ -1,0 +1,54 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#1a2947"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="80" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="38" font-weight="bold">Why Hire a Pro Agency</text>
+  <text x="600" y="115" text-anchor="middle" fill="#FF6B2C" font-family="Arial, sans-serif" font-size="20">Professional design that drives results</text>
+
+  <!-- Website mockup center -->
+  <rect x="350" y="150" width="500" height="320" rx="10" fill="#1e3a5f" stroke="#F5EFE6" stroke-width="2"/>
+  <!-- Browser bar -->
+  <rect x="350" y="150" width="500" height="35" rx="10" fill="#0d1f3c"/>
+  <circle cx="375" cy="168" r="6" fill="#FF6B2C" opacity="0.6"/>
+  <circle cx="395" cy="168" r="6" fill="#F5EFE6" opacity="0.2"/>
+  <circle cx="415" cy="168" r="6" fill="#10B981" opacity="0.4"/>
+  <rect x="460" y="160" width="280" height="16" rx="8" fill="#1e3a5f"/>
+  <!-- Screen content -->
+  <rect x="365" y="195" width="470" height="100" rx="4" fill="#0d1f3c"/>
+  <text x="600" y="255" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="16" opacity="0.3">Clean, Modern Layout</text>
+  <rect x="365" y="305" width="225" height="70" rx="4" fill="#0d1f3c"/>
+  <rect x="600" y="305" width="235" height="70" rx="4" fill="#0d1f3c"/>
+  <rect x="365" y="385" width="470" height="30" rx="4" fill="#FF6B2C" opacity="0.2"/>
+  <rect x="365" y="425" width="470" height="30" rx="4" fill="#0d1f3c"/>
+
+  <!-- Checkmark badge top-right of mockup -->
+  <circle cx="870" cy="170" r="30" fill="#10B981"/>
+  <polyline points="855,170 866,182 888,158" fill="none" stroke="#F5EFE6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Paint palette on left -->
+  <circle cx="160" cy="300" r="60" fill="#1e3a5f" stroke="#F5EFE6" stroke-width="1.5"/>
+  <circle cx="140" cy="280" r="10" fill="#FF6B2C"/>
+  <circle cx="170" cy="270" r="10" fill="#10B981"/>
+  <circle cx="190" cy="290" r="10" fill="#F5EFE6" opacity="0.6"/>
+  <circle cx="145" cy="310" r="10" fill="#1a2947" stroke="#FF6B2C" stroke-width="1"/>
+  <circle cx="175" cy="320" r="10" fill="#3b82f6" opacity="0.6"/>
+  <text x="160" y="390" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="13" opacity="0.5">Design</text>
+
+  <!-- Ruler on right -->
+  <rect x="950" y="230" width="30" height="200" rx="3" fill="#1e3a5f" stroke="#FF6B2C" stroke-width="1.5"/>
+  <line x1="950" y1="260" x2="965" y2="260" stroke="#FF6B2C" stroke-width="1" opacity="0.5"/>
+  <line x1="950" y1="290" x2="970" y2="290" stroke="#FF6B2C" stroke-width="1" opacity="0.5"/>
+  <line x1="950" y1="320" x2="965" y2="320" stroke="#FF6B2C" stroke-width="1" opacity="0.5"/>
+  <line x1="950" y1="350" x2="970" y2="350" stroke="#FF6B2C" stroke-width="1" opacity="0.5"/>
+  <line x1="950" y1="380" x2="965" y2="380" stroke="#FF6B2C" stroke-width="1" opacity="0.5"/>
+  <line x1="950" y1="410" x2="970" y2="410" stroke="#FF6B2C" stroke-width="1" opacity="0.5"/>
+  <text x="965" y="460" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="13" opacity="0.5">Precision</text>
+
+  <text x="600" y="570" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="16" opacity="0.5">Figgle Media</text>
+</svg>

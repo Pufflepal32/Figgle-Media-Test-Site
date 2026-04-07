@@ -6,28 +6,28 @@ import { getCurrentMonthYear } from '../utils/useCurrentDate';
 const serviceData: Record<string, { title: string; headline: string; description: string; meta: string; benefits: string[] }> = {
   'contractor-web-design': {
     title: 'Contractor Web Design',
-    headline: 'Custom Websites Built for Construction Businesses',
+    headline: 'Stop Losing Leads to a Bad Website',
     description: 'We design and build high-converting websites exclusively for contractors. Mobile-first, fast-loading, and optimized to turn visitors into leads.',
     meta: 'Custom web design for construction businesses. Professional, mobile-optimized websites that generate leads. Built by Figgle Media.',
     benefits: ['Mobile-First Design', 'Built for Lead Generation', 'Fast Load Speeds'],
   },
   'seo-for-contractors': {
     title: 'SEO for Contractors',
-    headline: 'Dominate Local Search Results in Your Market',
+    headline: 'Get Found First When Clients Search for Contractors',
     description: 'Our local SEO strategies help construction businesses rank at the top of Google. We target the keywords clients actually search when they need a contractor.',
     meta: 'Local SEO services for construction businesses. Rank higher on Google and get found by clients in your area. Figgle Media.',
     benefits: ['Rank on Google Maps', 'Target Local Keywords', 'Monthly Reporting'],
   },
   'google-ads-management': {
     title: 'Google Ads Management',
-    headline: 'Get Immediate Leads With Google Ads',
+    headline: 'Fill Your Pipeline With Ready-to-Hire Clients',
     description: 'We manage Google Ads campaigns specifically for contractors. Every dollar is optimized to target clients who are ready to hire.',
     meta: 'Google Ads management for construction businesses. Get qualified leads fast with expertly managed PPC campaigns. Figgle Media.',
     benefits: ['Leads in Days, Not Months', 'ROI-Optimized Campaigns', 'Dedicated Ad Manager'],
   },
   'local-service-ads': {
     title: 'Local Service Ads',
-    headline: 'Show Up First With Google Local Service Ads',
+    headline: 'Be the First Contractor Clients See on Google',
     description: 'Local Service Ads put your construction business at the very top of Google search results with a Google Guaranteed badge. We handle setup and optimization.',
     meta: 'Google Local Service Ads management for contractors. Get the Google Guaranteed badge and top placement. Figgle Media.',
     benefits: ['Google Guaranteed Badge', 'Top of Search Results', 'Pay Per Lead Only'],

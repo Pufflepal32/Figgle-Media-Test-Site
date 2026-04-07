@@ -1,0 +1,55 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#1a2947"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="80" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="38" font-weight="bold">Content Marketing ROI</text>
+  <text x="600" y="115" text-anchor="middle" fill="#FF6B2C" font-family="Arial, sans-serif" font-size="20">Measure the impact of your content strategy</text>
+
+  <!-- Bar chart -->
+  <rect x="250" y="170" width="700" height="350" rx="8" fill="#1e3a5f" opacity="0.3"/>
+  <!-- Y axis -->
+  <line x1="310" y1="190" x2="310" y2="490" stroke="#F5EFE6" stroke-width="1" opacity="0.2"/>
+  <!-- X axis -->
+  <line x1="310" y1="490" x2="900" y2="490" stroke="#F5EFE6" stroke-width="1" opacity="0.2"/>
+  <!-- Grid lines -->
+  <line x1="310" y1="420" x2="900" y2="420" stroke="#F5EFE6" stroke-width="0.5" opacity="0.05"/>
+  <line x1="310" y1="350" x2="900" y2="350" stroke="#F5EFE6" stroke-width="0.5" opacity="0.05"/>
+  <line x1="310" y1="280" x2="900" y2="280" stroke="#F5EFE6" stroke-width="0.5" opacity="0.05"/>
+  <line x1="310" y1="210" x2="900" y2="210" stroke="#F5EFE6" stroke-width="0.5" opacity="0.05"/>
+
+  <!-- Bars trending upward -->
+  <rect x="350" y="430" width="60" height="60" rx="4" fill="#FF6B2C" opacity="0.5"/>
+  <rect x="440" y="390" width="60" height="100" rx="4" fill="#FF6B2C" opacity="0.6"/>
+  <rect x="530" y="340" width="60" height="150" rx="4" fill="#FF6B2C" opacity="0.7"/>
+  <rect x="620" y="280" width="60" height="210" rx="4" fill="#FF6B2C" opacity="0.8"/>
+  <rect x="710" y="230" width="60" height="260" rx="4" fill="#10B981" opacity="0.7"/>
+  <rect x="800" y="200" width="60" height="290" rx="4" fill="#10B981" opacity="0.9"/>
+
+  <!-- Month labels -->
+  <text x="380" y="510" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="11" opacity="0.4">Jan</text>
+  <text x="470" y="510" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="11" opacity="0.4">Feb</text>
+  <text x="560" y="510" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="11" opacity="0.4">Mar</text>
+  <text x="650" y="510" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="11" opacity="0.4">Apr</text>
+  <text x="740" y="510" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="11" opacity="0.4">May</text>
+  <text x="830" y="510" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="11" opacity="0.4">Jun</text>
+
+  <!-- Trend line -->
+  <polyline points="380,420 470,380 560,330 650,270 740,220 830,190" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-dasharray="6,4" opacity="0.4"/>
+
+  <!-- Dollar sign badge -->
+  <circle cx="1020" cy="240" r="45" fill="#10B981" opacity="0.2" stroke="#10B981" stroke-width="2"/>
+  <text x="1020" y="255" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="42" font-weight="bold">$</text>
+
+  <!-- Percentage badge -->
+  <circle cx="1020" cy="380" r="45" fill="#FF6B2C" opacity="0.2" stroke="#FF6B2C" stroke-width="2"/>
+  <text x="1020" y="390" text-anchor="middle" fill="#FF6B2C" font-family="Arial, sans-serif" font-size="24" font-weight="bold">300%</text>
+  <text x="1020" y="410" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="11" opacity="0.5">ROI</text>
+
+  <text x="600" y="580" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="16" opacity="0.5">Figgle Media</text>
+</svg>

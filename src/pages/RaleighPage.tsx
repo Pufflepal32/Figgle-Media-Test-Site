@@ -126,8 +126,11 @@ export default function RaleighPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Best Web Design Agency in Raleigh{' '}
-                <span className="text-burnt-orange">{getCurrentMonthYear()}</span>
+                Raleigh Contractors Are{' '}
+                <span className="text-burnt-orange">Booking More Jobs</span> With Us
+                <span className="block text-xl sm:text-2xl font-semibold text-cream/80 mt-3">
+                  #1 Rated Contractor Web Design in Raleigh — {getCurrentMonthYear()}
+                </span>
               </h1>
 
               <p className="text-lg sm:text-xl text-cream leading-relaxed">
@@ -161,7 +164,18 @@ export default function RaleighPage() {
 
             {/* Right Column - Lead Form */}
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-light-gray">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-light-gray">
+                {/* City Photo */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="/assets/cities/raleigh.jpg"
+                    alt="Raleigh NC skyline - contractor web design services"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent"></div>
+                </div>
+
+                <div className="p-8 -mt-8 relative">
                 <div className="text-center mb-6">
                   <h2 className="text-2xl font-bold text-charcoal mb-2">
                     Get Your Free Raleigh Market Analysis
@@ -242,6 +256,7 @@ export default function RaleighPage() {
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
           </div>

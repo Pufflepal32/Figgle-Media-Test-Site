@@ -1,65 +1,55 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
-  <!-- Geolocation: Parkersburg, WV (39.2667, -81.5615) -->
-  <metadata>
-    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-             xmlns:exif="http://ns.adobe.com/exif/1.0/">
-      <rdf:Description rdf:about=""
-        exif:GPSLatitude="39.2667"
-        exif:GPSLongitude="-81.5615"
-        exif:GPSAltitude="0"
-        exif:Location="Parkersburg, WV"/>
-    </rdf:Description>
-  </metadata>
-
   <defs>
-    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0C2340;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0F3556;stop-opacity:1" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#1a2947"/>
+    </linearGradient>
+    <linearGradient id="funnel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B2C" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.8"/>
     </linearGradient>
   </defs>
-
-  <rect width="1200" height="630" fill="url(#bgGrad4)"/>
-
-  <!-- Funnel -->
-  <path d="M 300 120 L 900 120 L 750 350 L 450 350 Z" fill="#D2622A" opacity="0.3" stroke="#D2622A" stroke-width="3"/>
-  <path d="M 750 350 L 450 350 L 550 510 L 650 510 Z" fill="#D2622A" opacity="0.5" stroke="#D2622A" stroke-width="3"/>
-  <rect x="540" y="510" width="120" height="80" fill="#0D5C3B" stroke="#0D5C3B" stroke-width="3"/>
-
-  <!-- Labels -->
-  <text x="600" y="200" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#F5E6D3" text-anchor="middle">
-    Website Visitors
-  </text>
-  <text x="600" y="420" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#F5E6D3" text-anchor="middle">
-    Leads
-  </text>
-  <text x="600" y="565" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#fff" text-anchor="middle">
-    Customers
-  </text>
-
-  <!-- Numbers -->
-  <text x="200" y="170" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#F5E6D3">
-    1000
-  </text>
-  <text x="200" y="400" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#F5E6D3">
-    50
-  </text>
-  <text x="200" y="560" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#0D5C3B">
-    10
-  </text>
-
-  <!-- Arrow -->
-  <path d="M 950 200 L 950 500" stroke="#D2622A" stroke-width="6" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#D2622A"/>
-    </marker>
-  </defs>
-  <text x="970" y="360" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#D2622A">
-    Optimize
-  </text>
+  <rect width="1200" height="630" fill="url(#bg)"/>
 
   <!-- Title -->
-  <text x="600" y="70" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#F5E6D3" text-anchor="middle">
-    Conversion Optimization
-  </text>
+  <text x="600" y="80" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="38" font-weight="bold">Converting Visitors Into Leads</text>
+  <text x="600" y="115" text-anchor="middle" fill="#FF6B2C" font-family="Arial, sans-serif" font-size="20">Your complete conversion guide</text>
+
+  <!-- Funnel shape -->
+  <polygon points="400,160 800,160 720,300 680,400 650,480 550,480 520,400 480,300" fill="none" stroke="url(#funnel)" stroke-width="3"/>
+  <polygon points="405,165 795,165 755,230 445,230" fill="#FF6B2C" opacity="0.15"/>
+  <polygon points="445,230 755,230 720,300 480,300" fill="#FF6B2C" opacity="0.2"/>
+  <polygon points="480,300 720,300 680,400 520,400" fill="#10B981" opacity="0.2"/>
+  <polygon points="520,400 680,400 650,475 550,475" fill="#10B981" opacity="0.3"/>
+
+  <!-- Labels -->
+  <text x="600" y="205" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="18" font-weight="bold">VISITORS</text>
+  <text x="600" y="275" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="16">Interest</text>
+  <text x="600" y="360" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="16">Engagement</text>
+  <text x="600" y="455" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="18" font-weight="bold">LEADS</text>
+
+  <!-- Visitor icons -->
+  <circle cx="440" cy="145" r="8" fill="#F5EFE6" opacity="0.3"/>
+  <circle cx="470" cy="140" r="8" fill="#F5EFE6" opacity="0.3"/>
+  <circle cx="500" cy="145" r="8" fill="#F5EFE6" opacity="0.3"/>
+  <circle cx="600" cy="138" r="8" fill="#F5EFE6" opacity="0.3"/>
+  <circle cx="700" cy="145" r="8" fill="#F5EFE6" opacity="0.3"/>
+  <circle cx="730" cy="140" r="8" fill="#F5EFE6" opacity="0.3"/>
+  <circle cx="760" cy="145" r="8" fill="#F5EFE6" opacity="0.3"/>
+  <circle cx="530" cy="138" r="8" fill="#F5EFE6" opacity="0.3"/>
+  <circle cx="630" cy="143" r="8" fill="#F5EFE6" opacity="0.3"/>
+  <circle cx="670" cy="138" r="8" fill="#F5EFE6" opacity="0.3"/>
+
+  <!-- Arrow below funnel -->
+  <line x1="600" y1="485" x2="600" y2="530" stroke="#10B981" stroke-width="3"/>
+  <polygon points="585,525 600,545 615,525" fill="#10B981"/>
+
+  <!-- Side stats -->
+  <text x="200" y="260" text-anchor="middle" fill="#FF6B2C" font-family="Arial, sans-serif" font-size="36" font-weight="bold">1000</text>
+  <text x="200" y="285" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="14" opacity="0.5">visitors</text>
+
+  <text x="980" y="420" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="36" font-weight="bold">50</text>
+  <text x="980" y="445" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="14" opacity="0.5">qualified leads</text>
+
+  <text x="600" y="610" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="16" opacity="0.5">Figgle Media</text>
 </svg>

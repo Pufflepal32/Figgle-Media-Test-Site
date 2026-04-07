@@ -19,7 +19,7 @@ export default function BlogPostPage() {
     author: post.author,
     publishDate: post.publishDate,
     modifiedDate: post.modifiedDate,
-    image: `https://figglemedia.com${post.image.replace('.jpg', '.svg')}`,
+    image: `https://figglemedia.com${post.image}`,
     imageAlt: post.imageAlt,
     url: `https://figglemedia.com/blog/${post.slug}`,
     category: post.category,

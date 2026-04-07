@@ -5,8 +5,11 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isLocationsOpen, setIsLocationsOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileLocationsOpen, setIsMobileLocationsOpen] = useState(false);
   const servicesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const locationsTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const serviceLinks = [
     { label: 'Contractor Web Design', href: '/services/contractor-web-design' },
@@ -15,10 +18,22 @@ export default function Header() {
     { label: 'Local Service Ads', href: '/services/local-service-ads' },
   ];
 
+  const locationLinks = [
+    { label: 'Raleigh', href: '/raleigh-contractor-web-design' },
+    { label: 'Charlotte', href: '/charlotte-contractor-web-design' },
+    { label: 'Durham', href: '/durham-contractor-web-design' },
+    { label: 'Greensboro', href: '/greensboro-contractor-web-design' },
+    { label: 'Winston-Salem', href: '/winston-salem-contractor-web-design' },
+    { label: 'Fayetteville', href: '/fayetteville-contractor-web-design' },
+    { label: 'Wilmington', href: '/wilmington-contractor-web-design' },
+    { label: 'Asheville', href: '/asheville-contractor-web-design' },
+  ];
+
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Services', href: '/services' },
+    { label: 'Locations', href: '#' },
     { label: 'Our Process', href: '/our-process' },
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
@@ -33,13 +48,13 @@ export default function Header() {
             <img
               src="/assets/logo.png"
               alt="Figgle Media Logo"
-              className="h-14 w-14 object-cover rounded-full transition-transform duration-300 group-hover:scale-110"
+              className="h-12 w-12 object-cover rounded-full transition-transform duration-300 group-hover:scale-110"
             />
-            <div className="flex flex-col leading-normal">
-              <span className="text-3xl font-semibold text-cream group-hover:text-burnt-orange transition-colors duration-300">
+            <div className="flex flex-col items-center leading-none" style={{ fontFamily: "'Josefin Sans', sans-serif" }}>
+              <span className="text-[28px] font-bold tracking-[0.04em] text-cream group-hover:text-burnt-orange transition-colors duration-300 uppercase">
                 Figgle
               </span>
-              <span className="text-lg font-medium text-cream group-hover:text-burnt-orange transition-colors duration-300">
+              <span className="text-[13px] font-normal tracking-[0.35em] text-cream group-hover:text-burnt-orange transition-colors duration-300 uppercase">
                 Media
               </span>
             </div>
@@ -75,6 +90,39 @@ export default function Header() {
                           to={sub.href}
                           className="block px-4 py-2 text-cream hover:text-burnt-orange hover:bg-white/5 transition-colors text-sm"
                           onClick={() => setIsServicesOpen(false)}
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : link.label === 'Locations' ? (
+                <div
+                  key={link.label}
+                  className="relative"
+                  onMouseEnter={() => {
+                    if (locationsTimeoutRef.current) clearTimeout(locationsTimeoutRef.current);
+                    setIsLocationsOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    locationsTimeoutRef.current = setTimeout(() => setIsLocationsOpen(false), 150);
+                  }}
+                >
+                  <button
+                    className="text-cream hover:text-burnt-orange transition-colors font-medium flex items-center gap-1"
+                  >
+                    Locations
+                    <ChevronDown size={16} className={`transition-transform duration-200 ${isLocationsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isLocationsOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-navy rounded-lg shadow-xl border border-white/10 py-2">
+                      {locationLinks.map((sub) => (
+                        <Link
+                          key={sub.label}
+                          to={sub.href}
+                          className="block px-4 py-2 text-cream hover:text-burnt-orange hover:bg-white/5 transition-colors text-sm"
+                          onClick={() => setIsLocationsOpen(false)}
                         >
                           {sub.label}
                         </Link>
@@ -144,6 +192,30 @@ export default function Header() {
                         All Services
                       </Link>
                       {serviceLinks.map((sub) => (
+                        <Link
+                          key={sub.label}
+                          to={sub.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="text-cream hover:text-burnt-orange transition-colors text-sm py-1"
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : link.label === 'Locations' ? (
+                <div key={link.label}>
+                  <button
+                    onClick={() => setIsMobileLocationsOpen(!isMobileLocationsOpen)}
+                    className="text-cream hover:text-burnt-orange transition-colors font-medium py-2 flex items-center gap-1 w-full"
+                  >
+                    Locations
+                    <ChevronDown size={16} className={`transition-transform duration-200 ${isMobileLocationsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isMobileLocationsOpen && (
+                    <div className="pl-4 flex flex-col space-y-2 mt-1">
+                      {locationLinks.map((sub) => (
                         <Link
                           key={sub.label}
                           to={sub.href}

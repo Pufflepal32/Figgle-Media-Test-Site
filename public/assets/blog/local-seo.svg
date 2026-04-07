@@ -1,52 +1,49 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
-  <!-- Geolocation: Huntington, WV (38.4192, -82.4452) -->
-  <metadata>
-    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-             xmlns:exif="http://ns.adobe.com/exif/1.0/">
-      <rdf:Description rdf:about=""
-        exif:GPSLatitude="38.4192"
-        exif:GPSLongitude="-82.4452"
-        exif:GPSAltitude="0"
-        exif:Location="Huntington, WV"/>
-    </rdf:Description>
-  </metadata>
-
   <defs>
-    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0C2340;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0F3556;stop-opacity:1" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#1a2947"/>
     </linearGradient>
   </defs>
-
-  <rect width="1200" height="630" fill="url(#bgGrad2)"/>
-
-  <!-- Map Pin -->
-  <ellipse cx="600" cy="450" rx="180" ry="30" fill="#000" opacity="0.2"/>
-  <path d="M 600 200 L 600 420" stroke="#D2622A" stroke-width="8" opacity="0.3"/>
-  <circle cx="600" cy="200" r="80" fill="#D2622A"/>
-  <circle cx="600" cy="200" r="50" fill="#fff"/>
-  <circle cx="600" cy="200" r="25" fill="#D2622A"/>
-
-  <!-- Google Logo Style Elements -->
-  <circle cx="350" cy="150" r="40" fill="#4285F4" opacity="0.3"/>
-  <circle cx="850" cy="180" r="35" fill="#EA4335" opacity="0.3"/>
-  <circle cx="300" cy="480" r="45" fill="#FBBC04" opacity="0.3"/>
-  <circle cx="900" cy="450" r="38" fill="#34A853" opacity="0.3"/>
-
-  <!-- Search Bar -->
-  <rect x="300" y="480" width="600" height="70" rx="35" fill="#fff"/>
-  <circle cx="360" cy="515" r="20" fill="#D2622A" opacity="0.3"/>
-  <circle cx="360" cy="515" r="15" stroke="#D2622A" stroke-width="3" fill="none"/>
-  <line x1="372" y1="527" x2="385" y2="540" stroke="#D2622A" stroke-width="3"/>
-  <text x="410" y="525" font-family="Arial, sans-serif" font-size="24" fill="#666">
-    roofer near me
-  </text>
+  <rect width="1200" height="630" fill="url(#bg)"/>
 
   <!-- Title -->
-  <text x="600" y="90" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#F5E6D3" text-anchor="middle">
-    Local SEO for Roofers
-  </text>
-  <text x="600" y="590" font-family="Arial, sans-serif" font-size="28" fill="#D2622A" text-anchor="middle">
-    Dominate Your Market
-  </text>
+  <text x="600" y="80" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="38" font-weight="bold">Local SEO for Contractors</text>
+  <text x="600" y="115" text-anchor="middle" fill="#FF6B2C" font-family="Arial, sans-serif" font-size="20">Get found by customers near you</text>
+
+  <!-- Large map pin center -->
+  <path d="M600,180 C560,180 530,215 530,255 C530,310 600,400 600,400 C600,400 670,310 670,255 C670,215 640,180 600,180 Z" fill="none" stroke="#FF6B2C" stroke-width="3"/>
+  <circle cx="600" cy="255" r="25" fill="#FF6B2C" opacity="0.3"/>
+  <circle cx="600" cy="255" r="12" fill="#FF6B2C"/>
+
+  <!-- Magnifying glass -->
+  <circle cx="680" cy="220" r="45" fill="none" stroke="#F5EFE6" stroke-width="3"/>
+  <line x1="712" y1="252" x2="745" y2="285" stroke="#F5EFE6" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Search bar -->
+  <rect x="350" y="430" width="500" height="50" rx="25" fill="#1e3a5f" stroke="#F5EFE6" stroke-width="1.5"/>
+  <circle cx="385" cy="455" r="12" fill="none" stroke="#FF6B2C" stroke-width="2"/>
+  <line x1="393" y1="463" x2="403" y2="473" stroke="#FF6B2C" stroke-width="2"/>
+  <text x="420" y="461" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="16" opacity="0.6">contractors near me...</text>
+
+  <!-- Small location markers -->
+  <path d="M250,300 C238,300 228,312 228,325 C228,345 250,370 250,370 C250,370 272,345 272,325 C272,312 262,300 250,300 Z" fill="#10B981" opacity="0.5"/>
+  <circle cx="250" cy="325" r="6" fill="#10B981" opacity="0.8"/>
+
+  <path d="M900,280 C888,280 878,292 878,305 C878,325 900,350 900,350 C900,350 922,325 922,305 C922,292 912,280 900,280 Z" fill="#10B981" opacity="0.5"/>
+  <circle cx="900" cy="305" r="6" fill="#10B981" opacity="0.8"/>
+
+  <path d="M180,400 C172,400 165,408 165,418 C165,432 180,450 180,450 C180,450 195,432 195,418 C195,408 188,400 180,400 Z" fill="#FF6B2C" opacity="0.3"/>
+  <circle cx="180" cy="418" r="4" fill="#FF6B2C" opacity="0.5"/>
+
+  <path d="M1000,380 C992,380 985,388 985,398 C985,412 1000,430 1000,430 C1000,430 1015,412 1015,398 C1015,388 1008,380 1000,380 Z" fill="#FF6B2C" opacity="0.3"/>
+  <circle cx="1000" cy="398" r="4" fill="#FF6B2C" opacity="0.5"/>
+
+  <!-- Grid lines for map feel -->
+  <line x1="100" y1="250" x2="1100" y2="250" stroke="#F5EFE6" stroke-width="0.5" opacity="0.05"/>
+  <line x1="100" y1="350" x2="1100" y2="350" stroke="#F5EFE6" stroke-width="0.5" opacity="0.05"/>
+  <line x1="400" y1="150" x2="400" y2="500" stroke="#F5EFE6" stroke-width="0.5" opacity="0.05"/>
+  <line x1="800" y1="150" x2="800" y2="500" stroke="#F5EFE6" stroke-width="0.5" opacity="0.05"/>
+
+  <text x="600" y="570" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="16" opacity="0.5">Figgle Media</text>
 </svg>

@@ -1,84 +1,51 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
-  <!-- Geolocation: Morgantown, WV (39.6295, -79.9559) -->
-  <metadata>
-    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-             xmlns:exif="http://ns.adobe.com/exif/1.0/">
-      <rdf:Description rdf:about=""
-        exif:GPSLatitude="39.6295"
-        exif:GPSLongitude="-79.9559"
-        exif:GPSAltitude="0"
-        exif:Location="Morgantown, WV"/>
-    </rdf:Description>
-  </metadata>
-
   <defs>
-    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0C2340;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#1a2947"/>
     </linearGradient>
   </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
 
-  <rect width="1200" height="630" fill="url(#bgGrad3)"/>
+  <!-- Title -->
+  <text x="600" y="80" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="38" font-weight="bold">Google Ads vs Local Service Ads</text>
+  <text x="600" y="115" text-anchor="middle" fill="#FF6B2C" font-family="Arial, sans-serif" font-size="20">Which advertising strategy wins?</text>
 
-  <!-- Split Screen Design -->
-  <line x1="600" y1="150" x2="600" y2="530" stroke="#F5E6D3" stroke-width="3" opacity="0.3"/>
-  <text x="600" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#F5E6D3" text-anchor="middle">VS</text>
+  <!-- Left ad mockup -->
+  <rect x="120" y="160" width="400" height="340" rx="12" fill="#1e3a5f" stroke="#F5EFE6" stroke-width="1.5"/>
+  <rect x="140" y="180" width="100" height="28" rx="4" fill="#FF6B2C" opacity="0.8"/>
+  <text x="190" y="200" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Ad</text>
+  <text x="140" y="235" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Google Ads</text>
+  <rect x="140" y="255" width="360" height="12" rx="3" fill="#F5EFE6" opacity="0.15"/>
+  <rect x="140" y="280" width="300" height="12" rx="3" fill="#F5EFE6" opacity="0.1"/>
+  <rect x="140" y="305" width="340" height="12" rx="3" fill="#F5EFE6" opacity="0.1"/>
+  <!-- Dollar sign -->
+  <text x="200" y="400" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="48" font-weight="bold">$</text>
+  <!-- Click icon -->
+  <circle cx="350" cy="390" r="20" fill="none" stroke="#FF6B2C" stroke-width="2"/>
+  <path d="M345,380 L345,395 L355,390 Z" fill="#FF6B2C"/>
+  <text x="350" y="430" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="12" opacity="0.6">Pay Per Click</text>
 
-  <!-- Left Side - Google Ads -->
-  <text x="300" y="120" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#4285F4" text-anchor="middle">
-    Google Ads
-  </text>
+  <!-- VS divider -->
+  <circle cx="600" cy="330" r="35" fill="#FF6B2C"/>
+  <text x="600" y="340" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="24" font-weight="bold">VS</text>
+  <line x1="600" y1="160" x2="600" y2="290" stroke="#FF6B2C" stroke-width="2" opacity="0.3"/>
+  <line x1="600" y1="370" x2="600" y2="500" stroke="#FF6B2C" stroke-width="2" opacity="0.3"/>
 
-  <!-- Ad Preview -->
-  <rect x="100" y="250" width="400" height="120" rx="8" fill="#fff" opacity="0.9"/>
-  <text x="120" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a0dab">
-    Best Roofing Company | Call Now
-  </text>
-  <rect x="120" y="290" width="50" height="18" rx="3" fill="#0D5C3B"/>
-  <text x="145" y="303" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Ad</text>
-  <text x="120" y="320" font-family="Arial, sans-serif" font-size="14" fill="#545454">
-    www.roofingcompany.com
-  </text>
-  <text x="120" y="345" font-family="Arial, sans-serif" font-size="13" fill="#545454">
-    Expert roofing services. Free estimates.
-  </text>
+  <!-- Right ad mockup -->
+  <rect x="680" y="160" width="400" height="340" rx="12" fill="#1e3a5f" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="700" y="180" width="140" height="28" rx="4" fill="#10B981" opacity="0.8"/>
+  <text x="770" y="200" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Guaranteed</text>
+  <text x="700" y="235" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Local Service Ads</text>
+  <rect x="700" y="255" width="360" height="12" rx="3" fill="#F5EFE6" opacity="0.15"/>
+  <rect x="700" y="280" width="300" height="12" rx="3" fill="#F5EFE6" opacity="0.1"/>
+  <rect x="700" y="305" width="340" height="12" rx="3" fill="#F5EFE6" opacity="0.1"/>
+  <!-- Dollar sign -->
+  <text x="760" y="400" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="48" font-weight="bold">$</text>
+  <!-- Lead icon -->
+  <circle cx="910" cy="385" r="10" fill="#10B981" opacity="0.5"/>
+  <rect x="896" y="398" width="28" height="14" rx="7" fill="#10B981" opacity="0.5"/>
+  <text x="910" y="430" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="12" opacity="0.6">Pay Per Lead</text>
 
-  <!-- PPC Icon -->
-  <rect x="200" y="400" width="200" height="60" rx="8" fill="#D2622A"/>
-  <text x="300" y="435" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">
-    Pay Per Click
-  </text>
-
-  <!-- Right Side - LSA -->
-  <text x="900" y="120" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#0D5C3B" text-anchor="middle">
-    Local Service Ads
-  </text>
-
-  <!-- LSA Preview -->
-  <rect x="700" y="250" width="400" height="140" rx="8" fill="#fff" opacity="0.9"/>
-  <rect x="720" y="270" width="120" height="25" rx="4" fill="#0D5C3B"/>
-  <text x="780" y="288" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">
-    Google Guaranteed
-  </text>
-
-  <text x="720" y="320" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1a0dab">
-    ABC Roofing Co.
-  </text>
-  <text x="720" y="345" font-family="Arial, sans-serif" font-size="14" fill="#545454">
-    ⭐⭐⭐⭐⭐ 4.9 (127 reviews)
-  </text>
-  <text x="720" y="370" font-family="Arial, sans-serif" font-size="13" fill="#545454">
-    Serving Morgantown, WV
-  </text>
-
-  <!-- Pay Per Lead Icon -->
-  <rect x="800" y="400" width="200" height="60" rx="8" fill="#0D5C3B"/>
-  <text x="900" y="435" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">
-    Pay Per Lead
-  </text>
-
-  <!-- Bottom Title -->
-  <text x="600" y="580" font-family="Arial, sans-serif" font-size="28" fill="#D2622A" text-anchor="middle">
-    Which is Right for Your Business?
-  </text>
+  <text x="600" y="570" text-anchor="middle" fill="#F5EFE6" font-family="Arial, sans-serif" font-size="16" opacity="0.5">Figgle Media</text>
 </svg>

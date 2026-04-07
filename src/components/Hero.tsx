@@ -36,9 +36,12 @@ export default function Hero() {
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Best Contractor Web Design Agency{' '}
+              Websites That Turn Clicks Into{' '}
               <span className="text-burnt-orange">
-                {getCurrentMonthYear()}
+                Booked Jobs
+              </span>
+              <span className="block text-xl sm:text-2xl font-semibold text-cream/80 mt-3">
+                Trusted by Contractors Nationwide — {getCurrentMonthYear()}
               </span>
             </h1>
 
