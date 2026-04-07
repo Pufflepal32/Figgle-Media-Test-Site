@@ -13,7 +13,7 @@ export default function TestimonialsPreview() {
     {
       name: 'Sarah Mitchell',
       company: 'Elite Roofing Solutions',
-      location: 'Nashville, TN',
+      location: 'Raleigh, NC',
       rating: 5,
       text: 'The team at Figgle Media understands the roofing industry. Our new website looks professional and we\'re getting way more calls from homeowners.',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop',

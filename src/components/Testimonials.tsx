@@ -12,7 +12,7 @@ export default function Testimonials() {
     {
       name: 'Sarah Williams',
       company: 'Blue Ridge Roofing',
-      location: 'Nashville, TN',
+      location: 'Raleigh, NC',
       rating: 5,
       text: 'Best investment we made for our roofing business. The team knows the roofing industry inside and out. Our phone has not stopped ringing since the new site launched.',
     },

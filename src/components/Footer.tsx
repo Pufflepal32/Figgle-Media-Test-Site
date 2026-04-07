@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'luc
 export default function Footer() {
   const serviceAreas = [
     'Raleigh, NC',
-    'Nashville, TN',
-    'Morgantown, WV',
+    'Charlotte, NC',
+    'Durham, NC',
     'Charleston, WV',
   ];
 
@@ -39,7 +39,7 @@ export default function Footer() {
               </a>
               <div className="flex items-start text-gray-300">
                 <MapPin size={18} className="mr-2 mt-1 flex-shrink-0" />
-                <span>123 Main Street<br />Charleston, WV 25301</span>
+                <span>Raleigh, NC</span>
               </div>
             </div>
           </div>

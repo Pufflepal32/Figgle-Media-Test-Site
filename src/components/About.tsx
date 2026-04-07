@@ -13,7 +13,7 @@ export default function About() {
               We started Figgle Media with one mission: help local roofers stand out online with websites that actually bring results.
             </p>
             <p className="text-lg text-cream mb-8 leading-relaxed">
-              Founded by Michael Burgess and Trevor, we've spent years working exclusively with roofing contractors across West Virginia and Tennessee. We understand the unique challenges you face and know exactly what it takes to turn your website into a lead-generating machine.
+              Founded by Michael Burgess and Trevor, we've spent years working exclusively with roofing contractors across North Carolina and West Virginia. We understand the unique challenges you face and know exactly what it takes to turn your website into a lead-generating machine.
             </p>
 
             <div className="space-y-4">

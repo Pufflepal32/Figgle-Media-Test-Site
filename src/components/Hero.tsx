@@ -43,7 +43,7 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl text-cream leading-relaxed">
-              Custom-built websites that turn visitors into customers. We specialize in helping roofers in West Virginia and Tennessee dominate their local markets.
+              Custom-built websites that turn visitors into customers. We specialize in helping roofers in North Carolina and West Virginia dominate their local markets.
             </p>
 
             {/* Benefits */}

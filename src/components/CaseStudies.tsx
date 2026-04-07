@@ -11,8 +11,8 @@ export default function CaseStudies() {
       bg: 'bg-dark-green',
     },
     {
-      company: 'Tennessee Roof Pros',
-      location: 'Nashville, TN',
+      company: 'Carolina Roof Pros',
+      location: 'Raleigh, NC',
       metric: '+147',
       description: 'More qualified leads per month',
       icon: Users,

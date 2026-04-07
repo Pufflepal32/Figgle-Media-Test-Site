@@ -2,26 +2,26 @@ import { MapPin, CheckCircle, Phone } from 'lucide-react';
 
 export default function MapEmbed() {
   const serviceAreas = [
+    { city: 'Raleigh', state: 'NC' },
+    { city: 'Charlotte', state: 'NC' },
+    { city: 'Durham', state: 'NC' },
+    { city: 'Greensboro', state: 'NC' },
+    { city: 'Wilmington', state: 'NC' },
     { city: 'Charleston', state: 'WV' },
     { city: 'Huntington', state: 'WV' },
     { city: 'Morgantown', state: 'WV' },
     { city: 'Parkersburg', state: 'WV' },
-    { city: 'Wheeling', state: 'WV' },
-    { city: 'Nashville', state: 'TN' },
-    { city: 'Memphis', state: 'TN' },
-    { city: 'Knoxville', state: 'TN' },
-    { city: 'Chattanooga', state: 'TN' },
   ];
 
-  // Map centered on the region between Tennessee and West Virginia
-  const mapUrl = 'https://www.google.com/maps?q=Tennessee+West+Virginia&output=embed&z=7';
+  // Map centered on the region between North Carolina and West Virginia
+  const mapUrl = 'https://www.google.com/maps?q=North+Carolina+West+Virginia&output=embed&z=6';
 
   return (
     <section className="py-16 bg-gradient-to-br from-navy-blue via-navy to-light-navy">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Most Future Proof Web Design Agency in Tennessee and West Virginia
+            Most Future Proof Web Design Agency in North Carolina and West Virginia
           </h2>
           <p className="text-xl text-cream max-w-3xl mx-auto">
             Proudly serving roofing contractors across both states with cutting-edge websites that drive results.
@@ -52,7 +52,7 @@ export default function MapEmbed() {
               </div>
 
               <p className="text-cream text-sm italic">
-                And surrounding areas throughout Tennessee and West Virginia
+                And surrounding areas throughout North Carolina and West Virginia
               </p>
             </div>
 
@@ -66,7 +66,7 @@ export default function MapEmbed() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle size={20} className="flex-shrink-0 mt-1" />
-                  <p>Local market expertise in TN & WV</p>
+                  <p>Local market expertise in NC & WV</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle size={20} className="flex-shrink-0 mt-1" />
@@ -99,7 +99,7 @@ export default function MapEmbed() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Service Areas Map - Tennessee and West Virginia"
+                  title="Service Areas Map - North Carolina and West Virginia"
                 ></iframe>
               </div>
             </div>
