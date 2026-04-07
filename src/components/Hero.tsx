@@ -30,12 +30,12 @@ export default function Hero() {
             {/* Trust Badge */}
             <div className="inline-flex items-center gap-2 bg-white/20 border border-white/30 rounded-full px-4 py-2">
               <Star className="text-burnt-orange fill-burnt-orange" size={16} />
-              <span className="text-sm font-semibold text-white">Trusted by 100+ Roofers</span>
+              <span className="text-sm font-semibold text-white">Built for Construction Businesses</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Get More Roofing Leads With a{' '}
+              Get More Leads With a{' '}
               <span className="text-burnt-orange">
                 Website That Works
               </span>
@@ -43,13 +43,13 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl text-cream leading-relaxed">
-              Custom-built websites that turn visitors into customers. We specialize in helping roofers in North Carolina and West Virginia dominate their local markets.
+              Custom-built websites that turn visitors into customers. We specialize in helping construction businesses in North Carolina and West Virginia dominate their local markets.
             </p>
 
             {/* Benefits */}
             <div className="space-y-3">
               {[
-                'Get found on Google by homeowners searching for roofers',
+                'Get found on Google by clients searching for contractors',
                 'Convert more visitors into qualified leads',
                 'Professional design that builds trust instantly',
               ].map((benefit, index) => (
@@ -82,7 +82,7 @@ export default function Hero() {
                   Get Your Free Website Plan
                 </h3>
                 <p className="text-warm-gray">
-                  See how we can help you get more roofing leads
+                  See how we can help you get more leads
                 </p>
               </div>
 

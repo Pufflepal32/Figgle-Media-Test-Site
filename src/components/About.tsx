@@ -7,13 +7,13 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Built by Marketers Who Understand Roofing
+              Built by Marketers Who Understand Construction
             </h2>
             <p className="text-xl text-cream mb-6 leading-relaxed">
-              We started Figgle Media with one mission: help local roofers stand out online with websites that actually bring results.
+              We started Figgle Media with one mission: help local contractors stand out online with websites that actually bring results.
             </p>
             <p className="text-lg text-cream mb-8 leading-relaxed">
-              Founded by Michael Burgess and Trevor, we've spent years working exclusively with roofing contractors across North Carolina and West Virginia. We understand the unique challenges you face and know exactly what it takes to turn your website into a lead-generating machine.
+              Founded by Michael Burgess and Trevor, we've spent years working exclusively with construction businesses across North Carolina and West Virginia. We understand the unique challenges you face and know exactly what it takes to turn your website into a lead-generating machine.
             </p>
 
             <div className="space-y-4">
@@ -26,7 +26,7 @@ export default function About() {
                     Industry Expertise
                   </h3>
                   <p className="text-cream">
-                    We only work with roofers, so we know your business inside and out.
+                    We only work with contractors, so we know your business inside and out.
                   </p>
                 </div>
               </div>
@@ -70,8 +70,8 @@ export default function About() {
               />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-burnt-orange p-6 rounded-lg shadow-xl max-w-xs">
-              <p className="text-2xl font-bold text-white mb-2">50+</p>
-              <p className="text-white">Roofing businesses transformed</p>
+              <p className="text-2xl font-bold text-white mb-2">90-Day</p>
+              <p className="text-white">Performance guarantee</p>
             </div>
           </div>
         </div>

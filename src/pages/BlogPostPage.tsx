@@ -95,10 +95,10 @@ export default function BlogPostPage() {
             "keywords": postMeta.keywords,
             "inLanguage": "en-US",
             "wordCount": 1500,
-            "articleBody": "Your website is often the first impression potential customers have of your roofing business. If it's outdated, slow, or hard to navigate, you're losing leads to competitors every single day.",
+            "articleBody": "Your website is often the first impression potential customers have of your construction business. If it's outdated, slow, or hard to navigate, you're losing leads to competitors every single day.",
             "about": {
               "@type": "Thing",
-              "name": "Roofing Website Design"
+              "name": "Contractor Website Design"
             }
           })}
         </script>

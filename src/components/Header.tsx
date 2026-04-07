@@ -1,15 +1,25 @@
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const servicesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const serviceLinks = [
+    { label: 'Contractor Web Design', href: '/services/contractor-web-design' },
+    { label: 'SEO for Contractors', href: '/services/seo-for-contractors' },
+    { label: 'Google Ads Management', href: '/services/google-ads-management' },
+    { label: 'Local Service Ads', href: '/services/local-service-ads' },
+  ];
 
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Services', href: '/services' },
-    { label: 'Testimonials', href: '/testimonials' },
+    { label: 'Our Process', href: '/our-process' },
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
   ];
@@ -37,15 +47,51 @@ export default function Header() {
 
           {/* Nav links in the center */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                to={link.href}
-                className="text-cream hover:text-burnt-orange transition-colors font-medium"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.label === 'Services' ? (
+                <div
+                  key={link.label}
+                  className="relative"
+                  onMouseEnter={() => {
+                    if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+                    setIsServicesOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    servicesTimeoutRef.current = setTimeout(() => setIsServicesOpen(false), 150);
+                  }}
+                >
+                  <Link
+                    to={link.href}
+                    className="text-cream hover:text-burnt-orange transition-colors font-medium flex items-center gap-1"
+                  >
+                    {link.label}
+                    <ChevronDown size={16} className={`transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                  </Link>
+                  {isServicesOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-navy rounded-lg shadow-xl border border-white/10 py-2">
+                      {serviceLinks.map((sub) => (
+                        <Link
+                          key={sub.label}
+                          to={sub.href}
+                          className="block px-4 py-2 text-cream hover:text-burnt-orange hover:bg-white/5 transition-colors text-sm"
+                          onClick={() => setIsServicesOpen(false)}
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="text-cream hover:text-burnt-orange transition-colors font-medium"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* Phone and CTA button on the right */}
@@ -78,16 +124,49 @@ export default function Header() {
       {isMenuOpen && (
         <div className="lg:hidden bg-navy border-t border-white/10">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                to={link.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="text-cream hover:text-burnt-orange transition-colors font-medium py-2"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.label === 'Services' ? (
+                <div key={link.label}>
+                  <button
+                    onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                    className="text-cream hover:text-burnt-orange transition-colors font-medium py-2 flex items-center gap-1 w-full"
+                  >
+                    Services
+                    <ChevronDown size={16} className={`transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isMobileServicesOpen && (
+                    <div className="pl-4 flex flex-col space-y-2 mt-1">
+                      <Link
+                        to="/services"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="text-cream hover:text-burnt-orange transition-colors text-sm py-1"
+                      >
+                        All Services
+                      </Link>
+                      {serviceLinks.map((sub) => (
+                        <Link
+                          key={sub.label}
+                          to={sub.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="text-cream hover:text-burnt-orange transition-colors text-sm py-1"
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-cream hover:text-burnt-orange transition-colors font-medium py-2"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
 
             <Link
               to="/free-website-plan"

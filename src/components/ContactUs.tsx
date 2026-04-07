@@ -18,7 +18,7 @@ export default function ContactUs() {
               Contact Us
             </h2>
             <p className="text-lg md:text-xl" style={{ color: '#4A5D55' }}>
-              Get in touch for a free roofing estimate
+              Get in touch for a free estimate
             </p>
           </div>
 

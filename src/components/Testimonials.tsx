@@ -1,67 +1,97 @@
-import { Star, Quote } from 'lucide-react';
+import { Search, PenTool, Rocket, TrendingUp, Shield, CheckCircle } from 'lucide-react';
 
 export default function Testimonials() {
-  const testimonials = [
+  const steps = [
     {
-      name: 'Mike Patterson',
-      company: 'Patterson Roofing Co.',
-      location: 'Charleston, WV',
-      rating: 5,
-      text: 'Figgle Media transformed our online presence. We went from 2-3 leads a week to getting 15-20 qualified calls. The website looks incredible and actually brings in business.',
+      icon: Search,
+      title: 'Step 1: Free Website & Market Audit',
+      details: [
+        'Analyze your current website performance',
+        'Research your local competition',
+        'Identify the keywords clients in your area are searching',
+        'Find gaps and quick wins in your online presence',
+      ],
     },
     {
-      name: 'Sarah Williams',
-      company: 'Blue Ridge Roofing',
-      location: 'Raleigh, NC',
-      rating: 5,
-      text: 'Best investment we made for our roofing business. The team knows the roofing industry inside and out. Our phone has not stopped ringing since the new site launched.',
+      icon: PenTool,
+      title: 'Step 2: Custom Design & Development',
+      details: [
+        'Design a website tailored to your construction brand',
+        'Build for mobile-first — where most searches happen',
+        'Optimize every page for local SEO from day one',
+        'Add lead capture forms, click-to-call, and trust signals',
+      ],
     },
     {
-      name: 'Tom Jenkins',
-      company: 'Mountain Top Contractors',
-      location: 'Morgantown, WV',
-      rating: 5,
-      text: 'These guys know what they are doing. Our Google ranking went from page 3 to top 3 in just a few months. The ROI has been incredible and the team is always available.',
+      icon: Rocket,
+      title: 'Step 3: Launch & Configure',
+      details: [
+        'Go live with zero downtime',
+        'Set up Google Analytics and conversion tracking',
+        'Submit sitemap to Google Search Console',
+        'Configure Google Business Profile integration',
+      ],
+    },
+    {
+      icon: TrendingUp,
+      title: 'Step 4: Optimize & Grow',
+      details: [
+        'Monitor rankings and adjust SEO strategy',
+        'Manage Google Ads and Local Service Ads',
+        'Create content that targets high-intent local searches',
+        'Monthly reporting so you see exactly what\'s working',
+      ],
     },
   ];
 
   return (
-    <section id="reviews" className="py-20 bg-dark-green">
+    <section id="reviews" className="py-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            What Roofers Are Saying
+            Our Process — Step by Step
           </h2>
-          <p className="text-xl text-alabaster max-w-2xl mx-auto">
-            Do not just take our word for it. Here is what our clients have to say.
+          <p className="text-xl text-cream max-w-2xl mx-auto">
+            Here's exactly what happens when you work with Figgle Media.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+          {steps.map((step, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-8 shadow-lg relative"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
             >
-              <Quote size={40} className="text-peach absolute top-6 right-6 opacity-50" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-burnt-orange rounded-full p-3">
+                  <step.icon size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white">{step.title}</h3>
+              </div>
 
-              <div className="flex mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} size={20} className="text-burnt-orange fill-current" />
+              <ul className="space-y-3">
+                {step.details.map((detail, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle size={18} className="text-burnt-orange flex-shrink-0 mt-0.5" />
+                    <span className="text-cream">{detail}</span>
+                  </li>
                 ))}
-              </div>
-
-              <p className="text-jet-black mb-6 leading-relaxed italic">
-                "{testimonial.text}"
-              </p>
-
-              <div className="border-t border-gray-200 pt-4">
-                <p className="font-bold text-dark-green">{testimonial.name}</p>
-                <p className="text-sm text-jet-black">{testimonial.company}</p>
-                <p className="text-sm text-burnt-orange">{testimonial.location}</p>
-              </div>
+              </ul>
             </div>
           ))}
+        </div>
+
+        {/* Guarantee */}
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-burnt-orange rounded-2xl p-8 md:p-12 text-center">
+            <Shield size={48} className="text-white mx-auto mb-6" />
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Our 90-Day Performance Guarantee
+            </h3>
+            <p className="text-xl text-white/90 leading-relaxed">
+              If your website doesn't start generating more leads within 90 days of launch, we'll keep working for free until it does. We only win when you win.
+            </p>
+          </div>
         </div>
       </div>
     </section>

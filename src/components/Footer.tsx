@@ -22,7 +22,7 @@ export default function Footer() {
               <h3 className="text-2xl font-bold text-cream">Figgle Media</h3>
             </div>
             <p className="text-gray-300 mb-4">
-              Helping roofing contractors dominate local search and generate qualified leads.
+              Helping construction businesses dominate local search and generate qualified leads.
             </p>
           </div>
 

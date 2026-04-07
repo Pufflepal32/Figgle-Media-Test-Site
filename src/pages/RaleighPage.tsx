@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Phone, CheckCircle, Star, MapPin, Shield, Users, TrendingUp, Zap, Cloud, Sun } from 'lucide-react';
+import { ArrowRight, Phone, CheckCircle, Star, MapPin, Shield, Users, TrendingUp, Zap, Building2, Sun } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -18,9 +18,9 @@ export default function RaleighPage() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Figgle Media - Raleigh Roofing Web Design',
-    description: 'Custom web design and SEO for roofing contractors in Raleigh, NC. We help roofers generate more leads with high-converting websites.',
-    url: 'https://figglemedia.com/raleigh-roofing-web-design',
+    name: 'Figgle Media - Raleigh Contractor Web Design',
+    description: 'Custom web design and SEO for construction businesses in Raleigh, NC. We help contractors generate more leads with high-converting websites.',
+    url: 'https://figglemedia.com/raleigh-contractor-web-design',
     telephone: '(123) 456-7890',
     address: {
       '@type': 'PostalAddress',
@@ -46,10 +46,10 @@ export default function RaleighPage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'How much does a roofing website cost in Raleigh?',
+        name: 'How much does a contractor website cost in Raleigh?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our roofing websites for Raleigh contractors start at $2,999 for our Starter package, which includes custom design, mobile optimization, and basic SEO. Our most popular Scaler package is $4,999 and includes aggressive local SEO to rank in the Raleigh market.',
+          text: 'Our contractor websites for Raleigh construction businesses start at $2,999 for our Starter package, which includes custom design, mobile optimization, and basic SEO. Our most popular Scaler package is $4,999 and includes aggressive local SEO to rank in the Raleigh market.',
         },
       },
       {
@@ -57,15 +57,15 @@ export default function RaleighPage() {
         name: 'How long does it take to rank on Google in Raleigh?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Most Raleigh roofing contractors see meaningful ranking improvements within 3-6 months. The Raleigh market is competitive, but our local SEO strategies are designed to target high-intent keywords like "roofer near me Raleigh" and "roof repair Raleigh NC" to get you visible fast.',
+          text: 'Most Raleigh contractors see meaningful ranking improvements within 3-6 months. The Raleigh market is competitive, but our local SEO strategies are designed to target high-intent keywords like "contractor near me Raleigh" and "contractor Raleigh NC" to get you visible fast.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you only work with roofers in Raleigh?',
+        name: 'Do you only work with contractors in Raleigh?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We serve roofing contractors across North Carolina and West Virginia, but Raleigh is our home base. Being local means we understand the Raleigh market — from seasonal storm damage patterns to the neighborhoods where homeowners are actively searching for roofers.',
+          text: 'We serve construction businesses across North Carolina and West Virginia, but Raleigh is our home base. Being local means we understand the Raleigh market — from new development trends to the neighborhoods where clients are actively searching for contractors.',
         },
       },
     ],
@@ -74,29 +74,29 @@ export default function RaleighPage() {
   return (
     <>
       <Helmet>
-        <title>Roofing Web Design Raleigh NC | Websites for Roofers | Figgle Media</title>
+        <title>Contractor Web Design Raleigh NC | Websites for Contractors | Figgle Media</title>
         <meta
           name="description"
-          content="Custom web design for roofing contractors in Raleigh, NC. Get a high-converting website that ranks on Google and generates qualified leads. Based in Raleigh — we know your market."
+          content="Custom web design for construction businesses in Raleigh, NC. Get a high-converting website that ranks on Google and generates qualified leads. Based in Raleigh — we know your market."
         />
         <meta
           name="keywords"
-          content="roofing web design Raleigh, roofer website Raleigh NC, roofing SEO Raleigh, roofing contractor website design, web design for roofers Raleigh, roofing marketing Raleigh NC"
+          content="contractor web design Raleigh, contractor website Raleigh NC, construction SEO Raleigh, contractor website design, web design for contractors Raleigh, construction marketing Raleigh NC"
         />
-        <link rel="canonical" href="https://figglemedia.com/raleigh-roofing-web-design" />
-        <meta property="og:title" content="Roofing Web Design Raleigh NC | Figgle Media" />
+        <link rel="canonical" href="https://figglemedia.com/raleigh-contractor-web-design" />
+        <meta property="og:title" content="Contractor Web Design Raleigh NC | Figgle Media" />
         <meta
           property="og:description"
-          content="Custom websites for Raleigh roofing contractors. Rank higher on Google & get more leads. Free consultation available."
+          content="Custom websites for Raleigh contractors. Rank higher on Google & get more leads. Free consultation available."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://figglemedia.com/raleigh-roofing-web-design" />
+        <meta property="og:url" content="https://figglemedia.com/raleigh-contractor-web-design" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Roofing Web Design Raleigh NC | Figgle Media" />
+        <meta name="twitter:title" content="Contractor Web Design Raleigh NC | Figgle Media" />
         <meta
           name="twitter:description"
-          content="Custom websites for Raleigh roofing contractors. Rank higher on Google & get more leads."
+          content="Custom websites for Raleigh contractors. Rank higher on Google & get more leads."
         />
         <meta name="geo.region" content="US-NC" />
         <meta name="geo.placename" content="Raleigh" />
@@ -126,18 +126,18 @@ export default function RaleighPage() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Raleigh's #1{' '}
-                <span className="text-burnt-orange">Roofing Web Design</span>{' '}
+                <span className="text-burnt-orange">Contractor Web Design</span>{' '}
                 Agency
               </h1>
 
               <p className="text-lg sm:text-xl text-cream leading-relaxed">
-                We build high-converting websites for roofing contractors in Raleigh, NC. Get found on Google by homeowners in Wake County searching for roofers — and turn those clicks into booked jobs.
+                We build high-converting websites for construction businesses in Raleigh, NC. Get found on Google by clients in the Raleigh area searching for contractors — and turn those clicks into booked jobs.
               </p>
 
               <div className="space-y-3">
                 {[
-                  'Rank on Google for "roofer near me Raleigh"',
-                  'Convert Raleigh homeowners into qualified leads',
+                  'Rank on Google for "contractor near me Raleigh"',
+                  'Convert Raleigh area clients into qualified leads',
                   'Built by a local team that knows the Triangle market',
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
@@ -155,7 +155,7 @@ export default function RaleighPage() {
                   <Phone size={20} className="group-hover:rotate-12 transition-transform" />
                   <span>(123) 456-7890</span>
                 </a>
-                <span className="text-sm text-cream">Free consultation for Raleigh roofers</span>
+                <span className="text-sm text-cream">Free consultation for Raleigh contractors</span>
               </div>
             </div>
 
@@ -167,7 +167,7 @@ export default function RaleighPage() {
                     Get Your Free Raleigh Market Analysis
                   </h2>
                   <p className="text-warm-gray">
-                    See how your roofing website stacks up against Raleigh competitors
+                    See how your contractor website stacks up against Raleigh competitors
                   </p>
                 </div>
 
@@ -212,7 +212,7 @@ export default function RaleighPage() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent transition-all"
-                      placeholder="john@roofingcompany.com"
+                      placeholder="john@mycompany.com"
                       required
                     />
                   </div>
@@ -248,15 +248,15 @@ export default function RaleighPage() {
         </div>
       </section>
 
-      {/* Why Raleigh Roofers Need a Great Website */}
+      {/* Why Raleigh Contractors Need a Great Website */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-blue mb-6">
-              Why Raleigh Roofing Contractors Need a Better Website
+              Why Raleigh Construction Businesses Need a Better Website
             </h2>
             <p className="text-xl text-charcoal leading-relaxed">
-              Raleigh is one of the fastest-growing cities in the country. More homeowners means more competition for roofers. If your website isn't bringing in leads, you're losing jobs to competitors who invested in theirs.
+              Raleigh is one of the fastest-growing cities in the country. More residents and businesses means more competition for contractors. If your website isn't bringing in leads, you're losing jobs to competitors who invested in theirs.
             </p>
           </div>
 
@@ -267,17 +267,17 @@ export default function RaleighPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Raleigh Is Booming</h3>
               <p className="text-cream leading-relaxed">
-                The Triangle area is growing fast — over 60 people move to the Raleigh metro every day. That means more roofs, more storm damage, and more homeowners searching Google for "roofer near me." If you're not showing up, someone else is getting that call.
+                The Triangle area is growing fast — over 60 people move to the Raleigh metro every day. That means more new construction, renovations, and remodels, with more clients searching Google for "contractor near me." If you're not showing up, someone else is getting that call.
               </p>
             </div>
 
             <div className="bg-gradient-to-br from-navy-blue to-navy rounded-2xl p-8 text-white">
               <div className="bg-burnt-orange rounded-full p-3 w-fit mb-6">
-                <Cloud size={28} className="text-white" />
+                <Building2 size={28} className="text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Storm Season = Lead Season</h3>
+              <h3 className="text-2xl font-bold mb-4">New Construction Boom</h3>
               <p className="text-cream leading-relaxed">
-                North Carolina gets hit hard by hurricanes, hail, and severe thunderstorms. When a storm rolls through Wake County, homeowners flood Google looking for roofing help. A fast, professional website means you capture those leads before your competition does.
+                Raleigh's construction market is thriving with new residential developments, commercial projects, and renovation demand across the Triangle. When property owners and developers search for contractors online, a fast, professional website means you capture those leads before your competition does.
               </p>
             </div>
 
@@ -287,22 +287,22 @@ export default function RaleighPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Beat Local Competition</h3>
               <p className="text-cream leading-relaxed">
-                There are hundreds of roofing contractors in the Raleigh-Durham area. Most have outdated websites that don't convert. A modern, SEO-optimized site puts you ahead of competitors still running websites from 2015.
+                There are hundreds of contractors in the Raleigh-Durham area. Most have outdated websites that don't convert. A modern, SEO-optimized site puts you ahead of competitors still running websites from 2015.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What We Build for Raleigh Roofers */}
+      {/* What We Build for Raleigh Contractors */}
       <section className="py-20 bg-gradient-to-br from-navy-blue via-navy to-light-navy">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-              What We Build for Raleigh Roofing Contractors
+              What We Build for Raleigh Contractors
             </h2>
             <p className="text-xl text-cream">
-              Every site we build is designed to rank in the Raleigh market and convert local homeowners into paying customers.
+              Every site we build is designed to rank in the Raleigh market and convert local clients into paying customers.
             </p>
           </div>
 
@@ -311,22 +311,22 @@ export default function RaleighPage() {
               {
                 icon: Zap,
                 title: 'Lightning-Fast Load Times',
-                desc: "Google ranks faster sites higher. Our Raleigh roofing websites load in under 2 seconds on mobile — critical when homeowners are searching on their phones after a storm.",
+                desc: "Google ranks faster sites higher. Our contractor websites load in under 2 seconds on mobile — critical when clients are searching on their phones for a construction professional.",
               },
               {
                 icon: MapPin,
                 title: 'Raleigh Local SEO Built In',
-                desc: 'We optimize for the keywords Raleigh homeowners actually search: "roof repair Raleigh NC," "roofer near me," "storm damage roof Raleigh." Every page is built to rank locally.',
+                desc: 'We optimize for the keywords Raleigh clients actually search: "contractor Raleigh NC," "contractor near me," "construction company Raleigh." Every page is built to rank locally.',
               },
               {
                 icon: Phone,
                 title: 'Click-to-Call on Every Page',
-                desc: "When a Raleigh homeowner finds your site, they should be able to call you in one tap. We add prominent click-to-call buttons that drive phone leads.",
+                desc: "When a Raleigh client finds your site, they should be able to call you in one tap. We add prominent click-to-call buttons that drive phone leads.",
               },
               {
                 icon: Shield,
                 title: 'Trust Signals That Convert',
-                desc: "We showcase your NC contractor license, insurance, reviews, and before/after photos so Raleigh homeowners trust you enough to pick up the phone.",
+                desc: "We showcase your NC contractor license, insurance, reviews, and project photos so Raleigh area clients trust you enough to pick up the phone.",
               },
               {
                 icon: Star,
@@ -336,7 +336,7 @@ export default function RaleighPage() {
               {
                 icon: Sun,
                 title: 'Seasonal Content Strategy',
-                desc: "From hurricane season prep to winter ice dam prevention, we create content that matches what Raleigh homeowners are searching for throughout the year.",
+                desc: "From seasonal renovation trends to new build launches, we create content that matches what Raleigh area clients are searching for throughout the year.",
               },
             ].map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -351,31 +351,31 @@ export default function RaleighPage() {
         </div>
       </section>
 
-      {/* Social Proof / Results */}
+      {/* What You Get */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-blue mb-6">
-              Results Raleigh Roofers Can Expect
+              Why Raleigh Contractors Choose Figgle Media
             </h2>
             <p className="text-xl text-charcoal">
-              Here's what happens when you invest in a website that's built to perform in the Raleigh market.
+              We're not another generic web agency. We specialize in construction businesses, and we're based right here in Raleigh.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-navy-blue to-navy">
-              <div className="text-5xl font-bold text-burnt-orange mb-3">10X</div>
-              <div className="text-lg font-semibold text-white mb-2">More Leads</div>
-              <p className="text-cream text-sm">Average increase in monthly leads for our roofing clients</p>
+              <div className="text-5xl font-bold text-burnt-orange mb-3">100%</div>
+              <div className="text-lg font-semibold text-white mb-2">Construction Focus</div>
+              <p className="text-cream text-sm">We exclusively serve construction businesses and contractors</p>
             </div>
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-navy-blue to-navy">
-              <div className="text-5xl font-bold text-burnt-orange mb-3">Top 3</div>
-              <div className="text-lg font-semibold text-white mb-2">Google Rankings</div>
-              <p className="text-cream text-sm">Where our clients rank for their target local keywords</p>
+              <div className="text-5xl font-bold text-burnt-orange mb-3">Local</div>
+              <div className="text-lg font-semibold text-white mb-2">Raleigh Team</div>
+              <p className="text-cream text-sm">Based in Raleigh — we know your market and your competition</p>
             </div>
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-navy-blue to-navy">
-              <div className="text-5xl font-bold text-burnt-orange mb-3">90 Day</div>
+              <div className="text-5xl font-bold text-burnt-orange mb-3">90-Day</div>
               <div className="text-lg font-semibold text-white mb-2">Performance Guarantee</div>
               <p className="text-cream text-sm">If your leads don't improve, we work for free until they do</p>
             </div>
@@ -388,29 +388,29 @@ export default function RaleighPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
-              Frequently Asked Questions — Raleigh Roofing Web Design
+              Frequently Asked Questions — Raleigh Contractor Web Design
             </h2>
 
             <div className="space-y-6">
               {[
                 {
-                  q: 'How much does a roofing website cost in Raleigh?',
-                  a: 'Our roofing websites for Raleigh contractors start at $2,999 for our Starter package, which includes custom design, mobile optimization, and basic SEO. Our most popular Scaler package is $4,999 and includes aggressive local SEO to rank in the Raleigh market.',
+                  q: 'How much does a contractor website cost in Raleigh?',
+                  a: 'Our contractor websites for Raleigh construction businesses start at $2,999 for our Starter package, which includes custom design, mobile optimization, and basic SEO. Our most popular Scaler package is $4,999 and includes aggressive local SEO to rank in the Raleigh market.',
                 },
                 {
                   q: 'How long does it take to rank on Google in Raleigh?',
-                  a: 'Most Raleigh roofing contractors see meaningful ranking improvements within 3-6 months. The Raleigh market is competitive, but our local SEO strategies are designed to target high-intent keywords like "roofer near me Raleigh" and "roof repair Raleigh NC" to get you visible fast.',
+                  a: 'Most Raleigh contractors see meaningful ranking improvements within 3-6 months. The Raleigh market is competitive, but our local SEO strategies are designed to target high-intent keywords like "contractor near me Raleigh" and "contractor Raleigh NC" to get you visible fast.',
                 },
                 {
-                  q: 'Do you only work with roofers in Raleigh?',
-                  a: "We serve roofing contractors across North Carolina and West Virginia, but Raleigh is our home base. Being local means we understand the Raleigh market — from seasonal storm damage patterns to the neighborhoods where homeowners are actively searching for roofers.",
+                  q: 'Do you only work with contractors in Raleigh?',
+                  a: "We serve construction businesses across North Carolina and West Virginia, but Raleigh is our home base. Being local means we understand the Raleigh market — from new development trends to the neighborhoods where clients are actively searching for contractors.",
                 },
                 {
-                  q: 'What if I already have a roofing website?',
-                  a: "Most roofers we work with in Raleigh already have a website — it's just not generating leads. We'll do a free analysis of your current site, show you exactly what's holding it back, and build you a new one that actually converts Raleigh homeowners into customers.",
+                  q: 'What if I already have a contractor website?',
+                  a: "Most contractors we work with in Raleigh already have a website — it's just not generating leads. We'll do a free analysis of your current site, show you exactly what's holding it back, and build you a new one that actually converts Raleigh area clients into customers.",
                 },
                 {
-                  q: 'Do you help with Google Ads for Raleigh roofers?',
+                  q: 'Do you help with Google Ads for Raleigh contractors?',
                   a: "Yes. We offer Google Ads management and Local Service Ads specifically for the Raleigh market. Combined with a high-converting website, paid ads can get you leads immediately while your organic rankings build over time.",
                 },
               ].map((faq, index) => (
@@ -428,10 +428,10 @@ export default function RaleighPage() {
       <section className="py-20 bg-burnt-orange">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Dominate Raleigh's Roofing Market?
+            Ready to Dominate Raleigh's Construction Market?
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-            Get a free website analysis and see exactly how we'll help you outrank every roofer in the Raleigh area.
+            Get a free website analysis and see exactly how we'll help you outrank every contractor in the Raleigh area.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a

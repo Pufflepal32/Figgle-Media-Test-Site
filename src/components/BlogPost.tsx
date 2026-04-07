@@ -68,7 +68,7 @@ export default function BlogPost() {
                 Need Help Now?
               </h3>
               <p className="text-white mb-6">
-                While you wait for this article, get your free website plan and start growing your roofing business today.
+                While you wait for this article, get your free website plan and start growing your construction business today.
               </p>
               <Link
                 to="/free-website-plan"
@@ -243,7 +243,7 @@ export default function BlogPost() {
             <div>
               <h3 className="text-2xl font-bold text-white mb-2">About {post.author}</h3>
               <p className="text-cream leading-relaxed">
-                The Figgle Media team specializes in helping roofing contractors grow their businesses through strategic web design, SEO, and digital marketing. With years of experience in the roofing industry, we understand what it takes to generate quality leads and build a strong online presence.
+                The Figgle Media team specializes in helping construction businesses grow through strategic web design, SEO, and digital marketing. With years of experience in the construction industry, we understand what it takes to generate quality leads and build a strong online presence.
               </p>
             </div>
           </div>
@@ -252,7 +252,7 @@ export default function BlogPost() {
         {/* CTA Section */}
         <div className="mt-12 bg-gradient-to-r from-burnt-orange to-deep-orange rounded-xl p-8 text-center">
           <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Get More Roofing Leads?
+            Ready to Get More Leads?
           </h3>
           <p className="text-white mb-6 max-w-2xl mx-auto">
             Let's build you a website that actually brings in customers. Get your free website plan today.
@@ -270,17 +270,17 @@ export default function BlogPost() {
           <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Show 2 other random articles */}
-            <Link to="/blog/how-local-seo-helps-roofers-dominate-market" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:shadow-xl transition-all group">
+            <Link to="/blog/how-local-seo-helps-contractors-dominate-market" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:shadow-xl transition-all group">
               <h4 className="text-xl font-bold text-white mb-2 group-hover:text-burnt-orange transition-colors">
-                How Local SEO Helps Roofers Dominate Their Market
+                How Local SEO Helps Contractors Dominate Their Market
               </h4>
-              <p className="text-cream text-sm">Learn proven local SEO strategies that help roofing contractors rank #1...</p>
+              <p className="text-cream text-sm">Learn proven local SEO strategies that help contractors rank #1...</p>
             </Link>
-            <Link to="/blog/converting-website-visitors-into-roofing-leads" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:shadow-xl transition-all group">
+            <Link to="/blog/converting-website-visitors-into-leads" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:shadow-xl transition-all group">
               <h4 className="text-xl font-bold text-white mb-2 group-hover:text-burnt-orange transition-colors">
-                Converting Website Visitors Into Roofing Leads
+                Converting Website Visitors Into Leads
               </h4>
-              <p className="text-cream text-sm">Essential elements every high-converting roofing website needs...</p>
+              <p className="text-cream text-sm">Essential elements every high-converting contractor website needs...</p>
             </Link>
           </div>
         </div>

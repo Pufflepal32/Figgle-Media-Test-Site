@@ -9,12 +9,12 @@ export default function WhyChooseUs() {
     },
     {
       title: 'Proven SEO Strategy',
-      description: 'We use battle-tested SEO tactics that consistently rank roofing contractors at the top of local search results.',
+      description: 'We use battle-tested SEO tactics that consistently rank contractors at the top of local search results.',
       icon: TrendingUp,
     },
     {
       title: 'Done-for-You Setup',
-      description: 'We handle everything from design to launch. You focus on roofing, we focus on bringing you leads.',
+      description: 'We handle everything from design to launch. You focus on building, we focus on bringing you leads.',
       icon: Wrench,
     },
   ];
@@ -24,7 +24,7 @@ export default function WhyChooseUs() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Why Roofers Choose Figgle Media
+            Why Contractors Choose Figgle Media
           </h2>
           <p className="text-xl text-cream max-w-2xl mx-auto">
             We're not just another web design agency. We're your growth partner.

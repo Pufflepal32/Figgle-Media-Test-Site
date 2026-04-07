@@ -10,6 +10,7 @@ import BlogPostPage from './pages/BlogPostPage';
 import FreeWebsitePlanPage from './pages/FreeWebsitePlanPage';
 import PricingPage from './pages/PricingPage';
 import RaleighPage from './pages/RaleighPage';
+import ServiceLandingPage from './pages/ServiceLandingPage';
 
 function App() {
   return (
@@ -25,10 +26,11 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/:slug" element={<ServiceLandingPage />} />
               <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/testimonials" element={<TestimonialsPage />} />
+              <Route path="/our-process" element={<TestimonialsPage />} />
               <Route path="/about" element={<AboutPage />} />
-              <Route path="/raleigh-roofing-web-design" element={<RaleighPage />} />
+              <Route path="/raleigh-contractor-web-design" element={<RaleighPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
             </Routes>

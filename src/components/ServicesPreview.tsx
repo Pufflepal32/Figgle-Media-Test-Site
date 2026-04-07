@@ -6,26 +6,30 @@ export default function ServicesPreview() {
     {
       icon: Globe,
       title: 'Custom Website Design',
-      description: 'Beautiful, professional websites that showcase your roofing business and build trust with homeowners.',
+      description: 'Beautiful, professional websites that showcase your construction business and build trust with clients.',
       color: 'from-teal to-light-teal',
+      slug: 'contractor-web-design',
     },
     {
       icon: Search,
       title: 'Local SEO',
-      description: 'Get found by homeowners searching for roofers in your area. Dominate local search results.',
+      description: 'Get found by clients searching for contractors in your area. Dominate local search results.',
       color: 'from-dark-green to-teal',
+      slug: 'seo-for-contractors',
     },
     {
       icon: TrendingUp,
       title: 'Lead Generation',
       description: 'Convert more visitors into paying customers with proven lead generation strategies.',
       color: 'from-burnt-orange to-deep-orange',
+      slug: 'google-ads-management',
     },
     {
       icon: Smartphone,
       title: 'Mobile Optimization',
-      description: 'Your website will look perfect on every device. Most roofing leads come from mobile.',
+      description: 'Your website will look perfect on every device. Most contractor leads come from mobile.',
       color: 'from-warm-gray to-charcoal',
+      slug: 'contractor-web-design',
     },
   ];
 
@@ -41,16 +45,17 @@ export default function ServicesPreview() {
             </span>
           </h2>
           <p className="text-xl text-cream">
-            We build complete digital solutions designed specifically for roofing contractors.
+            We build complete digital solutions designed specifically for construction businesses.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {services.map((service, index) => (
-            <div
+            <Link
               key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-white/20 group"
+              to={`/services/${service.slug}`}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-white/20 group block"
             >
               <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} mb-6 group-hover:scale-110 transition-transform`}>
                 <service.icon className="text-white" size={32} />
@@ -58,10 +63,14 @@ export default function ServicesPreview() {
               <h3 className="text-xl font-bold text-white mb-3">
                 {service.title}
               </h3>
-              <p className="text-cream leading-relaxed">
+              <p className="text-cream leading-relaxed mb-4">
                 {service.description}
               </p>
-            </div>
+              <span className="inline-flex items-center text-burnt-orange font-semibold group-hover:text-white transition-colors">
+                Learn More
+                <ArrowRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
           ))}
         </div>
 

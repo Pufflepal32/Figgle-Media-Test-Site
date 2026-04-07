@@ -1,30 +1,34 @@
-import { Quote, Star } from 'lucide-react';
+import { Search, PenTool, Rocket, TrendingUp, ArrowRight } from 'lucide-react';
 
 export default function TestimonialsPreview() {
-  const testimonials = [
+  const steps = [
     {
-      name: 'Mike Johnson',
-      company: 'Summit Roofing',
-      location: 'Charleston, WV',
-      rating: 5,
-      text: 'Figgle Media built us a website that actually brings in leads. We went from 5-10 calls a month to 40+ qualified leads. Best investment we\'ve made.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
+      number: '01',
+      icon: Search,
+      title: 'Free Audit',
+      description:
+        "We analyze your current website, your local competition, and your market. You'll see exactly where you stand and what's holding you back.",
     },
     {
-      name: 'Sarah Mitchell',
-      company: 'Elite Roofing Solutions',
-      location: 'Raleigh, NC',
-      rating: 5,
-      text: 'The team at Figgle Media understands the roofing industry. Our new website looks professional and we\'re getting way more calls from homeowners.',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop',
+      number: '02',
+      icon: PenTool,
+      title: 'Custom Design & Build',
+      description:
+        'We design and build a website tailored to your construction business — optimized for conversions, mobile-first, and built to rank on Google.',
     },
     {
-      name: 'Tom Davis',
-      company: 'Mountain View Roofing',
-      location: 'Morgantown, WV',
-      rating: 5,
-      text: 'These guys know what they\'re doing. Our website ranks #1 on Google now and we\'re booked solid for months. Couldn\'t be happier!',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop',
+      number: '03',
+      icon: Rocket,
+      title: 'Launch & Optimize',
+      description:
+        'We go live, set up tracking and analytics, submit to Google, and fine-tune everything so your site starts generating leads from day one.',
+    },
+    {
+      number: '04',
+      icon: TrendingUp,
+      title: 'Grow',
+      description:
+        'Ongoing SEO, Google Ads management, and performance optimization to keep the leads flowing and your business growing month over month.',
     },
   ];
 
@@ -34,51 +38,40 @@ export default function TestimonialsPreview() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            What Roofers Are Saying
+            How We Get You More Leads
           </h2>
           <p className="text-xl text-cream">
-            Don't just take our word for it. Here's what our clients have to say.
+            A proven 4-step process designed specifically for construction businesses.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+        {/* Process Steps */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-white/20 relative"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-white/20 relative group"
             >
-              {/* Quote Icon */}
-              <div className="absolute top-6 right-6 opacity-10">
-                <Quote size={64} className="text-white" />
+              {/* Step Number */}
+              <div className="text-6xl font-bold text-white/10 absolute top-4 right-6">
+                {step.number}
               </div>
 
-              {/* Stars */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} size={18} className="text-burnt-orange fill-burnt-orange" />
-                ))}
+              {/* Icon */}
+              <div className="bg-burnt-orange rounded-full p-3 w-fit mb-6 group-hover:scale-110 transition-transform">
+                <step.icon size={24} className="text-white" />
               </div>
 
-              {/* Testimonial Text */}
-              <p className="text-cream mb-6 leading-relaxed relative z-10">
-                "{testimonial.text}"
-              </p>
+              {/* Content */}
+              <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
+              <p className="text-cream leading-relaxed">{step.description}</p>
 
-              {/* Author Info */}
-              <div className="flex items-center gap-4 relative z-10">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-burnt-orange"
-                />
-                <div>
-                  <div className="font-bold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-cream">
-                    {testimonial.company} • {testimonial.location}
-                  </div>
+              {/* Arrow connector (hidden on last item and on mobile) */}
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 z-10">
+                  <ArrowRight size={24} className="text-burnt-orange" />
                 </div>
-              </div>
+              )}
             </div>
           ))}
         </div>

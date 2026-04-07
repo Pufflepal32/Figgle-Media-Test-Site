@@ -1,30 +1,42 @@
-import { TrendingUp, Phone, Users } from 'lucide-react';
+import { Globe, Search, Target, BarChart3, Smartphone, Shield } from 'lucide-react';
 
 export default function CaseStudies() {
-  const cases = [
+  const deliverables = [
     {
-      company: 'Mountain State Roofing',
-      location: 'Charleston, WV',
-      metric: '+285%',
-      description: 'Increase in organic traffic',
-      icon: TrendingUp,
-      bg: 'bg-dark-green',
+      title: 'Custom Contractor Website',
+      description: 'A professional, conversion-focused website designed specifically for your construction business. Not a template — built from scratch to reflect your brand.',
+      icon: Globe,
+      bg: 'bg-gradient-to-br from-navy-blue to-navy',
     },
     {
-      company: 'Carolina Roof Pros',
-      location: 'Raleigh, NC',
-      metric: '+147',
-      description: 'More qualified leads per month',
-      icon: Users,
-      bg: 'bg-burnt-orange',
+      title: 'Local SEO Setup',
+      description: 'On-page optimization, Google Business Profile setup, local keyword targeting, and technical SEO so clients in your area find you first.',
+      icon: Search,
+      bg: 'bg-gradient-to-br from-burnt-orange to-deep-orange',
     },
     {
-      company: 'Valley Roofing & Siding',
-      location: 'Morgantown, WV',
-      metric: '+320%',
-      description: 'Increase in phone calls',
-      icon: Phone,
-      bg: 'bg-dark-green',
+      title: 'Lead Capture System',
+      description: 'Strategic contact forms, click-to-call buttons, and lead tracking so every visitor has a clear path to becoming a customer.',
+      icon: Target,
+      bg: 'bg-gradient-to-br from-navy-blue to-navy',
+    },
+    {
+      title: 'Analytics & Reporting',
+      description: 'Google Analytics setup and a clear dashboard so you can see exactly where your leads are coming from and how your site is performing.',
+      icon: BarChart3,
+      bg: 'bg-gradient-to-br from-burnt-orange to-deep-orange',
+    },
+    {
+      title: 'Mobile-First Design',
+      description: 'Over 60% of local searches happen on mobile. Your site will look and work perfectly on every phone, tablet, and desktop.',
+      icon: Smartphone,
+      bg: 'bg-gradient-to-br from-navy-blue to-navy',
+    },
+    {
+      title: '90-Day Performance Guarantee',
+      description: "If your website doesn't generate more leads within 90 days, we'll keep working for free until it does. Zero risk for you.",
+      icon: Shield,
+      bg: 'bg-gradient-to-br from-burnt-orange to-deep-orange',
     },
   ];
 
@@ -32,34 +44,27 @@ export default function CaseStudies() {
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-dark-green mb-4">
-            Real Results for Real Roofers.
+          <h2 className="text-4xl sm:text-5xl font-bold text-navy-blue mb-4">
+            What You Get When You Work With Us
           </h2>
-          <p className="text-xl text-jet-black max-w-2xl mx-auto">
-            We don't just build websites. We build lead-generating machines that transform your roofing business.
+          <p className="text-xl text-charcoal max-w-2xl mx-auto">
+            Everything a construction business needs to start generating leads online — no gaps, no guesswork.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {cases.map((item, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {deliverables.map((item, index) => (
             <div
               key={index}
               className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all"
             >
-              <div className={`${item.bg} p-8 text-white min-h-[320px] flex flex-col justify-between`}>
-                <div>
-                  <item.icon size={48} className="mb-4 opacity-80" />
-                  <h3 className="text-2xl font-bold mb-2">{item.company}</h3>
-                  <p className="text-sm opacity-90 mb-6">{item.location}</p>
+              <div className={`${item.bg} p-8 text-white min-h-[280px] flex flex-col`}>
+                <div className="mb-6">
+                  <item.icon size={40} className="opacity-90" />
                 </div>
-
-                <div>
-                  <div className="text-5xl font-bold mb-2">{item.metric}</div>
-                  <p className="text-lg">{item.description}</p>
-                </div>
+                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+                <p className="text-white/90 leading-relaxed">{item.description}</p>
               </div>
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
           ))}
         </div>

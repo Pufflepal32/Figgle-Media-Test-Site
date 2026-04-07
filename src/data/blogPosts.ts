@@ -37,18 +37,18 @@ export interface BlogPostContent {
 export const blogPosts: BlogPostData[] = [
   {
     id: '1',
-    title: '10 Signs Your Roofing Business Needs a New Website in 2025',
-    excerpt: 'Is your roofing website turning away potential customers? Learn the key indicators that it\'s time for a modern, conversion-focused website that actually brings in leads.',
+    title: '10 Signs Your Construction Business Needs a New Website in 2025',
+    excerpt: 'Is your contractor website turning away potential customers? Learn the key indicators that it\'s time for a modern, conversion-focused website that actually brings in leads.',
     author: 'Figgle Media Team',
     publishDate: '2025-01-15T09:00:00-05:00',
     modifiedDate: '2025-01-15T09:00:00-05:00',
     readTime: '5 min read',
     category: 'Web Design',
     image: '/assets/blog/website-signs.jpg',
-    imageAlt: 'Modern roofing website on laptop showing lead generation form',
-    slug: '10-signs-your-roofing-business-needs-new-website',
+    imageAlt: 'Modern contractor website on laptop showing lead generation form',
+    slug: '10-signs-your-construction-business-needs-new-website',
     isComplete: true,
-    keywords: 'roofing website, roofing web design, contractor website, roofing business website, website redesign',
+    keywords: 'contractor website, construction web design, contractor website, construction business website, website redesign',
     location: {
       city: 'Charleston',
       state: 'WV',
@@ -56,12 +56,12 @@ export const blogPosts: BlogPostData[] = [
       lng: -81.6326
     },
     content: {
-      introduction: 'Your website is often the first impression potential customers have of your roofing business. If it\'s outdated, slow, or hard to navigate, you\'re losing leads to competitors every single day. Here are 10 clear signs it\'s time to invest in a new website.',
+      introduction: 'Your website is often the first impression potential customers have of your construction business. If it\'s outdated, slow, or hard to navigate, you\'re losing leads to competitors every single day. Here are 10 clear signs it\'s time to invest in a new website.',
       sections: [
         {
           heading: '1. Your Website Isn\'t Mobile-Friendly',
           content: [
-            'Over 70% of homeowners search for roofing contractors on their smartphones. If your website doesn\'t load properly on mobile devices or requires pinching and zooming to read, you\'re turning away the majority of potential customers.',
+            'Over 70% of clients search for contractors on their smartphones. If your website doesn\'t load properly on mobile devices or requires pinching and zooming to read, you\'re turning away the majority of potential customers.',
             'Google also prioritizes mobile-friendly websites in search results. A website that\'s not optimized for mobile will rank lower, making it harder for customers to find you.'
           ]
         },
@@ -75,14 +75,14 @@ export const blogPosts: BlogPostData[] = [
         {
           heading: '3. You\'re Not Getting Leads From Your Website',
           content: [
-            'The primary purpose of your roofing website is to generate leads. If your phone isn\'t ringing and your contact form sits empty, your website isn\'t doing its job.',
+            'The primary purpose of your contractor website is to generate leads. If your phone isn\'t ringing and your contact form sits empty, your website isn\'t doing its job.',
             'A conversion-focused website includes clear calls-to-action, trust signals like reviews and certifications, prominent phone numbers, and easy-to-use contact forms. If these elements are missing or poorly designed, you need a website overhaul.'
           ]
         },
         {
           heading: '4. Your Website Doesn\'t Rank on Google',
           content: [
-            'When was the last time you searched for "roofing contractor near me" and found your own website? If you\'re not on the first page of Google, you\'re invisible to potential customers.',
+            'When was the last time you searched for "contractor near me" and found your own website? If you\'re not on the first page of Google, you\'re invisible to potential customers.',
             'Modern SEO-optimized websites are built with proper heading structure, meta tags, schema markup, fast load times, and mobile responsiveness - all factors Google uses to rank sites. An old website simply can\'t compete.'
           ]
         },
@@ -90,7 +90,7 @@ export const blogPosts: BlogPostData[] = [
           heading: '5. The Design Looks Outdated',
           content: [
             'Design trends evolve quickly. If your website still has Flash animations, rotating banners, or looks like it was built in 2010, visitors will question whether your business is still operating.',
-            'A modern, professional design builds trust and credibility. It signals to customers that you\'re a legitimate, professional business that invests in quality - exactly the kind of contractor they want working on their roof.'
+            'A modern, professional design builds trust and credibility. It signals to customers that you\'re a legitimate, professional business that invests in quality - exactly the kind of contractor they want working on their project.'
           ]
         },
         {
@@ -108,7 +108,7 @@ export const blogPosts: BlogPostData[] = [
         {
           heading: '8. It Doesn\'t Showcase Your Work',
           content: [
-            'Homeowners want to see examples of your work before they hire you. High-quality before-and-after photos, customer testimonials, and case studies should be prominently featured on your website. If they\'re missing or buried, you\'re not building the trust needed to convert visitors into customers.'
+            'Clients want to see examples of your work before they hire you. High-quality before-and-after photos, customer testimonials, and case studies should be prominently featured on your website. If they\'re missing or buried, you\'re not building the trust needed to convert visitors into customers.'
           ]
         },
         {
@@ -126,10 +126,10 @@ export const blogPosts: BlogPostData[] = [
         }
       ],
       conclusion: {
-        heading: 'Ready to Upgrade Your Roofing Website?',
+        heading: 'Ready to Upgrade Your Contractor Website?',
         content: [
           'If you recognized 3 or more of these signs, it\'s time to invest in a new website. A modern, conversion-focused website will:',
-          'At Figgle Media, we specialize in building high-performance websites for roofing contractors. Let\'s talk about how we can help you get more leads and grow your business.'
+          'At Figgle Media, we specialize in building high-performance websites for contractors. Let\'s talk about how we can help you get more leads and grow your business.'
         ],
         list: [
           'Rank higher on Google and get found by more customers',
@@ -143,18 +143,18 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     id: '2',
-    title: 'How Local SEO Helps Roofers Dominate Their Market',
-    excerpt: 'Discover proven local SEO strategies that help roofing contractors rank #1 in their area and get more qualified leads from homeowners searching for roof repairs.',
+    title: 'How Local SEO Helps Contractors Dominate Their Market',
+    excerpt: 'Discover proven local SEO strategies that help contractors rank #1 in their area and get more qualified leads from clients searching for construction services.',
     author: 'Figgle Media Team',
     publishDate: '2025-01-10T09:00:00-05:00',
     modifiedDate: '2025-01-10T09:00:00-05:00',
     readTime: '7 min read',
     category: 'SEO',
     image: '/assets/blog/local-seo.jpg',
-    imageAlt: 'Google Maps search results showing top-ranked roofing contractors',
-    slug: 'how-local-seo-helps-roofers-dominate-market',
+    imageAlt: 'Google Maps search results showing top-ranked contractors',
+    slug: 'how-local-seo-helps-contractors-dominate-market',
     isComplete: true,
-    keywords: 'local SEO, roofing SEO, Google My Business, local search, roofing leads',
+    keywords: 'local SEO, contractor SEO, Google My Business, local search, contractor leads',
     location: {
       city: 'Huntington',
       state: 'WV',
@@ -162,12 +162,12 @@ export const blogPosts: BlogPostData[] = [
       lng: -82.4452
     },
     content: {
-      introduction: 'When homeowners need a roofer, they don\'t browse through the Yellow Pages anymore - they search on Google. And if your roofing business isn\'t showing up in those local search results, you\'re missing out on dozens of qualified leads every month. Local SEO is the key to dominating your market and becoming the go-to roofing contractor in your area.',
+      introduction: 'When clients need a contractor, they don\'t browse through the Yellow Pages anymore - they search on Google. And if your construction business isn\'t showing up in those local search results, you\'re missing out on dozens of qualified leads every month. Local SEO is the key to dominating your market and becoming the go-to contractor in your area.',
       sections: [
         {
           heading: 'What is Local SEO and Why Does It Matter?',
           content: [
-            'Local SEO is the practice of optimizing your online presence to attract customers from specific geographic areas. For roofing contractors, this means showing up when someone in your service area searches for "roofer near me," "roof repair Charleston WV," or "best roofing contractor in Huntington."',
+            'Local SEO is the practice of optimizing your online presence to attract customers from specific geographic areas. For contractors, this means showing up when someone in your service area searches for "contractor near me," "home repair Charleston WV," or "best contractor in Huntington."',
             'Unlike traditional SEO that focuses on ranking nationally, local SEO targets customers in your immediate area - the people most likely to hire you. When done right, local SEO can transform your business by bringing in a steady stream of high-quality leads.'
           ]
         },
@@ -181,7 +181,7 @@ export const blogPosts: BlogPostData[] = [
         {
           heading: 'Build Location-Specific Content',
           content: [
-            'Create dedicated pages for each city or region you serve. Instead of one generic "Service Areas" page, build individual pages like "Roofing Services in Charleston, WV" or "Huntington Roof Repair Specialists."',
+            'Create dedicated pages for each city or region you serve. Instead of one generic "Service Areas" page, build individual pages like "Construction Services in Charleston, WV" or "Huntington Home Improvement Specialists."',
             'These pages should include local landmarks, neighborhood names, and information specific to that area. This helps Google understand exactly where you operate and increases your chances of showing up in local searches.'
           ]
         },
@@ -203,26 +203,26 @@ export const blogPosts: BlogPostData[] = [
       conclusion: {
         heading: 'Start Dominating Local Search Today',
         content: [
-          'Local SEO isn\'t a one-time task - it\'s an ongoing strategy that compounds over time. The sooner you start, the faster you\'ll see results. Most roofing contractors are barely scratching the surface of local SEO, which means there\'s a massive opportunity for businesses that get it right.',
-          'At Figgle Media, we\'ve helped dozens of roofing contractors dominate their local markets through strategic SEO. Ready to become the #1 roofer in your area?'
+          'Local SEO isn\'t a one-time task - it\'s an ongoing strategy that compounds over time. The sooner you start, the faster you\'ll see results. Most contractors are barely scratching the surface of local SEO, which means there\'s a massive opportunity for businesses that get it right.',
+          'At Figgle Media, we\'ve helped dozens of contractors dominate their local markets through strategic SEO. Ready to become the #1 contractor in your area?'
         ]
       }
     }
   },
   {
     id: '3',
-    title: 'Google Ads vs. Local Service Ads for Roofing Companies',
-    excerpt: 'Not sure which advertising platform is right for your roofing business? We break down the pros, cons, and ROI of each to help you make the best decision.',
+    title: 'Google Ads vs. Local Service Ads for Construction Companies',
+    excerpt: 'Not sure which advertising platform is right for your construction business? We break down the pros, cons, and ROI of each to help you make the best decision.',
     author: 'Figgle Media Team',
     publishDate: '2025-01-05T09:00:00-05:00',
     modifiedDate: '2025-01-05T09:00:00-05:00',
     readTime: '6 min read',
     category: 'Digital Marketing',
     image: '/assets/blog/google-ads.jpg',
-    imageAlt: 'Comparison of Google Ads and Local Service Ads for roofing contractors',
-    slug: 'google-ads-vs-local-service-ads-roofing',
+    imageAlt: 'Comparison of Google Ads and Local Service Ads for contractors',
+    slug: 'google-ads-vs-local-service-ads-construction',
     isComplete: true,
-    keywords: 'Google Ads, Local Service Ads, PPC advertising, roofing advertising, digital marketing',
+    keywords: 'Google Ads, Local Service Ads, PPC advertising, contractor advertising, digital marketing',
     location: {
       city: 'Morgantown',
       state: 'WV',
@@ -230,12 +230,12 @@ export const blogPosts: BlogPostData[] = [
       lng: -79.9559
     },
     content: {
-      introduction: 'As a roofing contractor, you have two powerful options for paid advertising on Google: traditional Google Ads (PPC) and Google Local Service Ads (LSA). Both can drive leads to your business, but they work differently and are suited for different goals. Here\'s everything you need to know to choose the right one for your roofing company.',
+      introduction: 'As a contractor, you have two powerful options for paid advertising on Google: traditional Google Ads (PPC) and Google Local Service Ads (LSA). Both can drive leads to your business, but they work differently and are suited for different goals. Here\'s everything you need to know to choose the right one for your construction company.',
       sections: [
         {
           heading: 'What Are Google Ads?',
           content: [
-            'Google Ads (formerly AdWords) are the text ads that appear at the top of search results. You bid on keywords like "roof repair near me," and when someone searches for those terms, your ad appears. You only pay when someone clicks on your ad (pay-per-click or PPC).',
+            'Google Ads (formerly AdWords) are the text ads that appear at the top of search results. You bid on keywords like "contractor near me," and when someone searches for those terms, your ad appears. You only pay when someone clicks on your ad (pay-per-click or PPC).',
             'Google Ads give you complete control over your budget, targeting, ad copy, and landing pages. You can start or stop campaigns instantly and track detailed metrics on performance.'
           ]
         },
@@ -249,8 +249,8 @@ export const blogPosts: BlogPostData[] = [
         {
           heading: 'Cost Comparison: Which is More Affordable?',
           content: [
-            'Google Ads costs vary widely based on competition in your area. Roofing keywords typically range from $15-$50 per click. If 10 people click your ad, you might spend $300, even if only 2 of them become leads.',
-            'Local Service Ads use a pay-per-lead model. You might pay $30-$75 per lead (phone call or message), but you\'re guaranteed an actual contact, not just a website visit. For many roofers, this makes LSAs more cost-effective.'
+            'Google Ads costs vary widely based on competition in your area. Construction keywords typically range from $15-$50 per click. If 10 people click your ad, you might spend $300, even if only 2 of them become leads.',
+            'Local Service Ads use a pay-per-lead model. You might pay $30-$75 per lead (phone call or message), but you\'re guaranteed an actual contact, not just a website visit. For many contractors, this makes LSAs more cost-effective.'
           ]
         },
         {
@@ -269,28 +269,28 @@ export const blogPosts: BlogPostData[] = [
         }
       ],
       conclusion: {
-        heading: 'Get Help With Your Roofing Advertising',
+        heading: 'Get Help With Your Contractor Advertising',
         content: [
-          'Both Google Ads and Local Service Ads can be powerful tools for roofing contractors - but they require expertise to maximize ROI. Poor campaign setup can waste thousands of dollars with little return.',
-          'At Figgle Media, we specialize in managing both Google Ads and Local Service Ads for roofing contractors. We\'ll help you choose the right strategy and optimize your campaigns for maximum leads at the lowest cost.'
+          'Both Google Ads and Local Service Ads can be powerful tools for contractors - but they require expertise to maximize ROI. Poor campaign setup can waste thousands of dollars with little return.',
+          'At Figgle Media, we specialize in managing both Google Ads and Local Service Ads for contractors. We\'ll help you choose the right strategy and optimize your campaigns for maximum leads at the lowest cost.'
         ]
       }
     }
   },
   {
     id: '4',
-    title: 'Converting Website Visitors Into Roofing Leads: A Complete Guide',
-    excerpt: 'Your website gets traffic, but are you converting those visitors into paying customers? Learn the essential elements every high-converting roofing website needs.',
+    title: 'Converting Website Visitors Into Leads: A Complete Guide',
+    excerpt: 'Your website gets traffic, but are you converting those visitors into paying customers? Learn the essential elements every high-converting contractor website needs.',
     author: 'Figgle Media Team',
     publishDate: '2024-12-28T09:00:00-05:00',
     modifiedDate: '2024-12-28T09:00:00-05:00',
     readTime: '8 min read',
     category: 'Lead Generation',
     image: '/assets/blog/conversion-guide.jpg',
-    imageAlt: 'Roofing website conversion funnel diagram showing visitor to customer journey',
-    slug: 'converting-website-visitors-into-roofing-leads',
+    imageAlt: 'Contractor website conversion funnel diagram showing visitor to customer journey',
+    slug: 'converting-website-visitors-into-leads',
     isComplete: true,
-    keywords: 'conversion optimization, roofing leads, website conversion, CRO, landing pages',
+    keywords: 'conversion optimization, contractor leads, website conversion, CRO, landing pages',
     location: {
       city: 'Parkersburg',
       state: 'WV',
@@ -298,7 +298,7 @@ export const blogPosts: BlogPostData[] = [
       lng: -81.5615
     },
     content: {
-      introduction: 'Getting traffic to your roofing website is only half the battle. The real challenge - and opportunity - is converting those visitors into leads. Even a small improvement in your conversion rate can dramatically increase your revenue. This guide shows you exactly how to turn more website visitors into paying roofing customers.',
+      introduction: 'Getting traffic to your contractor website is only half the battle. The real challenge - and opportunity - is converting those visitors into leads. Even a small improvement in your conversion rate can dramatically increase your revenue. This guide shows you exactly how to turn more website visitors into paying customers.',
       sections: [
         {
           heading: 'Understanding Conversion Rate Optimization',
@@ -310,28 +310,28 @@ export const blogPosts: BlogPostData[] = [
         {
           heading: 'Make Your Phone Number Unmissable',
           content: [
-            'Many homeowners prefer calling rather than filling out forms. Your phone number should be visible in multiple places: header, footer, throughout the content, and in a sticky bar that follows users as they scroll.',
+            'Many clients prefer calling rather than filling out forms. Your phone number should be visible in multiple places: header, footer, throughout the content, and in a sticky bar that follows users as they scroll.',
             'Make it clickable on mobile devices so visitors can call you with one tap. Use a tracking number to measure which marketing channels are driving calls.'
           ]
         },
         {
           heading: 'Create Compelling Calls-to-Action',
           content: [
-            'Generic buttons like "Submit" or "Contact Us" don\'t inspire action. Instead, use benefit-driven CTAs like "Get My Free Roof Inspection," "Schedule Emergency Repair," or "See My Instant Quote."',
+            'Generic buttons like "Submit" or "Contact Us" don\'t inspire action. Instead, use benefit-driven CTAs like "Get My Free Estimate," "Schedule a Consultation," or "See My Instant Quote."',
             'Use contrasting colors that stand out from your design. Place CTAs above the fold (visible without scrolling) and repeat them throughout longer pages.'
           ]
         },
         {
           heading: 'Build Trust With Social Proof',
           content: [
-            'Homeowners are skeptical of roofing contractors - there are too many horror stories of bad work and fly-by-night operators. Combat this by prominently displaying trust signals throughout your website.',
+            'Clients are skeptical of contractors - there are too many horror stories of bad work and fly-by-night operators. Combat this by prominently displaying trust signals throughout your website.',
             'Include customer testimonials with photos and full names, showcase your Google reviews, display certifications and awards, feature before-and-after photos of recent projects, and highlight your years in business and number of satisfied customers.'
           ]
         },
         {
           heading: 'Simplify Your Contact Forms',
           content: [
-            'Long forms with dozens of fields create friction and reduce conversions. For initial contact, you only need the essentials: name, phone number, email, and a brief description of their roofing needs.',
+            'Long forms with dozens of fields create friction and reduce conversions. For initial contact, you only need the essentials: name, phone number, email, and a brief description of their project needs.',
             'You can gather additional details during the phone call or follow-up. Every extra field you require reduces your form submissions. Test removing fields to see if your conversion rate improves.'
           ]
         },
@@ -347,25 +347,25 @@ export const blogPosts: BlogPostData[] = [
         heading: 'Start Optimizing Your Conversions Today',
         content: [
           'The beauty of conversion optimization is that it improves results from traffic you\'re already getting. Even small changes can have a big impact on your bottom line.',
-          'At Figgle Media, we build roofing websites specifically designed for maximum conversions. Every element - from the layout to the copy to the calls-to-action - is strategically crafted to turn visitors into customers. Ready to get more leads from your website?'
+          'At Figgle Media, we build contractor websites specifically designed for maximum conversions. Every element - from the layout to the copy to the calls-to-action - is strategically crafted to turn visitors into customers. Ready to get more leads from your website?'
         ]
       }
     }
   },
   {
     id: '5',
-    title: 'Mobile-First Design: Why It Matters for Roofing Contractors',
-    excerpt: 'Over 70% of homeowners search for roofers on their phones. If your website isn\'t mobile-optimized, you\'re losing leads every day. Here\'s what you need to know.',
+    title: 'Mobile-First Design: Why It Matters for Contractors',
+    excerpt: 'Over 70% of clients search for contractors on their phones. If your website isn\'t mobile-optimized, you\'re losing leads every day. Here\'s what you need to know.',
     author: 'Figgle Media Team',
     publishDate: '2024-12-20T09:00:00-05:00',
     modifiedDate: '2024-12-20T09:00:00-05:00',
     readTime: '5 min read',
     category: 'Web Design',
     image: '/assets/blog/mobile-first.jpg',
-    imageAlt: 'Smartphone displaying a mobile-optimized roofing contractor website',
-    slug: 'mobile-first-design-roofing-contractors',
+    imageAlt: 'Smartphone displaying a mobile-optimized contractor website',
+    slug: 'mobile-first-design-contractors',
     isComplete: true,
-    keywords: 'mobile website, responsive design, mobile optimization, roofing website, mobile-first',
+    keywords: 'mobile website, responsive design, mobile optimization, contractor website, mobile-first',
     location: {
       city: 'Wheeling',
       state: 'WV',
@@ -373,7 +373,7 @@ export const blogPosts: BlogPostData[] = [
       lng: -80.7209
     },
     content: {
-      introduction: 'The way people search for roofing contractors has fundamentally changed. Today, over 70% of homeowners use their smartphones to find and contact roofers. If your website isn\'t optimized for mobile devices, you\'re turning away the majority of potential customers before they even see what you have to offer.',
+      introduction: 'The way people search for contractors has fundamentally changed. Today, over 70% of clients use their smartphones to find and contact contractors. If your website isn\'t optimized for mobile devices, you\'re turning away the majority of potential customers before they even see what you have to offer.',
       sections: [
         {
           heading: 'What is Mobile-First Design?',
@@ -383,9 +383,9 @@ export const blogPosts: BlogPostData[] = [
           ]
         },
         {
-          heading: 'Why Mobile Matters for Roofing Businesses',
+          heading: 'Why Mobile Matters for Construction Businesses',
           content: [
-            'Think about when homeowners need a roofer: often it\'s after discovering a leak, seeing damage after a storm, or noticing missing shingles. They\'re searching on their phone right then and there, looking for someone who can help immediately.',
+            'Think about when clients need a contractor: often it\'s after discovering a problem, seeing damage after a storm, or noticing something that needs repair. They\'re searching on their phone right then and there, looking for someone who can help immediately.',
             'If your website is hard to use on mobile - text too small to read, buttons too tiny to tap, pages that take forever to load - they\'ll hit the back button and call your competitor instead. You literally have seconds to make a good impression.'
           ]
         },
@@ -397,7 +397,7 @@ export const blogPosts: BlogPostData[] = [
           ]
         },
         {
-          heading: 'Key Elements of Mobile-Optimized Roofing Websites',
+          heading: 'Key Elements of Mobile-Optimized Contractor Websites',
           content: [
             'Click-to-call phone numbers that work with one tap. Large, finger-friendly buttons for contact forms and CTAs. Fast-loading pages (under 3 seconds). Easy-to-read text without zooming. Simplified navigation with a mobile-friendly menu. Form fields that are easy to fill out on a small screen.',
             'Your best photos should load quickly and look great on small screens. Emergency contact information should be immediately visible. All these elements work together to create a seamless mobile experience.'
@@ -414,15 +414,15 @@ export const blogPosts: BlogPostData[] = [
       conclusion: {
         heading: 'Don\'t Lose Leads to Poor Mobile Experience',
         content: [
-          'In today\'s mobile-first world, your smartphone experience IS your first impression. Homeowners won\'t give you a second chance if your website frustrates them on mobile.',
-          'At Figgle Media, every roofing website we build is mobile-first from day one. We ensure your site looks amazing and converts visitors into leads on every device. Ready to stop losing mobile leads?'
+          'In today\'s mobile-first world, your smartphone experience IS your first impression. Clients won\'t give you a second chance if your website frustrates them on mobile.',
+          'At Figgle Media, every contractor website we build is mobile-first from day one. We ensure your site looks amazing and converts visitors into leads on every device. Ready to stop losing mobile leads?'
         ]
       }
     }
   },
   {
     id: '6',
-    title: 'Customer Reviews: The Secret Weapon for Roofing SEO',
+    title: 'Customer Reviews: The Secret Weapon for Contractor SEO',
     excerpt: 'Google reviews aren\'t just for social proof—they\'re a powerful SEO ranking factor. Learn how to leverage reviews to boost your local search visibility.',
     author: 'Figgle Media Team',
     publishDate: '2024-12-15T09:00:00-05:00',
@@ -430,10 +430,10 @@ export const blogPosts: BlogPostData[] = [
     readTime: '6 min read',
     category: 'SEO',
     image: '/assets/blog/customer-reviews.jpg',
-    imageAlt: 'Five-star Google reviews for roofing contractor on mobile phone',
-    slug: 'customer-reviews-secret-weapon-roofing-seo',
+    imageAlt: 'Five-star Google reviews for contractor on mobile phone',
+    slug: 'customer-reviews-secret-weapon-contractor-seo',
     isComplete: true,
-    keywords: 'Google reviews, online reviews, reputation management, roofing SEO, local SEO',
+    keywords: 'Google reviews, online reviews, reputation management, contractor SEO, local SEO',
     location: {
       city: 'Fairmont',
       state: 'WV',
@@ -441,13 +441,13 @@ export const blogPosts: BlogPostData[] = [
       lng: -80.1426
     },
     content: {
-      introduction: 'Most roofing contractors understand that reviews help build trust with potential customers. But what many don\'t realize is that customer reviews are also one of the most powerful tools for improving your search engine rankings. Google uses reviews as a key signal when deciding which businesses to show in local search results. Here\'s how to leverage reviews to dominate your market.',
+      introduction: 'Most contractors understand that reviews help build trust with potential customers. But what many don\'t realize is that customer reviews are also one of the most powerful tools for improving your search engine rankings. Google uses reviews as a key signal when deciding which businesses to show in local search results. Here\'s how to leverage reviews to dominate your market.',
       sections: [
         {
           heading: 'Why Reviews Impact Your SEO Rankings',
           content: [
             'Google\'s algorithm considers reviews when determining local search rankings. The quantity, quality, and frequency of reviews all play a role. Businesses with more positive reviews generally rank higher in the Local Pack (the map results at the top of Google).',
-            'Reviews also provide fresh, user-generated content that includes relevant keywords naturally. When customers write "They fixed my leaking roof quickly" or "Best roofing contractor in Charleston," they\'re creating SEO value for your business.'
+            'Reviews also provide fresh, user-generated content that includes relevant keywords naturally. When customers write "They completed the project quickly" or "Best contractor in Charleston," they\'re creating SEO value for your business.'
           ]
         },
         {
@@ -461,7 +461,7 @@ export const blogPosts: BlogPostData[] = [
           heading: 'Responding to Reviews Boosts Rankings',
           content: [
             'Responding to reviews - both positive and negative - signals to Google that you\'re an active, engaged business. It also provides an opportunity to include keywords naturally in your responses.',
-            'Thank customers by name, mention the specific service you provided, and reinforce your location. For example: "Thanks John! We\'re so glad we could help with your roof repair in Huntington. We appreciate your business!"'
+            'Thank customers by name, mention the specific service you provided, and reinforce your location. For example: "Thanks John! We\'re so glad we could help with your project in Huntington. We appreciate your business!"'
           ]
         },
         {
@@ -490,7 +490,7 @@ export const blogPosts: BlogPostData[] = [
         heading: 'Make Reviews Part of Your Growth Strategy',
         content: [
           'Customer reviews aren\'t just nice to have - they\'re a critical component of your local SEO strategy. Businesses that actively manage and grow their reviews consistently outrank competitors who ignore this powerful tool.',
-          'At Figgle Media, we help roofing contractors implement review generation systems that build trust AND boost search rankings. Ready to turn your happy customers into your best marketing asset?'
+          'At Figgle Media, we help contractors implement review generation systems that build trust AND boost search rankings. Ready to turn your happy customers into your best marketing asset?'
         ]
       }
     }
@@ -693,7 +693,7 @@ export const blogPosts: BlogPostData[] = [
           heading: 'Building Your Email List: Lead Magnets That Work',
           content: [
             'Nobody gives away their email address for nothing. You need to offer something valuable in exchange - a "lead magnet." For local businesses, effective lead magnets include free guides, checklists, discount codes, exclusive access, and valuable resources.',
-            'Examples: A roofer might offer "The Homeowner\'s Guide to Choosing a Roofing Contractor." A restaurant could offer "Join our VIP list for exclusive deals." A salon might provide "10% off your first visit." Make your lead magnet specific, immediately useful, and easy to consume.'
+            'Examples: A contractor might offer "The Client\'s Guide to Choosing the Right Contractor." A restaurant could offer "Join our VIP list for exclusive deals." A salon might provide "10% off your first visit." Make your lead magnet specific, immediately useful, and easy to consume.'
           ]
         },
         {

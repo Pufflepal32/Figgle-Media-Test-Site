@@ -1,5 +1,6 @@
-import { Check } from 'lucide-react';
+import { Check, DollarSign, Shield, Zap } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CTABanner from '../components/CTABanner';
 
 function PricingPage() {
@@ -115,14 +116,50 @@ function PricingPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-navy text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            PRICING OPTIONS THAT FIT YOUR BUSINESS
+      <section className="relative py-24 md:py-32 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
+        {/* SVG Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <svg width="100%" height="100%">
+            <defs>
+              <pattern id="pricing-dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1.5" fill="white" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pricing-dots)" />
+          </svg>
+        </div>
+
+        {/* Gradient Orbs */}
+        <div className="absolute top-10 left-1/4 w-72 h-72 bg-burnt-orange/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-burnt-orange/5 rounded-full blur-3xl"></div>
+
+        <div className="relative container mx-auto px-4 text-center">
+          <div className="inline-flex items-center gap-2 bg-burnt-orange/20 border border-burnt-orange/30 rounded-full px-5 py-2 mb-8">
+            <DollarSign size={16} className="text-burnt-orange" />
+            <span className="text-burnt-orange font-semibold text-sm">Transparent Pricing, No Hidden Fees</span>
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto">
+            Invest in Growth,{' '}
+            <span className="text-burnt-orange">Not Guesswork</span>
           </h1>
-          <p className="text-xl text-cream max-w-3xl mx-auto">
-            Transparent pricing with no hidden fees. Choose the package that works best for your business goals.
+          <p className="text-xl text-cream max-w-2xl mx-auto mb-12 leading-relaxed">
+            Choose the package that fits your goals. Every plan is built to deliver measurable ROI for your construction business.
           </p>
+
+          {/* Trust Signals */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+            {[
+              { icon: Shield, label: '90-Day Guarantee' },
+              { icon: Zap, label: 'Results in 30 Days' },
+              { icon: Check, label: 'No Long-Term Contracts' },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center gap-2 text-cream">
+                <item.icon size={20} className="text-burnt-orange" />
+                <span className="font-medium">{item.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -164,49 +201,34 @@ function PricingPage() {
       {/* Ready to Scale Section */}
       <section className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 py-24">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-8 items-center max-w-7xl mx-auto">
-            {/* Left Review */}
-            <div className="hidden lg:block bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-xl">★</span>
-                ))}
-              </div>
-              <p className="text-white mb-4 italic">
-                "Figgle Media transformed our online presence. Our website traffic has tripled since launch!"
-              </p>
-              <p className="text-cream font-semibold">- Sarah Johnson</p>
-              <p className="text-gray-400 text-sm">Home Services Business</p>
-            </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tight">
+              Ready to scale?
+            </h2>
+            <p className="text-xl text-cream mb-10">
+              Let's discuss how we can help grow your construction business with a custom solution tailored to your market.
+            </p>
 
-            {/* Center CTA */}
-            <div className="text-center">
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tight">
-                Ready to scale?
-              </h2>
-              <p className="text-xl text-cream mb-10">
-                Let's discuss how we can help grow your business with a custom solution tailored to your needs.
-              </p>
-              <a
-                href="/free-website-plan"
-                className="inline-block bg-burnt-orange text-white px-12 py-5 rounded-xl text-xl font-bold hover:bg-deep-orange transition-all shadow-2xl hover:shadow-burnt-orange/50 hover:scale-105 transform"
-              >
-                Talk to Sales
-              </a>
-            </div>
+            <a
+              href="/free-website-plan"
+              className="inline-block bg-burnt-orange text-white px-12 py-5 rounded-xl text-xl font-bold hover:bg-deep-orange transition-all shadow-2xl hover:shadow-burnt-orange/50 hover:scale-105 transform mb-10"
+            >
+              Talk to Sales
+            </a>
 
-            {/* Right Review */}
-            <div className="hidden lg:block bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-xl">★</span>
-                ))}
+            <div className="grid md:grid-cols-3 gap-6 mt-10">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <p className="text-2xl font-bold text-burnt-orange mb-2">90 Days</p>
+                <p className="text-cream text-sm">Performance guarantee — free work if no improvement</p>
               </div>
-              <p className="text-white mb-4 italic">
-                "Best investment we've made. The ROI from our new website paid for itself in 2 months!"
-              </p>
-              <p className="text-cream font-semibold">- Michael Chen</p>
-              <p className="text-gray-400 text-sm">E-commerce Store Owner</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <p className="text-2xl font-bold text-burnt-orange mb-2">Construction Only</p>
+                <p className="text-cream text-sm">We exclusively serve construction businesses</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <p className="text-2xl font-bold text-burnt-orange mb-2">Full Service</p>
+                <p className="text-cream text-sm">Design, SEO, Ads — all handled in-house</p>
+              </div>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ export default function CTABanner() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Ready to Get More Roofing Leads?
+            Ready to Get More Leads?
           </h2>
           <p className="text-xl sm:text-2xl text-cream mb-10 leading-relaxed">
             Schedule a free consultation and discover how we can transform your website into a lead-generating machine.

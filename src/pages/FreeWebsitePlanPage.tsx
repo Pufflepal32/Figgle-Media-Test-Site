@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CheckCircle, ArrowRight, TrendingUp, Users, Zap, Shield, Star } from 'lucide-react';
+import { CheckCircle, ArrowRight, TrendingUp, Users, Zap, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function FreeWebsitePlanPage() {
@@ -89,7 +89,7 @@ export default function FreeWebsitePlanPage() {
                 Get Your Free Custom Website Plan
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-cream leading-relaxed">
-                Discover exactly how we'll transform your roofing website into a 24/7 lead-generating machine.
+                Discover exactly how we'll transform your contractor website into a 24/7 lead-generating machine.
               </p>
 
               {/* What's Included */}
@@ -138,12 +138,12 @@ export default function FreeWebsitePlanPage() {
               {/* Trust Signals */}
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-3xl font-bold text-burnt-orange mb-1">50+</div>
-                  <div className="text-sm text-cream">Roofing Sites Built</div>
+                  <div className="text-3xl font-bold text-burnt-orange mb-1">90-Day</div>
+                  <div className="text-sm text-cream">Guarantee</div>
                 </div>
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-3xl font-bold text-burnt-orange mb-1">10X</div>
-                  <div className="text-sm text-cream">More Leads</div>
+                  <div className="text-3xl font-bold text-burnt-orange mb-1">100%</div>
+                  <div className="text-sm text-cream">Construction Focus</div>
                 </div>
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4">
                   <div className="text-3xl font-bold text-burnt-orange mb-1">24hr</div>
@@ -151,17 +151,15 @@ export default function FreeWebsitePlanPage() {
                 </div>
               </div>
 
-              {/* Testimonial */}
+              {/* Guarantee */}
               <div className="bg-white rounded-xl p-6 text-charcoal">
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={20} className="fill-burnt-orange text-burnt-orange" />
-                  ))}
+                <div className="flex items-center gap-3 mb-3">
+                  <Shield size={24} className="text-burnt-orange" />
+                  <p className="text-lg font-bold text-dark-green">Our Performance Guarantee</p>
                 </div>
-                <p className="text-lg mb-4 italic">
-                  "Figgle Media doubled our leads in the first 3 months. Best investment we've made in our business."
+                <p className="text-charcoal leading-relaxed">
+                  If your new website doesn't generate more leads within 90 days, we'll keep working for free until it does. We only succeed when you do.
                 </p>
-                <p className="font-bold text-dark-green">— Mike Thompson, Thompson Roofing</p>
               </div>
             </div>
 
@@ -206,7 +204,7 @@ export default function FreeWebsitePlanPage() {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-light-gray rounded-lg focus:border-burnt-orange focus:outline-none transition-colors"
-                      placeholder="john@roofingcompany.com"
+                      placeholder="john@mycompany.com"
                     />
                   </div>
 
@@ -238,7 +236,7 @@ export default function FreeWebsitePlanPage() {
                       value={formData.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-light-gray rounded-lg focus:border-burnt-orange focus:outline-none transition-colors"
-                      placeholder="ABC Roofing"
+                      placeholder="ABC Construction"
                     />
                   </div>
 
@@ -284,7 +282,7 @@ export default function FreeWebsitePlanPage() {
                 </div>
                 <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3 text-center">
                   <Users className="mx-auto mb-2 text-burnt-orange" size={24} />
-                  <p className="text-xs font-semibold text-dark-green">Roofing Experts</p>
+                  <p className="text-xs font-semibold text-dark-green">Construction Experts</p>
                 </div>
                 <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3 text-center">
                   <Shield className="mx-auto mb-2 text-dark-green" size={24} />

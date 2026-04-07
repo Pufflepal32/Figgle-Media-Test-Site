@@ -24,7 +24,7 @@ export default function MapEmbed() {
             Most Future Proof Web Design Agency in North Carolina and West Virginia
           </h2>
           <p className="text-xl text-cream max-w-3xl mx-auto">
-            Proudly serving roofing contractors across both states with cutting-edge websites that drive results.
+            Proudly serving construction businesses across both states with cutting-edge websites that drive results.
           </p>
         </div>
 
@@ -58,11 +58,11 @@ export default function MapEmbed() {
 
             {/* Why Choose Us Card */}
             <div className="bg-gradient-to-br from-light-navy to-navy rounded-2xl shadow-xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Why Roofing Contractors Choose Us</h3>
+              <h3 className="text-2xl font-bold mb-4">Why Contractors Choose Us</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle size={20} className="flex-shrink-0 mt-1" />
-                  <p>Specialized in roofing industry websites</p>
+                  <p>Specialized in construction industry websites</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle size={20} className="flex-shrink-0 mt-1" />
