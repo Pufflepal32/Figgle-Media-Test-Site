@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Phone, CheckCircle, Star, MapPin, Shield, Users, TrendingUp, Zap, Building2, Sun } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getCurrentMonthYear } from '../utils/useCurrentDate';
 
 export default function RaleighPage() {
   const [formData, setFormData] = useState({
@@ -125,9 +126,8 @@ export default function RaleighPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Raleigh's #1{' '}
-                <span className="text-burnt-orange">Contractor Web Design</span>{' '}
-                Agency
+                Best Web Design Agency in Raleigh{' '}
+                <span className="text-burnt-orange">{getCurrentMonthYear()}</span>
               </h1>
 
               <p className="text-lg sm:text-xl text-cream leading-relaxed">

@@ -1,5 +1,6 @@
 import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
 import { useState } from 'react';
+import { getCurrentMonthYear } from '../utils/useCurrentDate';
 
 export default function Hero() {
   const [formData, setFormData] = useState({
@@ -35,9 +36,9 @@ export default function Hero() {
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Get More Leads With a{' '}
+              Best Contractor Web Design Agency{' '}
               <span className="text-burnt-orange">
-                Website That Works
+                {getCurrentMonthYear()}
               </span>
             </h1>
 

@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Phone, CheckCircle } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
+import { getCurrentMonthYear } from '../utils/useCurrentDate';
 
 const serviceData: Record<string, { title: string; headline: string; description: string; meta: string; benefits: string[] }> = {
   'contractor-web-design': {
@@ -83,7 +84,8 @@ export default function ServiceLandingPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                {service.headline}
+                {service.headline}{' '}
+                <span className="text-burnt-orange">{getCurrentMonthYear()}</span>
               </h1>
               <p className="text-xl text-cream mb-10 leading-relaxed max-w-2xl mx-auto">
                 {service.description}
