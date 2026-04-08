@@ -44,7 +44,7 @@ export default function ServicesPreview() {
               Grow Your Business
             </span>
           </h2>
-          <p className="text-xl text-cream">
+          <p className="text-xl text-white">
             We build complete digital solutions designed specifically for construction businesses.
           </p>
         </div>

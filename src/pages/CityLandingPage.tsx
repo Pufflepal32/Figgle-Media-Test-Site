@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Phone, CheckCircle, MapPin, Shield, Users, TrendingUp, Star, Zap, Building2, Sun } from 'lucide-react';
-import { useState } from 'react';
 import { Link, useLocation, Navigate } from 'react-router-dom';
+import { useLeadForm } from '../hooks/useLeadForm';
 import { getCurrentMonthYear } from '../utils/useCurrentDate';
 import { getCityBySlug } from '../data/cityData';
 
@@ -16,16 +16,7 @@ export default function CityLandingPage() {
   const slug = location.pathname.replace(/^\//, '');
   const city = getCityBySlug(slug);
 
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(`${city?.name} form submitted:`, formData);
-  };
+  const { formData, setField, handleSubmit, isSubmitting, isSubmitted, error } = useLeadForm(`city-${slug}`);
 
   if (!city) {
     return <Navigate to="/" replace />;
@@ -114,7 +105,7 @@ export default function CityLandingPage() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 {city.name} Contractors Are{' '}
                 <span className="text-burnt-orange">Booking More Jobs</span> With Us
-                <span className="block text-xl sm:text-2xl font-semibold text-cream/80 mt-3">
+                <span className="block text-xl sm:text-2xl font-semibold text-cream mt-3">
                   {city.heroSubline} — {getCurrentMonthYear()}
                 </span>
               </h1>
@@ -167,6 +158,21 @@ export default function CityLandingPage() {
                   </p>
                 </div>
 
+                {isSubmitted ? (
+                  <div className="text-center py-8" role="alert">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                      <CheckCircle size={36} className="text-green-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-charcoal mb-2">Thank You!</h3>
+                    <p className="text-warm-gray">We'll analyze your {city.name} market and be in touch within 24 hours.</p>
+                  </div>
+                ) : (
+                <>
+                {error && (
+                  <div role="alert" className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm mb-4">
+                    {error}
+                  </div>
+                )}
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label htmlFor={`${city.slug}-name`} className="block text-sm font-semibold text-navy-blue mb-2">
@@ -176,10 +182,11 @@ export default function CityLandingPage() {
                       type="text"
                       id={`${city.slug}-name`}
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) => setField('name', e.target.value)}
                       className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent transition-all"
                       placeholder="John Smith"
                       required
+                      aria-required="true"
                     />
                   </div>
 
@@ -191,10 +198,11 @@ export default function CityLandingPage() {
                       type="tel"
                       id={`${city.slug}-phone`}
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) => setField('phone', e.target.value)}
                       className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent transition-all"
                       placeholder={city.phonePlaceholder}
                       required
+                      aria-required="true"
                     />
                   </div>
 
@@ -206,19 +214,21 @@ export default function CityLandingPage() {
                       type="email"
                       id={`${city.slug}-email`}
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) => setField('email', e.target.value)}
                       className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent transition-all"
                       placeholder="john@mycompany.com"
                       required
+                      aria-required="true"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-burnt-orange to-deep-orange text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-burnt-orange to-deep-orange text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Get My Free Analysis
-                    <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+                    {isSubmitting ? 'Submitting...' : 'Get My Free Analysis'}
+                    {!isSubmitting && <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />}
                   </button>
 
                   <p className="text-xs text-center text-navy-blue">
@@ -238,6 +248,8 @@ export default function CityLandingPage() {
                     </div>
                   </div>
                 </div>
+                </>
+                )}
                 </div>
               </div>
             </div>

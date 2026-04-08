@@ -1,6 +1,6 @@
+import { Helmet } from 'react-helmet-async';
 import { Check, DollarSign, Shield, Zap } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import CTABanner from '../components/CTABanner';
 
 function PricingPage() {
@@ -114,6 +114,16 @@ function PricingPage() {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Pricing - Contractor Website Packages | Figgle Media</title>
+        <meta name="description" content="Transparent pricing for contractor websites. Choose from Starter, Growth, or Dominator packages. No hidden fees, 90-day performance guarantee." />
+        <link rel="canonical" href="https://figglemedia.com/pricing" />
+        <meta property="og:title" content="Pricing - Contractor Website Packages | Figgle Media" />
+        <meta property="og:description" content="Transparent pricing for contractor websites. 90-day performance guarantee." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://figglemedia.com/pricing" />
+      </Helmet>
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
@@ -355,6 +365,7 @@ function PricingPage() {
       {/* CTA Banner */}
       <CTABanner />
     </div>
+    </>
   );
 }
 

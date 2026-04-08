@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Globe, Search, Target, Megaphone, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Services from '../components/Services';
@@ -7,6 +8,15 @@ import CTABanner from '../components/CTABanner';
 function ServicesPage() {
   return (
     <>
+      <Helmet>
+        <title>Contractor Marketing Services | Figgle Media</title>
+        <meta name="description" content="Web design, SEO, Google Ads, and Local Service Ads for contractors. Full-service digital marketing to help your construction business get more leads." />
+        <link rel="canonical" href="https://figglemedia.com/services" />
+        <meta property="og:title" content="Contractor Marketing Services | Figgle Media" />
+        <meta property="og:description" content="Full-service digital marketing for construction businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://figglemedia.com/services" />
+      </Helmet>
       <div className="pt-20">
         {/* Hero Section */}
         <section className="relative py-24 md:py-32 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">

@@ -46,7 +46,7 @@ export default function Header() {
           {/* Logo on the left */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
-              src="/assets/logo.png"
+              src="/assets/logo.webp"
               alt="Figgle Media Logo"
               className="h-12 w-12 object-cover rounded-full transition-transform duration-300 group-hover:scale-110"
             />
@@ -78,12 +78,14 @@ export default function Header() {
                   <Link
                     to={link.href}
                     className="text-cream hover:text-burnt-orange transition-colors font-medium flex items-center gap-1"
+                    aria-expanded={isServicesOpen}
+                    aria-haspopup="true"
                   >
                     {link.label}
                     <ChevronDown size={16} className={`transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
                   </Link>
                   {isServicesOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-navy rounded-lg shadow-xl border border-white/10 py-2">
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-navy rounded-lg shadow-xl border border-white/10 py-2" role="menu">
                       {serviceLinks.map((sub) => (
                         <Link
                           key={sub.label}
@@ -111,12 +113,14 @@ export default function Header() {
                 >
                   <button
                     className="text-cream hover:text-burnt-orange transition-colors font-medium flex items-center gap-1"
+                    aria-expanded={isLocationsOpen}
+                    aria-haspopup="true"
                   >
                     Locations
                     <ChevronDown size={16} className={`transition-transform duration-200 ${isLocationsOpen ? 'rotate-180' : ''}`} />
                   </button>
                   {isLocationsOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-navy rounded-lg shadow-xl border border-white/10 py-2">
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-navy rounded-lg shadow-xl border border-white/10 py-2" role="menu">
                       {locationLinks.map((sub) => (
                         <Link
                           key={sub.label}
@@ -163,6 +167,7 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden text-white"
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

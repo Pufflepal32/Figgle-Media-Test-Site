@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Users, Award, MapPin } from 'lucide-react';
 import About from '../components/About';
 import Testimonials from '../components/Testimonials';
@@ -6,6 +7,15 @@ import CTABanner from '../components/CTABanner';
 function AboutPage() {
   return (
     <>
+      <Helmet>
+        <title>About Us - Contractor Marketing Experts | Figgle Media</title>
+        <meta name="description" content="Figgle Media specializes in web design and digital marketing for construction businesses in North Carolina and West Virginia. Learn about our team and mission." />
+        <link rel="canonical" href="https://figglemedia.com/about" />
+        <meta property="og:title" content="About Us | Figgle Media" />
+        <meta property="og:description" content="Contractor marketing experts helping construction businesses grow." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://figglemedia.com/about" />
+      </Helmet>
       <div className="pt-20">
         {/* Hero Section */}
         <section className="relative py-24 md:py-32 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">

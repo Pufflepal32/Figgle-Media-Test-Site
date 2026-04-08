@@ -128,7 +128,7 @@ export default function RaleighPage() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Raleigh Contractors Are{' '}
                 <span className="text-burnt-orange">Booking More Jobs</span> With Us
-                <span className="block text-xl sm:text-2xl font-semibold text-cream/80 mt-3">
+                <span className="block text-xl sm:text-2xl font-semibold text-cream mt-3">
                   #1 Rated Contractor Web Design in Raleigh — {getCurrentMonthYear()}
                 </span>
               </h1>
@@ -168,7 +168,7 @@ export default function RaleighPage() {
                 {/* City Photo */}
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="/assets/cities/raleigh.jpg"
+                    src="/assets/cities/raleigh.webp" loading="lazy"
                     alt="Raleigh NC skyline - contractor web design services"
                     className="w-full h-full object-cover"
                   />

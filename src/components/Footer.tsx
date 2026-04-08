@@ -15,7 +15,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="/assets/logo.png"
+                src="/assets/logo.webp"
                 alt="Figgle Media Logo"
                 className="h-10 w-10 object-cover rounded-full"
               />
@@ -29,9 +29,9 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-cream">Contact Us</h4>
             <div className="space-y-3">
-              <a href="tel:+1234567890" className="flex items-center text-gray-300 hover:text-teal transition-colors">
+              <a href="tel:612-778-3914" className="flex items-center text-gray-300 hover:text-teal transition-colors">
                 <Phone size={18} className="mr-2" />
-                (123) 456-7890
+                612-778-3914
               </a>
               <a href="mailto:info@figglemedia.com" className="flex items-center text-gray-300 hover:text-teal transition-colors">
                 <Mail size={18} className="mr-2" />
@@ -58,16 +58,16 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-cream">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/people/Figgle-Media/61566383850893/" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+              <a href="https://www.facebook.com/people/Figgle-Media/61566383850893/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://x.com/FiggleMedia" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+              <a href="https://x.com/FiggleMedia" target="_blank" rel="noopener noreferrer" aria-label="Visit our X (Twitter) profile" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="https://www.instagram.com/figglemedia/" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+              <a href="https://www.instagram.com/figglemedia/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/trevor-alford-753435248/" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+              <a href="https://www.linkedin.com/in/trevor-alford-753435248/" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn profile" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>
@@ -76,7 +76,7 @@ export default function Footer() {
 
         <div className="border-t border-warm-gray pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 Figgle Media. All rights reserved.
+            © {new Date().getFullYear()} Figgle Media. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
             <a href="#" className="text-gray-400 hover:text-teal transition-colors">

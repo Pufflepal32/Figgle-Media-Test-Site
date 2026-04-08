@@ -38,7 +38,7 @@ export default function BeforeAfter() {
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               The Figgle Media Difference
             </h2>
-            <p className="text-xl text-cream">
+            <p className="text-xl text-white">
               Most contractor websites are costing their owners jobs. Here's what we build instead.
             </p>
           </div>
@@ -57,7 +57,7 @@ export default function BeforeAfter() {
                 <div className="h-[600px] overflow-hidden bg-gray-800">
                   <div className="scroll-animation-before">
                     <img
-                      src="/assets/old-website-before.png"
+                      src="/assets/old-website-before.webp" loading="lazy"
                       alt="Typical outdated contractor website design"
                       className="w-full h-auto object-top"
                       style={{ minHeight: '1200px', objectFit: 'cover' }}
@@ -137,7 +137,7 @@ export default function BeforeAfter() {
                 <div className="h-[600px] overflow-hidden bg-navy-blue">
                   <div className="scroll-animation-after">
                     <img
-                      src="/assets/premium-roofing-after.png"
+                      src="/assets/premium-roofing-after.webp" loading="lazy"
                       alt="Modern premium contractor website designed by Figgle Media"
                       className="w-full h-auto object-top"
                       style={{ minHeight: '1200px', objectFit: 'cover' }}

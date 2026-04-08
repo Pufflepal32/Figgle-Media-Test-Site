@@ -23,7 +23,7 @@ export default function MapEmbed() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Most Future Proof Web Design Agency in North Carolina and West Virginia
           </h2>
-          <p className="text-xl text-cream max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Proudly serving construction businesses across both states with cutting-edge websites that drive results.
           </p>
         </div>

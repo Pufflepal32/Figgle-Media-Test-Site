@@ -16,7 +16,7 @@ export default function CTABanner() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Ready to Get More Leads?
           </h2>
-          <p className="text-xl sm:text-2xl text-cream mb-10 leading-relaxed">
+          <p className="text-xl sm:text-2xl text-white mb-10 leading-relaxed">
             Schedule a free consultation and discover how we can transform your website into a lead-generating machine.
           </p>
 
@@ -31,7 +31,7 @@ export default function CTABanner() {
             </Link>
           </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-cream">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-white">
             <div className="flex items-center gap-2">
               <CheckCircle size={20} />
               <span className="font-semibold">No Obligation</span>

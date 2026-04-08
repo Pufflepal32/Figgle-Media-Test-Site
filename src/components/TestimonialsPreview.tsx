@@ -40,7 +40,7 @@ export default function TestimonialsPreview() {
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             How We Get You More Leads
           </h2>
-          <p className="text-xl text-cream">
+          <p className="text-xl text-white">
             A proven 4-step process designed specifically for construction businesses.
           </p>
         </div>

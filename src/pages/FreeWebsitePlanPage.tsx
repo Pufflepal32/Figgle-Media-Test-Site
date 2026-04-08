@@ -1,37 +1,9 @@
-import { useState } from 'react';
 import { CheckCircle, ArrowRight, TrendingUp, Users, Zap, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLeadForm } from '../hooks/useLeadForm';
 
 export default function FreeWebsitePlanPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    console.log('Form submitted:', formData);
-
-    // Add a small delay to show loading state
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 500);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const { formData, setField, handleSubmit, isSubmitting, isSubmitted, error } = useLeadForm('free-plan');
 
   if (isSubmitted) {
     return (
@@ -70,7 +42,7 @@ export default function FreeWebsitePlanPage() {
         <div className="container mx-auto px-4">
           <Link to="/" className="flex items-center gap-3 w-fit">
             <img
-              src="/assets/logo.png"
+              src="/assets/logo.webp"
               alt="Figgle Media Logo"
               className="h-12 w-12 object-cover rounded-full"
             />
@@ -176,6 +148,12 @@ export default function FreeWebsitePlanPage() {
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {error && (
+                    <div role="alert" className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                      {error}
+                    </div>
+                  )}
+
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-dark-green mb-2">
                       Full Name *
@@ -185,8 +163,9 @@ export default function FreeWebsitePlanPage() {
                       id="name"
                       name="name"
                       required
+                      aria-required="true"
                       value={formData.name}
-                      onChange={handleChange}
+                      onChange={(e) => setField('name', e.target.value)}
                       className="w-full px-4 py-3 border-2 border-light-gray rounded-lg focus:border-burnt-orange focus:outline-none transition-colors"
                       placeholder="John Smith"
                     />
@@ -201,8 +180,9 @@ export default function FreeWebsitePlanPage() {
                       id="email"
                       name="email"
                       required
+                      aria-required="true"
                       value={formData.email}
-                      onChange={handleChange}
+                      onChange={(e) => setField('email', e.target.value)}
                       className="w-full px-4 py-3 border-2 border-light-gray rounded-lg focus:border-burnt-orange focus:outline-none transition-colors"
                       placeholder="john@mycompany.com"
                     />
@@ -217,8 +197,9 @@ export default function FreeWebsitePlanPage() {
                       id="phone"
                       name="phone"
                       required
+                      aria-required="true"
                       value={formData.phone}
-                      onChange={handleChange}
+                      onChange={(e) => setField('phone', e.target.value)}
                       className="w-full px-4 py-3 border-2 border-light-gray rounded-lg focus:border-burnt-orange focus:outline-none transition-colors"
                       placeholder="(304) 555-1234"
                     />
@@ -233,8 +214,9 @@ export default function FreeWebsitePlanPage() {
                       id="company"
                       name="company"
                       required
-                      value={formData.company}
-                      onChange={handleChange}
+                      aria-required="true"
+                      value={formData.company || ''}
+                      onChange={(e) => setField('company', e.target.value)}
                       className="w-full px-4 py-3 border-2 border-light-gray rounded-lg focus:border-burnt-orange focus:outline-none transition-colors"
                       placeholder="ABC Construction"
                     />

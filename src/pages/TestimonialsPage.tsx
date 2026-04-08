@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Search, PenTool, Rocket, TrendingUp, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TestimonialsPreview from '../components/TestimonialsPreview';
@@ -6,6 +7,15 @@ import CTABanner from '../components/CTABanner';
 function TestimonialsPage() {
   return (
     <>
+      <Helmet>
+        <title>Our Process - How We Build Contractor Websites | Figgle Media</title>
+        <meta name="description" content="Our proven 4-step process for building high-converting contractor websites. From discovery to launch, see how we help construction businesses grow online." />
+        <link rel="canonical" href="https://figglemedia.com/our-process" />
+        <meta property="og:title" content="Our Process | Figgle Media" />
+        <meta property="og:description" content="Our proven 4-step process for building contractor websites that convert." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://figglemedia.com/our-process" />
+      </Helmet>
       <div className="pt-20">
         {/* Hero Section */}
         <section className="relative py-24 md:py-32 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
