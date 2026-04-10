@@ -148,15 +148,15 @@ export default function FreeWebsitePlanPage() {
               {/* Trust Signals */}
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-3xl font-bold text-bright-orange mb-1">90-Day</div>
+                  <div className="text-3xl font-bold text-burnt-orange mb-1">90-Day</div>
                   <div className="text-sm text-cream">Guarantee</div>
                 </div>
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-3xl font-bold text-bright-orange mb-1">100%</div>
+                  <div className="text-3xl font-bold text-burnt-orange mb-1">100%</div>
                   <div className="text-sm text-cream">Construction Focus</div>
                 </div>
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-3xl font-bold text-bright-orange mb-1">24hr</div>
+                  <div className="text-3xl font-bold text-burnt-orange mb-1">24hr</div>
                   <div className="text-sm text-cream">Response Time</div>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default function FreeWebsitePlanPage() {
               {/* Guarantee */}
               <div className="bg-white rounded-xl p-6 text-charcoal">
                 <div className="flex items-center gap-3 mb-3">
-                  <Shield size={24} className="text-bright-orange" />
+                  <Shield size={24} className="text-burnt-orange" />
                   <p className="text-lg font-bold text-dark-green">Our Performance Guarantee</p>
                 </div>
                 <p className="text-charcoal leading-relaxed">
@@ -277,7 +277,7 @@ export default function FreeWebsitePlanPage() {
                       <span>No Obligation</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Zap size={16} className="text-bright-orange" />
+                      <Zap size={16} className="text-burnt-orange" />
                       <span>Quick Response</span>
                     </div>
                   </div>

@@ -43,7 +43,7 @@ export default function MapEmbed() {
               <div className="grid sm:grid-cols-2 gap-4 mb-6">
                 {serviceAreas.map((area, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <CheckCircle size={18} className="text-bright-orange flex-shrink-0" />
+                    <CheckCircle size={18} className="text-burnt-orange flex-shrink-0" />
                     <span className="text-white font-medium">
                       {area.city}, {area.state}
                     </span>

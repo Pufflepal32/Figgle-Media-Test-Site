@@ -1,5 +1,8 @@
-/* Josefin Sans only — used for the logo wordmark in the Header.
- * Body text uses system-ui (set via Tailwind) so there's no font-load CLS. */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/800.css';
 @import '@fontsource/josefin-sans/600.css';
 @import '@fontsource/josefin-sans/700.css';
 

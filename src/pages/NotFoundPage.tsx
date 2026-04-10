@@ -11,7 +11,7 @@ export default function NotFoundPage() {
       </Helmet>
       <section className="min-h-[70vh] flex items-center justify-center bg-cream px-4">
         <div className="text-center max-w-xl">
-          <p className="text-bright-orange font-bold text-lg mb-4">404</p>
+          <p className="text-burnt-orange font-bold text-lg mb-4">404</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-charcoal mb-4">
             We couldn't find that page
           </h1>

@@ -37,13 +37,13 @@ function TestimonialsPage() {
           <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 bg-burnt-orange/20 border border-burnt-orange/30 rounded-full px-5 py-2 mb-8">
-                <Rocket size={16} className="text-bright-orange" />
-                <span className="text-bright-orange font-semibold text-sm">From Audit to Growth in 4 Steps</span>
+                <Rocket size={16} className="text-burnt-orange" />
+                <span className="text-burnt-orange font-semibold text-sm">From Audit to Growth in 4 Steps</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 A Proven Process That{' '}
-                <span className="text-bright-orange">Delivers Results</span>
+                <span className="text-burnt-orange">Delivers Results</span>
               </h1>
               <p className="text-xl text-cream max-w-2xl mx-auto mb-14 leading-relaxed">
                 No guesswork. No wasted time. We follow a battle-tested 4-step process designed to get your construction business generating leads fast.
@@ -58,7 +58,7 @@ function TestimonialsPage() {
                   { num: '04', icon: TrendingUp, label: 'Grow' },
                 ].map((step) => (
                   <div key={step.num} className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
-                    <span className="text-bright-orange font-bold text-sm">{step.num}</span>
+                    <span className="text-burnt-orange font-bold text-sm">{step.num}</span>
                     <step.icon size={28} className="text-white mx-auto my-3" />
                     <p className="text-cream font-semibold text-sm">{step.label}</p>
                   </div>

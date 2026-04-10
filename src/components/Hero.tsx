@@ -31,14 +31,14 @@ export default function Hero() {
           <div className="space-y-4 sm:space-y-6 lg:space-y-8">
             {/* Trust Badge */}
             <div className="inline-flex items-center gap-2 bg-white/20 border border-white/30 rounded-full px-3 py-1.5 sm:px-4 sm:py-2">
-              <Star className="text-bright-orange fill-burnt-orange" size={14} />
+              <Star className="text-burnt-orange fill-burnt-orange" size={14} />
               <span className="text-xs sm:text-sm font-semibold text-white">Built for Construction Businesses</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Websites That Turn Clicks Into{' '}
-              <span className="text-bright-orange">Booked Jobs</span>
+              <span className="text-burnt-orange">Booked Jobs</span>
             </h1>
 
             {/* Subline with date */}
@@ -63,7 +63,7 @@ export default function Hero() {
                 'Professional design that builds trust instantly',
               ].map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="text-bright-orange flex-shrink-0 mt-1" size={20} />
+                  <CheckCircle className="text-burnt-orange flex-shrink-0 mt-1" size={20} />
                   <span className="text-white">{benefit}</span>
                 </div>
               ))}
@@ -163,11 +163,11 @@ export default function Hero() {
               <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-light-gray">
                 <div className="flex items-center justify-center gap-4 text-sm text-navy-blue">
                   <div className="flex items-center gap-1">
-                    <CheckCircle size={16} className="text-bright-orange" />
+                    <CheckCircle size={16} className="text-burnt-orange" />
                     <span>No Spam</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <CheckCircle size={16} className="text-bright-orange" />
+                    <CheckCircle size={16} className="text-burnt-orange" />
                     <span>Quick Response</span>
                   </div>
                 </div>

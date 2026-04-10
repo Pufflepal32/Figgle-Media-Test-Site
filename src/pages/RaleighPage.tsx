@@ -122,13 +122,13 @@ export default function RaleighPage() {
             {/* Left Column */}
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 bg-white/20 border border-white/30 rounded-full px-4 py-2">
-                <MapPin className="text-bright-orange" size={16} />
+                <MapPin className="text-burnt-orange" size={16} />
                 <span className="text-sm font-semibold text-white">Based in Raleigh, NC</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Raleigh Contractors Are{' '}
-                <span className="text-bright-orange">Booking More Jobs</span> With Us
+                <span className="text-burnt-orange">Booking More Jobs</span> With Us
                 <span className="block text-xl sm:text-2xl font-semibold text-cream/80 mt-3">
                   #1 Rated Contractor Web Design in Raleigh — {getCurrentMonthYear()}
                 </span>
@@ -145,7 +145,7 @@ export default function RaleighPage() {
                   'Built by a local team that knows the Triangle market',
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="text-bright-orange flex-shrink-0 mt-1" size={20} />
+                    <CheckCircle className="text-burnt-orange flex-shrink-0 mt-1" size={20} />
                     <span className="text-white">{benefit}</span>
                   </div>
                 ))}
@@ -252,11 +252,11 @@ export default function RaleighPage() {
                 <div className="mt-6 pt-6 border-t border-light-gray">
                   <div className="flex items-center justify-center gap-4 text-sm text-navy-blue">
                     <div className="flex items-center gap-1">
-                      <CheckCircle size={16} className="text-bright-orange" />
+                      <CheckCircle size={16} className="text-burnt-orange" />
                       <span>No Spam</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <CheckCircle size={16} className="text-bright-orange" />
+                      <CheckCircle size={16} className="text-burnt-orange" />
                       <span>Local Team</span>
                     </div>
                   </div>
@@ -385,17 +385,17 @@ export default function RaleighPage() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-navy-blue to-navy">
-              <div className="text-5xl font-bold text-bright-orange mb-3">100%</div>
+              <div className="text-5xl font-bold text-burnt-orange mb-3">100%</div>
               <div className="text-lg font-semibold text-white mb-2">Construction Focus</div>
               <p className="text-cream text-sm">We exclusively serve construction businesses and contractors</p>
             </div>
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-navy-blue to-navy">
-              <div className="text-5xl font-bold text-bright-orange mb-3">Local</div>
+              <div className="text-5xl font-bold text-burnt-orange mb-3">Local</div>
               <div className="text-lg font-semibold text-white mb-2">Raleigh Team</div>
               <p className="text-cream text-sm">Based in Raleigh — we know your market and your competition</p>
             </div>
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-navy-blue to-navy">
-              <div className="text-5xl font-bold text-bright-orange mb-3">90-Day</div>
+              <div className="text-5xl font-bold text-burnt-orange mb-3">90-Day</div>
               <div className="text-lg font-semibold text-white mb-2">Performance Guarantee</div>
               <p className="text-cream text-sm">If your leads don't improve, we work for free until they do</p>
             </div>

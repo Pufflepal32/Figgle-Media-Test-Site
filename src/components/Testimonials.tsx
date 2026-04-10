@@ -72,7 +72,7 @@ export default function Testimonials() {
               <ul className="space-y-3">
                 {step.details.map((detail, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle size={18} className="text-bright-orange flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={18} className="text-burnt-orange flex-shrink-0 mt-0.5" />
                     <span className="text-cream">{detail}</span>
                   </li>
                 ))}

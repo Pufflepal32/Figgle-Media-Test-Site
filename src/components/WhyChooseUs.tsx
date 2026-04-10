@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
               className="text-center p-8 bg-white/10 backdrop-blur-sm rounded-xl hover:shadow-xl transition-all border border-white/20 group"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-burnt-orange/20 rounded-full mb-6 group-hover:bg-burnt-orange transition-colors">
-                <reason.icon size={32} className="text-bright-orange group-hover:text-white transition-colors" />
+                <reason.icon size={32} className="text-burnt-orange group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">
                 {reason.title}
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
 
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 text-center shadow-lg">
           <div className="flex items-center justify-center mb-4">
-            <Shield size={48} className="text-bright-orange" />
+            <Shield size={48} className="text-burnt-orange" />
           </div>
           <h3 className="text-3xl font-bold text-white mb-4">
             Our Performance Guarantee

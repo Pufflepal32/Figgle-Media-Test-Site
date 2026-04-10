@@ -69,7 +69,7 @@ export default function TestimonialsPreview() {
               {/* Arrow connector (hidden on last item and on mobile) */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 z-10">
-                  <ArrowRight size={24} className="text-bright-orange" />
+                  <ArrowRight size={24} className="text-burnt-orange" />
                 </div>
               )}
             </div>

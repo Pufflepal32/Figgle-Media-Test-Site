@@ -48,12 +48,12 @@ export default function Blog() {
       <div className="pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-burnt-orange/20 border border-burnt-orange/30 rounded-full px-5 py-2 mb-6">
-            <BookOpen size={16} className="text-bright-orange" />
-            <span className="text-bright-orange font-semibold text-sm">The Figgle Media Blog</span>
+            <BookOpen size={16} className="text-burnt-orange" />
+            <span className="text-burnt-orange font-semibold text-sm">The Figgle Media Blog</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight max-w-4xl mx-auto">
             Marketing Tips That{' '}
-            <span className="text-bright-orange">Grow Your Business</span>
+            <span className="text-burnt-orange">Grow Your Business</span>
           </h1>
           <p className="text-lg text-cream max-w-2xl mx-auto mb-8">
             Actionable insights on web design, SEO, and digital marketing — written specifically for contractors who want more leads.
@@ -190,7 +190,7 @@ export default function Blog() {
                             </div>
                           </div>
                           <h2
-                            className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-bright-orange transition-colors leading-tight"
+                            className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-burnt-orange transition-colors leading-tight"
                             itemProp="headline"
                           >
                             {featuredPost.title}
@@ -205,7 +205,7 @@ export default function Blog() {
                               </div>
                               <span className="text-cream text-sm font-medium" itemProp="author">{featuredPost.author}</span>
                             </div>
-                            <span className="inline-flex items-center gap-1.5 text-bright-orange font-semibold text-sm group-hover:gap-2.5 transition-all">
+                            <span className="inline-flex items-center gap-1.5 text-burnt-orange font-semibold text-sm group-hover:gap-2.5 transition-all">
                               Read Article <ArrowRight size={16} />
                             </span>
                           </div>
@@ -248,7 +248,7 @@ export default function Blog() {
                               <span>{post.readTime}</span>
                             </div>
                             <h2
-                              className="text-xl font-bold text-white mb-3 group-hover:text-bright-orange transition-colors leading-snug line-clamp-2"
+                              className="text-xl font-bold text-white mb-3 group-hover:text-burnt-orange transition-colors leading-snug line-clamp-2"
                               itemProp="headline"
                             >
                               {post.title}
@@ -312,7 +312,7 @@ export default function Blog() {
                             <span className="text-xs text-cream/50">{post.readTime}</span>
                           </div>
                           <h2
-                            className="text-lg font-bold text-white mb-2 group-hover:text-bright-orange transition-colors leading-snug line-clamp-2"
+                            className="text-lg font-bold text-white mb-2 group-hover:text-burnt-orange transition-colors leading-snug line-clamp-2"
                             itemProp="headline"
                           >
                             {post.title}

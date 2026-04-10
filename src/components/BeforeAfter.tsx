@@ -197,15 +197,15 @@ export default function BeforeAfter() {
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-blue to-transparent p-6 z-10">
                   <div className="grid grid-cols-3 gap-4 text-center text-white">
                     <div className="flex flex-col items-center">
-                      <Check size={20} className="text-bright-orange mb-1" />
+                      <Check size={20} className="text-burnt-orange mb-1" />
                       <p className="text-sm">Fast Loading</p>
                     </div>
                     <div className="flex flex-col items-center">
-                      <Check size={20} className="text-bright-orange mb-1" />
+                      <Check size={20} className="text-burnt-orange mb-1" />
                       <p className="text-sm">Mobile-First</p>
                     </div>
                     <div className="flex flex-col items-center">
-                      <Check size={20} className="text-bright-orange mb-1" />
+                      <Check size={20} className="text-burnt-orange mb-1" />
                       <p className="text-sm">SEO Built-In</p>
                     </div>
                   </div>
