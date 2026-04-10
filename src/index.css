@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* Josefin Sans only — used for the logo wordmark in the Header.
+ * Body text uses system-ui (set via Tailwind) so there's no font-load CLS. */
+@import '@fontsource/josefin-sans/600.css';
+@import '@fontsource/josefin-sans/700.css';
 
 @tailwind base;
 @tailwind components;

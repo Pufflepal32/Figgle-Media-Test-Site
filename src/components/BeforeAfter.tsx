@@ -57,8 +57,12 @@ export default function BeforeAfter() {
                 <div className="h-[600px] overflow-hidden bg-gray-800">
                   <div className="scroll-animation-before">
                     <img
-                      src="/assets/old-website-before.png"
+                      src="/assets/old-website-before.webp"
                       alt="Typical outdated contractor website design"
+                      width="1200"
+                      height="1200"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-auto object-top"
                       style={{ minHeight: '1200px', objectFit: 'cover' }}
                       onError={(e) => {
@@ -137,8 +141,12 @@ export default function BeforeAfter() {
                 <div className="h-[600px] overflow-hidden bg-navy-blue">
                   <div className="scroll-animation-after">
                     <img
-                      src="/assets/premium-roofing-after.png"
+                      src="/assets/premium-roofing-after.webp"
                       alt="Modern premium contractor website designed by Figgle Media"
+                      width="1200"
+                      height="1200"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-auto object-top"
                       style={{ minHeight: '1200px', objectFit: 'cover' }}
                       onError={(e) => {
@@ -189,15 +197,15 @@ export default function BeforeAfter() {
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-blue to-transparent p-6 z-10">
                   <div className="grid grid-cols-3 gap-4 text-center text-white">
                     <div className="flex flex-col items-center">
-                      <Check size={20} className="text-burnt-orange mb-1" />
+                      <Check size={20} className="text-bright-orange mb-1" />
                       <p className="text-sm">Fast Loading</p>
                     </div>
                     <div className="flex flex-col items-center">
-                      <Check size={20} className="text-burnt-orange mb-1" />
+                      <Check size={20} className="text-bright-orange mb-1" />
                       <p className="text-sm">Mobile-First</p>
                     </div>
                     <div className="flex flex-col items-center">
-                      <Check size={20} className="text-burnt-orange mb-1" />
+                      <Check size={20} className="text-bright-orange mb-1" />
                       <p className="text-sm">SEO Built-In</p>
                     </div>
                   </div>

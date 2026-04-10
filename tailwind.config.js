@@ -10,8 +10,11 @@ export default {
         'light-teal': '#56CCF2',
         'cream': '#F5EFE6',
         'light-cream': '#FBF8F3',
-        'burnt-orange': '#FF6B2C',
-        'deep-orange': '#E85D04',
+        'burnt-orange': '#C04500',
+        'deep-orange': '#A83C00',
+        // Bright accent for text-on-dark — passes WCAG against navy/gray-800 only.
+        // Do NOT use as a background with white text — use burnt-orange for that.
+        'bright-orange': '#FF6B2C',
         'charcoal': '#2C3333',
         'warm-gray': '#52575D',
         'light-gray': '#E8E8E8',
@@ -21,7 +24,17 @@ export default {
         'light-navy': '#243352',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        // System font stack — no network request, no font-loading CLS.
+        sans: [
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'sans-serif',
+        ],
       },
     },
   },

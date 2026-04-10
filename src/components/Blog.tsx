@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { getAllBlogPosts } from '../data/blogPosts';
 
+// Darker shades chosen so white text on the badge passes WCAG AA contrast.
 const categoryColors: Record<string, string> = {
-  'Web Design': 'bg-blue-500',
-  'SEO': 'bg-emerald-500',
-  'Digital Marketing': 'bg-purple-500',
+  'Web Design': 'bg-blue-700',
+  'SEO': 'bg-emerald-700',
+  'Digital Marketing': 'bg-purple-700',
   'Lead Generation': 'bg-burnt-orange',
-  'Social Media': 'bg-pink-500',
-  'Email Marketing': 'bg-amber-500',
-  'Content Marketing': 'bg-teal-500',
-  'Web Security': 'bg-red-500',
-  'Branding': 'bg-indigo-500',
+  'Social Media': 'bg-pink-700',
+  'Email Marketing': 'bg-amber-700',
+  'Content Marketing': 'bg-teal-700',
+  'Web Security': 'bg-red-700',
+  'Branding': 'bg-indigo-700',
 };
 
 function getBadgeColor(category: string) {
@@ -47,12 +48,12 @@ export default function Blog() {
       <div className="pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-burnt-orange/20 border border-burnt-orange/30 rounded-full px-5 py-2 mb-6">
-            <BookOpen size={16} className="text-burnt-orange" />
-            <span className="text-burnt-orange font-semibold text-sm">The Figgle Media Blog</span>
+            <BookOpen size={16} className="text-bright-orange" />
+            <span className="text-bright-orange font-semibold text-sm">The Figgle Media Blog</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight max-w-4xl mx-auto">
             Marketing Tips That{' '}
-            <span className="text-burnt-orange">Grow Your Business</span>
+            <span className="text-bright-orange">Grow Your Business</span>
           </h1>
           <p className="text-lg text-cream max-w-2xl mx-auto mb-8">
             Actionable insights on web design, SEO, and digital marketing — written specifically for contractors who want more leads.
@@ -78,7 +79,7 @@ export default function Blog() {
           {/* Sidebar */}
           <aside className="lg:w-64 flex-shrink-0 order-2 lg:order-1">
             <div className="sticky top-28">
-              <h3 className="text-sm font-bold text-cream/50 uppercase tracking-wider mb-4">Categories</h3>
+              <h2 className="text-sm font-bold text-cream/50 uppercase tracking-wider mb-4">Categories</h2>
               <nav className="space-y-1">
                 {categories.map((cat) => {
                   const count = cat === 'All' ? allPosts.length : allPosts.filter((p) => p.category === cat).length;
@@ -99,7 +100,7 @@ export default function Blog() {
                         {cat}
                       </span>
                       <span className={`text-xs px-2 py-0.5 rounded-full ${
-                        activeCategory === cat ? 'bg-white/20 text-white' : 'bg-white/10 text-cream/60'
+                        activeCategory === cat ? 'bg-burnt-orange text-white' : 'bg-white/10 text-cream'
                       }`}>
                         {count}
                       </span>
@@ -110,7 +111,7 @@ export default function Blog() {
 
               {/* Newsletter CTA */}
               <div className="mt-8 bg-white/5 border border-white/10 rounded-xl p-6">
-                <h4 className="text-white font-bold mb-2">Get Weekly Tips</h4>
+                <h3 className="text-white font-bold mb-2">Get Weekly Tips</h3>
                 <p className="text-cream/70 text-sm mb-4">Contractor marketing insights delivered to your inbox.</p>
                 <form className="space-y-3">
                   <input
@@ -130,7 +131,7 @@ export default function Blog() {
 
               {/* Popular Topics */}
               <div className="mt-8">
-                <h3 className="text-sm font-bold text-cream/50 uppercase tracking-wider mb-4">Popular Topics</h3>
+                <h2 className="text-sm font-bold text-cream/50 uppercase tracking-wider mb-4">Popular Topics</h2>
                 <div className="flex flex-wrap gap-2">
                   {['Local SEO', 'Google Ads', 'Lead Gen', 'Web Design', 'Mobile', 'Reviews', 'Branding'].map((tag) => (
                     <span key={tag} className="px-3 py-1.5 bg-white/10 text-cream/80 text-xs font-medium rounded-full hover:bg-white/20 cursor-pointer transition-colors border border-white/10">
@@ -189,7 +190,7 @@ export default function Blog() {
                             </div>
                           </div>
                           <h2
-                            className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-burnt-orange transition-colors leading-tight"
+                            className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-bright-orange transition-colors leading-tight"
                             itemProp="headline"
                           >
                             {featuredPost.title}
@@ -204,7 +205,7 @@ export default function Blog() {
                               </div>
                               <span className="text-cream text-sm font-medium" itemProp="author">{featuredPost.author}</span>
                             </div>
-                            <span className="inline-flex items-center gap-1.5 text-burnt-orange font-semibold text-sm group-hover:gap-2.5 transition-all">
+                            <span className="inline-flex items-center gap-1.5 text-bright-orange font-semibold text-sm group-hover:gap-2.5 transition-all">
                               Read Article <ArrowRight size={16} />
                             </span>
                           </div>
@@ -247,7 +248,7 @@ export default function Blog() {
                               <span>{post.readTime}</span>
                             </div>
                             <h2
-                              className="text-xl font-bold text-white mb-3 group-hover:text-burnt-orange transition-colors leading-snug line-clamp-2"
+                              className="text-xl font-bold text-white mb-3 group-hover:text-bright-orange transition-colors leading-snug line-clamp-2"
                               itemProp="headline"
                             >
                               {post.title}
@@ -311,7 +312,7 @@ export default function Blog() {
                             <span className="text-xs text-cream/50">{post.readTime}</span>
                           </div>
                           <h2
-                            className="text-lg font-bold text-white mb-2 group-hover:text-burnt-orange transition-colors leading-snug line-clamp-2"
+                            className="text-lg font-bold text-white mb-2 group-hover:text-bright-orange transition-colors leading-snug line-clamp-2"
                             itemProp="headline"
                           >
                             {post.title}

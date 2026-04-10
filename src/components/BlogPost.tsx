@@ -19,7 +19,7 @@ export default function BlogPost() {
           {/* Back Button */}
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-cream hover:text-burnt-orange transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-cream hover:text-bright-orange transition-colors mb-8"
           >
             <ArrowLeft size={20} />
             Back to Blog
@@ -36,7 +36,7 @@ export default function BlogPost() {
           <div className="text-center py-20">
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto mb-6 bg-burnt-orange/20 rounded-full flex items-center justify-center">
-                <Calendar size={64} className="text-burnt-orange" />
+                <Calendar size={64} className="text-bright-orange" />
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
                 {post.title}
@@ -82,7 +82,7 @@ export default function BlogPost() {
             <div className="mt-12">
               <Link
                 to="/blog"
-                className="inline-flex items-center gap-2 text-burnt-orange font-semibold hover:gap-3 transition-all text-lg"
+                className="inline-flex items-center gap-2 text-bright-orange font-semibold hover:gap-3 transition-all text-lg"
               >
                 <ArrowLeft size={20} />
                 View All Blog Posts
@@ -104,7 +104,7 @@ export default function BlogPost() {
         {/* Back Button */}
         <Link
           to="/blog"
-          className="inline-flex items-center gap-2 text-cream hover:text-burnt-orange transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-cream hover:text-bright-orange transition-colors mb-8"
         >
           <ArrowLeft size={20} />
           Back to Blog
@@ -271,13 +271,13 @@ export default function BlogPost() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Show 2 other random articles */}
             <Link to="/blog/how-local-seo-helps-contractors-dominate-market" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:shadow-xl transition-all group">
-              <h4 className="text-xl font-bold text-white mb-2 group-hover:text-burnt-orange transition-colors">
+              <h4 className="text-xl font-bold text-white mb-2 group-hover:text-bright-orange transition-colors">
                 How Local SEO Helps Contractors Dominate Their Market
               </h4>
               <p className="text-cream text-sm">Learn proven local SEO strategies that help contractors rank #1...</p>
             </Link>
             <Link to="/blog/converting-website-visitors-into-leads" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:shadow-xl transition-all group">
-              <h4 className="text-xl font-bold text-white mb-2 group-hover:text-burnt-orange transition-colors">
+              <h4 className="text-xl font-bold text-white mb-2 group-hover:text-bright-orange transition-colors">
                 Converting Website Visitors Into Leads
               </h4>
               <p className="text-cream text-sm">Essential elements every high-converting contractor website needs...</p>

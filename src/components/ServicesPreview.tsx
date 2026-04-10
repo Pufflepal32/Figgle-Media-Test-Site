@@ -40,7 +40,7 @@ export default function ServicesPreview() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Everything You Need to{' '}
-            <span className="text-burnt-orange">
+            <span className="text-bright-orange">
               Grow Your Business
             </span>
           </h2>
@@ -66,9 +66,9 @@ export default function ServicesPreview() {
               <p className="text-cream leading-relaxed mb-4">
                 {service.description}
               </p>
-              <span className="inline-flex items-center text-burnt-orange font-semibold group-hover:text-white transition-colors">
-                Learn More
-                <ArrowRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform" />
+              <span className="inline-flex items-center text-bright-orange font-semibold group-hover:text-white transition-colors">
+                Learn more about {service.title}
+                <ArrowRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </span>
             </Link>
           ))}
@@ -78,7 +78,7 @@ export default function ServicesPreview() {
         <div className="text-center">
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 text-burnt-orange hover:text-white font-semibold text-lg group transition-colors"
+            className="inline-flex items-center gap-2 text-bright-orange hover:text-white font-semibold text-lg group transition-colors"
           >
             View All Services
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />

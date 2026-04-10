@@ -3,6 +3,7 @@ import { ArrowRight, Phone, CheckCircle, Star, MapPin, Shield, Users, TrendingUp
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getCurrentMonthYear } from '../utils/useCurrentDate';
+import { BUSINESS } from '../config/business';
 
 export default function RaleighPage() {
   const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ export default function RaleighPage() {
     name: 'Figgle Media - Raleigh Contractor Web Design',
     description: 'Custom web design and SEO for construction businesses in Raleigh, NC. We help contractors generate more leads with high-converting websites.',
     url: 'https://figglemedia.com/raleigh-contractor-web-design',
-    telephone: '(123) 456-7890',
+    telephone: BUSINESS.phoneDisplay,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Raleigh',
@@ -66,7 +67,7 @@ export default function RaleighPage() {
         name: 'Do you only work with contractors in Raleigh?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We serve construction businesses across North Carolina and West Virginia, but Raleigh is our home base. Being local means we understand the Raleigh market — from new development trends to the neighborhoods where clients are actively searching for contractors.',
+          text: 'We serve construction businesses across North Carolina, and Raleigh is our home base. Being local means we understand the Raleigh market — from new development trends to the neighborhoods where clients are actively searching for contractors.',
         },
       },
     ],
@@ -121,13 +122,13 @@ export default function RaleighPage() {
             {/* Left Column */}
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 bg-white/20 border border-white/30 rounded-full px-4 py-2">
-                <MapPin className="text-burnt-orange" size={16} />
+                <MapPin className="text-bright-orange" size={16} />
                 <span className="text-sm font-semibold text-white">Based in Raleigh, NC</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Raleigh Contractors Are{' '}
-                <span className="text-burnt-orange">Booking More Jobs</span> With Us
+                <span className="text-bright-orange">Booking More Jobs</span> With Us
                 <span className="block text-xl sm:text-2xl font-semibold text-cream/80 mt-3">
                   #1 Rated Contractor Web Design in Raleigh — {getCurrentMonthYear()}
                 </span>
@@ -144,7 +145,7 @@ export default function RaleighPage() {
                   'Built by a local team that knows the Triangle market',
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="text-burnt-orange flex-shrink-0 mt-1" size={20} />
+                    <CheckCircle className="text-bright-orange flex-shrink-0 mt-1" size={20} />
                     <span className="text-white">{benefit}</span>
                   </div>
                 ))}
@@ -152,11 +153,11 @@ export default function RaleighPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-4">
                 <a
-                  href="tel:+1234567890"
+                  href={`tel:${BUSINESS.phoneTel}`}
                   className="inline-flex items-center gap-3 bg-burnt-orange text-white px-6 py-4 rounded-xl font-semibold text-lg hover:bg-deep-orange transition-all shadow-lg hover:shadow-xl group"
                 >
                   <Phone size={20} className="group-hover:rotate-12 transition-transform" />
-                  <span>(123) 456-7890</span>
+                  <span>{BUSINESS.phoneDisplay}</span>
                 </a>
                 <span className="text-sm text-cream">Free consultation for Raleigh contractors</span>
               </div>
@@ -168,8 +169,12 @@ export default function RaleighPage() {
                 {/* City Photo */}
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="/assets/cities/raleigh.jpg"
+                    src="/assets/cities/raleigh.webp"
                     alt="Raleigh NC skyline - contractor web design services"
+                    width="800"
+                    height="384"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent"></div>
@@ -247,11 +252,11 @@ export default function RaleighPage() {
                 <div className="mt-6 pt-6 border-t border-light-gray">
                   <div className="flex items-center justify-center gap-4 text-sm text-navy-blue">
                     <div className="flex items-center gap-1">
-                      <CheckCircle size={16} className="text-burnt-orange" />
+                      <CheckCircle size={16} className="text-bright-orange" />
                       <span>No Spam</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <CheckCircle size={16} className="text-burnt-orange" />
+                      <CheckCircle size={16} className="text-bright-orange" />
                       <span>Local Team</span>
                     </div>
                   </div>
@@ -380,17 +385,17 @@ export default function RaleighPage() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-navy-blue to-navy">
-              <div className="text-5xl font-bold text-burnt-orange mb-3">100%</div>
+              <div className="text-5xl font-bold text-bright-orange mb-3">100%</div>
               <div className="text-lg font-semibold text-white mb-2">Construction Focus</div>
               <p className="text-cream text-sm">We exclusively serve construction businesses and contractors</p>
             </div>
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-navy-blue to-navy">
-              <div className="text-5xl font-bold text-burnt-orange mb-3">Local</div>
+              <div className="text-5xl font-bold text-bright-orange mb-3">Local</div>
               <div className="text-lg font-semibold text-white mb-2">Raleigh Team</div>
               <p className="text-cream text-sm">Based in Raleigh — we know your market and your competition</p>
             </div>
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-navy-blue to-navy">
-              <div className="text-5xl font-bold text-burnt-orange mb-3">90-Day</div>
+              <div className="text-5xl font-bold text-bright-orange mb-3">90-Day</div>
               <div className="text-lg font-semibold text-white mb-2">Performance Guarantee</div>
               <p className="text-cream text-sm">If your leads don't improve, we work for free until they do</p>
             </div>
@@ -418,7 +423,7 @@ export default function RaleighPage() {
                 },
                 {
                   q: 'Do you only work with contractors in Raleigh?',
-                  a: "We serve construction businesses across North Carolina and West Virginia, but Raleigh is our home base. Being local means we understand the Raleigh market — from new development trends to the neighborhoods where clients are actively searching for contractors.",
+                  a: "We serve construction businesses across North Carolina, and Raleigh is our home base. Being local means we understand the Raleigh market — from new development trends to the neighborhoods where clients are actively searching for contractors.",
                 },
                 {
                   q: 'What if I already have a contractor website?',
@@ -445,16 +450,16 @@ export default function RaleighPage() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Dominate Raleigh's Construction Market?
           </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-white max-w-2xl mx-auto mb-8">
             Get a free website analysis and see exactly how we'll help you outrank every contractor in the Raleigh area.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="tel:+1234567890"
+              href={`tel:${BUSINESS.phoneTel}`}
               className="inline-flex items-center gap-3 bg-white text-burnt-orange px-8 py-4 rounded-xl font-bold text-lg hover:bg-cream transition-all shadow-lg hover:shadow-xl group"
             >
               <Phone size={20} className="group-hover:rotate-12 transition-transform" />
-              Call (123) 456-7890
+              Call {BUSINESS.phoneDisplay}
             </a>
             <Link
               to="/free-website-plan"

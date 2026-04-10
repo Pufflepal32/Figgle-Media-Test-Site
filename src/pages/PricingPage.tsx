@@ -1,6 +1,6 @@
+import { Helmet } from 'react-helmet-async';
 import { Check, DollarSign, Shield, Zap } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import CTABanner from '../components/CTABanner';
 
 function PricingPage() {
@@ -114,7 +114,16 @@ function PricingPage() {
   ];
 
   return (
-    <div className="pt-20">
+    <>
+      <Helmet>
+        <title>Contractor Web Design Pricing | Figgle Media</title>
+        <meta
+          name="description"
+          content="Transparent pricing for contractor websites, SEO, and Google Ads management. Plans starting at $2,999. Built for construction businesses across North Carolina."
+        />
+        <link rel="canonical" href="https://figglemedia.com/pricing" />
+      </Helmet>
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
         {/* SVG Pattern */}
@@ -135,13 +144,13 @@ function PricingPage() {
 
         <div className="relative container mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-burnt-orange/20 border border-burnt-orange/30 rounded-full px-5 py-2 mb-8">
-            <DollarSign size={16} className="text-burnt-orange" />
-            <span className="text-burnt-orange font-semibold text-sm">Transparent Pricing, No Hidden Fees</span>
+            <DollarSign size={16} className="text-bright-orange" />
+            <span className="text-bright-orange font-semibold text-sm">Transparent Pricing, No Hidden Fees</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto">
             Invest in Growth,{' '}
-            <span className="text-burnt-orange">Not Guesswork</span>
+            <span className="text-bright-orange">Not Guesswork</span>
           </h1>
           <p className="text-xl text-cream max-w-2xl mx-auto mb-12 leading-relaxed">
             Choose the package that fits your goals. Every plan is built to deliver measurable ROI for your construction business.
@@ -155,7 +164,7 @@ function PricingPage() {
               { icon: Check, label: 'No Long-Term Contracts' },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-2 text-cream">
-                <item.icon size={20} className="text-burnt-orange" />
+                <item.icon size={20} className="text-bright-orange" />
                 <span className="font-medium">{item.label}</span>
               </div>
             ))}
@@ -181,7 +190,7 @@ function PricingPage() {
                     MOST POPULAR
                   </div>
                 )}
-                <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                <h2 className="text-2xl font-bold text-white mb-2">{tier.name}</h2>
                 <div className="text-5xl font-bold text-white mb-4">{tier.price}</div>
                 <p className={`mb-6 ${tier.featured ? 'text-white' : 'text-gray-300'}`}>{tier.description}</p>
                 <ul className="space-y-3">
@@ -218,15 +227,15 @@ function PricingPage() {
 
             <div className="grid md:grid-cols-3 gap-6 mt-10">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <p className="text-2xl font-bold text-burnt-orange mb-2">90 Days</p>
+                <p className="text-2xl font-bold text-bright-orange mb-2">90 Days</p>
                 <p className="text-cream text-sm">Performance guarantee — free work if no improvement</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <p className="text-2xl font-bold text-burnt-orange mb-2">Construction Only</p>
+                <p className="text-2xl font-bold text-bright-orange mb-2">Construction Only</p>
                 <p className="text-cream text-sm">We exclusively serve construction businesses</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <p className="text-2xl font-bold text-burnt-orange mb-2">Full Service</p>
+                <p className="text-2xl font-bold text-bright-orange mb-2">Full Service</p>
                 <p className="text-cream text-sm">Design, SEO, Ads — all handled in-house</p>
               </div>
             </div>
@@ -249,7 +258,7 @@ function PricingPage() {
                 <div className="text-5xl mb-4">{service.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                 <p className="text-gray-300 mb-6 min-h-[60px]">{service.description}</p>
-                <div className="text-4xl font-bold text-burnt-orange">{service.price}</div>
+                <div className="text-4xl font-bold text-white">{service.price}</div>
               </div>
             ))}
           </div>
@@ -270,23 +279,23 @@ function PricingPage() {
             </div>
             <div className="space-y-6 text-cream">
               <div className="flex gap-4">
-                <Check className="text-burnt-orange flex-shrink-0 mt-1" size={24} />
+                <Check className="text-bright-orange flex-shrink-0 mt-1" size={24} />
                 <div>
-                  <h4 className="font-bold text-xl mb-2 text-white">Custom website design</h4>
+                  <h3 className="font-bold text-xl mb-2 text-white">Custom website design</h3>
                   <p>We take pride in every custom website we build, and it shows. On average, we spend 2x more time on websites compared to other agencies.</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <Check className="text-burnt-orange flex-shrink-0 mt-1" size={24} />
+                <Check className="text-bright-orange flex-shrink-0 mt-1" size={24} />
                 <div>
-                  <h4 className="font-bold text-xl mb-2 text-white">Comprehensive approach</h4>
+                  <h3 className="font-bold text-xl mb-2 text-white">Comprehensive approach</h3>
                   <p>We do everything in-house from custom illustrations to premium copywriting, and we really mean everything.</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <Check className="text-burnt-orange flex-shrink-0 mt-1" size={24} />
+                <Check className="text-bright-orange flex-shrink-0 mt-1" size={24} />
                 <div>
-                  <h4 className="font-bold text-xl mb-2 text-white">We're invested in your success</h4>
+                  <h3 className="font-bold text-xl mb-2 text-white">We're invested in your success</h3>
                   <p>With limited monthly availability, we're working with you because we genuinely think our team is a good fit. At the end of the day, nothing matters more than ROI.</p>
                 </div>
               </div>
@@ -337,7 +346,7 @@ function PricingPage() {
                   className="w-full text-left px-6 py-4 bg-gray-800 hover:bg-gray-750 transition-colors flex justify-between items-center"
                 >
                   <span className="font-semibold text-lg text-white">{faq.question}</span>
-                  <span className="text-2xl text-burnt-orange">
+                  <span className="text-2xl text-bright-orange">
                     {openFAQ === index ? '−' : '+'}
                   </span>
                 </button>
@@ -354,7 +363,8 @@ function PricingPage() {
 
       {/* CTA Banner */}
       <CTABanner />
-    </div>
+      </div>
+    </>
   );
 }
 

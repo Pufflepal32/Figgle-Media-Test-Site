@@ -12,6 +12,7 @@ import PricingPage from './pages/PricingPage';
 import RaleighPage from './pages/RaleighPage';
 import ServiceLandingPage from './pages/ServiceLandingPage';
 import CityLandingPage from './pages/CityLandingPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -21,30 +22,36 @@ function App() {
         <Route path="/free-website-plan" element={<FreeWebsitePlanPage />} />
 
         {/* Main site routes with header/footer */}
-        <Route path="*" element={
-          <div className="min-h-screen">
-            <Header />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/:slug" element={<ServiceLandingPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/our-process" element={<TestimonialsPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/raleigh-contractor-web-design" element={<RaleighPage />} />
-              <Route path="/charlotte-contractor-web-design" element={<CityLandingPage />} />
-              <Route path="/durham-contractor-web-design" element={<CityLandingPage />} />
-              <Route path="/greensboro-contractor-web-design" element={<CityLandingPage />} />
-              <Route path="/winston-salem-contractor-web-design" element={<CityLandingPage />} />
-              <Route path="/fayetteville-contractor-web-design" element={<CityLandingPage />} />
-              <Route path="/wilmington-contractor-web-design" element={<CityLandingPage />} />
-              <Route path="/asheville-contractor-web-design" element={<CityLandingPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/blog/:slug" element={<BlogPostPage />} />
-            </Routes>
-            <Footer />
-          </div>
-        } />
+        <Route
+          path="*"
+          element={
+            <div className="min-h-screen">
+              <Header />
+              <main id="main">
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/services/:slug" element={<ServiceLandingPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/our-process" element={<TestimonialsPage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/raleigh-contractor-web-design" element={<RaleighPage />} />
+                  <Route path="/charlotte-contractor-web-design" element={<CityLandingPage />} />
+                  <Route path="/durham-contractor-web-design" element={<CityLandingPage />} />
+                  <Route path="/greensboro-contractor-web-design" element={<CityLandingPage />} />
+                  <Route path="/winston-salem-contractor-web-design" element={<CityLandingPage />} />
+                  <Route path="/fayetteville-contractor-web-design" element={<CityLandingPage />} />
+                  <Route path="/wilmington-contractor-web-design" element={<CityLandingPage />} />
+                  <Route path="/asheville-contractor-web-design" element={<CityLandingPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/blog/:slug" element={<BlogPostPage />} />
+                  <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+              </main>
+              <Footer />
+            </div>
+          }
+        />
       </Routes>
     </Router>
   );

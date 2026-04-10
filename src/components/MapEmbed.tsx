@@ -1,4 +1,5 @@
 import { MapPin, CheckCircle, Phone } from 'lucide-react';
+import { BUSINESS } from '../config/business';
 
 export default function MapEmbed() {
   const serviceAreas = [
@@ -6,25 +7,24 @@ export default function MapEmbed() {
     { city: 'Charlotte', state: 'NC' },
     { city: 'Durham', state: 'NC' },
     { city: 'Greensboro', state: 'NC' },
+    { city: 'Winston-Salem', state: 'NC' },
+    { city: 'Fayetteville', state: 'NC' },
     { city: 'Wilmington', state: 'NC' },
-    { city: 'Charleston', state: 'WV' },
-    { city: 'Huntington', state: 'WV' },
-    { city: 'Morgantown', state: 'WV' },
-    { city: 'Parkersburg', state: 'WV' },
+    { city: 'Asheville', state: 'NC' },
   ];
 
-  // Map centered on the region between North Carolina and West Virginia
-  const mapUrl = 'https://www.google.com/maps?q=North+Carolina+West+Virginia&output=embed&z=6';
+  // Map centered on North Carolina
+  const mapUrl = 'https://www.google.com/maps?q=North+Carolina&output=embed&z=7';
 
   return (
     <section className="py-16 bg-gradient-to-br from-navy-blue via-navy to-light-navy">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Most Future Proof Web Design Agency in North Carolina and West Virginia
+            Most Future Proof Web Design Agency in North Carolina
           </h2>
           <p className="text-xl text-cream max-w-3xl mx-auto">
-            Proudly serving construction businesses across both states with cutting-edge websites that drive results.
+            Proudly serving construction businesses across the state with cutting-edge websites that drive results.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function MapEmbed() {
               <div className="grid sm:grid-cols-2 gap-4 mb-6">
                 {serviceAreas.map((area, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <CheckCircle size={18} className="text-burnt-orange flex-shrink-0" />
+                    <CheckCircle size={18} className="text-bright-orange flex-shrink-0" />
                     <span className="text-white font-medium">
                       {area.city}, {area.state}
                     </span>
@@ -52,7 +52,7 @@ export default function MapEmbed() {
               </div>
 
               <p className="text-cream text-sm italic">
-                And surrounding areas throughout North Carolina and West Virginia
+                And surrounding areas throughout North Carolina
               </p>
             </div>
 
@@ -66,7 +66,7 @@ export default function MapEmbed() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle size={20} className="flex-shrink-0 mt-1" />
-                  <p>Local market expertise in NC & WV</p>
+                  <p>Local market expertise across North Carolina</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle size={20} className="flex-shrink-0 mt-1" />
@@ -79,7 +79,7 @@ export default function MapEmbed() {
               </div>
 
               <a
-                href="tel:+1234567890"
+                href={`tel:${BUSINESS.phoneTel}`}
                 className="mt-6 flex items-center justify-center gap-2 bg-burnt-orange hover:bg-deep-orange text-white font-bold py-3 px-6 rounded-xl transition-all shadow-lg hover:shadow-xl"
               >
                 <Phone size={20} />
@@ -99,7 +99,7 @@ export default function MapEmbed() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Service Areas Map - North Carolina and West Virginia"
+                  title="Service Areas Map - North Carolina"
                 ></iframe>
               </div>
             </div>

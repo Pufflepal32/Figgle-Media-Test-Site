@@ -1,6 +1,7 @@
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { BUSINESS } from '../config/business';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,15 +47,19 @@ export default function Header() {
           {/* Logo on the left */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
-              src="/assets/logo.png"
+              src="/assets/logo.webp"
               alt="Figgle Media Logo"
+              width="48"
+              height="48"
+              fetchPriority="high"
+              decoding="async"
               className="h-12 w-12 object-cover rounded-full transition-transform duration-300 group-hover:scale-110"
             />
             <div className="flex flex-col items-center leading-none" style={{ fontFamily: "'Josefin Sans', sans-serif" }}>
-              <span className="text-[28px] font-bold tracking-[0.04em] text-cream group-hover:text-burnt-orange transition-colors duration-300 uppercase">
+              <span className="text-[28px] font-bold tracking-[0.04em] text-cream group-hover:text-bright-orange transition-colors duration-300 uppercase">
                 Figgle
               </span>
-              <span className="text-[13px] font-normal tracking-[0.35em] text-cream group-hover:text-burnt-orange transition-colors duration-300 uppercase">
+              <span className="text-[13px] font-normal tracking-[0.35em] text-cream group-hover:text-bright-orange transition-colors duration-300 uppercase">
                 Media
               </span>
             </div>
@@ -77,7 +82,7 @@ export default function Header() {
                 >
                   <Link
                     to={link.href}
-                    className="text-cream hover:text-burnt-orange transition-colors font-medium flex items-center gap-1"
+                    className="text-cream hover:text-bright-orange transition-colors font-medium flex items-center gap-1"
                   >
                     {link.label}
                     <ChevronDown size={16} className={`transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -88,7 +93,7 @@ export default function Header() {
                         <Link
                           key={sub.label}
                           to={sub.href}
-                          className="block px-4 py-2 text-cream hover:text-burnt-orange hover:bg-white/5 transition-colors text-sm"
+                          className="block px-4 py-2 text-cream hover:text-bright-orange hover:bg-white/5 transition-colors text-sm"
                           onClick={() => setIsServicesOpen(false)}
                         >
                           {sub.label}
@@ -110,7 +115,7 @@ export default function Header() {
                   }}
                 >
                   <button
-                    className="text-cream hover:text-burnt-orange transition-colors font-medium flex items-center gap-1"
+                    className="text-cream hover:text-bright-orange transition-colors font-medium flex items-center gap-1"
                   >
                     Locations
                     <ChevronDown size={16} className={`transition-transform duration-200 ${isLocationsOpen ? 'rotate-180' : ''}`} />
@@ -121,7 +126,7 @@ export default function Header() {
                         <Link
                           key={sub.label}
                           to={sub.href}
-                          className="block px-4 py-2 text-cream hover:text-burnt-orange hover:bg-white/5 transition-colors text-sm"
+                          className="block px-4 py-2 text-cream hover:text-bright-orange hover:bg-white/5 transition-colors text-sm"
                           onClick={() => setIsLocationsOpen(false)}
                         >
                           {sub.label}
@@ -134,7 +139,7 @@ export default function Header() {
                 <Link
                   key={link.label}
                   to={link.href}
-                  className="text-cream hover:text-burnt-orange transition-colors font-medium"
+                  className="text-cream hover:text-bright-orange transition-colors font-medium"
                 >
                   {link.label}
                 </Link>
@@ -144,11 +149,11 @@ export default function Header() {
 
           {/* Phone and CTA button on the right */}
           <div className="hidden lg:flex items-center gap-6">
-            <a href="tel:612-778-3914" className="flex items-center gap-2 text-cream hover:text-burnt-orange transition-colors">
+            <a href={`tel:${BUSINESS.phoneTel}`} className="flex items-center gap-2 text-cream hover:text-bright-orange transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
-              <span className="font-semibold">612-778-3914</span>
+              <span className="font-semibold">{BUSINESS.phoneDisplay}</span>
             </a>
             <Link
               to="/free-website-plan"
@@ -177,7 +182,7 @@ export default function Header() {
                 <div key={link.label}>
                   <button
                     onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                    className="text-cream hover:text-burnt-orange transition-colors font-medium py-2 flex items-center gap-1 w-full"
+                    className="text-cream hover:text-bright-orange transition-colors font-medium py-2 flex items-center gap-1 w-full"
                   >
                     Services
                     <ChevronDown size={16} className={`transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
@@ -187,7 +192,7 @@ export default function Header() {
                       <Link
                         to="/services"
                         onClick={() => setIsMenuOpen(false)}
-                        className="text-cream hover:text-burnt-orange transition-colors text-sm py-1"
+                        className="text-cream hover:text-bright-orange transition-colors text-sm py-1"
                       >
                         All Services
                       </Link>
@@ -196,7 +201,7 @@ export default function Header() {
                           key={sub.label}
                           to={sub.href}
                           onClick={() => setIsMenuOpen(false)}
-                          className="text-cream hover:text-burnt-orange transition-colors text-sm py-1"
+                          className="text-cream hover:text-bright-orange transition-colors text-sm py-1"
                         >
                           {sub.label}
                         </Link>
@@ -208,7 +213,7 @@ export default function Header() {
                 <div key={link.label}>
                   <button
                     onClick={() => setIsMobileLocationsOpen(!isMobileLocationsOpen)}
-                    className="text-cream hover:text-burnt-orange transition-colors font-medium py-2 flex items-center gap-1 w-full"
+                    className="text-cream hover:text-bright-orange transition-colors font-medium py-2 flex items-center gap-1 w-full"
                   >
                     Locations
                     <ChevronDown size={16} className={`transition-transform duration-200 ${isMobileLocationsOpen ? 'rotate-180' : ''}`} />
@@ -220,7 +225,7 @@ export default function Header() {
                           key={sub.label}
                           to={sub.href}
                           onClick={() => setIsMenuOpen(false)}
-                          className="text-cream hover:text-burnt-orange transition-colors text-sm py-1"
+                          className="text-cream hover:text-bright-orange transition-colors text-sm py-1"
                         >
                           {sub.label}
                         </Link>
@@ -233,7 +238,7 @@ export default function Header() {
                   key={link.label}
                   to={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-cream hover:text-burnt-orange transition-colors font-medium py-2"
+                  className="text-cream hover:text-bright-orange transition-colors font-medium py-2"
                 >
                   {link.label}
                 </Link>

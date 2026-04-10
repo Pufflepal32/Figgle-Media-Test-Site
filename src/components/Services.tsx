@@ -51,7 +51,7 @@ export default function Services() {
                 <div className="bg-burnt-orange/20 p-4 rounded-lg group-hover:bg-burnt-orange transition-colors">
                   <service.icon
                     size={32}
-                    className="text-burnt-orange group-hover:text-white transition-colors"
+                    className="text-bright-orange group-hover:text-white transition-colors"
                   />
                 </div>
               </div>
@@ -65,10 +65,11 @@ export default function Services() {
 
               <Link
                 to={`/services/${service.slug}`}
-                className="inline-flex items-center text-burnt-orange font-semibold hover:gap-2 hover:text-white transition-all"
+                aria-label={`Learn more about ${service.title}`}
+                className="inline-flex items-center text-bright-orange font-semibold hover:gap-2 hover:text-white transition-all"
               >
-                Learn More
-                <ArrowRight size={20} className="ml-1" />
+                Learn more about {service.title}
+                <ArrowRight size={20} className="ml-1" aria-hidden="true" />
               </Link>
             </div>
           ))}

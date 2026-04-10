@@ -63,7 +63,7 @@ export default function CaseStudies() {
                   <item.icon size={40} className="opacity-90" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                <p className="text-white/90 leading-relaxed">{item.description}</p>
+                <p className="text-white leading-relaxed">{item.description}</p>
               </div>
             </div>
           ))}

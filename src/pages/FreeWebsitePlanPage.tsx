@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, TrendingUp, Users, Zap, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -64,13 +65,22 @@ export default function FreeWebsitePlanPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-navy-blue via-dark-navy to-navy">
+    <>
+      <Helmet>
+        <title>Get Your Free Website Plan | Figgle Media</title>
+        <meta
+          name="description"
+          content="Get a free, no-obligation website plan tailored to your contractor business. We'll show you exactly what's broken and how to fix it to generate more leads."
+        />
+        <link rel="canonical" href="https://figglemedia.com/free-website-plan" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-navy-blue via-dark-navy to-navy">
       {/* Simple Header with Logo Only */}
       <header className="py-6">
         <div className="container mx-auto px-4">
           <Link to="/" className="flex items-center gap-3 w-fit">
             <img
-              src="/assets/logo.png"
+              src="/assets/logo.webp"
               alt="Figgle Media Logo"
               className="h-12 w-12 object-cover rounded-full"
             />
@@ -80,7 +90,7 @@ export default function FreeWebsitePlanPage() {
       </header>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-8 md:py-12">
+      <main id="main" className="container mx-auto px-4 py-8 md:py-12">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Column - Value Proposition */}
@@ -138,15 +148,15 @@ export default function FreeWebsitePlanPage() {
               {/* Trust Signals */}
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-3xl font-bold text-burnt-orange mb-1">90-Day</div>
+                  <div className="text-3xl font-bold text-bright-orange mb-1">90-Day</div>
                   <div className="text-sm text-cream">Guarantee</div>
                 </div>
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-3xl font-bold text-burnt-orange mb-1">100%</div>
+                  <div className="text-3xl font-bold text-bright-orange mb-1">100%</div>
                   <div className="text-sm text-cream">Construction Focus</div>
                 </div>
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-3xl font-bold text-burnt-orange mb-1">24hr</div>
+                  <div className="text-3xl font-bold text-bright-orange mb-1">24hr</div>
                   <div className="text-sm text-cream">Response Time</div>
                 </div>
               </div>
@@ -154,7 +164,7 @@ export default function FreeWebsitePlanPage() {
               {/* Guarantee */}
               <div className="bg-white rounded-xl p-6 text-charcoal">
                 <div className="flex items-center gap-3 mb-3">
-                  <Shield size={24} className="text-burnt-orange" />
+                  <Shield size={24} className="text-bright-orange" />
                   <p className="text-lg font-bold text-dark-green">Our Performance Guarantee</p>
                 </div>
                 <p className="text-charcoal leading-relaxed">
@@ -267,7 +277,7 @@ export default function FreeWebsitePlanPage() {
                       <span>No Obligation</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Zap size={16} className="text-burnt-orange" />
+                      <Zap size={16} className="text-bright-orange" />
                       <span>Quick Response</span>
                     </div>
                   </div>
@@ -292,7 +302,8 @@ export default function FreeWebsitePlanPage() {
             </div>
           </div>
         </div>
+      </main>
       </div>
-    </div>
+    </>
   );
 }

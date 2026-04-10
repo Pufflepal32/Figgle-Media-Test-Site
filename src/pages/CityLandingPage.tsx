@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link, useLocation, Navigate } from 'react-router-dom';
 import { getCurrentMonthYear } from '../utils/useCurrentDate';
 import { getCityBySlug } from '../data/cityData';
+import { BUSINESS } from '../config/business';
 
 const iconMap = {
   trending: TrendingUp,
@@ -37,7 +38,7 @@ export default function CityLandingPage() {
     name: `Figgle Media - ${city.name} Contractor Web Design`,
     description: city.metaDescription,
     url: `https://figglemedia.com/${city.slug}`,
-    telephone: '612-778-3914',
+    telephone: BUSINESS.phoneDisplay,
     address: {
       '@type': 'PostalAddress',
       addressLocality: city.name,
@@ -107,13 +108,13 @@ export default function CityLandingPage() {
             {/* Left Column */}
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 bg-white/20 border border-white/30 rounded-full px-4 py-2">
-                <MapPin className="text-burnt-orange" size={16} />
+                <MapPin className="text-bright-orange" size={16} />
                 <span className="text-sm font-semibold text-white">Serving {city.name}, {city.state}</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 {city.name} Contractors Are{' '}
-                <span className="text-burnt-orange">Booking More Jobs</span> With Us
+                <span className="text-bright-orange">Booking More Jobs</span> With Us
                 <span className="block text-xl sm:text-2xl font-semibold text-cream/80 mt-3">
                   {city.heroSubline} — {getCurrentMonthYear()}
                 </span>
@@ -126,7 +127,7 @@ export default function CityLandingPage() {
               <div className="space-y-3">
                 {city.benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="text-burnt-orange flex-shrink-0 mt-1" size={20} />
+                    <CheckCircle className="text-bright-orange flex-shrink-0 mt-1" size={20} />
                     <span className="text-white">{benefit}</span>
                   </div>
                 ))}
@@ -134,11 +135,11 @@ export default function CityLandingPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-4">
                 <a
-                  href="tel:612-778-3914"
+                  href={`tel:${BUSINESS.phoneTel}`}
                   className="inline-flex items-center gap-3 bg-burnt-orange text-white px-6 py-4 rounded-xl font-semibold text-lg hover:bg-deep-orange transition-all shadow-lg hover:shadow-xl group"
                 >
                   <Phone size={20} className="group-hover:rotate-12 transition-transform" />
-                  <span>612-778-3914</span>
+                  <span>{BUSINESS.phoneDisplay}</span>
                 </a>
                 <span className="text-sm text-cream">Free consultation for {city.name} contractors</span>
               </div>
@@ -152,6 +153,10 @@ export default function CityLandingPage() {
                   <img
                     src={city.cityImage}
                     alt={city.cityImageAlt}
+                    width="800"
+                    height="384"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent"></div>
@@ -229,11 +234,11 @@ export default function CityLandingPage() {
                 <div className="mt-6 pt-6 border-t border-light-gray">
                   <div className="flex items-center justify-center gap-4 text-sm text-navy-blue">
                     <div className="flex items-center gap-1">
-                      <CheckCircle size={16} className="text-burnt-orange" />
+                      <CheckCircle size={16} className="text-bright-orange" />
                       <span>No Spam</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <CheckCircle size={16} className="text-burnt-orange" />
+                      <CheckCircle size={16} className="text-bright-orange" />
                       <span>Local Team</span>
                     </div>
                   </div>
@@ -251,13 +256,17 @@ export default function CityLandingPage() {
           <img
             src={city.cityImage}
             alt={city.cityImageAlt}
+            width="1600"
+            height="640"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-navy-blue/70"></div>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
               <div className="flex items-center justify-center gap-3 mb-3">
-                <MapPin className="text-burnt-orange" size={28} />
+                <MapPin className="text-bright-orange" size={28} />
                 <span className="text-white text-2xl sm:text-3xl font-bold">
                   Proudly Serving {city.name}, {city.state}
                 </span>
@@ -369,7 +378,7 @@ export default function CityLandingPage() {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {city.stats.map((stat, index) => (
               <div key={index} className="text-center p-8 rounded-2xl bg-gradient-to-br from-navy-blue to-navy">
-                <div className="text-5xl font-bold text-burnt-orange mb-3">{stat.value}</div>
+                <div className="text-5xl font-bold text-bright-orange mb-3">{stat.value}</div>
                 <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
                 <p className="text-cream text-sm">{stat.description}</p>
               </div>
@@ -404,16 +413,16 @@ export default function CityLandingPage() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             {city.ctaHeadline}
           </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-white max-w-2xl mx-auto mb-8">
             {city.ctaDescription}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="tel:612-778-3914"
+              href={`tel:${BUSINESS.phoneTel}`}
               className="inline-flex items-center gap-3 bg-white text-burnt-orange px-8 py-4 rounded-xl font-bold text-lg hover:bg-cream transition-all shadow-lg hover:shadow-xl group"
             >
               <Phone size={20} className="group-hover:rotate-12 transition-transform" />
-              Call 612-778-3914
+              Call {BUSINESS.phoneDisplay}
             </a>
             <Link
               to="/free-website-plan"

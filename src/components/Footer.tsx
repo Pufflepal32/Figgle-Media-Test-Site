@@ -1,11 +1,12 @@
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { BUSINESS } from '../config/business';
 
 export default function Footer() {
   const serviceAreas = [
     'Raleigh, NC',
     'Charlotte, NC',
     'Durham, NC',
-    'Charleston, WV',
+    'Greensboro, NC',
   ];
 
   return (
@@ -15,8 +16,12 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="/assets/logo.png"
+                src="/assets/logo.webp"
                 alt="Figgle Media Logo"
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
                 className="h-10 w-10 object-cover rounded-full"
               />
               <h3 className="text-2xl font-bold text-cream">Figgle Media</h3>
@@ -29,13 +34,13 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-cream">Contact Us</h4>
             <div className="space-y-3">
-              <a href="tel:+1234567890" className="flex items-center text-gray-300 hover:text-teal transition-colors">
+              <a href={`tel:${BUSINESS.phoneTel}`} className="flex items-center text-gray-300 hover:text-teal transition-colors">
                 <Phone size={18} className="mr-2" />
-                (123) 456-7890
+                {BUSINESS.phoneDisplay}
               </a>
-              <a href="mailto:info@figglemedia.com" className="flex items-center text-gray-300 hover:text-teal transition-colors">
+              <a href={`mailto:${BUSINESS.email}`} className="flex items-center text-gray-300 hover:text-teal transition-colors">
                 <Mail size={18} className="mr-2" />
-                info@figglemedia.com
+                {BUSINESS.email}
               </a>
               <div className="flex items-start text-gray-300">
                 <MapPin size={18} className="mr-2 mt-1 flex-shrink-0" />
@@ -58,17 +63,17 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-cream">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/people/Figgle-Media/61566383850893/" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
-                <Facebook size={20} />
+              <a href="https://www.facebook.com/people/Figgle-Media/61566383850893/" target="_blank" rel="noopener noreferrer" aria-label="Figgle Media on Facebook" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+                <Facebook size={20} aria-hidden="true" />
               </a>
-              <a href="https://x.com/FiggleMedia" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
-                <Twitter size={20} />
+              <a href="https://x.com/FiggleMedia" target="_blank" rel="noopener noreferrer" aria-label="Figgle Media on X" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+                <Twitter size={20} aria-hidden="true" />
               </a>
-              <a href="https://www.instagram.com/figglemedia/" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
-                <Instagram size={20} />
+              <a href="https://www.instagram.com/figglemedia/" target="_blank" rel="noopener noreferrer" aria-label="Figgle Media on Instagram" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+                <Instagram size={20} aria-hidden="true" />
               </a>
-              <a href="https://www.linkedin.com/in/trevor-alford-753435248/" target="_blank" rel="noopener noreferrer" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
-                <Linkedin size={20} />
+              <a href="https://www.linkedin.com/in/trevor-alford-753435248/" target="_blank" rel="noopener noreferrer" aria-label="Trevor Alford on LinkedIn" className="bg-dark-green p-2 rounded-full hover:bg-teal transition-colors">
+                <Linkedin size={20} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -76,16 +81,8 @@ export default function Footer() {
 
         <div className="border-t border-warm-gray pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 Figgle Media. All rights reserved.
+            © {new Date().getFullYear()} {BUSINESS.name}. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-gray-400 hover:text-teal transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-teal transition-colors">
-              Terms of Service
-            </a>
-          </div>
         </div>
       </div>
     </footer>

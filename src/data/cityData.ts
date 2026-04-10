@@ -77,13 +77,13 @@ export const cityData: Record<string, CityData> = {
     faqs: [
       { q: 'How much does a contractor website cost in Charlotte?', a: 'Our contractor websites for Charlotte construction businesses start at $2,999 for our Starter package, which includes custom design, mobile optimization, and basic SEO. Our most popular Scaler package is $4,999 and includes aggressive local SEO to rank in the Charlotte market.' },
       { q: 'How long does it take to rank on Google in Charlotte?', a: 'Most Charlotte contractors see meaningful ranking improvements within 3-6 months. The Charlotte market is competitive, but our local SEO strategies target high-intent keywords like "contractor near me Charlotte" and "contractor Charlotte NC" to get you visible fast.' },
-      { q: 'Do you work with contractors outside Charlotte?', a: 'We serve construction businesses across North Carolina and West Virginia. But Charlotte is a key market for us — we understand the Queen City\'s growth patterns, from South End to Ballantyne, and know exactly how to position your business.' },
+      { q: 'Do you work with contractors outside Charlotte?', a: 'We serve construction businesses across North Carolina. But Charlotte is a key market for us — we understand the Queen City\'s growth patterns, from South End to Ballantyne, and know exactly how to position your business.' },
       { q: 'What if I already have a contractor website?', a: 'Most contractors we work with in Charlotte already have a website — it just isn\'t generating leads. We\'ll do a free analysis, show you exactly what\'s holding it back, and build you a new one that converts Charlotte area clients into customers.' },
       { q: 'Do you help with Google Ads for Charlotte contractors?', a: 'Yes. We offer Google Ads management and Local Service Ads specifically for the Charlotte market. Combined with a high-converting website, paid ads get you leads immediately while your organic rankings build over time.' },
     ],
     ctaHeadline: "Ready to Dominate Charlotte's Construction Market?",
     ctaDescription: "Get a free website analysis and see exactly how we'll help you outrank every contractor in the Charlotte area.",
-    cityImage: '/assets/cities/charlotte.jpg',
+    cityImage: '/assets/cities/charlotte.webp',
     cityImageAlt: 'Charlotte NC skyline - contractor web design services',
   },
 
@@ -141,7 +141,7 @@ export const cityData: Record<string, CityData> = {
     ],
     ctaHeadline: "Ready to Dominate Durham's Construction Market?",
     ctaDescription: "Get a free website analysis and see exactly how we'll help you outrank every contractor in the Triangle area.",
-    cityImage: '/assets/cities/durham.jpg',
+    cityImage: '/assets/cities/durham.webp',
     cityImageAlt: 'Downtown Durham NC skyline - contractor web design services',
   },
 
@@ -199,7 +199,7 @@ export const cityData: Record<string, CityData> = {
     ],
     ctaHeadline: "Ready to Dominate Greensboro's Construction Market?",
     ctaDescription: "Get a free website analysis and see exactly how we'll help you outrank every contractor in the Piedmont Triad.",
-    cityImage: '/assets/cities/greensboro.jpg',
+    cityImage: '/assets/cities/greensboro.webp',
     cityImageAlt: 'Greensboro NC skyline - contractor web design services',
   },
 
@@ -257,7 +257,7 @@ export const cityData: Record<string, CityData> = {
     ],
     ctaHeadline: "Ready to Dominate Winston-Salem's Construction Market?",
     ctaDescription: "Get a free website analysis and see exactly how we'll help you outrank every contractor in the Winston-Salem area.",
-    cityImage: '/assets/cities/winston-salem.jpg',
+    cityImage: '/assets/cities/winston-salem.webp',
     cityImageAlt: 'Winston-Salem NC skyline - contractor web design services',
   },
 
@@ -315,7 +315,7 @@ export const cityData: Record<string, CityData> = {
     ],
     ctaHeadline: "Ready to Dominate Fayetteville's Construction Market?",
     ctaDescription: "Get a free website analysis and see exactly how we'll help you outrank every contractor in the Fayetteville area.",
-    cityImage: '/assets/cities/fayetteville.jpg',
+    cityImage: '/assets/cities/fayetteville.webp',
     cityImageAlt: 'Fayetteville NC Cape Fear River Trail - contractor web design services',
   },
 
@@ -373,7 +373,7 @@ export const cityData: Record<string, CityData> = {
     ],
     ctaHeadline: "Ready to Dominate Wilmington's Construction Market?",
     ctaDescription: "Get a free website analysis and see exactly how we'll help you outrank every contractor on the Cape Fear Coast.",
-    cityImage: '/assets/cities/wilmington.jpg',
+    cityImage: '/assets/cities/wilmington.webp',
     cityImageAlt: 'Downtown Wilmington NC from Cape Fear Memorial Bridge - contractor web design services',
   },
 
@@ -431,7 +431,7 @@ export const cityData: Record<string, CityData> = {
     ],
     ctaHeadline: "Ready to Dominate Asheville's Construction Market?",
     ctaDescription: "Get a free website analysis and see exactly how we'll help you outrank every contractor in Western North Carolina.",
-    cityImage: '/assets/cities/asheville.jpg',
+    cityImage: '/assets/cities/asheville.webp',
     cityImageAlt: 'Downtown Asheville NC panorama - contractor web design services',
   },
 };

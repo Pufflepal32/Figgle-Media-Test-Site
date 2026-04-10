@@ -1,12 +1,22 @@
+import { Helmet } from 'react-helmet-async';
 import { Globe, Search, Target, Megaphone, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 import CTABanner from '../components/CTABanner';
+import { BUSINESS } from '../config/business';
 
 function ServicesPage() {
   return (
     <>
+      <Helmet>
+        <title>Contractor Marketing Services | Web Design, SEO & Ads | Figgle Media</title>
+        <meta
+          name="description"
+          content="Web design, local SEO, Google Ads, and Local Service Ads management for contractors. Everything you need to dominate your local market and book more jobs."
+        />
+        <link rel="canonical" href="https://figglemedia.com/services" />
+      </Helmet>
       <div className="pt-20">
         {/* Hero Section */}
         <section className="relative py-24 md:py-32 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
@@ -29,13 +39,13 @@ function ServicesPage() {
           <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 bg-burnt-orange/20 border border-burnt-orange/30 rounded-full px-5 py-2 mb-8">
-                <Target size={16} className="text-burnt-orange" />
-                <span className="text-burnt-orange font-semibold text-sm">Built Exclusively for Contractors</span>
+                <Target size={16} className="text-bright-orange" />
+                <span className="text-bright-orange font-semibold text-sm">Built Exclusively for Contractors</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Everything You Need to{' '}
-                <span className="text-burnt-orange">Dominate Online</span>
+                <span className="text-bright-orange">Dominate Online</span>
               </h1>
               <p className="text-xl text-cream max-w-2xl mx-auto mb-12 leading-relaxed">
                 From custom websites to local SEO and paid ads — we handle your entire digital presence so you can focus on what you do best: building.
@@ -50,10 +60,10 @@ function ServicesPage() {
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="tel:612-778-3914"
+                  href={`tel:${BUSINESS.phoneTel}`}
                   className="inline-flex items-center gap-2 text-cream hover:text-white transition-colors font-semibold text-lg"
                 >
-                  Or call 612-778-3914
+                  Or call {BUSINESS.phoneDisplay}
                 </a>
               </div>
 
@@ -70,7 +80,7 @@ function ServicesPage() {
                     to={item.href}
                     className="group bg-white/5 border border-white/10 hover:border-burnt-orange/50 hover:bg-white/10 rounded-xl p-5 transition-all"
                   >
-                    <item.icon size={28} className="text-burnt-orange mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                    <item.icon size={28} className="text-bright-orange mx-auto mb-3 group-hover:scale-110 transition-transform" />
                     <p className="text-cream font-semibold text-sm">{item.label}</p>
                   </Link>
                 ))}

@@ -19,7 +19,7 @@ export default function TrustBadges() {
               className="text-center group"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 mb-4 group-hover:scale-110 transition-transform">
-                <item.icon className="text-burnt-orange" size={32} />
+                <item.icon className="text-bright-orange" size={32} />
               </div>
               <div className="text-xl sm:text-2xl font-bold text-white mb-1">
                 {item.label}
@@ -38,19 +38,19 @@ export default function TrustBadges() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8 opacity-90">
             <div className="flex items-center gap-2">
-              <Search size={24} className="text-burnt-orange" />
+              <Search size={24} className="text-bright-orange" />
               <span className="font-semibold text-white">Google Ads</span>
             </div>
             <div className="flex items-center gap-2">
-              <BarChart3 size={24} className="text-burnt-orange" />
+              <BarChart3 size={24} className="text-bright-orange" />
               <span className="font-semibold text-white">Google Analytics</span>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin size={24} className="text-burnt-orange" />
+              <MapPin size={24} className="text-bright-orange" />
               <span className="font-semibold text-white">Google Business Profile</span>
             </div>
             <div className="flex items-center gap-2">
-              <Code size={24} className="text-burnt-orange" />
+              <Code size={24} className="text-bright-orange" />
               <span className="font-semibold text-white">Custom-Built Sites</span>
             </div>
           </div>

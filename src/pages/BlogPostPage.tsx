@@ -80,7 +80,7 @@ export default function BlogPostPage() {
               "name": "Figgle Media",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://figglemedia.com/assets/logo.png",
+                "url": "https://figglemedia.com/assets/logo.webp",
                 "width": 200,
                 "height": 200
               }

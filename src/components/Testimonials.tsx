@@ -72,7 +72,7 @@ export default function Testimonials() {
               <ul className="space-y-3">
                 {step.details.map((detail, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle size={18} className="text-burnt-orange flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={18} className="text-bright-orange flex-shrink-0 mt-0.5" />
                     <span className="text-cream">{detail}</span>
                   </li>
                 ))}
@@ -88,7 +88,7 @@ export default function Testimonials() {
             <h3 className="text-3xl font-bold text-white mb-4">
               Our 90-Day Performance Guarantee
             </h3>
-            <p className="text-xl text-white/90 leading-relaxed">
+            <p className="text-xl text-white leading-relaxed">
               If your website doesn't start generating more leads within 90 days of launch, we'll keep working for free until it does. We only win when you win.
             </p>
           </div>

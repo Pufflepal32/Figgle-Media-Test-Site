@@ -50,10 +50,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'contractor website, construction web design, contractor website, construction business website, website redesign',
     location: {
-      city: 'Charleston',
-      state: 'WV',
-      lat: 38.3498,
-      lng: -81.6326
+      city: 'Raleigh',
+      state: 'NC',
+      lat: 35.7796,
+      lng: -78.6382
     },
     content: {
       introduction: 'Your website is often the first impression potential customers have of your construction business. If it\'s outdated, slow, or hard to navigate, you\'re losing leads to competitors every single day. Here are 10 clear signs it\'s time to invest in a new website.',
@@ -156,10 +156,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'local SEO, contractor SEO, Google My Business, local search, contractor leads',
     location: {
-      city: 'Huntington',
-      state: 'WV',
-      lat: 38.4192,
-      lng: -82.4452
+      city: 'Charlotte',
+      state: 'NC',
+      lat: 35.2271,
+      lng: -80.8431
     },
     content: {
       introduction: 'When clients need a contractor, they don\'t browse through the Yellow Pages anymore - they search on Google. And if your construction business isn\'t showing up in those local search results, you\'re missing out on dozens of qualified leads every month. Local SEO is the key to dominating your market and becoming the go-to contractor in your area.',
@@ -167,7 +167,7 @@ export const blogPosts: BlogPostData[] = [
         {
           heading: 'What is Local SEO and Why Does It Matter?',
           content: [
-            'Local SEO is the practice of optimizing your online presence to attract customers from specific geographic areas. For contractors, this means showing up when someone in your service area searches for "contractor near me," "home repair Charleston WV," or "best contractor in Huntington."',
+            'Local SEO is the practice of optimizing your online presence to attract customers from specific geographic areas. For contractors, this means showing up when someone in your service area searches for "contractor near me," "home repair Raleigh NC," or "best contractor in Charlotte."',
             'Unlike traditional SEO that focuses on ranking nationally, local SEO targets customers in your immediate area - the people most likely to hire you. When done right, local SEO can transform your business by bringing in a steady stream of high-quality leads.'
           ]
         },
@@ -181,7 +181,7 @@ export const blogPosts: BlogPostData[] = [
         {
           heading: 'Build Location-Specific Content',
           content: [
-            'Create dedicated pages for each city or region you serve. Instead of one generic "Service Areas" page, build individual pages like "Construction Services in Charleston, WV" or "Huntington Home Improvement Specialists."',
+            'Create dedicated pages for each city or region you serve. Instead of one generic "Service Areas" page, build individual pages like "Construction Services in Raleigh, NC" or "Charlotte Home Improvement Specialists."',
             'These pages should include local landmarks, neighborhood names, and information specific to that area. This helps Google understand exactly where you operate and increases your chances of showing up in local searches.'
           ]
         },
@@ -224,10 +224,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'Google Ads, Local Service Ads, PPC advertising, contractor advertising, digital marketing',
     location: {
-      city: 'Morgantown',
-      state: 'WV',
-      lat: 39.6295,
-      lng: -79.9559
+      city: 'Durham',
+      state: 'NC',
+      lat: 35.994,
+      lng: -78.8986
     },
     content: {
       introduction: 'As a contractor, you have two powerful options for paid advertising on Google: traditional Google Ads (PPC) and Google Local Service Ads (LSA). Both can drive leads to your business, but they work differently and are suited for different goals. Here\'s everything you need to know to choose the right one for your construction company.',
@@ -292,10 +292,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'conversion optimization, contractor leads, website conversion, CRO, landing pages',
     location: {
-      city: 'Parkersburg',
-      state: 'WV',
-      lat: 39.2667,
-      lng: -81.5615
+      city: 'Greensboro',
+      state: 'NC',
+      lat: 36.0726,
+      lng: -79.792
     },
     content: {
       introduction: 'Getting traffic to your contractor website is only half the battle. The real challenge - and opportunity - is converting those visitors into leads. Even a small improvement in your conversion rate can dramatically increase your revenue. This guide shows you exactly how to turn more website visitors into paying customers.',
@@ -367,10 +367,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'mobile website, responsive design, mobile optimization, contractor website, mobile-first',
     location: {
-      city: 'Wheeling',
-      state: 'WV',
-      lat: 40.0640,
-      lng: -80.7209
+      city: 'Winston-Salem',
+      state: 'NC',
+      lat: 36.0999,
+      lng: -80.2442
     },
     content: {
       introduction: 'The way people search for contractors has fundamentally changed. Today, over 70% of clients use their smartphones to find and contact contractors. If your website isn\'t optimized for mobile devices, you\'re turning away the majority of potential customers before they even see what you have to offer.',
@@ -435,10 +435,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'Google reviews, online reviews, reputation management, contractor SEO, local SEO',
     location: {
-      city: 'Fairmont',
-      state: 'WV',
-      lat: 39.4851,
-      lng: -80.1426
+      city: 'Asheville',
+      state: 'NC',
+      lat: 35.5951,
+      lng: -82.5515
     },
     content: {
       introduction: 'Most contractors understand that reviews help build trust with potential customers. But what many don\'t realize is that customer reviews are also one of the most powerful tools for improving your search engine rankings. Google uses reviews as a key signal when deciding which businesses to show in local search results. Here\'s how to leverage reviews to dominate your market.',
@@ -447,7 +447,7 @@ export const blogPosts: BlogPostData[] = [
           heading: 'Why Reviews Impact Your SEO Rankings',
           content: [
             'Google\'s algorithm considers reviews when determining local search rankings. The quantity, quality, and frequency of reviews all play a role. Businesses with more positive reviews generally rank higher in the Local Pack (the map results at the top of Google).',
-            'Reviews also provide fresh, user-generated content that includes relevant keywords naturally. When customers write "They completed the project quickly" or "Best contractor in Charleston," they\'re creating SEO value for your business.'
+            'Reviews also provide fresh, user-generated content that includes relevant keywords naturally. When customers write "They completed the project quickly" or "Best contractor in Raleigh," they\'re creating SEO value for your business.'
           ]
         },
         {
@@ -461,7 +461,7 @@ export const blogPosts: BlogPostData[] = [
           heading: 'Responding to Reviews Boosts Rankings',
           content: [
             'Responding to reviews - both positive and negative - signals to Google that you\'re an active, engaged business. It also provides an opportunity to include keywords naturally in your responses.',
-            'Thank customers by name, mention the specific service you provided, and reinforce your location. For example: "Thanks John! We\'re so glad we could help with your project in Huntington. We appreciate your business!"'
+            'Thank customers by name, mention the specific service you provided, and reinforce your location. For example: "Thanks John! We\'re so glad we could help with your project in Charlotte. We appreciate your business!"'
           ]
         },
         {
@@ -510,10 +510,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'professional web design, web design agency, custom website, DIY website, website investment',
     location: {
-      city: 'Charleston',
-      state: 'WV',
-      lat: 38.3498,
-      lng: -81.6326
+      city: 'Raleigh',
+      state: 'NC',
+      lat: 35.7796,
+      lng: -78.6382
     },
     content: {
       introduction: 'In today\'s digital age, platforms like Wix, Squarespace, and WordPress promise that anyone can build a professional website in hours. While these tools have their place, they often lead to websites that look amateurish, perform poorly, and fail to generate leads. Here\'s why investing in a professional web design agency delivers far better results for your business.',
@@ -592,10 +592,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'social media marketing, local business marketing, Facebook marketing, Instagram business, social media strategy',
     location: {
-      city: 'Huntington',
-      state: 'WV',
-      lat: 38.4192,
-      lng: -82.4452
+      city: 'Charlotte',
+      state: 'NC',
+      lat: 35.2271,
+      lng: -80.8431
     },
     content: {
       introduction: 'Social media can be a powerful tool for local businesses - or a massive time sink that produces zero results. The difference comes down to strategy. Most local businesses approach social media wrong, posting random content without a clear plan. This guide shows you exactly what works for local businesses in 2025, so you can stop wasting time and start generating real leads.',
@@ -674,10 +674,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'email marketing, email list building, newsletter marketing, email automation, small business email',
     location: {
-      city: 'Morgantown',
-      state: 'WV',
-      lat: 39.6295,
-      lng: -79.9559
+      city: 'Durham',
+      state: 'NC',
+      lat: 35.994,
+      lng: -78.8986
     },
     content: {
       introduction: 'Despite the rise of social media, email marketing remains the highest-ROI digital marketing channel for small businesses. For every $1 spent on email marketing, the average return is $42. Unlike social media, where algorithms control who sees your content, with email you own your audience. Here\'s how to build an email list that actually drives sales.',
@@ -763,10 +763,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'content marketing ROI, marketing metrics, content analytics, marketing measurement, digital marketing results',
     location: {
-      city: 'Parkersburg',
-      state: 'WV',
-      lat: 39.2667,
-      lng: -81.5615
+      city: 'Greensboro',
+      state: 'NC',
+      lat: 36.0726,
+      lng: -79.792
     },
     content: {
       introduction: 'Content marketing can drive tremendous results for businesses - but only if you\'re measuring the right things. Too many businesses track vanity metrics like page views while ignoring the metrics that actually impact revenue. This guide shows you exactly how to measure content marketing ROI and prove that your content efforts are worth the investment.',
@@ -845,10 +845,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'website security, website maintenance, WordPress security, SSL certificate, website backup, cyber security',
     location: {
-      city: 'Wheeling',
-      state: 'WV',
-      lat: 40.0640,
-      lng: -80.7209
+      city: 'Winston-Salem',
+      state: 'NC',
+      lat: 36.0999,
+      lng: -80.2442
     },
     content: {
       introduction: 'Your website is a valuable business asset - and a potential liability if not properly secured. Every day, thousands of websites are hacked, customer data is stolen, and businesses lose revenue due to preventable security issues. Don\'t wait until your site is compromised. This guide covers essential security and maintenance practices every business website needs.',
@@ -934,10 +934,10 @@ export const blogPosts: BlogPostData[] = [
     isComplete: true,
     keywords: 'small business branding, brand identity, brand strategy, business branding, brand development',
     location: {
-      city: 'Fairmont',
-      state: 'WV',
-      lat: 39.4851,
-      lng: -80.1426
+      city: 'Asheville',
+      state: 'NC',
+      lat: 35.5951,
+      lng: -82.5515
     },
     content: {
       introduction: 'Strong brands charge premium prices, enjoy customer loyalty, and dominate their markets. But branding isn\'t just for Fortune 500 companies - it\'s critical for small businesses too. Your brand is what sets you apart from competitors, builds trust with customers, and creates long-term value. Here\'s how to build a brand that drives business growth.',

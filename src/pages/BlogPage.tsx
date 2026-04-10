@@ -41,7 +41,7 @@ export default function BlogPage() {
               "name": "Figgle Media",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://figglemedia.com/assets/logo.png"
+                "url": "https://figglemedia.com/assets/logo.webp"
               }
             },
             "inLanguage": "en-US"

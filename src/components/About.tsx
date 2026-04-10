@@ -13,7 +13,7 @@ export default function About() {
               We started Figgle Media with one mission: help local contractors stand out online with websites that actually bring results.
             </p>
             <p className="text-lg text-cream mb-8 leading-relaxed">
-              Founded by Michael Burgess and Trevor, we've spent years working exclusively with construction businesses across North Carolina and West Virginia. We understand the unique challenges you face and know exactly what it takes to turn your website into a lead-generating machine.
+              Founded by Michael Burgess and Trevor, we've spent years working exclusively with construction businesses across North Carolina. We understand the unique challenges you face and know exactly what it takes to turn your website into a lead-generating machine.
             </p>
 
             <div className="space-y-4">
@@ -64,8 +64,12 @@ export default function About() {
           <div className="relative">
             <div className="aspect-square bg-gradient-to-br from-navy to-burnt-orange rounded-xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/assets/team.jpg"
                 alt="Figgle Media Team"
+                width="800"
+                height="800"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover opacity-80"
               />
             </div>

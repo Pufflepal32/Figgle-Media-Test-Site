@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Phone, CheckCircle } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { getCurrentMonthYear } from '../utils/useCurrentDate';
+import { BUSINESS } from '../config/business';
 
 const serviceData: Record<string, { title: string; headline: string; description: string; meta: string; benefits: string[] }> = {
   'contractor-web-design': {
@@ -43,7 +44,7 @@ export default function ServiceLandingPage() {
       <div className="min-h-screen flex items-center justify-center bg-navy-blue pt-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Service Not Found</h1>
-          <Link to="/services" className="text-burnt-orange hover:text-white transition-colors">
+          <Link to="/services" className="text-bright-orange hover:text-white transition-colors">
             Back to Services
           </Link>
         </div>
@@ -80,12 +81,12 @@ export default function ServiceLandingPage() {
           <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 bg-burnt-orange/20 border border-burnt-orange/30 rounded-full px-5 py-2 mb-8">
-                <span className="text-burnt-orange font-semibold text-sm">{service.title}</span>
+                <span className="text-bright-orange font-semibold text-sm">{service.title}</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 {service.headline}{' '}
-                <span className="text-burnt-orange">{getCurrentMonthYear()}</span>
+                <span className="text-bright-orange">{getCurrentMonthYear()}</span>
               </h1>
               <p className="text-xl text-cream mb-10 leading-relaxed max-w-2xl mx-auto">
                 {service.description}
@@ -95,7 +96,7 @@ export default function ServiceLandingPage() {
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 {service.benefits.map((benefit) => (
                   <div key={benefit} className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2.5">
-                    <CheckCircle size={16} className="text-burnt-orange" />
+                    <CheckCircle size={16} className="text-bright-orange" />
                     <span className="text-cream font-medium text-sm">{benefit}</span>
                   </div>
                 ))}
@@ -110,11 +111,11 @@ export default function ServiceLandingPage() {
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="tel:612-778-3914"
+                  href={`tel:${BUSINESS.phoneTel}`}
                   className="inline-flex items-center gap-2 text-cream hover:text-white transition-colors font-semibold"
                 >
                   <Phone size={20} />
-                  612-778-3914
+                  {BUSINESS.phoneDisplay}
                 </a>
               </div>
             </div>
