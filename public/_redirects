@@ -1,0 +1,22 @@
+# 301 Redirects for old URLs that Google has indexed
+# Old blog posts → best matching new content or blog index
+/blog/creating-engaging-content-for-your-audience          /blog/measure-content-marketing-roi-guide          301
+/blog/boost-your-sites-visibility-with-seo                 /blog/how-local-seo-helps-contractors-dominate-market  301
+/blog/emerging-trends-in-digital-marketing-for-2023        /blog/social-media-marketing-local-businesses-2025  301
+/blog/the-rise-of-ai-in-digital-marketing                  /blog                                              301
+/blog/top-5-web-design-trends-for-2023                     /blog                                              301
+/blog/mobile-first-design-principles                       /blog/mobile-first-design-contractors               301
+
+# Old SEO section pages → new SEO service page
+/seo                                                       /services/seo-for-contractors                       301
+/seo/off-page                                              /services/seo-for-contractors                       301
+/seo/technical                                             /services/seo-for-contractors                       301
+
+# Old portfolio → about/process page
+/portfolio                                                 /our-process                                       301
+
+# Old web development section → new service page
+/web-development/technical-solutions                       /services/contractor-web-design                     301
+
+# SPA fallback — must be LAST (Netlify processes rules top-to-bottom)
+/*    /index.html   200
