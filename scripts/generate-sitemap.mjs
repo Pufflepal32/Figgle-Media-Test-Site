@@ -32,6 +32,22 @@ const staticRoutes = [
   ['/fayetteville-contractor-web-design', 'monthly', '0.8'],
   ['/wilmington-contractor-web-design', 'monthly', '0.8'],
   ['/asheville-contractor-web-design', 'monthly', '0.8'],
+
+  // SEO Layer 1: Industry Authority Pages
+  ['/contractor-marketing-agency', 'monthly', '0.9'],
+  ['/roofing-web-design', 'monthly', '0.9'],
+  ['/seo-for-roofers', 'monthly', '0.9'],
+  ['/google-ads-for-roofers', 'monthly', '0.9'],
+  ['/roofing-lead-generation', 'monthly', '0.9'],
+
+  // SEO Layer 2: Location Hub Pages
+  ['/raleigh-web-design', 'monthly', '0.9'],
+
+  // SEO Layer 3: Service + Location Pages (Raleigh)
+  ['/raleigh-roofing-web-design', 'monthly', '0.8'],
+  ['/raleigh-seo-for-roofers', 'monthly', '0.8'],
+  ['/raleigh-google-ads-roofers', 'monthly', '0.8'],
+  ['/raleigh-roofing-lead-generation', 'monthly', '0.8'],
 ];
 
 // Parse src/data/blogPosts.ts for completed posts (slug + modifiedDate)

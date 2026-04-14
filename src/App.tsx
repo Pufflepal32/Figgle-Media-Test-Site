@@ -13,6 +13,9 @@ import RaleighPage from './pages/RaleighPage';
 import ServiceLandingPage from './pages/ServiceLandingPage';
 import CityLandingPage from './pages/CityLandingPage';
 import NotFoundPage from './pages/NotFoundPage';
+import IndustryPage from './pages/IndustryPage';
+import LocationHubPage from './pages/LocationHubPage';
+import ServiceLocationPage2 from './pages/ServiceLocationPage2';
 
 function App() {
   return (
@@ -35,6 +38,26 @@ function App() {
                   <Route path="/pricing" element={<PricingPage />} />
                   <Route path="/our-process" element={<TestimonialsPage />} />
                   <Route path="/about" element={<AboutPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/blog/:slug" element={<BlogPostPage />} />
+
+                  {/* ── SEO Layer 1: Industry Authority Pages ── */}
+                  <Route path="/contractor-marketing-agency" element={<IndustryPage />} />
+                  <Route path="/roofing-web-design" element={<IndustryPage />} />
+                  <Route path="/seo-for-roofers" element={<IndustryPage />} />
+                  <Route path="/google-ads-for-roofers" element={<IndustryPage />} />
+                  <Route path="/roofing-lead-generation" element={<IndustryPage />} />
+
+                  {/* ── SEO Layer 2: Location Hub Pages ── */}
+                  <Route path="/raleigh-web-design" element={<LocationHubPage />} />
+
+                  {/* ── SEO Layer 3: Service + Location Pages (Raleigh) ── */}
+                  <Route path="/raleigh-roofing-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/raleigh-seo-for-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/raleigh-google-ads-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/raleigh-roofing-lead-generation" element={<ServiceLocationPage2 />} />
+
+                  {/* ── Legacy city pages (existing) ── */}
                   <Route path="/raleigh-contractor-web-design" element={<RaleighPage />} />
                   <Route path="/charlotte-contractor-web-design" element={<CityLandingPage />} />
                   <Route path="/durham-contractor-web-design" element={<CityLandingPage />} />
@@ -43,8 +66,7 @@ function App() {
                   <Route path="/fayetteville-contractor-web-design" element={<CityLandingPage />} />
                   <Route path="/wilmington-contractor-web-design" element={<CityLandingPage />} />
                   <Route path="/asheville-contractor-web-design" element={<CityLandingPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/blog/:slug" element={<BlogPostPage />} />
+
                   <Route path="*" element={<NotFoundPage />} />
                 </Routes>
               </main>
