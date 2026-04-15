@@ -1,16 +1,62 @@
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { BUSINESS } from '../config/business';
+
+type Industry = {
+  label: string;
+  hubHref: string;
+  services: { label: string; href: string }[];
+};
+
+const industries: Industry[] = [
+  {
+    label: 'Roofing',
+    hubHref: '/roofing',
+    services: [
+      { label: 'Roofing Web Design', href: '/roofing/web-design' },
+      { label: 'Roofing SEO', href: '/roofing/seo' },
+      { label: 'Roofing Google Ads', href: '/roofing/google-ads' },
+      { label: 'Roofing Lead Generation', href: '/roofing/lead-generation' },
+    ],
+  },
+  {
+    label: 'HVAC',
+    hubHref: '/hvac',
+    services: [
+      { label: 'HVAC Web Design', href: '/hvac/web-design' },
+      { label: 'HVAC SEO', href: '/hvac/seo' },
+      { label: 'HVAC Google Ads', href: '/hvac/google-ads' },
+      { label: 'HVAC Lead Generation', href: '/hvac/lead-generation' },
+    ],
+  },
+  {
+    label: 'Electrician',
+    hubHref: '/electrician',
+    services: [
+      { label: 'Electrician Web Design', href: '/electrician/web-design' },
+      { label: 'Electrician SEO', href: '/electrician/seo' },
+      { label: 'Electrician Google Ads', href: '/electrician/google-ads' },
+      { label: 'Electrician Lead Generation', href: '/electrician/lead-generation' },
+    ],
+  },
+];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isLocationsOpen, setIsLocationsOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [hoveredIndustry, setHoveredIndustry] = useState<string | null>(null);
+
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMobileLocationsOpen, setIsMobileLocationsOpen] = useState(false);
+  const [isMobileIndustriesOpen, setIsMobileIndustriesOpen] = useState(false);
+  const [mobileIndustryOpen, setMobileIndustryOpen] = useState<string | null>(null);
+
   const servicesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const locationsTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const industriesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const serviceLinks = [
     { label: 'Contractor Web Design', href: '/services/contractor-web-design' },
@@ -20,21 +66,21 @@ export default function Header() {
   ];
 
   const locationLinks = [
-    { label: 'Raleigh', href: '/raleigh-contractor-web-design' },
-    { label: 'Charlotte', href: '/charlotte-contractor-web-design' },
-    { label: 'Durham', href: '/durham-contractor-web-design' },
-    { label: 'Greensboro', href: '/greensboro-contractor-web-design' },
-    { label: 'Winston-Salem', href: '/winston-salem-contractor-web-design' },
-    { label: 'Fayetteville', href: '/fayetteville-contractor-web-design' },
-    { label: 'Wilmington', href: '/wilmington-contractor-web-design' },
-    { label: 'Asheville', href: '/asheville-contractor-web-design' },
+    { label: 'Raleigh', href: '/raleigh-web-design' },
+    { label: 'Charlotte', href: '/charlotte-web-design' },
+    { label: 'Durham', href: '/durham-web-design' },
+    { label: 'Greensboro', href: '/greensboro-web-design' },
+    { label: 'Winston-Salem', href: '/winston-salem-web-design' },
+    { label: 'Fayetteville', href: '/fayetteville-web-design' },
+    { label: 'Wilmington', href: '/wilmington-web-design' },
+    { label: 'Asheville', href: '/asheville-web-design' },
   ];
 
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Pricing', href: '/pricing' },
-    { label: 'Services', href: '/services' },
-    { label: 'Locations', href: '#' },
+    { label: 'Industries', href: '#' },
+    { label: 'Service Areas', href: '#' },
     { label: 'Our Process', href: '/our-process' },
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
@@ -44,7 +90,6 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy shadow-lg border-b border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo on the left */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
               src="/assets/logo.webp"
@@ -65,7 +110,6 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Nav links in the center */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) =>
               link.label === 'Services' ? (
@@ -102,7 +146,103 @@ export default function Header() {
                     </div>
                   )}
                 </div>
-              ) : link.label === 'Locations' ? (
+              ) : link.label === 'Industries' ? (
+                <div
+                  key={link.label}
+                  className="relative"
+                  onMouseEnter={() => {
+                    if (industriesTimeoutRef.current) clearTimeout(industriesTimeoutRef.current);
+                    setIsIndustriesOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    industriesTimeoutRef.current = setTimeout(() => {
+                      setIsIndustriesOpen(false);
+                      setHoveredIndustry(null);
+                    }, 150);
+                  }}
+                >
+                  <button className="text-cream hover:text-burnt-orange transition-colors font-medium flex items-center gap-1">
+                    Industries
+                    <ChevronDown size={16} className={`transition-transform duration-200 ${isIndustriesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isIndustriesOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-navy rounded-lg shadow-xl border border-white/10 py-2">
+                      {industries.map((ind) => (
+                        <div
+                          key={ind.label}
+                          className="relative"
+                          onMouseEnter={() => setHoveredIndustry(ind.label)}
+                        >
+                          <Link
+                            to={ind.hubHref}
+                            className="flex items-center justify-between px-4 py-2 text-cream hover:text-burnt-orange hover:bg-white/5 transition-colors text-sm"
+                            onClick={() => {
+                              setIsIndustriesOpen(false);
+                              setHoveredIndustry(null);
+                            }}
+                          >
+                            <span>{ind.label}</span>
+                            <ChevronRight size={14} className="text-cream/60" />
+                          </Link>
+                          {hoveredIndustry === ind.label && (
+                            <div className="absolute top-0 left-full ml-1 w-60 bg-navy rounded-lg shadow-xl border border-white/10 py-2">
+                              <Link
+                                to={ind.hubHref}
+                                className="block px-4 py-2 text-burnt-orange hover:bg-white/5 transition-colors text-sm font-semibold border-b border-white/10 mb-1"
+                                onClick={() => {
+                                  setIsIndustriesOpen(false);
+                                  setHoveredIndustry(null);
+                                }}
+                              >
+                                {ind.label} Overview
+                              </Link>
+                              {ind.services.map((svc) => (
+                                <Link
+                                  key={svc.href}
+                                  to={svc.href}
+                                  className="block px-4 py-2 text-cream hover:text-burnt-orange hover:bg-white/5 transition-colors text-sm"
+                                  onClick={() => {
+                                    setIsIndustriesOpen(false);
+                                    setHoveredIndustry(null);
+                                  }}
+                                >
+                                  {svc.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                      <Link
+                        to="/contractor-marketing-agency"
+                        className="block px-4 py-2 text-cream hover:text-burnt-orange hover:bg-white/5 transition-colors text-sm border-t border-white/10 mt-1 pt-2"
+                        onClick={() => {
+                          setIsIndustriesOpen(false);
+                          setHoveredIndustry(null);
+                        }}
+                      >
+                        Contractor Marketing Agency
+                      </Link>
+                      <div className="border-t border-white/10 mt-1 pt-2">
+                        <p className="px-4 py-1 text-xs font-semibold text-cream/50 uppercase tracking-wider">Core Services</p>
+                        {serviceLinks.map((sub) => (
+                          <Link
+                            key={sub.label}
+                            to={sub.href}
+                            className="block px-4 py-2 text-cream hover:text-burnt-orange hover:bg-white/5 transition-colors text-sm"
+                            onClick={() => {
+                              setIsIndustriesOpen(false);
+                              setHoveredIndustry(null);
+                            }}
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : link.label === 'Service Areas' ? (
                 <div
                   key={link.label}
                   className="relative"
@@ -114,10 +254,8 @@ export default function Header() {
                     locationsTimeoutRef.current = setTimeout(() => setIsLocationsOpen(false), 150);
                   }}
                 >
-                  <button
-                    className="text-cream hover:text-burnt-orange transition-colors font-medium flex items-center gap-1"
-                  >
-                    Locations
+                  <button className="text-cream hover:text-burnt-orange transition-colors font-medium flex items-center gap-1">
+                    Service Areas
                     <ChevronDown size={16} className={`transition-transform duration-200 ${isLocationsOpen ? 'rotate-180' : ''}`} />
                   </button>
                   {isLocationsOpen && (
@@ -147,7 +285,6 @@ export default function Header() {
             )}
           </nav>
 
-          {/* Phone and CTA button on the right */}
           <div className="hidden lg:flex items-center gap-6">
             <a href={`tel:${BUSINESS.phoneTel}`} className="flex items-center gap-2 text-cream hover:text-burnt-orange transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -163,7 +300,6 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden text-white"
@@ -209,13 +345,79 @@ export default function Header() {
                     </div>
                   )}
                 </div>
-              ) : link.label === 'Locations' ? (
+              ) : link.label === 'Industries' ? (
+                <div key={link.label}>
+                  <button
+                    onClick={() => setIsMobileIndustriesOpen(!isMobileIndustriesOpen)}
+                    className="text-cream hover:text-burnt-orange transition-colors font-medium py-2 flex items-center gap-1 w-full"
+                  >
+                    Industries
+                    <ChevronDown size={16} className={`transition-transform duration-200 ${isMobileIndustriesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isMobileIndustriesOpen && (
+                    <div className="pl-4 flex flex-col space-y-2 mt-1">
+                      {industries.map((ind) => (
+                        <div key={ind.label}>
+                          <button
+                            onClick={() => setMobileIndustryOpen(mobileIndustryOpen === ind.label ? null : ind.label)}
+                            className="text-cream hover:text-burnt-orange transition-colors text-sm py-1 flex items-center gap-1 w-full"
+                          >
+                            {ind.label}
+                            <ChevronDown size={14} className={`transition-transform duration-200 ${mobileIndustryOpen === ind.label ? 'rotate-180' : ''}`} />
+                          </button>
+                          {mobileIndustryOpen === ind.label && (
+                            <div className="pl-4 flex flex-col space-y-1 mt-1">
+                              <Link
+                                to={ind.hubHref}
+                                onClick={() => setIsMenuOpen(false)}
+                                className="text-burnt-orange hover:text-white transition-colors text-sm py-1 font-semibold"
+                              >
+                                {ind.label} Overview
+                              </Link>
+                              {ind.services.map((svc) => (
+                                <Link
+                                  key={svc.href}
+                                  to={svc.href}
+                                  onClick={() => setIsMenuOpen(false)}
+                                  className="text-cream hover:text-burnt-orange transition-colors text-sm py-1"
+                                >
+                                  {svc.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                      <Link
+                        to="/contractor-marketing-agency"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="text-cream hover:text-burnt-orange transition-colors text-sm py-1"
+                      >
+                        Contractor Marketing Agency
+                      </Link>
+                      <div className="border-t border-white/10 mt-2 pt-2">
+                        <p className="text-xs font-semibold text-cream/50 uppercase tracking-wider mb-1">Core Services</p>
+                        {serviceLinks.map((sub) => (
+                          <Link
+                            key={sub.label}
+                            to={sub.href}
+                            onClick={() => setIsMenuOpen(false)}
+                            className="block text-cream hover:text-burnt-orange transition-colors text-sm py-1"
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : link.label === 'Service Areas' ? (
                 <div key={link.label}>
                   <button
                     onClick={() => setIsMobileLocationsOpen(!isMobileLocationsOpen)}
                     className="text-cream hover:text-burnt-orange transition-colors font-medium py-2 flex items-center gap-1 w-full"
                   >
-                    Locations
+                    Service Areas
                     <ChevronDown size={16} className={`transition-transform duration-200 ${isMobileLocationsOpen ? 'rotate-180' : ''}`} />
                   </button>
                   {isMobileLocationsOpen && (

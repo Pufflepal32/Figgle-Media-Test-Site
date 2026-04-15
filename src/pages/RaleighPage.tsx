@@ -22,7 +22,7 @@ export default function RaleighPage() {
     '@type': 'LocalBusiness',
     name: 'Figgle Media - Raleigh Contractor Web Design',
     description: 'Custom web design and SEO for construction businesses in Raleigh, NC. We help contractors generate more leads with high-converting websites.',
-    url: 'https://figglemedia.com/raleigh-contractor-web-design',
+    url: 'https://figglemedia.com/raleigh-web-design',
     telephone: BUSINESS.phoneDisplay,
     address: {
       '@type': 'PostalAddress',
@@ -85,14 +85,14 @@ export default function RaleighPage() {
           name="keywords"
           content="contractor web design Raleigh, contractor website Raleigh NC, construction SEO Raleigh, contractor website design, web design for contractors Raleigh, construction marketing Raleigh NC"
         />
-        <link rel="canonical" href="https://figglemedia.com/raleigh-contractor-web-design" />
+        <link rel="canonical" href="https://figglemedia.com/raleigh-web-design" />
         <meta property="og:title" content="Contractor Web Design Raleigh NC | Figgle Media" />
         <meta
           property="og:description"
           content="Custom websites for Raleigh contractors. Rank higher on Google & get more leads. Free consultation available."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://figglemedia.com/raleigh-contractor-web-design" />
+        <meta property="og:url" content="https://figglemedia.com/raleigh-web-design" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contractor Web Design Raleigh NC | Figgle Media" />

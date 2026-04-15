@@ -44,13 +44,22 @@ export default function IndustryPage() {
       </Helmet>
 
       <div className="pt-20">
-        {/* Breadcrumb */}
+        {/* Breadcrumb — industry-silo aware */}
         <div className="bg-navy-blue/50 border-b border-white/10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <nav className="flex items-center gap-2 text-sm text-cream/60" aria-label="Breadcrumb">
               <Link to="/" className="hover:text-white transition-colors">Home</Link>
-              <ChevronRight size={14} />
-              <Link to="/contractor-marketing-agency" className="hover:text-white transition-colors">Contractor Marketing</Link>
+              {page.slug.includes('/') && (() => {
+                const industry = page.slug.split('/')[0];
+                return (
+                  <>
+                    <ChevronRight size={14} />
+                    <Link to={`/${industry}`} className="hover:text-white transition-colors capitalize">
+                      {industry}
+                    </Link>
+                  </>
+                );
+              })()}
               <ChevronRight size={14} />
               <span className="text-white">{page.h1}</span>
             </nav>
@@ -89,6 +98,40 @@ export default function IndustryPage() {
           </div>
         </section>
 
+        {/* Services grid — only renders on hub pages (/roofing, /hvac) */}
+        {page.serviceLinks && page.serviceLinks.length > 0 && (
+          <section className="py-20 bg-cream">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center max-w-3xl mx-auto mb-12">
+                <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">
+                  Our {page.h1.split(' ')[0]} Services
+                </h2>
+                <p className="text-lg text-warm-gray">
+                  Four specialist services — use one, stack all four. Every service is tuned to how {page.h1.split(' ')[0].toLowerCase()} customers search, compare, and hire.
+                </p>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                {page.serviceLinks.map((svc) => (
+                  <Link
+                    key={svc.slug}
+                    to={`/${svc.slug}`}
+                    className="group bg-white border border-light-gray rounded-xl p-6 shadow-sm hover:border-burnt-orange hover:shadow-md transition-all"
+                  >
+                    <h3 className="text-xl font-bold text-navy-blue group-hover:text-burnt-orange transition-colors mb-2">
+                      {svc.label}
+                    </h3>
+                    <p className="text-warm-gray text-sm mb-4">{svc.description}</p>
+                    <span className="inline-flex items-center gap-1 text-burnt-orange font-semibold text-sm">
+                      Learn more
+                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Content Sections */}
         <section className="py-20 bg-cream">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,7 +163,8 @@ export default function IndustryPage() {
           </div>
         </section>
 
-        {/* Cities We Serve — Internal links to Layer 3 */}
+        {/* Cities We Serve — Internal links to Layer 3 (only renders when L3s exist) */}
+        {page.cityLinks.length > 0 && (
         <section className="py-20 bg-cream">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal text-center mb-4">
@@ -146,6 +190,7 @@ export default function IndustryPage() {
             </div>
           </div>
         </section>
+        )}
 
         {/* FAQs */}
         <section className="py-20 bg-gradient-to-br from-navy-blue to-navy">

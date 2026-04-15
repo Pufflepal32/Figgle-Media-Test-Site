@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link, useLocation, Navigate } from 'react-router-dom';
 import { getCurrentMonthYear } from '../utils/useCurrentDate';
 import { getCityBySlug } from '../data/cityData';
+import { serviceLocationPages } from '../data/seoPages';
 import { BUSINESS } from '../config/business';
 
 const iconMap = {
@@ -31,6 +32,11 @@ export default function CityLandingPage() {
   if (!city) {
     return <Navigate to="/" replace />;
   }
+
+  // L3 service+location pages parented to this hub (if any)
+  const childServicePages = Object.values(serviceLocationPages).filter(
+    (p) => p.locationParentSlug === city.slug,
+  );
 
   const schema = {
     '@context': 'https://schema.org',
@@ -386,6 +392,40 @@ export default function CityLandingPage() {
           </div>
         </div>
       </section>
+
+      {/* Specialized services (L3) — only renders when child pages exist */}
+      {childServicePages.length > 0 && (
+        <section className="py-20 bg-cream">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-navy-blue mb-4">
+                Specialized Services for {city.name} Contractors
+              </h2>
+              <p className="text-lg text-charcoal">
+                Industry-specific campaigns built for the {city.name} market — each with its own lead funnel and local SEO plan.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {childServicePages.map((svc) => (
+                <Link
+                  key={svc.slug}
+                  to={`/${svc.slug}`}
+                  className="group bg-white border border-light-gray rounded-xl p-6 shadow-sm hover:border-burnt-orange hover:shadow-md transition-all"
+                >
+                  <h3 className="text-lg font-bold text-navy-blue group-hover:text-burnt-orange transition-colors mb-2">
+                    {svc.industry} {svc.service} in {svc.city}
+                  </h3>
+                  <p className="text-warm-gray text-sm mb-4">{svc.subtitle}</p>
+                  <span className="inline-flex items-center gap-1 text-burnt-orange font-semibold text-sm">
+                    Learn more
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* FAQ Section */}
       <section className="py-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy">

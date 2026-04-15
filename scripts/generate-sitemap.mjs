@@ -24,21 +24,32 @@ const staticRoutes = [
   ['/about', 'monthly', '0.6'],
   ['/blog', 'weekly', '0.8'],
   ['/free-website-plan', 'monthly', '0.9'],
-  ['/raleigh-contractor-web-design', 'monthly', '0.8'],
-  ['/charlotte-contractor-web-design', 'monthly', '0.8'],
-  ['/durham-contractor-web-design', 'monthly', '0.8'],
-  ['/greensboro-contractor-web-design', 'monthly', '0.8'],
-  ['/winston-salem-contractor-web-design', 'monthly', '0.8'],
-  ['/fayetteville-contractor-web-design', 'monthly', '0.8'],
-  ['/wilmington-contractor-web-design', 'monthly', '0.8'],
-  ['/asheville-contractor-web-design', 'monthly', '0.8'],
+  // Legacy /{city}-contractor-web-design URLs → 301 to /{city}-web-design (see public/_redirects)
+  ['/charlotte-web-design', 'monthly', '0.9'],
+  ['/durham-web-design', 'monthly', '0.9'],
+  ['/greensboro-web-design', 'monthly', '0.9'],
+  ['/winston-salem-web-design', 'monthly', '0.9'],
+  ['/fayetteville-web-design', 'monthly', '0.9'],
+  ['/wilmington-web-design', 'monthly', '0.9'],
+  ['/asheville-web-design', 'monthly', '0.9'],
 
-  // SEO Layer 1: Industry Authority Pages
-  ['/contractor-marketing-agency', 'monthly', '0.9'],
-  ['/roofing-web-design', 'monthly', '0.9'],
-  ['/seo-for-roofers', 'monthly', '0.9'],
-  ['/google-ads-for-roofers', 'monthly', '0.9'],
-  ['/roofing-lead-generation', 'monthly', '0.9'],
+  // Industry Silos (replaces legacy flat L1 URLs — those 301 via public/_redirects)
+  ['/roofing', 'monthly', '0.95'],
+  ['/roofing/web-design', 'monthly', '0.9'],
+  ['/roofing/seo', 'monthly', '0.9'],
+  ['/roofing/google-ads', 'monthly', '0.9'],
+  ['/roofing/lead-generation', 'monthly', '0.9'],
+  ['/hvac', 'monthly', '0.95'],
+  ['/hvac/web-design', 'monthly', '0.9'],
+  ['/hvac/seo', 'monthly', '0.9'],
+  ['/hvac/google-ads', 'monthly', '0.9'],
+  ['/hvac/lead-generation', 'monthly', '0.9'],
+  ['/electrician', 'monthly', '0.95'],
+  ['/electrician/web-design', 'monthly', '0.9'],
+  ['/electrician/seo', 'monthly', '0.9'],
+  ['/electrician/google-ads', 'monthly', '0.9'],
+  ['/electrician/lead-generation', 'monthly', '0.9'],
+  ['/contractor-marketing-agency', 'monthly', '0.8'],
 
   // SEO Layer 2: Location Hub Pages
   ['/raleigh-web-design', 'monthly', '0.9'],
@@ -48,6 +59,16 @@ const staticRoutes = [
   ['/raleigh-seo-for-roofers', 'monthly', '0.8'],
   ['/raleigh-google-ads-roofers', 'monthly', '0.8'],
   ['/raleigh-roofing-lead-generation', 'monthly', '0.8'],
+  ['/raleigh-hvac-web-design', 'monthly', '0.8'],
+  ['/raleigh-seo-for-hvac', 'monthly', '0.8'],
+  ['/raleigh-google-ads-hvac', 'monthly', '0.8'],
+  ['/raleigh-hvac-lead-generation', 'monthly', '0.8'],
+
+  // SEO Layer 3: Service + Location Pages (Charlotte)
+  ['/charlotte-roofing-web-design', 'monthly', '0.8'],
+  ['/charlotte-seo-for-roofers', 'monthly', '0.8'],
+  ['/charlotte-google-ads-roofers', 'monthly', '0.8'],
+  ['/charlotte-roofing-lead-generation', 'monthly', '0.8'],
 ];
 
 // Parse src/data/blogPosts.ts for completed posts (slug + modifiedDate)

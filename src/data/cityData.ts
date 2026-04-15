@@ -30,7 +30,7 @@ export interface CityData {
 
 export const cityData: Record<string, CityData> = {
   charlotte: {
-    slug: 'charlotte-contractor-web-design',
+    slug: 'charlotte-web-design',
     name: 'Charlotte',
     state: 'NC',
     region: 'Charlotte Metro',
@@ -88,7 +88,7 @@ export const cityData: Record<string, CityData> = {
   },
 
   durham: {
-    slug: 'durham-contractor-web-design',
+    slug: 'durham-web-design',
     name: 'Durham',
     state: 'NC',
     region: 'the Triangle',
@@ -146,7 +146,7 @@ export const cityData: Record<string, CityData> = {
   },
 
   greensboro: {
-    slug: 'greensboro-contractor-web-design',
+    slug: 'greensboro-web-design',
     name: 'Greensboro',
     state: 'NC',
     region: 'the Piedmont Triad',
@@ -204,7 +204,7 @@ export const cityData: Record<string, CityData> = {
   },
 
   'winston-salem': {
-    slug: 'winston-salem-contractor-web-design',
+    slug: 'winston-salem-web-design',
     name: 'Winston-Salem',
     state: 'NC',
     region: 'the Piedmont Triad',
@@ -262,7 +262,7 @@ export const cityData: Record<string, CityData> = {
   },
 
   fayetteville: {
-    slug: 'fayetteville-contractor-web-design',
+    slug: 'fayetteville-web-design',
     name: 'Fayetteville',
     state: 'NC',
     region: 'the Sandhills',
@@ -320,7 +320,7 @@ export const cityData: Record<string, CityData> = {
   },
 
   wilmington: {
-    slug: 'wilmington-contractor-web-design',
+    slug: 'wilmington-web-design',
     name: 'Wilmington',
     state: 'NC',
     region: 'the Cape Fear Coast',
@@ -378,7 +378,7 @@ export const cityData: Record<string, CityData> = {
   },
 
   asheville: {
-    slug: 'asheville-contractor-web-design',
+    slug: 'asheville-web-design',
     name: 'Asheville',
     state: 'NC',
     region: 'Western NC',
@@ -437,7 +437,7 @@ export const cityData: Record<string, CityData> = {
 };
 
 export function getCityBySlug(slug: string): CityData | null {
-  // Match slug pattern like "charlotte-contractor-web-design" -> "charlotte"
+  // Match slug pattern like "charlotte-web-design" -> "charlotte"
   for (const key of Object.keys(cityData)) {
     if (cityData[key].slug === slug) {
       return cityData[key];

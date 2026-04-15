@@ -18,5 +18,25 @@
 # Old web development section → new service page
 /web-development/technical-solutions                       /services/contractor-web-design                     301
 
+# L1 industry silo restructure — flat legacy URLs → nested /{industry}/{service}
+/roofing-web-design                                        /roofing/web-design                                 301
+/seo-for-roofers                                           /roofing/seo                                        301
+/google-ads-for-roofers                                    /roofing/google-ads                                 301
+/roofing-lead-generation                                   /roofing/lead-generation                            301
+/hvac-web-design                                           /hvac/web-design                                    301
+/seo-for-hvac                                              /hvac/seo                                           301
+/google-ads-for-hvac                                       /hvac/google-ads                                    301
+/hvac-lead-generation                                      /hvac/lead-generation                               301
+
+# L2 hub consolidation — kill legacy /{city}-contractor-web-design cannibalization
+/raleigh-contractor-web-design                             /raleigh-web-design                                 301
+/charlotte-contractor-web-design                           /charlotte-web-design                               301
+/durham-contractor-web-design                              /durham-web-design                                  301
+/greensboro-contractor-web-design                          /greensboro-web-design                              301
+/winston-salem-contractor-web-design                       /winston-salem-web-design                           301
+/fayetteville-contractor-web-design                        /fayetteville-web-design                            301
+/wilmington-contractor-web-design                          /wilmington-web-design                              301
+/asheville-contractor-web-design                           /asheville-web-design                               301
+
 # SPA fallback — must be LAST (Netlify processes rules top-to-bottom)
 /*    /index.html   200
