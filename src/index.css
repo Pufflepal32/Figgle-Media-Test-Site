@@ -5,7 +5,6 @@
 @import '@fontsource/manrope/600.css';
 @import '@fontsource/manrope/700.css';
 @import '@fontsource/manrope/800.css';
-@import '@fontsource/josefin-sans/700.css';
 
 /* Size-adjusted fallback font faces — when text renders in the fallback
    (before the web font arrives), it takes the exact same box as the final
@@ -27,15 +26,6 @@
   descent-override: 35%;
   line-gap-override: 0%;
 }
-@font-face {
-  font-family: JosefinSansFallback;
-  src: local('Arial');
-  size-adjust: 129.11%;
-  ascent-override: 77%;
-  descent-override: 10%;
-  line-gap-override: 0%;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
