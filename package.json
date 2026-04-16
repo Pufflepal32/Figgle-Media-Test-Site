@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/generate-sitemap.mjs && node scripts/optimize-hero.mjs && node scripts/optimize-home-images.mjs",
+    "prebuild": "node scripts/generate-sitemap.mjs && node scripts/optimize-home-images.mjs",
     "build": "vite build && node scripts/inject-head.mjs && node scripts/prerender.mjs && node scripts/inline-critical-css.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "lint": "eslint .",
