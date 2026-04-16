@@ -20,8 +20,16 @@ const HTML_PATH = join(DIST, 'index.html');
 // unicode-range for basic Latin, matches what @fontsource's latin subset covers.
 const LATIN_RANGE = 'U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD';
 
+// All weights used above the fold on at least one of our routes. Preloading
+// these (rather than letting them be discovered after the CSS bundle loads)
+// shortens the network dependency tree. Without 600/700 preloaded, /our-work
+// and /blog headings switched from fallback to web font mid-load, extending
+// their observed LCP.
 const CRITICAL_FONTS = [
   { family: 'Inter',   weight: 400, match: /^inter-latin-400-normal-[^.]+\.woff2$/ },
+  { family: 'Inter',   weight: 600, match: /^inter-latin-600-normal-[^.]+\.woff2$/ },
+  { family: 'Inter',   weight: 700, match: /^inter-latin-700-normal-[^.]+\.woff2$/ },
+  { family: 'Manrope', weight: 600, match: /^manrope-latin-600-normal-[^.]+\.woff2$/ },
   { family: 'Manrope', weight: 700, match: /^manrope-latin-700-normal-[^.]+\.woff2$/ },
   { family: 'Manrope', weight: 800, match: /^manrope-latin-800-normal-[^.]+\.woff2$/ },
 ];
