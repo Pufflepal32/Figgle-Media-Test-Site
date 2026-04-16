@@ -11,6 +11,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Figgle Media" />
+    <!-- Hero bg is opacity-30 decoration, not LCP. No preload — the H1 text is
+         LCP and needs the font bandwidth. Image still eager-loads from Hero.tsx. -->
     <!-- Google tag (gtag.js) — deferred until idle so it doesn't block LCP -->
     <script>
       window.dataLayer = window.dataLayer || [];

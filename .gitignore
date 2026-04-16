@@ -11,6 +11,7 @@ dist
 dist-ssr
 .unlighthouse
 .unlighthouse-after
+scripts/.cache
 *.local
 
 .vscode/*

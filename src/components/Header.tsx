@@ -77,7 +77,7 @@ export default function Header() {
               decoding="async"
               className="h-12 w-12 object-cover rounded-full transition-transform duration-300 group-hover:scale-110"
             />
-            <div className="flex flex-col items-center leading-none" style={{ fontFamily: "'Josefin Sans', sans-serif" }}>
+            <div className="flex flex-col items-center leading-none" style={{ fontFamily: "'Josefin Sans', JosefinSansFallback, sans-serif" }}>
               <span className="text-[28px] font-bold tracking-[0.04em] text-cream group-hover:text-burnt-orange transition-colors duration-300 uppercase">
                 Figgle
               </span>

@@ -14,7 +14,7 @@ const ROOT = join(__dirname, '..');
 const DIST = join(ROOT, 'dist');
 const PORT = 4173;
 const ORIGIN = `http://127.0.0.1:${PORT}`;
-const CONCURRENCY = 4;
+const CONCURRENCY = 2;
 
 // Also prerender blog routes by reading the built sitemap
 function getBlogRoutes() {
@@ -63,8 +63,8 @@ async function startPreview() {
 async function renderRoute(browser, route) {
   const page = await browser.newPage();
   try {
-    await page.goto(`${ORIGIN}${route}`, { waitUntil: 'networkidle0', timeout: 30000 });
-    await page.waitForSelector('#root', { timeout: 5000 });
+    await page.goto(`${ORIGIN}${route}`, { waitUntil: 'networkidle0', timeout: 45000 });
+    await page.waitForSelector('#root', { timeout: 15000 });
     const html = await page.content();
 
     // Write to dist/{route}/index.html

@@ -1,47 +1,159 @@
-# Force canonical domain: www.figglemedia.com → figglemedia.com (301)
+# ─────────────────────────────────────────────────────────────────────────────
+# Specific legacy-URL rules come first, fully qualified with every origin
+# (http, https+www, http+www) so the visitor reaches the final canonical URL
+# in a single 301 hop instead of chaining through the domain-normalize block.
+# Lighthouse flagged 0.63s of "multiple page redirects" — this collapses it.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Old blog posts → best matching new content or blog index
+https://www.figglemedia.com/blog/creating-engaging-content-for-your-audience     https://figglemedia.com/blog/measure-content-marketing-roi-guide             301!
+http://www.figglemedia.com/blog/creating-engaging-content-for-your-audience      https://figglemedia.com/blog/measure-content-marketing-roi-guide             301!
+http://figglemedia.com/blog/creating-engaging-content-for-your-audience          https://figglemedia.com/blog/measure-content-marketing-roi-guide             301!
+/blog/creating-engaging-content-for-your-audience                                /blog/measure-content-marketing-roi-guide                                    301
+
+https://www.figglemedia.com/blog/boost-your-sites-visibility-with-seo            https://figglemedia.com/blog/how-local-seo-helps-contractors-dominate-market 301!
+http://www.figglemedia.com/blog/boost-your-sites-visibility-with-seo             https://figglemedia.com/blog/how-local-seo-helps-contractors-dominate-market 301!
+http://figglemedia.com/blog/boost-your-sites-visibility-with-seo                 https://figglemedia.com/blog/how-local-seo-helps-contractors-dominate-market 301!
+/blog/boost-your-sites-visibility-with-seo                                       /blog/how-local-seo-helps-contractors-dominate-market                        301
+
+https://www.figglemedia.com/blog/emerging-trends-in-digital-marketing-for-2023   https://figglemedia.com/blog/social-media-marketing-local-businesses-2025    301!
+http://www.figglemedia.com/blog/emerging-trends-in-digital-marketing-for-2023    https://figglemedia.com/blog/social-media-marketing-local-businesses-2025    301!
+http://figglemedia.com/blog/emerging-trends-in-digital-marketing-for-2023        https://figglemedia.com/blog/social-media-marketing-local-businesses-2025    301!
+/blog/emerging-trends-in-digital-marketing-for-2023                              /blog/social-media-marketing-local-businesses-2025                           301
+
+https://www.figglemedia.com/blog/the-rise-of-ai-in-digital-marketing             https://figglemedia.com/blog                                                 301!
+http://www.figglemedia.com/blog/the-rise-of-ai-in-digital-marketing              https://figglemedia.com/blog                                                 301!
+http://figglemedia.com/blog/the-rise-of-ai-in-digital-marketing                  https://figglemedia.com/blog                                                 301!
+/blog/the-rise-of-ai-in-digital-marketing                                        /blog                                                                        301
+
+https://www.figglemedia.com/blog/top-5-web-design-trends-for-2023                https://figglemedia.com/blog                                                 301!
+http://www.figglemedia.com/blog/top-5-web-design-trends-for-2023                 https://figglemedia.com/blog                                                 301!
+http://figglemedia.com/blog/top-5-web-design-trends-for-2023                     https://figglemedia.com/blog                                                 301!
+/blog/top-5-web-design-trends-for-2023                                           /blog                                                                        301
+
+https://www.figglemedia.com/blog/mobile-first-design-principles                  https://figglemedia.com/blog/mobile-first-design-contractors                 301!
+http://www.figglemedia.com/blog/mobile-first-design-principles                   https://figglemedia.com/blog/mobile-first-design-contractors                 301!
+http://figglemedia.com/blog/mobile-first-design-principles                       https://figglemedia.com/blog/mobile-first-design-contractors                 301!
+/blog/mobile-first-design-principles                                             /blog/mobile-first-design-contractors                                        301
+
+# Old SEO section pages → new SEO service page
+https://www.figglemedia.com/seo                                                  https://figglemedia.com/services/seo-for-contractors                         301!
+http://www.figglemedia.com/seo                                                   https://figglemedia.com/services/seo-for-contractors                         301!
+http://figglemedia.com/seo                                                       https://figglemedia.com/services/seo-for-contractors                         301!
+/seo                                                                             /services/seo-for-contractors                                                301
+
+https://www.figglemedia.com/seo/off-page                                         https://figglemedia.com/services/seo-for-contractors                         301!
+http://www.figglemedia.com/seo/off-page                                          https://figglemedia.com/services/seo-for-contractors                         301!
+http://figglemedia.com/seo/off-page                                              https://figglemedia.com/services/seo-for-contractors                         301!
+/seo/off-page                                                                    /services/seo-for-contractors                                                301
+
+https://www.figglemedia.com/seo/technical                                        https://figglemedia.com/services/seo-for-contractors                         301!
+http://www.figglemedia.com/seo/technical                                         https://figglemedia.com/services/seo-for-contractors                         301!
+http://figglemedia.com/seo/technical                                             https://figglemedia.com/services/seo-for-contractors                         301!
+/seo/technical                                                                   /services/seo-for-contractors                                                301
+
+# Old portfolio → about/process page
+https://www.figglemedia.com/portfolio                                            https://figglemedia.com/our-process                                          301!
+http://www.figglemedia.com/portfolio                                             https://figglemedia.com/our-process                                          301!
+http://figglemedia.com/portfolio                                                 https://figglemedia.com/our-process                                          301!
+/portfolio                                                                       /our-process                                                                 301
+
+# Old web development section → new service page
+https://www.figglemedia.com/web-development/technical-solutions                  https://figglemedia.com/services/contractor-web-design                       301!
+http://www.figglemedia.com/web-development/technical-solutions                   https://figglemedia.com/services/contractor-web-design                       301!
+http://figglemedia.com/web-development/technical-solutions                       https://figglemedia.com/services/contractor-web-design                       301!
+/web-development/technical-solutions                                             /services/contractor-web-design                                              301
+
+# L1 industry silo restructure — flat legacy URLs → nested /{industry}/{service}
+https://www.figglemedia.com/roofing-web-design                                   https://figglemedia.com/roofing/web-design                                   301!
+http://www.figglemedia.com/roofing-web-design                                    https://figglemedia.com/roofing/web-design                                   301!
+http://figglemedia.com/roofing-web-design                                        https://figglemedia.com/roofing/web-design                                   301!
+/roofing-web-design                                                              /roofing/web-design                                                          301
+
+https://www.figglemedia.com/seo-for-roofers                                      https://figglemedia.com/roofing/seo                                          301!
+http://www.figglemedia.com/seo-for-roofers                                       https://figglemedia.com/roofing/seo                                          301!
+http://figglemedia.com/seo-for-roofers                                           https://figglemedia.com/roofing/seo                                          301!
+/seo-for-roofers                                                                 /roofing/seo                                                                 301
+
+https://www.figglemedia.com/google-ads-for-roofers                               https://figglemedia.com/roofing/google-ads                                   301!
+http://www.figglemedia.com/google-ads-for-roofers                                https://figglemedia.com/roofing/google-ads                                   301!
+http://figglemedia.com/google-ads-for-roofers                                    https://figglemedia.com/roofing/google-ads                                   301!
+/google-ads-for-roofers                                                          /roofing/google-ads                                                          301
+
+https://www.figglemedia.com/roofing-lead-generation                              https://figglemedia.com/roofing/lead-generation                              301!
+http://www.figglemedia.com/roofing-lead-generation                               https://figglemedia.com/roofing/lead-generation                              301!
+http://figglemedia.com/roofing-lead-generation                                   https://figglemedia.com/roofing/lead-generation                              301!
+/roofing-lead-generation                                                         /roofing/lead-generation                                                     301
+
+https://www.figglemedia.com/hvac-web-design                                      https://figglemedia.com/hvac/web-design                                      301!
+http://www.figglemedia.com/hvac-web-design                                       https://figglemedia.com/hvac/web-design                                      301!
+http://figglemedia.com/hvac-web-design                                           https://figglemedia.com/hvac/web-design                                      301!
+/hvac-web-design                                                                 /hvac/web-design                                                             301
+
+https://www.figglemedia.com/seo-for-hvac                                         https://figglemedia.com/hvac/seo                                             301!
+http://www.figglemedia.com/seo-for-hvac                                          https://figglemedia.com/hvac/seo                                             301!
+http://figglemedia.com/seo-for-hvac                                              https://figglemedia.com/hvac/seo                                             301!
+/seo-for-hvac                                                                    /hvac/seo                                                                    301
+
+https://www.figglemedia.com/google-ads-for-hvac                                  https://figglemedia.com/hvac/google-ads                                      301!
+http://www.figglemedia.com/google-ads-for-hvac                                   https://figglemedia.com/hvac/google-ads                                      301!
+http://figglemedia.com/google-ads-for-hvac                                       https://figglemedia.com/hvac/google-ads                                      301!
+/google-ads-for-hvac                                                             /hvac/google-ads                                                             301
+
+https://www.figglemedia.com/hvac-lead-generation                                 https://figglemedia.com/hvac/lead-generation                                 301!
+http://www.figglemedia.com/hvac-lead-generation                                  https://figglemedia.com/hvac/lead-generation                                 301!
+http://figglemedia.com/hvac-lead-generation                                      https://figglemedia.com/hvac/lead-generation                                 301!
+/hvac-lead-generation                                                            /hvac/lead-generation                                                        301
+
+# L2 hub consolidation — kill legacy /{city}-contractor-web-design cannibalization
+https://www.figglemedia.com/raleigh-contractor-web-design                        https://figglemedia.com/raleigh-web-design                                   301!
+http://www.figglemedia.com/raleigh-contractor-web-design                         https://figglemedia.com/raleigh-web-design                                   301!
+http://figglemedia.com/raleigh-contractor-web-design                             https://figglemedia.com/raleigh-web-design                                   301!
+/raleigh-contractor-web-design                                                   /raleigh-web-design                                                          301
+
+https://www.figglemedia.com/charlotte-contractor-web-design                      https://figglemedia.com/charlotte-web-design                                 301!
+http://www.figglemedia.com/charlotte-contractor-web-design                       https://figglemedia.com/charlotte-web-design                                 301!
+http://figglemedia.com/charlotte-contractor-web-design                           https://figglemedia.com/charlotte-web-design                                 301!
+/charlotte-contractor-web-design                                                 /charlotte-web-design                                                        301
+
+https://www.figglemedia.com/durham-contractor-web-design                         https://figglemedia.com/durham-web-design                                    301!
+http://www.figglemedia.com/durham-contractor-web-design                          https://figglemedia.com/durham-web-design                                    301!
+http://figglemedia.com/durham-contractor-web-design                              https://figglemedia.com/durham-web-design                                    301!
+/durham-contractor-web-design                                                    /durham-web-design                                                           301
+
+https://www.figglemedia.com/greensboro-contractor-web-design                     https://figglemedia.com/greensboro-web-design                                301!
+http://www.figglemedia.com/greensboro-contractor-web-design                      https://figglemedia.com/greensboro-web-design                                301!
+http://figglemedia.com/greensboro-contractor-web-design                          https://figglemedia.com/greensboro-web-design                                301!
+/greensboro-contractor-web-design                                                /greensboro-web-design                                                       301
+
+https://www.figglemedia.com/winston-salem-contractor-web-design                  https://figglemedia.com/winston-salem-web-design                             301!
+http://www.figglemedia.com/winston-salem-contractor-web-design                   https://figglemedia.com/winston-salem-web-design                             301!
+http://figglemedia.com/winston-salem-contractor-web-design                       https://figglemedia.com/winston-salem-web-design                             301!
+/winston-salem-contractor-web-design                                             /winston-salem-web-design                                                    301
+
+https://www.figglemedia.com/fayetteville-contractor-web-design                   https://figglemedia.com/fayetteville-web-design                              301!
+http://www.figglemedia.com/fayetteville-contractor-web-design                    https://figglemedia.com/fayetteville-web-design                              301!
+http://figglemedia.com/fayetteville-contractor-web-design                        https://figglemedia.com/fayetteville-web-design                              301!
+/fayetteville-contractor-web-design                                              /fayetteville-web-design                                                     301
+
+https://www.figglemedia.com/wilmington-contractor-web-design                     https://figglemedia.com/wilmington-web-design                                301!
+http://www.figglemedia.com/wilmington-contractor-web-design                      https://figglemedia.com/wilmington-web-design                                301!
+http://figglemedia.com/wilmington-contractor-web-design                          https://figglemedia.com/wilmington-web-design                                301!
+/wilmington-contractor-web-design                                                /wilmington-web-design                                                       301
+
+https://www.figglemedia.com/asheville-contractor-web-design                      https://figglemedia.com/asheville-web-design                                 301!
+http://www.figglemedia.com/asheville-contractor-web-design                       https://figglemedia.com/asheville-web-design                                 301!
+http://figglemedia.com/asheville-contractor-web-design                           https://figglemedia.com/asheville-web-design                                 301!
+/asheville-contractor-web-design                                                 /asheville-web-design                                                        301
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Domain canonicalization (catch-all, runs AFTER the specific legacy rules).
+# Visitors who land on non-canonical origins for paths we haven't specifically
+# rewritten still get one hop to https://figglemedia.com.
+# ─────────────────────────────────────────────────────────────────────────────
 https://www.figglemedia.com/*    https://figglemedia.com/:splat    301!
 http://www.figglemedia.com/*     https://figglemedia.com/:splat    301!
 http://figglemedia.com/*         https://figglemedia.com/:splat    301!
-
-# 301 Redirects for old URLs that Google has indexed
-# Old blog posts → best matching new content or blog index
-/blog/creating-engaging-content-for-your-audience          /blog/measure-content-marketing-roi-guide          301
-/blog/boost-your-sites-visibility-with-seo                 /blog/how-local-seo-helps-contractors-dominate-market  301
-/blog/emerging-trends-in-digital-marketing-for-2023        /blog/social-media-marketing-local-businesses-2025  301
-/blog/the-rise-of-ai-in-digital-marketing                  /blog                                              301
-/blog/top-5-web-design-trends-for-2023                     /blog                                              301
-/blog/mobile-first-design-principles                       /blog/mobile-first-design-contractors               301
-
-# Old SEO section pages → new SEO service page
-/seo                                                       /services/seo-for-contractors                       301
-/seo/off-page                                              /services/seo-for-contractors                       301
-/seo/technical                                             /services/seo-for-contractors                       301
-
-# Old portfolio → about/process page
-/portfolio                                                 /our-process                                       301
-
-# Old web development section → new service page
-/web-development/technical-solutions                       /services/contractor-web-design                     301
-
-# L1 industry silo restructure — flat legacy URLs → nested /{industry}/{service}
-/roofing-web-design                                        /roofing/web-design                                 301
-/seo-for-roofers                                           /roofing/seo                                        301
-/google-ads-for-roofers                                    /roofing/google-ads                                 301
-/roofing-lead-generation                                   /roofing/lead-generation                            301
-/hvac-web-design                                           /hvac/web-design                                    301
-/seo-for-hvac                                              /hvac/seo                                           301
-/google-ads-for-hvac                                       /hvac/google-ads                                    301
-/hvac-lead-generation                                      /hvac/lead-generation                               301
-
-# L2 hub consolidation — kill legacy /{city}-contractor-web-design cannibalization
-/raleigh-contractor-web-design                             /raleigh-web-design                                 301
-/charlotte-contractor-web-design                           /charlotte-web-design                               301
-/durham-contractor-web-design                              /durham-web-design                                  301
-/greensboro-contractor-web-design                          /greensboro-web-design                              301
-/winston-salem-contractor-web-design                       /winston-salem-web-design                           301
-/fayetteville-contractor-web-design                        /fayetteville-web-design                            301
-/wilmington-contractor-web-design                          /wilmington-web-design                              301
-/asheville-contractor-web-design                           /asheville-web-design                               301
 
 # SPA fallback — must be LAST (Netlify processes rules top-to-bottom)
 /*    /index.html   200

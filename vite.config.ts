@@ -10,6 +10,19 @@ export default defineConfig({
   build: {
     cssCodeSplit: true,
     sourcemap: 'hidden',
+    modulePreload: {
+      // Keep react-vendor preloaded (main entry needs it synchronously for FCP),
+      // but drop helmet-vendor and router-vendor from the <link rel=modulepreload>
+      // emission. The main index chunk imports them shortly after; not preloading
+      // them saves ~50KB of eager JS fetches on the critical path — the "Reduce
+      // unused JavaScript" Lighthouse flag.
+      polyfill: false,
+      resolveDependencies(_filename, deps) {
+        return deps.filter(
+          (d) => !d.includes('helmet-vendor') && !d.includes('router-vendor'),
+        );
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks(id) {
