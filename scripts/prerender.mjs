@@ -13,7 +13,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 const DIST = join(ROOT, 'dist');
 const PORT = 4173;
-const ORIGIN = `http://localhost:${PORT}`;
+const ORIGIN = `http://127.0.0.1:${PORT}`;
 const CONCURRENCY = 4;
 
 // Also prerender blog routes by reading the built sitemap
@@ -26,29 +26,38 @@ function getBlogRoutes() {
 }
 
 async function startPreview() {
-  const isWin = process.platform === 'win32';
-  const cmd = isWin ? 'npx.cmd' : 'npx';
-  const server = spawn(cmd, ['vite', 'preview', '--port', String(PORT), '--strictPort'], {
+  const viteBin = join(ROOT, 'node_modules', 'vite', 'bin', 'vite.js');
+  const server = spawn(process.execPath, [viteBin, 'preview', '--port', String(PORT), '--strictPort', '--host', '127.0.0.1'], {
     cwd: ROOT,
-    stdio: 'pipe',
+    stdio: ['ignore', 'pipe', 'pipe'],
   });
 
-  await new Promise((resolve, reject) => {
-    const timeout = setTimeout(() => reject(new Error('Preview server timed out')), 15000);
-    server.stdout.on('data', (data) => {
-      if (data.toString().includes('Local:')) {
-        clearTimeout(timeout);
-        resolve();
-      }
-    });
-    server.stderr.on('data', (data) => {
-      const msg = data.toString();
-      if (msg.includes('Error')) console.error('[preview]', msg);
-    });
-    server.on('error', (err) => { clearTimeout(timeout); reject(err); });
+  server.stdout.on('data', (d) => process.stdout.write(`[preview] ${d}`));
+  server.stderr.on('data', (d) => process.stderr.write(`[preview] ${d}`));
+
+  let exited = false;
+  let exitInfo = null;
+  server.on('exit', (code, signal) => {
+    exited = true;
+    exitInfo = { code, signal };
   });
 
-  return server;
+  const deadline = Date.now() + 60000;
+  while (Date.now() < deadline) {
+    if (exited) {
+      throw new Error(`Preview server exited before becoming ready (code=${exitInfo?.code} signal=${exitInfo?.signal})`);
+    }
+    try {
+      const res = await fetch(`${ORIGIN}/`, { method: 'GET' });
+      if (res.ok || res.status === 404) return server;
+    } catch {
+      // not up yet
+    }
+    await new Promise((r) => setTimeout(r, 300));
+  }
+
+  server.kill();
+  throw new Error('Preview server timed out (60s) waiting for HTTP readiness');
 }
 
 async function renderRoute(browser, route) {
