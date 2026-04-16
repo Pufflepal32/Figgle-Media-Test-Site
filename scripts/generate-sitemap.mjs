@@ -10,66 +10,7 @@ const ROOT = join(__dirname, '..');
 const PUBLIC_DIR = join(ROOT, 'public');
 const SITE = 'https://figglemedia.com';
 
-// Static routes — keep in sync with src/App.tsx
-// [path, changefreq, priority]
-const staticRoutes = [
-  ['/', 'weekly', '1.0'],
-  ['/services', 'monthly', '0.9'],
-  ['/services/contractor-web-design', 'monthly', '0.8'],
-  ['/services/seo-for-contractors', 'monthly', '0.8'],
-  ['/services/google-ads-management', 'monthly', '0.8'],
-  ['/services/local-service-ads', 'monthly', '0.8'],
-  ['/pricing', 'monthly', '0.9'],
-  ['/our-process', 'monthly', '0.7'],
-  ['/about', 'monthly', '0.6'],
-  ['/blog', 'weekly', '0.8'],
-  ['/free-website-plan', 'monthly', '0.9'],
-  // Legacy /{city}-contractor-web-design URLs → 301 to /{city}-web-design (see public/_redirects)
-  ['/charlotte-web-design', 'monthly', '0.9'],
-  ['/durham-web-design', 'monthly', '0.9'],
-  ['/greensboro-web-design', 'monthly', '0.9'],
-  ['/winston-salem-web-design', 'monthly', '0.9'],
-  ['/fayetteville-web-design', 'monthly', '0.9'],
-  ['/wilmington-web-design', 'monthly', '0.9'],
-  ['/asheville-web-design', 'monthly', '0.9'],
-
-  // Industry Silos (replaces legacy flat L1 URLs — those 301 via public/_redirects)
-  ['/roofing', 'monthly', '0.95'],
-  ['/roofing/web-design', 'monthly', '0.9'],
-  ['/roofing/seo', 'monthly', '0.9'],
-  ['/roofing/google-ads', 'monthly', '0.9'],
-  ['/roofing/lead-generation', 'monthly', '0.9'],
-  ['/hvac', 'monthly', '0.95'],
-  ['/hvac/web-design', 'monthly', '0.9'],
-  ['/hvac/seo', 'monthly', '0.9'],
-  ['/hvac/google-ads', 'monthly', '0.9'],
-  ['/hvac/lead-generation', 'monthly', '0.9'],
-  ['/electrician', 'monthly', '0.95'],
-  ['/electrician/web-design', 'monthly', '0.9'],
-  ['/electrician/seo', 'monthly', '0.9'],
-  ['/electrician/google-ads', 'monthly', '0.9'],
-  ['/electrician/lead-generation', 'monthly', '0.9'],
-  ['/contractor-marketing-agency', 'monthly', '0.8'],
-
-  // SEO Layer 2: Location Hub Pages
-  ['/raleigh-web-design', 'monthly', '0.9'],
-
-  // SEO Layer 3: Service + Location Pages (Raleigh)
-  ['/raleigh-roofing-web-design', 'monthly', '0.8'],
-  ['/raleigh-seo-for-roofers', 'monthly', '0.8'],
-  ['/raleigh-google-ads-roofers', 'monthly', '0.8'],
-  ['/raleigh-roofing-lead-generation', 'monthly', '0.8'],
-  ['/raleigh-hvac-web-design', 'monthly', '0.8'],
-  ['/raleigh-seo-for-hvac', 'monthly', '0.8'],
-  ['/raleigh-google-ads-hvac', 'monthly', '0.8'],
-  ['/raleigh-hvac-lead-generation', 'monthly', '0.8'],
-
-  // SEO Layer 3: Service + Location Pages (Charlotte)
-  ['/charlotte-roofing-web-design', 'monthly', '0.8'],
-  ['/charlotte-seo-for-roofers', 'monthly', '0.8'],
-  ['/charlotte-google-ads-roofers', 'monthly', '0.8'],
-  ['/charlotte-roofing-lead-generation', 'monthly', '0.8'],
-];
+import { staticRoutes } from './routes.mjs';
 
 // Parse src/data/blogPosts.ts for completed posts (slug + modifiedDate)
 // Walks each post object by tracking which `slug:` belongs to which `isComplete:`.

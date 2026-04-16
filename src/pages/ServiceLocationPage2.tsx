@@ -3,6 +3,7 @@ import { Link, Navigate, useLocation } from 'react-router-dom';
 import { CheckCircle, ArrowRight, MapPin, ChevronRight, Phone, BarChart3, Zap } from 'lucide-react';
 import { getServiceLocationPage } from '../data/seoPages';
 import { BUSINESS } from '../config/business';
+import { buildBreadcrumbSchema } from '../utils/breadcrumbSchema';
 import { useState } from 'react';
 
 export default function ServiceLocationPage2() {
@@ -48,8 +49,21 @@ export default function ServiceLocationPage2() {
         <title>{page.title}</title>
         <meta name="description" content={page.metaDescription} />
         <link rel="canonical" href={`${BUSINESS.url}/${page.slug}`} />
+        <meta property="og:title" content={page.title} />
+        <meta property="og:description" content={page.metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${BUSINESS.url}/${page.slug}`} />
+        <meta property="og:image" content={`${BUSINESS.url}/assets/logo.webp`} />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(buildBreadcrumbSchema([
+            { name: 'Home', url: BUSINESS.url },
+            { name: page.industry, url: `${BUSINESS.url}/${page.industryParentSlug}` },
+            { name: page.city, url: `${BUSINESS.url}/${page.locationParentSlug}` },
+            { name: `${page.industry} ${page.service}`, url: `${BUSINESS.url}/${page.slug}` },
+          ]))}
+        </script>
       </Helmet>
 
       <div className="pt-20">

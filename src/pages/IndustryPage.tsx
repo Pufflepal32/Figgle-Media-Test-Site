@@ -3,6 +3,7 @@ import { Link, Navigate, useLocation } from 'react-router-dom';
 import { CheckCircle, ArrowRight, MapPin, ChevronRight } from 'lucide-react';
 import { getIndustryPage } from '../data/seoPages';
 import { BUSINESS } from '../config/business';
+import { buildBreadcrumbSchema } from '../utils/breadcrumbSchema';
 
 export default function IndustryPage() {
   const slug = useLocation().pathname.replace(/^\//, '');
@@ -39,8 +40,27 @@ export default function IndustryPage() {
         <title>{page.title}</title>
         <meta name="description" content={page.metaDescription} />
         <link rel="canonical" href={`${BUSINESS.url}/${page.slug}`} />
+        <meta property="og:title" content={page.title} />
+        <meta property="og:description" content={page.metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${BUSINESS.url}/${page.slug}`} />
+        <meta property="og:image" content={`${BUSINESS.url}/assets/logo.webp`} />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(buildBreadcrumbSchema(
+            page.slug.includes('/')
+              ? [
+                  { name: 'Home', url: BUSINESS.url },
+                  { name: page.slug.split('/')[0].charAt(0).toUpperCase() + page.slug.split('/')[0].slice(1), url: `${BUSINESS.url}/${page.slug.split('/')[0]}` },
+                  { name: page.h1, url: `${BUSINESS.url}/${page.slug}` },
+                ]
+              : [
+                  { name: 'Home', url: BUSINESS.url },
+                  { name: page.h1, url: `${BUSINESS.url}/${page.slug}` },
+                ]
+          ))}
+        </script>
       </Helmet>
 
       <div className="pt-20">

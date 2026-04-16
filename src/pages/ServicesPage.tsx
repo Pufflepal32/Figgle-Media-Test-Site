@@ -5,6 +5,7 @@ import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 import CTABanner from '../components/CTABanner';
 import { BUSINESS } from '../config/business';
+import { buildBreadcrumbSchema } from '../utils/breadcrumbSchema';
 
 function ServicesPage() {
   return (
@@ -16,6 +17,12 @@ function ServicesPage() {
           content="Web design, local SEO, Google Ads, and Local Service Ads management for contractors. Everything you need to dominate your local market and book more jobs."
         />
         <link rel="canonical" href="https://figglemedia.com/services" />
+        <script type="application/ld+json">
+          {JSON.stringify(buildBreadcrumbSchema([
+            { name: 'Home', url: BUSINESS.url },
+            { name: 'Services', url: `${BUSINESS.url}/services` },
+          ]))}
+        </script>
       </Helmet>
       <div className="pt-20">
         {/* Hero Section */}

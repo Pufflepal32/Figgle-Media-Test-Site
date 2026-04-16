@@ -6,6 +6,7 @@ import { getCurrentMonthYear } from '../utils/useCurrentDate';
 import { getCityBySlug } from '../data/cityData';
 import { serviceLocationPages } from '../data/seoPages';
 import { BUSINESS } from '../config/business';
+import { buildBreadcrumbSchema } from '../utils/breadcrumbSchema';
 
 const iconMap = {
   trending: TrendingUp,
@@ -88,13 +89,22 @@ export default function CityLandingPage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://figglemedia.com/${city.slug}`} />
         <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content={`https://figglemedia.com${city.cityImage}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={city.metaTitle} />
         <meta name="twitter:description" content={city.metaDescription} />
+        <meta name="twitter:image" content={`https://figglemedia.com${city.cityImage}`} />
         <meta name="geo.region" content={`US-${city.state}`} />
         <meta name="geo.placename" content={city.name} />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(buildBreadcrumbSchema([
+            { name: 'Home', url: BUSINESS.url },
+            { name: 'Service Areas', url: `${BUSINESS.url}/services` },
+            { name: `${city.name} Web Design`, url: `${BUSINESS.url}/${city.slug}` },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

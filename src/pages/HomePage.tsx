@@ -1,13 +1,67 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { MapPin, ArrowRight, Hammer } from 'lucide-react';
-import Hero from '../components/Hero';
-import BeforeAfter from '../components/BeforeAfter';
-import TrustBadges from '../components/TrustBadges';
-import ServicesPreview from '../components/ServicesPreview';
-import TestimonialsPreview from '../components/TestimonialsPreview';
-import CTABanner from '../components/CTABanner';
-import MapEmbed from '../components/MapEmbed';
+import { ArrowRight, Globe, Search, Target, Megaphone, Phone, Shield, Zap, Clock } from 'lucide-react';
+import { BUSINESS } from '../config/business';
+import Hero from '../components/ui/Hero';
+import SectionBand from '../components/ui/SectionBand';
+import EyebrowHeading from '../components/ui/EyebrowHeading';
+import Card from '../components/ui/Card';
+import { LinkButton } from '../components/ui/Button';
+import ScrollReveal from '../components/ui/ScrollReveal';
+
+const PX = (id: number) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=1200`;
+
+const services = [
+  {
+    icon: Globe,
+    title: 'Contractor Web Design',
+    description: 'Custom websites engineered to convert local traffic into booked jobs. Mobile-first, fast-loading, SEO-ready.',
+    href: '/services/contractor-web-design',
+    image: PX(16129877), // Laptop with web design work
+  },
+  {
+    icon: Search,
+    title: 'SEO for Contractors',
+    description: 'Map Pack-winning local SEO that puts your company in front of homeowners the moment they search.',
+    href: '/services/seo-for-contractors',
+    image: PX(3861957), // Analytics graph on laptop
+  },
+  {
+    icon: Target,
+    title: 'Google Ads Management',
+    description: 'Weather-triggered, geo-targeted PPC campaigns built for contractor demand cycles and seasonal spikes.',
+    href: '/services/google-ads-management',
+    image: PX(18530501), // Google on smartphone
+  },
+  {
+    icon: Megaphone,
+    title: 'Local Service Ads',
+    description: 'Google Guaranteed placement that generates verified leads at lower cost than standard search.',
+    href: '/services/local-service-ads',
+    image: PX(7109314), // Laptop with documents
+  },
+];
+
+const industries = [
+  {
+    name: 'Roofing',
+    href: '/roofing',
+    description: 'Storm-ready websites, Map Pack SEO, and weather-triggered ads for roofing contractors.',
+    image: PX(4966809), // Construction worker at site
+  },
+  {
+    name: 'HVAC',
+    href: '/hvac',
+    description: 'Dual-journey sites that capture emergency calls and planned replacements year-round.',
+    image: PX(32497161), // HVAC technician with outdoor unit
+  },
+  {
+    name: 'Electrician',
+    href: '/electrician',
+    description: 'Tuned for panel upgrades, emergency service, and the EV-charger installation boom.',
+    image: PX(257736), // Electrician fixing switchboard
+  },
+];
 
 const cityLinks = [
   { label: 'Raleigh', href: '/raleigh-web-design' },
@@ -20,108 +74,255 @@ const cityLinks = [
   { label: 'Asheville', href: '/asheville-web-design' },
 ];
 
-const nicheLinks = [
-  { label: 'Roofing Marketing', href: '/roofing', desc: 'Web design, SEO, Google Ads, and lead generation for roofers. Storm-ready, neighborhood-targeted, conversion-tuned.' },
-  { label: 'HVAC Marketing', href: '/hvac', desc: 'Web design, SEO, Google Ads, and lead generation for HVAC companies. Built for emergency calls and planned replacements.' },
-  { label: 'Electrician Marketing', href: '/electrician', desc: 'Web design, SEO, Google Ads, and lead generation for electrical contractors. Tuned for emergency calls, panel upgrades, and the EV-charger boom.' },
+const processSteps = [
+  { number: '01', icon: Search, title: 'Free Audit', description: 'We analyze your current site, local competition, and market gaps — no obligation.' },
+  { number: '02', icon: Globe, title: 'Design & Build', description: 'Custom site built for conversions with local SEO baked in from day one.' },
+  { number: '03', icon: Zap, title: 'Launch & Track', description: 'Zero-downtime launch, tracking configured, Google Search Console submitted.' },
+  { number: '04', icon: Clock, title: 'Grow', description: 'Ongoing SEO, ad management, and optimization. Monthly reporting, always.' },
 ];
 
-function HomePage() {
+const valuePoints = [
+  {
+    icon: Shield,
+    title: 'Contractor-only focus',
+    description: 'We don\'t split attention across industries. Every strategy reflects the rhythms of the trades — storm surges, seasonal demand, emergency calls.',
+  },
+  {
+    icon: Globe,
+    title: 'Built locally, for locals',
+    description: 'Every page we build is engineered to rank in North Carolina markets — from Triangle neighborhoods to coastal zip codes to mountain service areas.',
+  },
+  {
+    icon: Zap,
+    title: 'Speed over theater',
+    description: 'Sites launch in weeks, not months. No bloated agency process. You talk directly to the people building your site.',
+  },
+];
+
+export default function HomePage() {
   return (
     <>
       <Helmet>
         <title>Figgle Media — Web Design & SEO for North Carolina Contractors</title>
-        <meta
-          name="description"
-          content="Custom websites and local SEO that turn searches into booked jobs for contractors across North Carolina. Get a free website plan."
-        />
+        <meta name="description" content="Custom websites and local SEO that turn searches into booked jobs for contractors across North Carolina. Get a free website plan." />
         <link rel="canonical" href="https://figglemedia.com/" />
         <meta property="og:title" content="Figgle Media — Web Design & SEO for North Carolina Contractors" />
-        <meta
-          property="og:description"
-          content="Custom websites and local SEO that turn searches into booked jobs for contractors across North Carolina."
-        />
+        <meta property="og:description" content="Custom websites and local SEO that turn searches into booked jobs for contractors across North Carolina." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://figglemedia.com/" />
+        <meta property="og:image" content="https://figglemedia.com/assets/logo.webp" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": BUSINESS.name,
+            "url": BUSINESS.url,
+            "logo": `${BUSINESS.url}/assets/logo.webp`,
+            "telephone": BUSINESS.phoneTel,
+            "email": BUSINESS.email,
+            "address": { "@type": "PostalAddress", "addressLocality": BUSINESS.city, "addressRegion": BUSINESS.state, "addressCountry": "US" },
+            "areaServed": { "@type": "State", "name": BUSINESS.serviceArea },
+          })}
+        </script>
       </Helmet>
+
       <Hero />
-      <BeforeAfter />
-      <TrustBadges />
-      <ServicesPreview />
 
-      {/* NC Cities We Serve */}
-      <section className="py-20 bg-cream">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 bg-navy-blue/10 text-navy-blue rounded-full px-4 py-2 mb-4">
-              <MapPin size={16} className="text-burnt-orange" />
-              <span className="text-sm font-semibold">North Carolina Coverage</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-blue mb-4">
-              NC Cities We Serve
-            </h2>
-            <p className="text-lg text-charcoal">
-              Local SEO and web design tailored to every major North Carolina metro — from the Triangle to the coast.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {cityLinks.map((city) => (
-              <Link
-                key={city.label}
-                to={city.href}
-                className="group flex items-center justify-between bg-white border border-light-gray rounded-xl p-4 shadow-sm hover:border-burnt-orange hover:shadow-md transition-all"
-              >
-                <span className="flex items-center gap-3 font-semibold text-navy-blue group-hover:text-burnt-orange transition-colors">
-                  <MapPin size={18} className="text-burnt-orange" />
-                  {city.label}
-                </span>
-                <ArrowRight size={16} className="text-warm-gray group-hover:text-burnt-orange group-hover:translate-x-1 transition-all" />
-              </Link>
-            ))}
-          </div>
+      {/* Why Figgle — value props, no fake numbers */}
+      <SectionBand variant="slate" padding="default">
+        <ScrollReveal>
+          <EyebrowHeading
+            eyebrow="Why Figgle"
+            title="A marketing agency that actually gets contractors"
+            description="Most agencies treat construction like any other industry. We only work with the trades — that's the whole playbook."
+          />
+        </ScrollReveal>
+        <div className="grid md:grid-cols-3 gap-6 mt-16 max-w-6xl mx-auto">
+          {valuePoints.map((v, i) => (
+            <ScrollReveal key={v.title} delay={i * 100}>
+              <div className="bg-white rounded-card p-8 shadow-premium border border-slate-100 h-full">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-burnt-orange/10 rounded-button mb-5">
+                  <v.icon size={24} className="text-burnt-orange" />
+                </div>
+                <h3 className="text-heading-md text-navy-blue mb-3">{v.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{v.description}</p>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
-      </section>
+      </SectionBand>
 
-      {/* Contractor Specialties / Industries */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 bg-navy-blue/10 text-navy-blue rounded-full px-4 py-2 mb-4">
-              <Hammer size={16} className="text-burnt-orange" />
-              <span className="text-sm font-semibold">Built for Contractors</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-blue mb-4">
-              Contractor Specialties
-            </h2>
-            <p className="text-lg text-charcoal">
-              Industry-specific playbooks for the trades. Deeper targeting, higher-converting pages, faster lead flow.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {nicheLinks.map((niche) => (
-              <Link
-                key={niche.label}
-                to={niche.href}
-                className="group bg-gradient-to-br from-navy-blue to-navy rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border border-white/10"
-              >
-                <h3 className="text-xl font-bold text-white group-hover:text-burnt-orange transition-colors mb-2">
-                  {niche.label}
-                </h3>
-                <p className="text-cream text-sm mb-4 leading-relaxed">{niche.desc}</p>
-                <span className="inline-flex items-center gap-1 text-burnt-orange font-semibold text-sm">
-                  Learn more <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-            ))}
-          </div>
+      {/* Services grid */}
+      <SectionBand variant="white" padding="default">
+        <ScrollReveal>
+          <EyebrowHeading
+            eyebrow="What We Do"
+            title="Everything a contractor needs to dominate online"
+            description="Four services, purpose-built for the trades. Choose one, or stack them for compounding results."
+          />
+        </ScrollReveal>
+        <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-6xl mx-auto">
+          {services.map((service, i) => (
+            <ScrollReveal key={service.title} delay={i * 100}>
+              <Card to={service.href} className="h-full group">
+                <div className="aspect-[16/9] overflow-hidden bg-slate-100">
+                  <img
+                    src={service.image}
+                    alt=""
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-8">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-burnt-orange/10 rounded-button mb-4">
+                    <service.icon size={24} className="text-burnt-orange" />
+                  </div>
+                  <h3 className="text-heading-lg text-navy-blue mb-3 group-hover:text-burnt-orange transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
+                  <span className="inline-flex items-center gap-2 text-burnt-orange font-semibold">
+                    Learn more
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </Card>
+            </ScrollReveal>
+          ))}
         </div>
-      </section>
+      </SectionBand>
 
-      <TestimonialsPreview />
-      <CTABanner />
-      <MapEmbed />
+      {/* Industries */}
+      <SectionBand variant="slate" padding="default">
+        <ScrollReveal>
+          <EyebrowHeading
+            eyebrow="Industries We Serve"
+            title="Specialist playbooks for the trades"
+            description="We don't work with florists, dentists, or SaaS. Just contractors. Every strategy reflects that focus."
+          />
+        </ScrollReveal>
+        <div className="grid md:grid-cols-3 gap-6 mt-16 max-w-6xl mx-auto">
+          {industries.map((ind, i) => (
+            <ScrollReveal key={ind.name} delay={i * 100}>
+              <Card to={ind.href} className="h-full group overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={ind.image}
+                    alt=""
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-blue via-navy-blue/50 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-heading-lg text-white mb-2">{ind.name}</h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-slate-600 mb-4 leading-relaxed">{ind.description}</p>
+                  <span className="inline-flex items-center gap-2 text-burnt-orange font-semibold group-hover:gap-3 transition-all">
+                    See {ind.name} marketing
+                    <ArrowRight size={16} />
+                  </span>
+                </div>
+              </Card>
+            </ScrollReveal>
+          ))}
+        </div>
+      </SectionBand>
+
+      {/* Process */}
+      <SectionBand variant="navy" padding="default">
+        <ScrollReveal>
+          <EyebrowHeading
+            eyebrow="Our Process"
+            title="A proven 4-step system"
+            description="From the first audit to monthly growth — transparent, fast, and tuned to contractor rhythms."
+            dark
+          />
+        </ScrollReveal>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-6xl mx-auto">
+          {processSteps.map((step, i) => (
+            <ScrollReveal key={step.number} delay={i * 100}>
+              <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-card p-6">
+                <div className="text-burnt-orange font-display font-extrabold text-5xl opacity-40 mb-2">{step.number}</div>
+                <div className="inline-flex items-center justify-center w-10 h-10 bg-burnt-orange/20 rounded-button mb-4">
+                  <step.icon size={20} className="text-burnt-orange" />
+                </div>
+                <h3 className="text-heading-md text-white mb-2">{step.title}</h3>
+                <p className="text-slate-300 text-body-sm leading-relaxed">{step.description}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+        <div className="text-center mt-12">
+          <LinkButton to="/our-process" variant="primary" size="md" iconRight={<ArrowRight size={18} />}>
+            See the Full Process
+          </LinkButton>
+        </div>
+      </SectionBand>
+
+      {/* Locations */}
+      <SectionBand id="cities" variant="white" padding="default">
+        <ScrollReveal>
+          <EyebrowHeading
+            eyebrow="Where We Work"
+            title="Serving contractors across North Carolina"
+            description="From the Triangle to the coast to the mountains — local strategies for every NC market."
+          />
+        </ScrollReveal>
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto">
+          {cityLinks.map((city) => (
+            <Link
+              key={city.href}
+              to={city.href}
+              className="group flex items-center justify-between bg-white border border-slate-200 rounded-button px-5 py-4 hover:border-burnt-orange hover:shadow-premium transition-all"
+            >
+              <span className="font-semibold text-navy-blue group-hover:text-burnt-orange transition-colors">
+                {city.label}
+              </span>
+              <ArrowRight size={16} className="text-slate-400 group-hover:text-burnt-orange group-hover:translate-x-1 transition-all" />
+            </Link>
+          ))}
+        </div>
+      </SectionBand>
+
+      {/* Final CTA */}
+      <SectionBand variant="dark-navy" padding="feature" className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-blue via-dark-navy to-navy"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-burnt-orange/10 rounded-full blur-3xl"></div>
+        <div className="relative z-10">
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center">
+              <div className="text-eyebrow uppercase text-burnt-orange mb-4">Get Started</div>
+              <h2 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-tight">
+                Ready to book more jobs?
+              </h2>
+              <p className="text-body-lg text-slate-200 mb-10 leading-relaxed">
+                Get a free custom website plan within 48 hours. No obligation, no contract, no fluff — just a clear picture of what would move the needle for your contracting business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <LinkButton to="/free-website-plan" variant="primary" size="lg" iconRight={<ArrowRight size={20} />}>
+                  Get Your Free Plan
+                </LinkButton>
+                <a href={`tel:${BUSINESS.phoneTel}`} className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg text-white font-semibold border-2 border-white/30 rounded-button hover:bg-white/10 transition-all">
+                  <Phone size={20} />
+                  {BUSINESS.phoneDisplay}
+                </a>
+              </div>
+              <div className="flex flex-wrap justify-center gap-6 mt-10 text-slate-300 text-sm">
+                <div className="flex items-center gap-2">
+                  <Shield size={16} className="text-burnt-orange" />
+                  90-Day Performance Guarantee
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock size={16} className="text-burnt-orange" />
+                  No Long-Term Contracts
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </SectionBand>
     </>
   );
 }
-
-export default HomePage;

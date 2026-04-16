@@ -1,3 +1,8 @@
+# Force canonical domain: www.figglemedia.com → figglemedia.com (301)
+https://www.figglemedia.com/*    https://figglemedia.com/:splat    301!
+http://www.figglemedia.com/*     https://figglemedia.com/:splat    301!
+http://figglemedia.com/*         https://figglemedia.com/:splat    301!
+
 # 301 Redirects for old URLs that Google has indexed
 # Old blog posts → best matching new content or blog index
 /blog/creating-engaging-content-for-your-audience          /blog/measure-content-marketing-roi-guide          301

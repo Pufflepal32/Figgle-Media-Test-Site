@@ -94,8 +94,11 @@ export default function BlogPostPage() {
             "articleSection": postMeta.category,
             "keywords": postMeta.keywords,
             "inLanguage": "en-US",
-            "wordCount": 1500,
-            "articleBody": "Your website is often the first impression potential customers have of your construction business. If it's outdated, slow, or hard to navigate, you're losing leads to competitors every single day.",
+            "wordCount": (() => {
+              const body = [post.content.introduction, ...post.content.sections.flatMap(s => s.content), ...(post.content.conclusion?.content ?? [])].join(' ');
+              return body.split(/\s+/).length;
+            })(),
+            "articleBody": [post.content.introduction, ...post.content.sections.flatMap(s => s.content), ...(post.content.conclusion?.content ?? [])].join(' ').slice(0, 500),
             "about": {
               "@type": "Thing",
               "name": "Contractor Website Design"

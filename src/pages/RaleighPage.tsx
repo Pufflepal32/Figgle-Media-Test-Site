@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getCurrentMonthYear } from '../utils/useCurrentDate';
 import { BUSINESS } from '../config/business';
+import { buildBreadcrumbSchema } from '../utils/breadcrumbSchema';
 
 export default function RaleighPage() {
   const [formData, setFormData] = useState({
@@ -102,8 +103,16 @@ export default function RaleighPage() {
         />
         <meta name="geo.region" content="US-NC" />
         <meta name="geo.placename" content="Raleigh" />
+        <meta property="og:image" content={`${BUSINESS.url}/assets/cities/raleigh.webp`} />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(buildBreadcrumbSchema([
+            { name: 'Home', url: BUSINESS.url },
+            { name: 'Service Areas', url: `${BUSINESS.url}/services` },
+            { name: 'Raleigh Web Design', url: `${BUSINESS.url}/raleigh-web-design` },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

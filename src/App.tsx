@@ -1,10 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { usePageTracking } from './hooks/usePageTracking';
+import { useScrollToTop } from './hooks/useScrollToTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import TestimonialsPage from './pages/TestimonialsPage';
 import AboutPage from './pages/AboutPage';
+import TeamPage from './pages/TeamPage';
+import OurWorkPage from './pages/OurWorkPage';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import FreeWebsitePlanPage from './pages/FreeWebsitePlanPage';
@@ -14,12 +18,18 @@ import ServiceLandingPage from './pages/ServiceLandingPage';
 import CityLandingPage from './pages/CityLandingPage';
 import NotFoundPage from './pages/NotFoundPage';
 import IndustryPage from './pages/IndustryPage';
-import LocationHubPage from './pages/LocationHubPage';
 import ServiceLocationPage2 from './pages/ServiceLocationPage2';
+
+function PageTracker() {
+  usePageTracking();
+  useScrollToTop();
+  return null;
+}
 
 function App() {
   return (
     <Router>
+      <PageTracker />
       <Routes>
         {/* Landing page route without header/footer for maximum conversions */}
         <Route path="/free-website-plan" element={<FreeWebsitePlanPage />} />
@@ -38,6 +48,8 @@ function App() {
                   <Route path="/pricing" element={<PricingPage />} />
                   <Route path="/our-process" element={<TestimonialsPage />} />
                   <Route path="/about" element={<AboutPage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/our-work" element={<OurWorkPage />} />
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/blog/:slug" element={<BlogPostPage />} />
 
@@ -90,6 +102,66 @@ function App() {
                   <Route path="/charlotte-seo-for-roofers" element={<ServiceLocationPage2 />} />
                   <Route path="/charlotte-google-ads-roofers" element={<ServiceLocationPage2 />} />
                   <Route path="/charlotte-roofing-lead-generation" element={<ServiceLocationPage2 />} />
+
+                  {/* ── SEO Layer 3: Service + Location Pages (Durham) ── */}
+                  <Route path="/durham-roofing-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/durham-seo-for-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/durham-google-ads-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/durham-roofing-lead-generation" element={<ServiceLocationPage2 />} />
+                  <Route path="/durham-hvac-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/durham-seo-for-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/durham-google-ads-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/durham-hvac-lead-generation" element={<ServiceLocationPage2 />} />
+
+                  {/* ── SEO Layer 3: Service + Location Pages (Greensboro) ── */}
+                  <Route path="/greensboro-roofing-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/greensboro-seo-for-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/greensboro-google-ads-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/greensboro-roofing-lead-generation" element={<ServiceLocationPage2 />} />
+                  <Route path="/greensboro-hvac-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/greensboro-seo-for-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/greensboro-google-ads-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/greensboro-hvac-lead-generation" element={<ServiceLocationPage2 />} />
+
+                  {/* ── SEO Layer 3: Service + Location Pages (Winston-Salem) ── */}
+                  <Route path="/winston-salem-roofing-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/winston-salem-seo-for-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/winston-salem-google-ads-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/winston-salem-roofing-lead-generation" element={<ServiceLocationPage2 />} />
+                  <Route path="/winston-salem-hvac-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/winston-salem-seo-for-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/winston-salem-google-ads-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/winston-salem-hvac-lead-generation" element={<ServiceLocationPage2 />} />
+
+                  {/* ── SEO Layer 3: Service + Location Pages (Fayetteville) ── */}
+                  <Route path="/fayetteville-roofing-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/fayetteville-seo-for-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/fayetteville-google-ads-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/fayetteville-roofing-lead-generation" element={<ServiceLocationPage2 />} />
+                  <Route path="/fayetteville-hvac-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/fayetteville-seo-for-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/fayetteville-google-ads-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/fayetteville-hvac-lead-generation" element={<ServiceLocationPage2 />} />
+
+                  {/* ── SEO Layer 3: Service + Location Pages (Wilmington) ── */}
+                  <Route path="/wilmington-roofing-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/wilmington-seo-for-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/wilmington-google-ads-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/wilmington-roofing-lead-generation" element={<ServiceLocationPage2 />} />
+                  <Route path="/wilmington-hvac-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/wilmington-seo-for-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/wilmington-google-ads-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/wilmington-hvac-lead-generation" element={<ServiceLocationPage2 />} />
+
+                  {/* ── SEO Layer 3: Service + Location Pages (Asheville) ── */}
+                  <Route path="/asheville-roofing-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/asheville-seo-for-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/asheville-google-ads-roofers" element={<ServiceLocationPage2 />} />
+                  <Route path="/asheville-roofing-lead-generation" element={<ServiceLocationPage2 />} />
+                  <Route path="/asheville-hvac-web-design" element={<ServiceLocationPage2 />} />
+                  <Route path="/asheville-seo-for-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/asheville-google-ads-hvac" element={<ServiceLocationPage2 />} />
+                  <Route path="/asheville-hvac-lead-generation" element={<ServiceLocationPage2 />} />
 
                   {/* ── City Location Hubs (new L2 URL pattern) ── */}
                   <Route path="/charlotte-web-design" element={<CityLandingPage />} />

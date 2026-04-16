@@ -2,55 +2,48 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'luc
 import { Link } from 'react-router-dom';
 import { BUSINESS } from '../config/business';
 
-const roofingLinks = [
-  { label: 'Roofing Overview', href: '/roofing' },
-  { label: 'Roofing Web Design', href: '/roofing/web-design' },
-  { label: 'Roofing SEO', href: '/roofing/seo' },
-  { label: 'Roofing Google Ads', href: '/roofing/google-ads' },
-  { label: 'Roofing Lead Generation', href: '/roofing/lead-generation' },
+const servicesLinks = [
+  { label: 'Contractor Web Design', href: '/services/contractor-web-design' },
+  { label: 'SEO for Contractors', href: '/services/seo-for-contractors' },
+  { label: 'Google Ads Management', href: '/services/google-ads-management' },
+  { label: 'Local Service Ads', href: '/services/local-service-ads' },
+  { label: 'All Services', href: '/services' },
 ];
 
-const hvacLinks = [
-  { label: 'HVAC Overview', href: '/hvac' },
-  { label: 'HVAC Web Design', href: '/hvac/web-design' },
-  { label: 'HVAC SEO', href: '/hvac/seo' },
-  { label: 'HVAC Google Ads', href: '/hvac/google-ads' },
-  { label: 'HVAC Lead Generation', href: '/hvac/lead-generation' },
+const solutionsIndustries = [
+  { label: 'Roofing Marketing', href: '/roofing' },
+  { label: 'HVAC Marketing', href: '/hvac' },
+  { label: 'Electrician Marketing', href: '/electrician' },
 ];
 
-const electricianLinks = [
-  { label: 'Electrician Overview', href: '/electrician' },
-  { label: 'Electrician Web Design', href: '/electrician/web-design' },
-  { label: 'Electrician SEO', href: '/electrician/seo' },
-  { label: 'Electrician Google Ads', href: '/electrician/google-ads' },
-  { label: 'Electrician Lead Generation', href: '/electrician/lead-generation' },
+const solutionsTopCities = [
+  { label: 'Raleigh', href: '/raleigh-web-design' },
+  { label: 'Charlotte', href: '/charlotte-web-design' },
+  { label: 'Durham', href: '/durham-web-design' },
+  { label: 'Greensboro', href: '/greensboro-web-design' },
+];
+
+const workLinks = [
+  { label: 'Case Studies', href: '/our-work' },
+  { label: 'Testimonials', href: '/our-work#testimonials' },
 ];
 
 const companyLinks = [
   { label: 'About', href: '/about' },
-  { label: 'Pricing', href: '/pricing' },
   { label: 'Our Process', href: '/our-process' },
+  { label: 'Team', href: '/team' },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/free-website-plan' },
-];
-
-const serviceAreas = [
-  { label: 'Raleigh, NC', href: '/raleigh-web-design' },
-  { label: 'Charlotte, NC', href: '/charlotte-web-design' },
-  { label: 'Durham, NC', href: '/durham-web-design' },
-  { label: 'Greensboro, NC', href: '/greensboro-web-design' },
-  { label: 'Winston-Salem, NC', href: '/winston-salem-web-design' },
-  { label: 'Fayetteville, NC', href: '/fayetteville-web-design' },
-  { label: 'Wilmington, NC', href: '/wilmington-web-design' },
-  { label: 'Asheville, NC', href: '/asheville-web-design' },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-charcoal text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
-          <div className="lg:col-span-1">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+          {/* Brand + contact */}
+          <div>
             <div className="flex items-center gap-2 mb-4">
               <img
                 src="/assets/logo.webp"
@@ -64,7 +57,7 @@ export default function Footer() {
               <h3 className="text-2xl font-bold text-cream">Figgle Media</h3>
             </div>
             <p className="text-gray-300 mb-4 text-sm">
-              Specialist marketing for roofing and HVAC contractors across North Carolina.
+              Specialist marketing for roofing, HVAC, and electrical contractors across North Carolina.
             </p>
             <div className="space-y-3 text-sm">
               <a href={`tel:${BUSINESS.phoneTel}`} className="flex items-center text-gray-300 hover:text-teal transition-colors">
@@ -96,10 +89,11 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-cream">Roofing</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cream">Services</h4>
             <ul className="space-y-2">
-              {roofingLinks.map((item) => (
+              {servicesLinks.map((item) => (
                 <li key={item.href}>
                   <Link to={item.href} className="text-gray-300 hover:text-teal transition-colors text-sm">
                     {item.label}
@@ -109,10 +103,41 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Solutions */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-cream">HVAC</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cream">Solutions</h4>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">By Industry</p>
+            <ul className="space-y-2 mb-4">
+              {solutionsIndustries.map((item) => (
+                <li key={item.href}>
+                  <Link to={item.href} className="text-gray-300 hover:text-teal transition-colors text-sm">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">By Location</p>
             <ul className="space-y-2">
-              {hvacLinks.map((item) => (
+              {solutionsTopCities.map((item) => (
+                <li key={item.href}>
+                  <Link to={item.href} className="text-gray-300 hover:text-teal transition-colors text-sm">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link to="/#cities" className="text-teal hover:text-cream transition-colors text-sm font-semibold">
+                  View all 8 cities →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Our Work */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-cream">Our Work</h4>
+            <ul className="space-y-2">
+              {workLinks.map((item) => (
                 <li key={item.href}>
                   <Link to={item.href} className="text-gray-300 hover:text-teal transition-colors text-sm">
                     {item.label}
@@ -122,32 +147,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-cream">Electrician</h4>
-            <ul className="space-y-2">
-              {electricianLinks.map((item) => (
-                <li key={item.href}>
-                  <Link to={item.href} className="text-gray-300 hover:text-teal transition-colors text-sm">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-cream">Service Areas</h4>
-            <ul className="space-y-2">
-              {serviceAreas.map((area) => (
-                <li key={area.href}>
-                  <Link to={area.href} className="text-gray-300 hover:text-teal transition-colors text-sm">
-                    {area.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
+          {/* Company */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-cream">Company</h4>
             <ul className="space-y-2">
