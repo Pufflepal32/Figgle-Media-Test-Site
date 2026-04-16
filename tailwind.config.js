@@ -32,8 +32,8 @@ export default {
         'light-gray': '#E8E8E8',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'InterFallback', 'system-ui', 'sans-serif'],
+        display: ['Manrope', 'ManropeFallback', 'Inter', 'InterFallback', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         // ── TYPOGRAPHY SCALE ───────────────────────────

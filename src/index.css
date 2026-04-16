@@ -2,12 +2,39 @@
 @import '@fontsource/inter/500.css';
 @import '@fontsource/inter/600.css';
 @import '@fontsource/inter/700.css';
-@import '@fontsource/inter/800.css';
 @import '@fontsource/manrope/600.css';
 @import '@fontsource/manrope/700.css';
 @import '@fontsource/manrope/800.css';
-@import '@fontsource/josefin-sans/600.css';
 @import '@fontsource/josefin-sans/700.css';
+
+/* Size-adjusted fallback font faces — when text renders in the fallback
+   (before the web font arrives), it takes the exact same box as the final
+   web font, so the font swap doesn't cause any layout shift. Metrics are
+   Fontaine's published values for the Google-Fonts source versions. */
+@font-face {
+  font-family: InterFallback;
+  src: local('Arial');
+  size-adjust: 107.41%;
+  ascent-override: 90.02%;
+  descent-override: 22.44%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: ManropeFallback;
+  src: local('Arial');
+  size-adjust: 103.41%;
+  ascent-override: 101.87%;
+  descent-override: 35%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: JosefinSansFallback;
+  src: local('Arial');
+  size-adjust: 129.11%;
+  ascent-override: 77%;
+  descent-override: 10%;
+  line-gap-override: 0%;
+}
 
 @tailwind base;
 @tailwind components;
@@ -24,7 +51,7 @@
 
   /* Display headings default to Manrope */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+    font-family: 'Manrope', ManropeFallback, 'Inter', InterFallback, system-ui, sans-serif;
   }
 }
 

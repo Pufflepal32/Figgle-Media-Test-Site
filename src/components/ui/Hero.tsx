@@ -16,16 +16,30 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-navy-blue">
-      {/* Background image with overlay */}
+      {/* Background image with overlay — self-hosted AVIF/WebP, preloaded in index.html */}
       <div className="absolute inset-0">
-        <img
-          src="https://images.pexels.com/photos/4311990/pexels-photo-4311990.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt=""
-          className="w-full h-full object-cover opacity-30"
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-        />
+        <picture>
+          <source
+            type="image/avif"
+            srcSet="/assets/hero-bg-768.avif 768w, /assets/hero-bg-1280.avif 1280w"
+            sizes="100vw"
+          />
+          <source
+            type="image/webp"
+            srcSet="/assets/hero-bg-768.webp 768w, /assets/hero-bg-1280.webp 1280w"
+            sizes="100vw"
+          />
+          <img
+            src="/assets/hero-bg-1280.webp"
+            alt=""
+            width={1280}
+            height={720}
+            className="w-full h-full object-cover opacity-30"
+            loading="eager"
+            decoding="async"
+            fetchPriority="low"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-br from-navy-blue/95 via-navy-blue/85 to-navy/80"></div>
       </div>
 
