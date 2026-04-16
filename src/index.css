@@ -36,7 +36,7 @@
   }
 
   body {
-    @apply font-sans antialiased bg-white text-slate-800;
+    @apply font-sans antialiased bg-light-navy text-slate-100;
   }
 
   /* Display headings default to Manrope */

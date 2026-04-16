@@ -3,10 +3,15 @@ import type { ReactNode } from 'react';
 type Variant = 'white' | 'slate' | 'cream' | 'navy' | 'dark-navy';
 type Padding = 'tight' | 'default' | 'feature';
 
+// Everything "bright" (was white/slate-50/cream) now renders on the dark
+// navy palette — one shade brighter than the header's bg-navy so there's
+// a clear hierarchy. Text flips to slate-100 / slate-200 accordingly.
+// slate/cream use a slightly different tone so adjacent sections still
+// read as distinct bands.
 const variantClasses: Record<Variant, string> = {
-  white: 'bg-white text-slate-800',
-  slate: 'bg-slate-50 text-slate-800',
-  cream: 'bg-cream text-slate-800',
+  white: 'bg-light-navy text-slate-100',
+  slate: 'bg-[#2a3a5e] text-slate-100',
+  cream: 'bg-light-navy text-slate-100',
   navy: 'bg-navy-blue text-white',
   'dark-navy': 'bg-gradient-to-br from-navy-blue via-dark-navy to-navy text-white',
 };

@@ -162,17 +162,18 @@ export default function HomePage() {
             eyebrow="Why Figgle"
             title="A marketing agency that actually gets contractors"
             description="Most agencies treat construction like any other industry. We only work with the trades — that's the whole playbook."
+            dark
           />
         </ScrollReveal>
         <div className="grid md:grid-cols-3 gap-6 mt-16 max-w-6xl mx-auto">
           {valuePoints.map((v, i) => (
             <ScrollReveal key={v.title} delay={i * 100}>
-              <div className="bg-white rounded-card p-8 shadow-premium border border-slate-100 h-full">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-burnt-orange/10 rounded-button mb-5">
+              <div className="bg-slate-700 rounded-card p-8 shadow-lg border border-white/10 h-full">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-burnt-orange/20 rounded-button mb-5">
                   <v.icon size={24} className="text-burnt-orange" />
                 </div>
-                <h3 className="text-heading-md text-navy-blue mb-3">{v.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{v.description}</p>
+                <h3 className="text-heading-md text-white mb-3">{v.title}</h3>
+                <p className="text-slate-300 leading-relaxed">{v.description}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -186,13 +187,14 @@ export default function HomePage() {
             eyebrow="What We Do"
             title="Everything a contractor needs to dominate online"
             description="Four services, purpose-built for the trades. Choose one, or stack them for compounding results."
+            dark
           />
         </ScrollReveal>
         <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-6xl mx-auto">
           {services.map((service, i) => (
             <ScrollReveal key={service.title} delay={i * 100}>
               <Card to={service.href} className="h-full group">
-                <div className="aspect-[16/9] overflow-hidden bg-slate-100">
+                <div className="aspect-[16/9] overflow-hidden bg-navy-blue/50">
                   <HomeImage
                     slug={service.image}
                     alt=""
@@ -200,13 +202,13 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="p-8">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-burnt-orange/10 rounded-button mb-4">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-burnt-orange/20 rounded-button mb-4">
                     <service.icon size={24} className="text-burnt-orange" />
                   </div>
-                  <h3 className="text-heading-lg text-navy-blue mb-3 group-hover:text-burnt-orange transition-colors">
+                  <h3 className="text-heading-lg text-white mb-3 group-hover:text-burnt-orange transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
+                  <p className="text-slate-300 mb-6 leading-relaxed">{service.description}</p>
                   <span className="inline-flex items-center gap-2 text-burnt-orange font-semibold">
                     Learn more
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -225,6 +227,7 @@ export default function HomePage() {
             eyebrow="Industries We Serve"
             title="Specialist playbooks for the trades"
             description="We don't work with florists, dentists, or SaaS. Just contractors. Every strategy reflects that focus."
+            dark
           />
         </ScrollReveal>
         <div className="grid md:grid-cols-3 gap-6 mt-16 max-w-6xl mx-auto">
@@ -243,7 +246,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="text-slate-600 mb-4 leading-relaxed">{ind.description}</p>
+                  <p className="text-slate-300 mb-4 leading-relaxed">{ind.description}</p>
                   <span className="inline-flex items-center gap-2 text-burnt-orange font-semibold group-hover:gap-3 transition-all">
                     See {ind.name} marketing
                     <ArrowRight size={16} />
@@ -293,6 +296,7 @@ export default function HomePage() {
             eyebrow="Where We Work"
             title="Serving contractors across North Carolina"
             description="From the Triangle to the coast to the mountains — local strategies for every NC market."
+            dark
           />
         </ScrollReveal>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto">
@@ -300,9 +304,9 @@ export default function HomePage() {
             <Link
               key={city.href}
               to={city.href}
-              className="group flex items-center justify-between bg-white border border-slate-200 rounded-button px-5 py-4 hover:border-burnt-orange hover:shadow-premium transition-all"
+              className="group flex items-center justify-between bg-slate-700 border border-white/10 rounded-button px-5 py-4 hover:border-burnt-orange hover:shadow-lg transition-all"
             >
-              <span className="font-semibold text-navy-blue group-hover:text-burnt-orange transition-colors">
+              <span className="font-semibold text-white group-hover:text-burnt-orange transition-colors">
                 {city.label}
               </span>
               <ArrowRight size={16} className="text-slate-400 group-hover:text-burnt-orange group-hover:translate-x-1 transition-all" />
