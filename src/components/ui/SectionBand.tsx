@@ -3,15 +3,14 @@ import type { ReactNode } from 'react';
 type Variant = 'white' | 'slate' | 'cream' | 'navy' | 'dark-navy';
 type Padding = 'tight' | 'default' | 'feature';
 
-// Everything "bright" (was white/slate-50/cream) now renders on the dark
-// navy palette — one shade brighter than the header's bg-navy so there's
-// a clear hierarchy. Text flips to slate-100 / slate-200 accordingly.
-// slate/cream use a slightly different tone so adjacent sections still
-// read as distinct bands.
+// All "bright" variants (white/slate/cream) now render on layered mesh
+// gradients with a subtle dot pattern on top — no more solid fills. The
+// navy + dark-navy variants stay for sections that should read as heavier
+// (e.g. final CTA).
 const variantClasses: Record<Variant, string> = {
-  white: 'bg-light-navy text-slate-100',
-  slate: 'bg-[#2a3a5e] text-slate-100',
-  cream: 'bg-light-navy text-slate-100',
+  white: 'bg-mesh-a pattern-dots text-slate-100',
+  slate: 'bg-mesh-b pattern-dots text-slate-100',
+  cream: 'bg-mesh-a pattern-dots text-slate-100',
   navy: 'bg-navy-blue text-white',
   'dark-navy': 'bg-gradient-to-br from-navy-blue via-dark-navy to-navy text-white',
 };
@@ -31,9 +30,21 @@ interface Props {
 }
 
 export default function SectionBand({ variant = 'white', padding = 'default', id, className = '', children }: Props) {
+  const isMesh = variant === 'white' || variant === 'slate' || variant === 'cream';
   return (
-    <section id={id} className={`${variantClasses[variant]} ${paddingClasses[padding]} ${className}`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id={id}
+      className={`relative overflow-hidden ${variantClasses[variant]} ${paddingClasses[padding]} ${className}`}
+    >
+      {isMesh && (
+        <>
+          {/* Decorative glow orbs — give the mesh some depth, stay outside
+              content bounds so they don't obscure text on narrow viewports. */}
+          <div className="pointer-events-none absolute top-[-15%] right-[-10%] h-[520px] w-[520px] rounded-full bg-burnt-orange/10 blur-3xl" />
+          <div className="pointer-events-none absolute bottom-[-20%] left-[-15%] h-[440px] w-[440px] rounded-full bg-sky-gold/5 blur-3xl" />
+        </>
+      )}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {children}
       </div>
     </section>

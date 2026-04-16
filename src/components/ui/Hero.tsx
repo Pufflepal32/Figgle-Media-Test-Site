@@ -15,37 +15,12 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-navy-blue">
-      {/* Background image with overlay — self-hosted AVIF/WebP, preloaded in index.html */}
-      <div className="absolute inset-0">
-        <picture>
-          <source
-            type="image/avif"
-            srcSet="/assets/hero-bg-768.avif 768w, /assets/hero-bg-1280.avif 1280w"
-            sizes="100vw"
-          />
-          <source
-            type="image/webp"
-            srcSet="/assets/hero-bg-768.webp 768w, /assets/hero-bg-1280.webp 1280w"
-            sizes="100vw"
-          />
-          <img
-            src="/assets/hero-bg-1280.webp"
-            alt=""
-            width={1280}
-            height={720}
-            className="w-full h-full object-cover opacity-30"
-            loading="eager"
-            decoding="async"
-            fetchPriority="low"
-          />
-        </picture>
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-blue/95 via-navy-blue/85 to-navy/80"></div>
-      </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-20 w-96 h-96 bg-burnt-orange/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-80 h-80 bg-sky-gold/5 rounded-full blur-3xl"></div>
+    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-mesh-a pattern-grid">
+      {/* Glow orbs — heavier than the section defaults so the hero reads as the
+          "moment of impact" while still feeling part of the same palette. */}
+      <div className="pointer-events-none absolute top-10 right-[-5%] h-[560px] w-[560px] rounded-full bg-burnt-orange/15 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-[-10%] left-[-10%] h-[480px] w-[480px] rounded-full bg-sky-gold/10 blur-3xl" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-light-navy/20 blur-3xl" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-24">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -200,8 +175,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   );
 }

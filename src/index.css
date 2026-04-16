@@ -36,7 +36,8 @@
   }
 
   body {
-    @apply font-sans antialiased bg-light-navy text-slate-100;
+    @apply font-sans antialiased text-slate-100;
+    background-color: #0A1628;
   }
 
   /* Display headings default to Manrope */
@@ -52,6 +53,53 @@
   }
   .container-wide {
     @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   Background primitives — mesh gradients + subtle dot/grid patterns that
+   get composited per-section by SectionBand. Intentionally built as
+   layered background-images on a single element so each section ships as
+   one compact paint, not a stack of absolute-positioned DIVs.
+   ────────────────────────────────────────────────────────────────────── */
+@layer utilities {
+  /* Primary mesh — warm-skewed glow at top-left, cool at bottom-right */
+  .bg-mesh-a {
+    background-color: #0f1d38;
+    background-image:
+      radial-gradient(at 15% 20%, rgba(201, 72, 24, 0.12) 0px, transparent 50%),
+      radial-gradient(at 85% 75%, rgba(36, 51, 82, 0.8) 0px, transparent 50%),
+      linear-gradient(135deg, #0A1628 0%, #1a2947 60%, #243352 100%);
+  }
+  /* Alternate mesh — mirrors the hotspots so adjacent bands still feel distinct */
+  .bg-mesh-b {
+    background-color: #0d1a30;
+    background-image:
+      radial-gradient(at 80% 15%, rgba(245, 200, 66, 0.08) 0px, transparent 50%),
+      radial-gradient(at 25% 85%, rgba(201, 72, 24, 0.1) 0px, transparent 50%),
+      linear-gradient(225deg, #0A1628 0%, #1a2947 50%, #1f2c4d 100%);
+  }
+  /* Dot grid overlay — composed via background-image on the same element */
+  .pattern-dots::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+  }
+  /* Fine line grid — for hero */
+  .pattern-grid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at center, black 45%, transparent 90%);
   }
 }
 
