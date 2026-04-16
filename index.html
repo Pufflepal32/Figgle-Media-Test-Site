@@ -13,24 +13,32 @@
     <meta name="apple-mobile-web-app-title" content="Figgle Media" />
     <!-- Hero bg is opacity-30 decoration, not LCP. No preload — the H1 text is
          LCP and needs the font bandwidth. Image still eager-loads from Hero.tsx. -->
-    <!-- Google tag (gtag.js) — deferred until idle so it doesn't block LCP -->
+    <!-- Partytown config: tells the worker to forward dataLayer.push/gtag calls
+         from main-thread code (anything that calls window.gtag()) into the
+         worker where gtag.js actually runs. Without `forward`, main-thread
+         gtag() calls would be no-ops. -->
     <script>
+      partytown = {
+        lib: '/~partytown/',
+        forward: ['dataLayer.push', 'gtag'],
+      };
+    </script>
+    <!-- Partytown bootstrap: loads the main-thread shim that relays script tags
+         with type="text/partytown" into a worker. Runtime files are copied to
+         public/~partytown/ by scripts/copy-partytown.mjs during build. -->
+    <script src="/~partytown/partytown.js" async></script>
+    <!-- Google tag (gtag.js) — runs inside the Partytown worker so it can't
+         cause forced reflows or long main-thread tasks. -->
+    <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-WZKXG2GY6E');
-      function __loadGtag(){
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WZKXG2GY6E';
-        document.head.appendChild(s);
-      }
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(__loadGtag, { timeout: 4000 });
-      } else {
-        window.addEventListener('load', function(){ setTimeout(__loadGtag, 2000); });
-      }
     </script>
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-WZKXG2GY6E"
+    ></script>
     <title>Figgle Media — Web Design & SEO for North Carolina Contractors</title>
     <meta
       name="description"

@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "vite",
     "prebuild": "node scripts/generate-sitemap.mjs && node scripts/optimize-hero.mjs && node scripts/optimize-home-images.mjs",
-    "build": "vite build && node scripts/inject-head.mjs && node scripts/prerender.mjs && node scripts/inline-critical-css.mjs",
+    "build": "vite build && node scripts/copy-partytown.mjs && node scripts/inject-head.mjs && node scripts/prerender.mjs && node scripts/inline-critical-css.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.10.3",
     "@fontsource/inter": "^5.2.8",
     "@fontsource/josefin-sans": "^5.2.8",
     "@fontsource/manrope": "^5.2.8",

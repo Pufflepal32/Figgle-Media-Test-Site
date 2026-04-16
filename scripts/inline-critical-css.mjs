@@ -46,17 +46,26 @@ const noscriptRe = new RegExp(
   'g',
 );
 
+// Puppeteer runs Partytown during prerender, which rewrites our GTM
+// `<script type="text/partytown">` to `text/partytown-x` (Partytown's "already
+// processed" marker) and injects data-ptid/data-pttab attrs. If we ship that,
+// real visitors' Partytown runtime sees the -x marker and skips the script —
+// and GTM never boots. So undo all of it here.
+const partytownXRe = /type="text\/partytown-x"/g;
+const partytownAttrRe = / data-pt(id|tab)="[^"]*"/g;
+
 let replaced = 0;
 for (const file of htmlFiles) {
   const src = readFileSync(file, 'utf8');
-  if (!linkRe.test(src)) continue;
-  const out = src
-    .replace(noscriptRe, '')
-    .replace(linkRe, `<style>${css}</style>`);
+  const hasCss = linkRe.test(src);
+  const hasPt = partytownXRe.test(src) || partytownAttrRe.test(src);
+  if (!hasCss && !hasPt) continue;
+  let out = src.replace(noscriptRe, '').replace(linkRe, `<style>${css}</style>`);
+  out = out.replace(partytownXRe, 'type="text/partytown"').replace(partytownAttrRe, '');
   writeFileSync(file, out);
   replaced++;
 }
 
 console.log(
-  `[inline-css] inlined ${cssFile} (${(css.length / 1024).toFixed(1)} KB uncompressed) into ${replaced} pages`,
+  `[inline-css] inlined ${cssFile} (${(css.length / 1024).toFixed(1)} KB) + reset partytown markers in ${replaced} pages`,
 );
