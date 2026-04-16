@@ -9,6 +9,7 @@ export default defineConfig({
   },
   build: {
     cssCodeSplit: true,
+    sourcemap: 'hidden',
     rollupOptions: {
       output: {
         manualChunks(id) {

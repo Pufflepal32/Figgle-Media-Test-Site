@@ -55,9 +55,9 @@ export default function LocationHubPage() {
 
       <div className="pt-20">
         {/* Breadcrumb */}
-        <div className="bg-navy-blue/50 border-b border-white/10">
+        <div className="bg-dark-navy border-b border-white/10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <nav className="flex items-center gap-2 text-sm text-cream/60" aria-label="Breadcrumb">
+            <nav className="flex items-center gap-2 text-sm text-slate-300" aria-label="Breadcrumb">
               <Link to="/" className="hover:text-white transition-colors">Home</Link>
               <ChevronRight size={14} />
               <span className="text-white">{page.city} Web Design</span>

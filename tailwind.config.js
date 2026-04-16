@@ -5,8 +5,9 @@ export default {
     extend: {
       colors: {
         // ── BRAND (kept) ───────────────────────────────
-        'burnt-orange': '#FF6B2C',
-        'deep-orange': '#E85D04',
+        // Darkened from #FF6B2C / #E85D04 so white text meets WCAG AA (≥4.5:1)
+        'burnt-orange': '#C94818',
+        'deep-orange': '#A83A00',
         'navy-blue': '#0A1628',
         'dark-navy': '#060d1a',
         'navy': '#1a2947',

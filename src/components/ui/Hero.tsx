@@ -19,11 +19,12 @@ export default function Hero() {
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
-          src="https://images.pexels.com/photos/4311990/pexels-photo-4311990.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          src="https://images.pexels.com/photos/4311990/pexels-photo-4311990.jpeg?auto=compress&cs=tinysrgb&w=1200"
           alt=""
           className="w-full h-full object-cover opacity-30"
           loading="eager"
           decoding="async"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-navy-blue/95 via-navy-blue/85 to-navy/80"></div>
       </div>

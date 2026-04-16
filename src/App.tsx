@@ -1,24 +1,28 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { usePageTracking } from './hooks/usePageTracking';
 import { useScrollToTop } from './hooks/useScrollToTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
+// Homepage is eagerly imported so the above-fold hero renders without a chunk round-trip.
 import HomePage from './pages/HomePage';
-import ServicesPage from './pages/ServicesPage';
-import TestimonialsPage from './pages/TestimonialsPage';
-import AboutPage from './pages/AboutPage';
-import TeamPage from './pages/TeamPage';
-import OurWorkPage from './pages/OurWorkPage';
-import BlogPage from './pages/BlogPage';
-import BlogPostPage from './pages/BlogPostPage';
-import FreeWebsitePlanPage from './pages/FreeWebsitePlanPage';
-import PricingPage from './pages/PricingPage';
-import RaleighPage from './pages/RaleighPage';
-import ServiceLandingPage from './pages/ServiceLandingPage';
-import CityLandingPage from './pages/CityLandingPage';
-import NotFoundPage from './pages/NotFoundPage';
-import IndustryPage from './pages/IndustryPage';
-import ServiceLocationPage2 from './pages/ServiceLocationPage2';
+
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const TestimonialsPage = lazy(() => import('./pages/TestimonialsPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const TeamPage = lazy(() => import('./pages/TeamPage'));
+const OurWorkPage = lazy(() => import('./pages/OurWorkPage'));
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
+const FreeWebsitePlanPage = lazy(() => import('./pages/FreeWebsitePlanPage'));
+const PricingPage = lazy(() => import('./pages/PricingPage'));
+const RaleighPage = lazy(() => import('./pages/RaleighPage'));
+const ServiceLandingPage = lazy(() => import('./pages/ServiceLandingPage'));
+const CityLandingPage = lazy(() => import('./pages/CityLandingPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+const IndustryPage = lazy(() => import('./pages/IndustryPage'));
+const ServiceLocationPage2 = lazy(() => import('./pages/ServiceLocationPage2'));
 
 function PageTracker() {
   usePageTracking();
@@ -30,6 +34,7 @@ function App() {
   return (
     <Router>
       <PageTracker />
+      <Suspense fallback={<div className="min-h-screen" />}>
       <Routes>
         {/* Landing page route without header/footer for maximum conversions */}
         <Route path="/free-website-plan" element={<FreeWebsitePlanPage />} />
@@ -190,6 +195,7 @@ function App() {
           }
         />
       </Routes>
+      </Suspense>
     </Router>
   );
 }

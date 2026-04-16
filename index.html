@@ -11,13 +11,23 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Figgle Media" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZKXG2GY6E"></script>
+    <!-- Google tag (gtag.js) — deferred until idle so it doesn't block LCP -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-WZKXG2GY6E');
+      function __loadGtag(){
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WZKXG2GY6E';
+        document.head.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(__loadGtag, { timeout: 4000 });
+      } else {
+        window.addEventListener('load', function(){ setTimeout(__loadGtag, 2000); });
+      }
     </script>
     <title>Figgle Media — Web Design & SEO for North Carolina Contractors</title>
     <meta

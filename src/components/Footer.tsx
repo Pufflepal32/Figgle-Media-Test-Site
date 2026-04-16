@@ -126,7 +126,7 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <Link to="/#cities" className="text-teal hover:text-cream transition-colors text-sm font-semibold">
+                <Link to="/#cities" className="text-light-teal hover:text-cream transition-colors text-sm font-semibold">
                   View all 8 cities →
                 </Link>
               </li>

@@ -65,9 +65,9 @@ export default function IndustryPage() {
 
       <div className="pt-20">
         {/* Breadcrumb — industry-silo aware */}
-        <div className="bg-navy-blue/50 border-b border-white/10">
+        <div className="bg-dark-navy border-b border-white/10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <nav className="flex items-center gap-2 text-sm text-cream/60" aria-label="Breadcrumb">
+            <nav className="flex items-center gap-2 text-sm text-slate-300" aria-label="Breadcrumb">
               <Link to="/" className="hover:text-white transition-colors">Home</Link>
               {page.slug.includes('/') && (() => {
                 const industry = page.slug.split('/')[0];
@@ -109,7 +109,7 @@ export default function IndustryPage() {
                 </Link>
                 <a
                   href={`tel:${BUSINESS.phoneTel}`}
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-navy-blue transition-all"
                 >
                   Call {BUSINESS.phoneDisplay}
                 </a>
@@ -248,7 +248,7 @@ export default function IndustryPage() {
               </Link>
               <a
                 href={`tel:${BUSINESS.phoneTel}`}
-                className="inline-flex items-center justify-center gap-2 bg-white/20 border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-burnt-orange transition-all"
               >
                 Call {BUSINESS.phoneDisplay}
               </a>
