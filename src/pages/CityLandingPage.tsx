@@ -297,7 +297,7 @@ export default function CityLandingPage() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-blue mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               {city.whySection.headline}
             </h2>
             <p className="text-xl text-slate-300 leading-relaxed">
@@ -383,7 +383,7 @@ export default function CityLandingPage() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-blue mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Why {city.name} Contractors Choose Figgle Media
             </h2>
             <p className="text-xl text-slate-300">
@@ -408,7 +408,7 @@ export default function CityLandingPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-navy-blue mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 Specialized Services for {city.name} Contractors
               </h2>
               <p className="text-lg text-slate-300">
@@ -422,7 +422,7 @@ export default function CityLandingPage() {
                   to={`/${svc.slug}`}
                   className="group bg-slate-700 rounded-xl p-6 shadow-lg hover:shadow-xl hover:ring-2 hover:ring-burnt-orange transition-all"
                 >
-                  <h3 className="text-lg font-bold text-navy-blue group-hover:text-burnt-orange transition-colors mb-2">
+                  <h3 className="text-lg font-bold text-white group-hover:text-burnt-orange transition-colors mb-2">
                     {svc.industry} {svc.service} in {svc.city}
                   </h3>
                   <p className="text-slate-300 text-sm mb-4">{svc.subtitle}</p>
