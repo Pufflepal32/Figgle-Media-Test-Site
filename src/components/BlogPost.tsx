@@ -14,7 +14,7 @@ export default function BlogPost() {
   // Show placeholder for incomplete blogs
   if (!post.isComplete) {
     return (
-      <article className="py-20 bg-gradient-to-br from-navy-blue via-navy to-light-navy">
+      <article className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           {/* Back Button */}
           <Link
@@ -96,7 +96,7 @@ export default function BlogPost() {
 
   return (
     <article
-      className="py-20 bg-gradient-to-br from-navy-blue via-navy to-light-navy"
+      className="py-16"
       itemScope
       itemType="https://schema.org/BlogPosting"
     >

@@ -9,7 +9,7 @@ export default function TrustBadges() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-dark-navy to-navy-blue border-y border-white/10">
+    <section className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Differentiators Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">

@@ -45,7 +45,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="reviews" className="py-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy">
+    <section id="reviews" className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">

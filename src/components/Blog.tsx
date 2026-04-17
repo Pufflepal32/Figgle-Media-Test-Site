@@ -43,7 +43,7 @@ export default function Blog() {
   const remainingPosts = filteredPosts.slice(3);
 
   return (
-    <section className="bg-gradient-to-b from-navy-blue via-dark-navy to-navy-blue min-h-screen">
+    <section className="py-16 min-h-screen">
       {/* Hero */}
       <div className="pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">

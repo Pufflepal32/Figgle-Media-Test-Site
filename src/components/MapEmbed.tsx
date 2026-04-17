@@ -17,7 +17,7 @@ export default function MapEmbed() {
   const mapUrl = 'https://www.google.com/maps?q=North+Carolina&output=embed&z=7';
 
   return (
-    <section className="py-16 bg-gradient-to-br from-navy-blue via-navy to-light-navy">
+    <section className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">

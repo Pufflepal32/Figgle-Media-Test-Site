@@ -2,7 +2,7 @@ import { X, Check } from 'lucide-react';
 
 export default function BeforeAfter() {
   return (
-    <section className="py-20 bg-gradient-to-br from-navy-blue via-navy to-light-navy">
+    <section className="py-16">
       <style>{`
         .scroll-animation-before {
           animation: scrollDownBefore 15s ease-in-out infinite alternate;

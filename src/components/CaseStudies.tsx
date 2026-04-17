@@ -41,13 +41,13 @@ export default function CaseStudies() {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-white">
+    <section id="portfolio" className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-navy-blue mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             What You Get When You Work With Us
           </h2>
-          <p className="text-xl text-charcoal max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             Everything a construction business needs to start generating leads online — no gaps, no guesswork.
           </p>
         </div>

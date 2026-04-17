@@ -2,7 +2,7 @@ import { Users, Heart, Target } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-light-navy via-navy to-navy-blue">
+    <section id="about" className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
