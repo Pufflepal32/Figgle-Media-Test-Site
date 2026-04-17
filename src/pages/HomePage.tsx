@@ -194,7 +194,7 @@ export default function HomePage() {
           {services.map((service, i) => (
             <ScrollReveal key={service.title} delay={i * 100}>
               <Card to={service.href} className="h-full group">
-                <div className="aspect-[16/9] overflow-hidden bg-navy-blue/50">
+                <div className="aspect-[16/9] overflow-hidden">
                   <HomeImage
                     slug={service.image}
                     alt=""

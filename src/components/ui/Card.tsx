@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 
 type Variant = 'light' | 'dark' | 'bordered';
 
-// Cards sit on a dark navy page bg, so "light" no longer means white. It's a
-// slate-700 surface — clearly brighter than the section it sits on so the
-// card reads as elevated, but not "bright white" that clashes with the rest
-// of the site.
+// Cards sit on a dark navy mesh. "light" is a slate-700 surface — brighter
+// than the body so the card reads as elevated, but no border: a 1px
+// white-ish border antialiased into thin strips at the rounded-card corners
+// on dark bgs, which looked like visible scratches at the top of each card.
+// Shadow alone carries the elevation now.
 const variantClasses: Record<Variant, string> = {
-  light: 'bg-slate-700 text-slate-100 shadow-lg hover:shadow-xl border border-white/10',
-  dark: 'bg-gradient-to-br from-navy-blue to-navy text-white border border-white/10 shadow-premium-lg',
+  light: 'bg-slate-700 text-slate-100 shadow-lg hover:shadow-xl',
+  dark: 'bg-gradient-to-br from-navy-blue to-navy text-white shadow-premium-lg',
   bordered: 'bg-slate-700 text-slate-100 border-2 border-white/20 hover:border-burnt-orange',
 };
 
