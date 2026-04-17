@@ -15,7 +15,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden pattern-grid">
+    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
       {/* Glow orbs — heavier than the defaults so the hero reads as the
           "moment of impact" while still sitting on the shared body mesh. */}
       <div className="pointer-events-none absolute top-10 right-[-5%] h-[560px] w-[560px] rounded-full bg-burnt-orange/15 blur-3xl" />

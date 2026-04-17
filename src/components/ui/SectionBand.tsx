@@ -3,16 +3,15 @@ import type { ReactNode } from 'react';
 type Variant = 'white' | 'slate' | 'cream' | 'navy' | 'dark-navy';
 type Padding = 'tight' | 'default' | 'feature';
 
-// "Bright" variants (white/slate/cream) are fully transparent — the body
-// bg owns the mesh. Sections only contribute padding, the dot pattern
-// overlay, and their own decorative orbs. This is what makes adjacent
-// sections blend: there is no section-level bg color to transition from.
-// Navy + dark-navy variants still paint their own bg for "heavier" moments
-// like the final CTA.
+// "Bright" variants are fully transparent — the body owns the mesh AND
+// the dot pattern, so they run continuously under every section with no
+// cuts. Sections only contribute padding + their own decorative orbs.
+// Navy + dark-navy variants paint their own bg for intentional "break"
+// moments like the final CTA.
 const variantClasses: Record<Variant, string> = {
-  white: 'pattern-dots text-slate-100',
-  slate: 'pattern-dots text-slate-100',
-  cream: 'pattern-dots text-slate-100',
+  white: 'text-slate-100',
+  slate: 'text-slate-100',
+  cream: 'text-slate-100',
   navy: 'bg-navy-blue text-white',
   'dark-navy': 'bg-gradient-to-br from-navy-blue via-dark-navy to-navy text-white',
 };
