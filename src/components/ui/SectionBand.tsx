@@ -3,17 +3,16 @@ import type { ReactNode } from 'react';
 type Variant = 'white' | 'slate' | 'cream' | 'navy' | 'dark-navy';
 type Padding = 'tight' | 'default' | 'feature';
 
-// "Bright" variants are fully transparent — the body owns the mesh AND
-// the dot pattern, so they run continuously under every section with no
-// cuts. Sections only contribute padding + their own decorative orbs.
-// Navy + dark-navy variants paint their own bg for intentional "break"
-// moments like the final CTA.
+// Every variant is fully transparent. The body bg owns the mesh + dots
+// + all the orb-style hotspots, so sections never paint over it and the
+// whole page reads as one continuous surface. Variant names are kept
+// only for text-color differentiation and legacy call sites.
 const variantClasses: Record<Variant, string> = {
   white: 'text-slate-100',
   slate: 'text-slate-100',
   cream: 'text-slate-100',
-  navy: 'bg-navy-blue text-white',
-  'dark-navy': 'bg-gradient-to-br from-navy-blue via-dark-navy to-navy text-white',
+  navy: 'text-white',
+  'dark-navy': 'text-white',
 };
 
 const paddingClasses: Record<Padding, string> = {
@@ -31,21 +30,12 @@ interface Props {
 }
 
 export default function SectionBand({ variant = 'white', padding = 'default', id, className = '', children }: Props) {
-  const isMesh = variant === 'white' || variant === 'slate' || variant === 'cream';
   return (
     <section
       id={id}
-      className={`relative overflow-hidden ${variantClasses[variant]} ${paddingClasses[padding]} ${className}`}
+      className={`relative ${variantClasses[variant]} ${paddingClasses[padding]} ${className}`}
     >
-      {isMesh && (
-        <>
-          {/* Decorative glow orbs — give each band its own warmth on top of
-              the shared body mesh, stay outside content bounds. */}
-          <div className="pointer-events-none absolute top-[-15%] right-[-10%] h-[520px] w-[520px] rounded-full bg-burnt-orange/10 blur-3xl" />
-          <div className="pointer-events-none absolute bottom-[-20%] left-[-15%] h-[440px] w-[440px] rounded-full bg-sky-gold/5 blur-3xl" />
-        </>
-      )}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {children}
       </div>
     </section>

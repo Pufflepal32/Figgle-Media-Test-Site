@@ -38,18 +38,22 @@
   body {
     @apply font-sans antialiased text-slate-100;
     background-color: #0A1628;
-    /* One continuous multi-hotspot mesh + dot pattern under the whole app.
-       Sections are transparent, so there is no per-section color boundary
-       and no per-section pattern boundary — the mesh + dots are the ambient
-       bg everywhere. Fixed attachment = the whole composite stays anchored
-       to the viewport while content scrolls. */
+    /* The entire visual: mesh gradients + dot pattern in a single
+       background-image stack, fixed-attached. Because this lives on <body>
+       and every section is transparent (including navy/dark-navy), the same
+       scenery shows under the whole page. Nothing paints over it anywhere,
+       so there are no cuts — the page is literally one surface.
+       Five color hotspots replace what used to be per-section orb divs, so
+       the "glow" character is preserved without ever clipping at a section
+       edge. */
     background-image:
-      radial-gradient(at 15% 10%, rgba(201, 72, 24, 0.12) 0px, transparent 55%),
-      radial-gradient(at 85% 35%, rgba(36, 51, 82, 0.65) 0px, transparent 55%),
-      radial-gradient(at 25% 65%, rgba(245, 200, 66, 0.06) 0px, transparent 55%),
-      radial-gradient(at 80% 90%, rgba(201, 72, 24, 0.08) 0px, transparent 50%),
+      radial-gradient(ellipse 55% 40% at 15% 12%, rgba(201, 72, 24, 0.22) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 35% at 88% 22%, rgba(36, 51, 82, 0.85) 0%, transparent 70%),
+      radial-gradient(ellipse 45% 35% at 22% 58%, rgba(245, 200, 66, 0.1) 0%, transparent 70%),
+      radial-gradient(ellipse 55% 40% at 82% 68%, rgba(201, 72, 24, 0.16) 0%, transparent 70%),
+      radial-gradient(ellipse 45% 35% at 45% 92%, rgba(36, 51, 82, 0.75) 0%, transparent 70%),
       radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: auto, auto, auto, auto, 24px 24px;
+    background-size: auto, auto, auto, auto, auto, 24px 24px;
     background-attachment: fixed;
   }
 

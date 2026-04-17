@@ -316,10 +316,8 @@ export default function HomePage() {
       </SectionBand>
 
       {/* Final CTA */}
-      <SectionBand variant="dark-navy" padding="feature" className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-blue via-dark-navy to-navy"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-burnt-orange/10 rounded-full blur-3xl"></div>
-        <div className="relative z-10">
+      <SectionBand variant="dark-navy" padding="feature">
+        <div>
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
               <div className="text-eyebrow uppercase text-burnt-orange mb-4">Get Started</div>
