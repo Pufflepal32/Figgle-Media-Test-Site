@@ -17,8 +17,8 @@ const variantClasses: Record<Variant, string> = {
 
 const paddingClasses: Record<Padding, string> = {
   tight: 'py-16',
-  default: 'py-24',
-  feature: 'py-32',
+  default: 'py-16',
+  feature: 'py-20',
 };
 
 interface Props {
