@@ -9,13 +9,13 @@ export default function NotFoundPage() {
         <title>Page Not Found | Figgle Media</title>
         <meta name="robots" content="noindex, follow" />
       </Helmet>
-      <section className="min-h-[70vh] flex items-center justify-center bg-cream px-4">
+      <section className="min-h-[70vh] flex items-center justify-center px-4">
         <div className="text-center max-w-xl">
           <p className="text-burnt-orange font-bold text-lg mb-4">404</p>
-          <h1 className="text-4xl sm:text-5xl font-bold text-charcoal mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             We couldn't find that page
           </h1>
-          <p className="text-lg text-warm-gray mb-8">
+          <p className="text-lg text-slate-300 mb-8">
             The page you're looking for was moved, removed, or never existed. Try one of the links
             below.
           </p>
@@ -29,7 +29,7 @@ export default function NotFoundPage() {
             </Link>
             <Link
               to="/services"
-              className="inline-flex items-center justify-center gap-2 bg-white border border-light-gray text-charcoal px-6 py-3 rounded-xl font-semibold hover:bg-light-gray transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-slate-700 border border-white/10 text-white px-6 py-3 rounded-xl font-semibold hover:bg-slate-600 transition-all"
             >
               <ArrowLeft size={18} />
               Browse our services

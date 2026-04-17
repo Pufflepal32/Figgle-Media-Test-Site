@@ -40,7 +40,7 @@ export default function OurWorkPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="py-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-6">
               <span className="text-sm font-semibold text-cream">Case Studies</span>
@@ -55,13 +55,13 @@ export default function OurWorkPage() {
         </section>
 
         {/* Case studies grid OR empty state */}
-        <section className="py-20 bg-cream">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             {hasStudies ? (
               <>
                 <div className="text-center max-w-3xl mx-auto mb-12">
-                  <h2 className="text-3xl sm:text-4xl font-bold text-navy-blue mb-4">Case Studies</h2>
-                  <p className="text-lg text-charcoal">Filter by industry to see work from clients like yours.</p>
+                  <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Case Studies</h2>
+                  <p className="text-lg text-slate-300">Filter by industry to see work from clients like yours.</p>
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -72,7 +72,7 @@ export default function OurWorkPage() {
                       className={`px-6 py-2 rounded-full font-semibold text-sm transition-all ${
                         filter === f
                           ? 'bg-burnt-orange text-white shadow-md'
-                          : 'bg-white text-navy-blue border border-light-gray hover:border-burnt-orange hover:text-burnt-orange'
+                          : 'bg-slate-700 text-slate-100 border border-white/10 hover:border-burnt-orange hover:text-burnt-orange'
                       }`}
                     >
                       {f}
@@ -84,23 +84,23 @@ export default function OurWorkPage() {
                   {studies.map((study) => (
                     <article
                       key={study.id}
-                      className="bg-white rounded-2xl overflow-hidden shadow-sm border border-light-gray hover:shadow-lg transition-shadow"
+                      className="bg-slate-700 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
                     >
-                      <div className="aspect-video overflow-hidden bg-navy-blue/5">
+                      <div className="aspect-video overflow-hidden bg-navy-blue/30">
                         <img src={study.image} alt={study.imageAlt} loading="lazy" className="w-full h-full object-cover" />
                       </div>
                       <div className="p-6 sm:p-8">
                         <div className="flex flex-wrap gap-2 mb-4">
-                          <span className="text-xs font-semibold bg-burnt-orange/10 text-burnt-orange px-3 py-1 rounded-full">
+                          <span className="text-xs font-semibold bg-burnt-orange/20 text-burnt-orange px-3 py-1 rounded-full">
                             {study.industry}
                           </span>
-                          <span className="text-xs font-semibold bg-navy-blue/5 text-navy-blue px-3 py-1 rounded-full">
+                          <span className="text-xs font-semibold bg-white/10 text-slate-200 px-3 py-1 rounded-full">
                             {study.city}, NC
                           </span>
                         </div>
-                        <h3 className="text-xl font-bold text-navy-blue mb-2">{study.clientName}</h3>
+                        <h3 className="text-xl font-bold text-white mb-2">{study.clientName}</h3>
                         <p className="text-lg text-burnt-orange font-semibold mb-4">{study.headline}</p>
-                        <p className="text-charcoal leading-relaxed mb-6">{study.summary}</p>
+                        <p className="text-slate-300 leading-relaxed mb-6">{study.summary}</p>
                       </div>
                     </article>
                   ))}
@@ -108,13 +108,13 @@ export default function OurWorkPage() {
               </>
             ) : (
               <div className="max-w-2xl mx-auto text-center py-16">
-                <h2 className="text-3xl sm:text-4xl font-bold text-navy-blue mb-6">
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
                   Case studies coming soon
                 </h2>
-                <p className="text-lg text-charcoal mb-10 leading-relaxed">
+                <p className="text-lg text-slate-300 mb-10 leading-relaxed">
                   We're actively working with North Carolina contractors, and as results come in and clients give us permission to publish, their case studies will appear here.
                 </p>
-                <p className="text-charcoal mb-10">
+                <p className="text-slate-300 mb-10">
                   In the meantime, reach out for a free custom plan — we'll walk you through our approach and show you what kind of results we're targeting for your industry and market.
                 </p>
                 <Link

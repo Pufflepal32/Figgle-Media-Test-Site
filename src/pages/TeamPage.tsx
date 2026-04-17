@@ -46,7 +46,7 @@ export default function TeamPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="py-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-6">
               <span className="text-sm font-semibold text-cream">The Figgle Media Team</span>
@@ -63,33 +63,33 @@ export default function TeamPage() {
         </section>
 
         {/* Team Members */}
-        <section className="py-20 bg-cream">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {team.map((person) => (
                 <div
                   key={person.name}
-                  className="bg-white rounded-2xl p-8 shadow-sm border border-light-gray hover:shadow-lg transition-shadow"
+                  className="bg-slate-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
                 >
                   <div className="mb-6">
-                    <h2 className="text-2xl font-bold text-navy-blue mb-1">{person.name}</h2>
+                    <h2 className="text-2xl font-bold text-white mb-1">{person.name}</h2>
                     <p className="text-burnt-orange font-semibold">{person.role}</p>
                   </div>
-                  <p className="text-charcoal leading-relaxed mb-6">{person.bio}</p>
+                  <p className="text-slate-300 leading-relaxed mb-6">{person.bio}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {person.focus.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs font-semibold bg-navy-blue/5 text-navy-blue px-3 py-1 rounded-full"
+                        className="text-xs font-semibold bg-white/10 text-slate-200 px-3 py-1 rounded-full"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center gap-3 pt-4 border-t border-light-gray">
+                  <div className="flex items-center gap-3 pt-4 border-t border-white/10">
                     <a
                       href={`mailto:${BUSINESS.email}`}
-                      className="inline-flex items-center gap-2 text-warm-gray hover:text-burnt-orange transition-colors text-sm"
+                      className="inline-flex items-center gap-2 text-slate-400 hover:text-burnt-orange transition-colors text-sm"
                       aria-label={`Email ${person.name}`}
                     >
                       <Mail size={16} />
@@ -99,7 +99,7 @@ export default function TeamPage() {
                       href="https://linkedin.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-warm-gray hover:text-burnt-orange transition-colors text-sm"
+                      className="inline-flex items-center gap-2 text-slate-400 hover:text-burnt-orange transition-colors text-sm"
                       aria-label={`${person.name} on LinkedIn`}
                     >
                       <Linkedin size={16} />
@@ -113,29 +113,29 @@ export default function TeamPage() {
         </section>
 
         {/* Values */}
-        <section className="py-20 bg-white">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-blue text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
               How We Work
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <h3 className="text-xl font-bold text-navy-blue mb-3">No Handoffs</h3>
-                <p className="text-charcoal leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-3">No Handoffs</h3>
+                <p className="text-slate-300 leading-relaxed">
                   You work directly with the people building your site and running your campaigns.
                   No account managers filtering your feedback.
                 </p>
               </div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-navy-blue mb-3">Contractor Focus</h3>
-                <p className="text-charcoal leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-3">Contractor Focus</h3>
+                <p className="text-slate-300 leading-relaxed">
                   We only take on roofing, HVAC, and electrical contractors. We know your
                   customers, your seasonality, and your competitors.
                 </p>
               </div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-navy-blue mb-3">Real Results</h3>
-                <p className="text-charcoal leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-3">Real Results</h3>
+                <p className="text-slate-300 leading-relaxed">
                   Every engagement is backed by a 90-day performance guarantee. If we don't
                   deliver, we keep working until we do.
                 </p>

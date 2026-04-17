@@ -116,7 +116,7 @@ export default function RaleighPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy">
+      <section className="relative min-h-screen flex items-center pt-20">
         <div className="absolute inset-0 opacity-5">
           <div
             className="absolute inset-0"
@@ -191,10 +191,10 @@ export default function RaleighPage() {
 
                 <div className="p-8 -mt-8 relative">
                 <div className="text-center mb-6">
-                  <h2 className="text-2xl font-bold text-charcoal mb-2">
+                  <h2 className="text-2xl font-bold text-slate-300 mb-2">
                     Get Your Free Raleigh Market Analysis
                   </h2>
-                  <p className="text-warm-gray">
+                  <p className="text-slate-300">
                     See how your contractor website stacks up against Raleigh competitors
                   </p>
                 </div>
@@ -278,13 +278,13 @@ export default function RaleighPage() {
       </section>
 
       {/* Why Raleigh Contractors Need a Great Website */}
-      <section className="py-20 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-blue mb-6">
               Why Raleigh Construction Businesses Need a Better Website
             </h2>
-            <p className="text-xl text-charcoal leading-relaxed">
+            <p className="text-xl text-slate-300 leading-relaxed">
               Raleigh is one of the fastest-growing cities in the country. More residents and businesses means more competition for contractors. If your website isn't bringing in leads, you're losing jobs to competitors who invested in theirs.
             </p>
           </div>
@@ -324,7 +324,7 @@ export default function RaleighPage() {
       </section>
 
       {/* What We Build for Raleigh Contractors */}
-      <section className="py-20 bg-gradient-to-br from-navy-blue via-navy to-light-navy">
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
@@ -381,13 +381,13 @@ export default function RaleighPage() {
       </section>
 
       {/* What You Get */}
-      <section className="py-20 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-blue mb-6">
               Why Raleigh Contractors Choose Figgle Media
             </h2>
-            <p className="text-xl text-charcoal">
+            <p className="text-xl text-slate-300">
               We're not another generic web agency. We specialize in construction businesses, and we're based right here in Raleigh.
             </p>
           </div>
@@ -413,7 +413,7 @@ export default function RaleighPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy">
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">

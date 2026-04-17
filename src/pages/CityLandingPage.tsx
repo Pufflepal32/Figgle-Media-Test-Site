@@ -108,7 +108,7 @@ export default function CityLandingPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
+      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         {/* SVG Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -180,10 +180,10 @@ export default function CityLandingPage() {
 
                 <div className="p-8 -mt-8 relative">
                 <div className="text-center mb-6">
-                  <h2 className="text-2xl font-bold text-charcoal mb-2">
+                  <h2 className="text-2xl font-bold text-slate-300 mb-2">
                     {city.formHeadline}
                   </h2>
-                  <p className="text-warm-gray">
+                  <p className="text-slate-300">
                     {city.formSubline}
                   </p>
                 </div>
@@ -294,13 +294,13 @@ export default function CityLandingPage() {
       </section>
 
       {/* Why Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-blue mb-6">
               {city.whySection.headline}
             </h2>
-            <p className="text-xl text-charcoal leading-relaxed">
+            <p className="text-xl text-slate-300 leading-relaxed">
               {city.whySection.description}
             </p>
           </div>
@@ -323,7 +323,7 @@ export default function CityLandingPage() {
       </section>
 
       {/* What We Build */}
-      <section className="py-20 bg-gradient-to-br from-navy-blue via-navy to-light-navy">
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
@@ -380,13 +380,13 @@ export default function CityLandingPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-blue mb-6">
               Why {city.name} Contractors Choose Figgle Media
             </h2>
-            <p className="text-xl text-charcoal">
+            <p className="text-xl text-slate-300">
               We're not another generic web agency. We specialize in construction businesses and we know {city.region}.
             </p>
           </div>
@@ -405,13 +405,13 @@ export default function CityLandingPage() {
 
       {/* Specialized services (L3) — only renders when child pages exist */}
       {childServicePages.length > 0 && (
-        <section className="py-20 bg-cream">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-navy-blue mb-4">
                 Specialized Services for {city.name} Contractors
               </h2>
-              <p className="text-lg text-charcoal">
+              <p className="text-lg text-slate-300">
                 Industry-specific campaigns built for the {city.name} market — each with its own lead funnel and local SEO plan.
               </p>
             </div>
@@ -420,12 +420,12 @@ export default function CityLandingPage() {
                 <Link
                   key={svc.slug}
                   to={`/${svc.slug}`}
-                  className="group bg-white border border-light-gray rounded-xl p-6 shadow-sm hover:border-burnt-orange hover:shadow-md transition-all"
+                  className="group bg-slate-700 rounded-xl p-6 shadow-lg hover:shadow-xl hover:ring-2 hover:ring-burnt-orange transition-all"
                 >
                   <h3 className="text-lg font-bold text-navy-blue group-hover:text-burnt-orange transition-colors mb-2">
                     {svc.industry} {svc.service} in {svc.city}
                   </h3>
-                  <p className="text-warm-gray text-sm mb-4">{svc.subtitle}</p>
+                  <p className="text-slate-300 text-sm mb-4">{svc.subtitle}</p>
                   <span className="inline-flex items-center gap-1 text-burnt-orange font-semibold text-sm">
                     Learn more
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -438,7 +438,7 @@ export default function CityLandingPage() {
       )}
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gradient-to-br from-navy-blue via-dark-navy to-navy">
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">

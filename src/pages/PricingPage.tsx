@@ -125,23 +125,7 @@ function PricingPage() {
       </Helmet>
       <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
-        {/* SVG Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <svg width="100%" height="100%">
-            <defs>
-              <pattern id="pricing-dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-                <circle cx="2" cy="2" r="1.5" fill="white" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#pricing-dots)" />
-          </svg>
-        </div>
-
-        {/* Gradient Orbs */}
-        <div className="absolute top-10 left-1/4 w-72 h-72 bg-burnt-orange/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-burnt-orange/5 rounded-full blur-3xl"></div>
-
+      <section className="relative py-16 md:py-20 overflow-hidden">
         <div className="relative container mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-burnt-orange/20 border border-burnt-orange/30 rounded-full px-5 py-2 mb-8">
             <DollarSign size={16} className="text-burnt-orange" />
@@ -173,7 +157,7 @@ function PricingPage() {
       </section>
 
       {/* Pricing Tiers */}
-      <section className="bg-gray-900 py-20">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
             {pricingTiers.map((tier, index) => (
@@ -181,23 +165,23 @@ function PricingPage() {
                 key={index}
                 className={`rounded-xl p-8 ${
                   tier.featured
-                    ? 'bg-burnt-orange transform scale-105 border-4 border-yellow-400'
-                    : 'bg-gray-800 border-2 border-gray-700'
+                    ? 'bg-burnt-orange transform scale-105 border-4 border-sky-gold'
+                    : 'bg-slate-700 shadow-lg'
                 } transition-all hover:transform hover:scale-105`}
               >
                 {tier.featured && (
-                  <div className="bg-yellow-400 text-gray-900 text-sm font-bold px-4 py-1 rounded-full inline-block mb-4">
+                  <div className="bg-sky-gold text-navy-blue text-sm font-bold px-4 py-1 rounded-full inline-block mb-4">
                     MOST POPULAR
                   </div>
                 )}
                 <h2 className="text-2xl font-bold text-white mb-2">{tier.name}</h2>
                 <div className="text-5xl font-bold text-white mb-4">{tier.price}</div>
-                <p className={`mb-6 ${tier.featured ? 'text-white' : 'text-gray-300'}`}>{tier.description}</p>
+                <p className={`mb-6 ${tier.featured ? 'text-white' : 'text-slate-300'}`}>{tier.description}</p>
                 <ul className="space-y-3">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <Check className={tier.featured ? "text-yellow-300 flex-shrink-0 mt-1" : "text-green-400 flex-shrink-0 mt-1"} size={20} />
-                      <span className={tier.featured ? "text-white" : "text-gray-200"}>{feature}</span>
+                      <Check className={tier.featured ? "text-sky-gold flex-shrink-0 mt-1" : "text-burnt-orange flex-shrink-0 mt-1"} size={20} />
+                      <span className={tier.featured ? "text-white" : "text-slate-200"}>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -208,7 +192,7 @@ function PricingPage() {
       </section>
 
       {/* Ready to Scale Section */}
-      <section className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 py-24">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tight">
@@ -244,7 +228,7 @@ function PricingPage() {
       </section>
 
       {/* Pricing Broken Down by Service */}
-      <section className="bg-navy py-20">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
             PRICING BROKEN DOWN BY SERVICE
@@ -253,11 +237,11 @@ function PricingPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-800 rounded-xl p-8 border-2 border-gray-700 hover:border-burnt-orange transition-all"
+                className="bg-slate-700 rounded-xl p-8 shadow-lg hover:shadow-xl hover:ring-2 hover:ring-burnt-orange transition-all"
               >
                 <div className="text-5xl mb-4">{service.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
-                <p className="text-gray-300 mb-6 min-h-[60px]">{service.description}</p>
+                <p className="text-slate-300 mb-6 min-h-[60px]">{service.description}</p>
                 <div className="text-4xl font-bold text-white">{service.price}</div>
               </div>
             ))}
@@ -266,7 +250,7 @@ function PricingPage() {
       </section>
 
       {/* Why Figgle Section */}
-      <section className="bg-gray-900 py-20">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-burnt-orange rounded-xl p-12 text-white mb-12">
@@ -305,7 +289,7 @@ function PricingPage() {
       </section>
 
       {/* Bundle Discount Section */}
-      <section className="bg-navy py-20">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -314,8 +298,8 @@ function PricingPage() {
             <p className="text-lg text-cream mb-8">
               Our bundled packages are designed to work together seamlessly, giving you the best results while saving you money.
             </p>
-            <div className="bg-gray-800 rounded-xl p-8 border-2 border-gray-700">
-              <p className="text-gray-300 leading-relaxed mb-6">
+            <div className="bg-slate-700 rounded-xl p-8 shadow-lg">
+              <p className="text-slate-300 leading-relaxed mb-6">
                 Our bundled approach saves you 5,000+ more than buying individual services, and speeds up launch time because you're working with one dedicated team rather than juggling multiple contractors. All our services work together to create a cohesive marketing strategy that drives real results for your business.
               </p>
               <a
@@ -330,7 +314,7 @@ function PricingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-gray-900 py-20">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
             COMMONLY ASKED QUESTIONS
@@ -339,11 +323,11 @@ function PricingPage() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border-2 border-gray-700 rounded-lg overflow-hidden"
+                className="border border-white/10 rounded-lg overflow-hidden"
               >
                 <button
                   onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
-                  className="w-full text-left px-6 py-4 bg-gray-800 hover:bg-gray-750 transition-colors flex justify-between items-center"
+                  className="w-full text-left px-6 py-4 bg-slate-700 hover:bg-slate-600 transition-colors flex justify-between items-center"
                 >
                   <span className="font-semibold text-lg text-white">{faq.question}</span>
                   <span className="text-2xl text-burnt-orange">
@@ -351,8 +335,8 @@ function PricingPage() {
                   </span>
                 </button>
                 {openFAQ === index && (
-                  <div className="px-6 py-4 bg-gray-850 border-t-2 border-gray-700">
-                    <p className="text-gray-300">{faq.answer}</p>
+                  <div className="px-6 py-4 bg-slate-800 border-t border-white/10">
+                    <p className="text-slate-300">{faq.answer}</p>
                   </div>
                 )}
               </div>

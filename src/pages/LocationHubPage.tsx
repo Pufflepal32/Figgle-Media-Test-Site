@@ -66,7 +66,7 @@ export default function LocationHubPage() {
         </div>
 
         {/* Hero */}
-        <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
+        <section className="relative py-16 md:py-20 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Left Content */}
@@ -115,7 +115,7 @@ export default function LocationHubPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-blue/80 to-transparent" />
                 </div>
                 <div className="bg-white rounded-2xl shadow-2xl p-6 border border-light-gray">
-                  <h2 className="text-xl font-bold text-charcoal mb-4 text-center">
+                  <h2 className="text-xl font-bold text-white mb-4 text-center">
                     Get a Free {page.city} Website Plan
                   </h2>
                   <form onSubmit={handleSubmit} className="space-y-3">
@@ -151,12 +151,12 @@ export default function LocationHubPage() {
         </section>
 
         {/* Services We Offer — Links to Layer 3 children */}
-        <section className="py-20 bg-cream">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal text-center mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-4">
               Services We Offer in {page.city}
             </h2>
-            <p className="text-warm-gray text-center max-w-2xl mx-auto mb-12">
+            <p className="text-slate-300 text-center max-w-2xl mx-auto mb-12">
               Specialized marketing services for {page.city} contractors — each one designed to generate leads in your local market.
             </p>
             <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -164,12 +164,12 @@ export default function LocationHubPage() {
                 <Link
                   key={link.slug}
                   to={`/${link.slug}`}
-                  className="group bg-white rounded-xl p-6 shadow-sm border border-light-gray hover:border-burnt-orange hover:shadow-md transition-all"
+                  className="group bg-slate-700 rounded-xl p-6 shadow-lg hover:shadow-xl hover:ring-2 hover:ring-burnt-orange transition-all"
                 >
-                  <h3 className="text-lg font-bold text-charcoal group-hover:text-burnt-orange transition-colors mb-2">
+                  <h3 className="text-lg font-bold text-white group-hover:text-burnt-orange transition-colors mb-2">
                     {link.label}
                   </h3>
-                  <p className="text-warm-gray text-sm mb-4">{link.description}</p>
+                  <p className="text-slate-300 text-sm mb-4">{link.description}</p>
                   <span className="inline-flex items-center gap-1 text-burnt-orange font-semibold text-sm">
                     Learn more <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </span>
@@ -180,7 +180,7 @@ export default function LocationHubPage() {
         </section>
 
         {/* Benefits */}
-        <section className="py-20 bg-gradient-to-br from-navy-blue to-navy">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
               Why {page.city} Contractors Choose Us
@@ -208,16 +208,16 @@ export default function LocationHubPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-20 bg-cream">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-charcoal text-center mb-12">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
               {page.city} Web Design FAQ
             </h2>
             <div className="max-w-3xl mx-auto space-y-6">
               {page.faqs.map((faq, i) => (
-                <div key={i} className="bg-white rounded-xl p-6 border border-light-gray shadow-sm">
-                  <h3 className="text-lg font-bold text-charcoal mb-3">{faq.q}</h3>
-                  <p className="text-warm-gray leading-relaxed">{faq.a}</p>
+                <div key={i} className="bg-slate-700 rounded-xl p-6 shadow-lg">
+                  <h3 className="text-lg font-bold text-white mb-3">{faq.q}</h3>
+                  <p className="text-slate-300 leading-relaxed">{faq.a}</p>
                 </div>
               ))}
             </div>
@@ -226,7 +226,7 @@ export default function LocationHubPage() {
 
         {/* Nearby Cities */}
         {page.nearbyHubs.length > 0 && (
-          <section className="py-16 bg-gradient-to-br from-light-navy to-navy-blue">
+          <section className="py-16">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-2xl font-bold text-white text-center mb-8">
                 Also Serving

@@ -17,7 +17,7 @@ function AboutPage() {
       </Helmet>
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="relative py-24 md:py-32 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
+        <section className="relative py-16 md:py-20 overflow-hidden">
           <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 bg-burnt-orange/20 border border-burnt-orange/30 rounded-full px-5 py-2 mb-8">

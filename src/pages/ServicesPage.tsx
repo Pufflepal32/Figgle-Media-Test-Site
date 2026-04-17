@@ -26,7 +26,7 @@ function ServicesPage() {
       </Helmet>
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="relative py-24 md:py-32 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
+        <section className="relative py-16 md:py-20 overflow-hidden">
           {/* SVG Pattern Overlay */}
           <div className="absolute inset-0 opacity-5">
             <svg width="100%" height="100%">

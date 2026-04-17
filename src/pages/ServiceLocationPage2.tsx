@@ -83,7 +83,7 @@ export default function ServiceLocationPage2() {
         </div>
 
         {/* Hero with Lead Form */}
-        <section className="relative py-16 md:py-24 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
+        <section className="relative py-16 md:py-20 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Left — Content */}
@@ -124,10 +124,10 @@ export default function ServiceLocationPage2() {
 
               {/* Right — Lead Form */}
               <div className="bg-white rounded-2xl shadow-2xl p-8 border border-light-gray">
-                <h2 className="text-2xl font-bold text-charcoal mb-2 text-center">
+                <h2 className="text-2xl font-bold text-white mb-2 text-center">
                   Get a Free {page.industry} {page.service} Plan
                 </h2>
-                <p className="text-warm-gray text-center mb-6 text-sm">
+                <p className="text-slate-300 text-center mb-6 text-sm">
                   Tailored for {page.city} {page.industry.toLowerCase()} companies
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -161,7 +161,7 @@ export default function ServiceLocationPage2() {
                   >
                     Get My Free Plan
                   </button>
-                  <p className="text-xs text-center text-warm-gray">
+                  <p className="text-xs text-center text-slate-300">
                     No obligation. We'll analyze your {page.city} market and show you exactly how to get more leads.
                   </p>
                 </form>
@@ -171,19 +171,19 @@ export default function ServiceLocationPage2() {
         </section>
 
         {/* Content Sections */}
-        <section className="py-20 bg-cream">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto space-y-16">
               {page.sections.map((section, i) => (
                 <div key={i}>
-                  <h2 className="text-3xl font-bold text-charcoal mb-4">{section.heading}</h2>
-                  <p className="text-lg text-warm-gray leading-relaxed">{section.content}</p>
+                  <h2 className="text-3xl font-bold text-white mb-4">{section.heading}</h2>
+                  <p className="text-lg text-slate-300 leading-relaxed">{section.content}</p>
                 </div>
               ))}
 
               {/* Internal link to industry parent */}
-              <div className="bg-white rounded-xl p-6 border border-light-gray">
-                <p className="text-warm-gray mb-3">
+              <div className="bg-slate-700 rounded-xl p-6 shadow-lg">
+                <p className="text-slate-300 mb-3">
                   Learn more about our {page.industry.toLowerCase()} {page.service.toLowerCase()} expertise:
                 </p>
                 <Link
@@ -199,7 +199,7 @@ export default function ServiceLocationPage2() {
         </section>
 
         {/* Benefits */}
-        <section className="py-20 bg-gradient-to-br from-navy-blue to-navy">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
               What's Included
@@ -216,12 +216,12 @@ export default function ServiceLocationPage2() {
         </section>
 
         {/* Other Services in This City */}
-        <section className="py-20 bg-cream">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-charcoal text-center mb-4">
+            <h2 className="text-3xl font-bold text-white text-center mb-4">
               Other Roofing Services in {page.city}
             </h2>
-            <p className="text-warm-gray text-center max-w-2xl mx-auto mb-10">
+            <p className="text-slate-300 text-center max-w-2xl mx-auto mb-10">
               Get the full marketing stack working together for maximum results.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -229,10 +229,10 @@ export default function ServiceLocationPage2() {
                 <Link
                   key={link.slug}
                   to={`/${link.slug}`}
-                  className="group bg-white rounded-xl p-6 shadow-sm border border-light-gray hover:border-burnt-orange hover:shadow-md transition-all"
+                  className="group bg-slate-700 rounded-xl p-6 shadow-lg hover:shadow-xl hover:ring-2 hover:ring-burnt-orange transition-all"
                 >
                   <Zap size={24} className="text-burnt-orange mb-3" />
-                  <h3 className="font-bold text-charcoal group-hover:text-burnt-orange transition-colors mb-2">
+                  <h3 className="font-bold text-white group-hover:text-burnt-orange transition-colors mb-2">
                     {link.label}
                   </h3>
                   <span className="text-sm text-burnt-orange font-semibold inline-flex items-center gap-1">
@@ -258,7 +258,7 @@ export default function ServiceLocationPage2() {
 
         {/* Same Service in Nearby Cities */}
         {page.nearbyCityLinks.length > 0 && (
-          <section className="py-16 bg-gradient-to-br from-light-navy to-navy-blue">
+          <section className="py-16">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-2xl font-bold text-white text-center mb-8">
                 {page.industry} {page.service} in Nearby Cities
@@ -281,16 +281,16 @@ export default function ServiceLocationPage2() {
         )}
 
         {/* FAQs */}
-        <section className="py-20 bg-cream">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
               {page.industry} {page.service} in {page.city} — FAQ
             </h2>
             <div className="max-w-3xl mx-auto space-y-6">
               {page.faqs.map((faq, i) => (
-                <div key={i} className="bg-white rounded-xl p-6 border border-light-gray shadow-sm">
-                  <h3 className="text-lg font-bold text-charcoal mb-3">{faq.q}</h3>
-                  <p className="text-warm-gray leading-relaxed">{faq.a}</p>
+                <div key={i} className="bg-slate-700 rounded-xl p-6 shadow-lg">
+                  <h3 className="text-lg font-bold text-white mb-3">{faq.q}</h3>
+                  <p className="text-slate-300 leading-relaxed">{faq.a}</p>
                 </div>
               ))}
             </div>

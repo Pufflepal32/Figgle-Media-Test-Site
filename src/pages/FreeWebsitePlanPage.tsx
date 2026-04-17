@@ -36,7 +36,7 @@ export default function FreeWebsitePlanPage() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-navy-blue to-navy flex items-center justify-center px-4">
+      <div className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-center">
           <div className="mb-6">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-4">
@@ -74,7 +74,7 @@ export default function FreeWebsitePlanPage() {
         />
         <link rel="canonical" href="https://figglemedia.com/free-website-plan" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-navy-blue via-dark-navy to-navy">
+      <div className="min-h-screen">
       {/* Simple Header with Logo Only */}
       <header className="py-6">
         <div className="container mx-auto px-4">

@@ -61,7 +61,7 @@ export default function ServiceLandingPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative py-24 md:py-32 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
+        <section className="relative py-16 md:py-20 overflow-hidden">
           {/* SVG Pattern */}
           <div className="absolute inset-0 opacity-5">
             <svg width="100%" height="100%">
@@ -123,10 +123,10 @@ export default function ServiceLandingPage() {
         </section>
 
         {/* Placeholder Content */}
-        <section className="py-20 bg-white">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xl text-charcoal mb-8">
+              <p className="text-xl text-slate-300 mb-8">
                 Full {service.title.toLowerCase()} page coming soon. In the meantime, get in touch for a free consultation.
               </p>
               <Link

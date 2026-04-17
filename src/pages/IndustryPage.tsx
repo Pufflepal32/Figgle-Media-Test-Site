@@ -87,7 +87,7 @@ export default function IndustryPage() {
         </div>
 
         {/* Hero */}
-        <section className="relative py-20 md:py-28 bg-gradient-to-br from-navy-blue via-dark-navy to-navy overflow-hidden">
+        <section className="relative py-16 md:py-20 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-burnt-orange font-semibold text-sm uppercase tracking-wider mb-4">
@@ -120,13 +120,13 @@ export default function IndustryPage() {
 
         {/* Services grid — only renders on hub pages (/roofing, /hvac) */}
         {page.serviceLinks && page.serviceLinks.length > 0 && (
-          <section className="py-20 bg-cream">
+          <section className="py-16">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-3xl mx-auto mb-12">
-                <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                   Our {page.h1.split(' ')[0]} Services
                 </h2>
-                <p className="text-lg text-warm-gray">
+                <p className="text-lg text-slate-300">
                   Four specialist services — use one, stack all four. Every service is tuned to how {page.h1.split(' ')[0].toLowerCase()} customers search, compare, and hire.
                 </p>
               </div>
@@ -135,12 +135,12 @@ export default function IndustryPage() {
                   <Link
                     key={svc.slug}
                     to={`/${svc.slug}`}
-                    className="group bg-white border border-light-gray rounded-xl p-6 shadow-sm hover:border-burnt-orange hover:shadow-md transition-all"
+                    className="group bg-slate-700 rounded-xl p-6 shadow-lg hover:shadow-xl hover:ring-2 hover:ring-burnt-orange transition-all"
                   >
-                    <h3 className="text-xl font-bold text-navy-blue group-hover:text-burnt-orange transition-colors mb-2">
+                    <h3 className="text-xl font-bold text-white group-hover:text-burnt-orange transition-colors mb-2">
                       {svc.label}
                     </h3>
-                    <p className="text-warm-gray text-sm mb-4">{svc.description}</p>
+                    <p className="text-slate-300 text-sm mb-4">{svc.description}</p>
                     <span className="inline-flex items-center gap-1 text-burnt-orange font-semibold text-sm">
                       Learn more
                       <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -153,13 +153,13 @@ export default function IndustryPage() {
         )}
 
         {/* Content Sections */}
-        <section className="py-20 bg-cream">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto space-y-16">
               {page.sections.map((section, i) => (
                 <div key={i}>
-                  <h2 className="text-3xl font-bold text-charcoal mb-4">{section.heading}</h2>
-                  <p className="text-lg text-warm-gray leading-relaxed">{section.content}</p>
+                  <h2 className="text-3xl font-bold text-white mb-4">{section.heading}</h2>
+                  <p className="text-lg text-slate-300 leading-relaxed">{section.content}</p>
                 </div>
               ))}
             </div>
@@ -167,7 +167,7 @@ export default function IndustryPage() {
         </section>
 
         {/* Benefits */}
-        <section className="py-20 bg-gradient-to-br from-navy-blue to-navy">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
               What You Get
@@ -185,12 +185,12 @@ export default function IndustryPage() {
 
         {/* Cities We Serve — Internal links to Layer 3 (only renders when L3s exist) */}
         {page.cityLinks.length > 0 && (
-        <section className="py-20 bg-cream">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal text-center mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-4">
               Cities We Serve
             </h2>
-            <p className="text-warm-gray text-center max-w-2xl mx-auto mb-12">
+            <p className="text-slate-300 text-center max-w-2xl mx-auto mb-12">
               We bring our specialized expertise to contractors across North Carolina.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -198,13 +198,13 @@ export default function IndustryPage() {
                 <Link
                   key={link.slug}
                   to={`/${link.slug}`}
-                  className="group flex items-center gap-3 bg-white rounded-xl p-5 shadow-sm border border-light-gray hover:border-burnt-orange hover:shadow-md transition-all"
+                  className="group flex items-center gap-3 bg-slate-700 rounded-xl p-5 shadow-lg hover:shadow-xl hover:ring-2 hover:ring-burnt-orange transition-all"
                 >
                   <MapPin size={20} className="text-burnt-orange flex-shrink-0" />
-                  <span className="font-semibold text-charcoal group-hover:text-burnt-orange transition-colors">
+                  <span className="font-semibold text-white group-hover:text-burnt-orange transition-colors">
                     {link.city}
                   </span>
-                  <ArrowRight size={16} className="ml-auto text-warm-gray group-hover:text-burnt-orange transition-colors" />
+                  <ArrowRight size={16} className="ml-auto text-slate-400 group-hover:text-burnt-orange transition-colors" />
                 </Link>
               ))}
             </div>
@@ -213,7 +213,7 @@ export default function IndustryPage() {
         )}
 
         {/* FAQs */}
-        <section className="py-20 bg-gradient-to-br from-navy-blue to-navy">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
               Frequently Asked Questions
