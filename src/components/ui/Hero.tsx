@@ -21,6 +21,9 @@ export default function Hero() {
       <div className="pointer-events-none absolute top-10 right-[-5%] h-[560px] w-[560px] rounded-full bg-burnt-orange/15 blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-10%] left-[-10%] h-[480px] w-[480px] rounded-full bg-sky-gold/10 blur-3xl" />
       <div className="pointer-events-none absolute top-1/2 left-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-light-navy/20 blur-3xl" />
+      {/* Bottom fade to the shared page bg so the hero dissolves into the
+          first section instead of ending on a hard edge. */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0A1628] to-transparent" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-24">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">

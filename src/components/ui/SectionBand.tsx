@@ -42,6 +42,11 @@ export default function SectionBand({ variant = 'white', padding = 'default', id
               content bounds so they don't obscure text on narrow viewports. */}
           <div className="pointer-events-none absolute top-[-15%] right-[-10%] h-[520px] w-[520px] rounded-full bg-burnt-orange/10 blur-3xl" />
           <div className="pointer-events-none absolute bottom-[-20%] left-[-15%] h-[440px] w-[440px] rounded-full bg-sky-gold/5 blur-3xl" />
+          {/* Soft top + bottom fades to the page bg color so this section
+              blends into its neighbors instead of hard-cutting at the edge.
+              Adjacent sections both fade to #0A1628, so they meet mid-fade. */}
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0A1628] to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0A1628] to-transparent" />
         </>
       )}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
