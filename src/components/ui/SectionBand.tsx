@@ -3,14 +3,16 @@ import type { ReactNode } from 'react';
 type Variant = 'white' | 'slate' | 'cream' | 'navy' | 'dark-navy';
 type Padding = 'tight' | 'default' | 'feature';
 
-// All "bright" variants (white/slate/cream) now render on layered mesh
-// gradients with a subtle dot pattern on top — no more solid fills. The
-// navy + dark-navy variants stay for sections that should read as heavier
-// (e.g. final CTA).
+// "Bright" variants (white/slate/cream) are fully transparent — the body
+// bg owns the mesh. Sections only contribute padding, the dot pattern
+// overlay, and their own decorative orbs. This is what makes adjacent
+// sections blend: there is no section-level bg color to transition from.
+// Navy + dark-navy variants still paint their own bg for "heavier" moments
+// like the final CTA.
 const variantClasses: Record<Variant, string> = {
-  white: 'bg-mesh-a pattern-dots text-slate-100',
-  slate: 'bg-mesh-b pattern-dots text-slate-100',
-  cream: 'bg-mesh-a pattern-dots text-slate-100',
+  white: 'pattern-dots text-slate-100',
+  slate: 'pattern-dots text-slate-100',
+  cream: 'pattern-dots text-slate-100',
   navy: 'bg-navy-blue text-white',
   'dark-navy': 'bg-gradient-to-br from-navy-blue via-dark-navy to-navy text-white',
 };
@@ -38,15 +40,10 @@ export default function SectionBand({ variant = 'white', padding = 'default', id
     >
       {isMesh && (
         <>
-          {/* Decorative glow orbs — give the mesh some depth, stay outside
-              content bounds so they don't obscure text on narrow viewports. */}
+          {/* Decorative glow orbs — give each band its own warmth on top of
+              the shared body mesh, stay outside content bounds. */}
           <div className="pointer-events-none absolute top-[-15%] right-[-10%] h-[520px] w-[520px] rounded-full bg-burnt-orange/10 blur-3xl" />
           <div className="pointer-events-none absolute bottom-[-20%] left-[-15%] h-[440px] w-[440px] rounded-full bg-sky-gold/5 blur-3xl" />
-          {/* Soft top + bottom fades to the page bg color so this section
-              blends into its neighbors instead of hard-cutting at the edge.
-              Adjacent sections both fade to #0A1628, so they meet mid-fade. */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0A1628] to-transparent" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0A1628] to-transparent" />
         </>
       )}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

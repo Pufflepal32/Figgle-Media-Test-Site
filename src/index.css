@@ -38,6 +38,17 @@
   body {
     @apply font-sans antialiased text-slate-100;
     background-color: #0A1628;
+    /* One continuous multi-hotspot mesh under the whole app. Sections are
+       transparent, so there is no per-section color boundary to blend —
+       the mesh is the ambient bg everywhere. Fixed attachment = the mesh
+       stays anchored to the viewport while content scrolls, reinforcing
+       that it's one continuous surface. */
+    background-image:
+      radial-gradient(at 15% 10%, rgba(201, 72, 24, 0.12) 0px, transparent 55%),
+      radial-gradient(at 85% 35%, rgba(36, 51, 82, 0.65) 0px, transparent 55%),
+      radial-gradient(at 25% 65%, rgba(245, 200, 66, 0.06) 0px, transparent 55%),
+      radial-gradient(at 80% 90%, rgba(201, 72, 24, 0.08) 0px, transparent 50%);
+    background-attachment: fixed;
   }
 
   /* Display headings default to Manrope */
